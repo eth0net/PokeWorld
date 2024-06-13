@@ -1,11 +1,8 @@
-﻿using System;
+﻿using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RimWorld;
-using Verse;
 using UnityEngine;
+using Verse;
 
 namespace PokeWorld
 {
@@ -32,11 +29,11 @@ namespace PokeWorld
         {
             this.comp = comp;
             pokemonHolder = comp.Pokemon;
-            canEvolve = comp.canEvolve;
-            evolutions = comp.evolutions;
-            expCategory = comp.expCategory;
-            wildLevelMin = comp.wildLevelMin;
-            wildLevelMax = comp.wildLevelMax;
+            canEvolve = comp.CanEvolve;
+            evolutions = comp.Evolutions;
+            expCategory = comp.ExpCategory;
+            wildLevelMin = comp.WildLevelMin;
+            wildLevelMax = comp.WildLevelMax;
 
             level = (int)Rand.Range(wildLevelMin, wildLevelMax + 1);
             experience = 0;
@@ -47,7 +44,7 @@ namespace PokeWorld
         {
             if (pokemonHolder.Faction == Faction.OfPlayer)
             {
-                if (comp.canEvolve)
+                if (comp.CanEvolve)
                 {
                     if (!flagIsEvolving)
                     {
@@ -60,7 +57,7 @@ namespace PokeWorld
                                     defaultLabel = (flagEverstoneOn ? "PW_TakeBackEverstone".Translate() : "PW_GiveEverstone".Translate()),
                                     defaultDesc = (flagEverstoneOn ? "PW_TakeBackEverstoneDesc".Translate() : "PW_GiveEverstoneDesc".Translate()),
                                     hotKey = KeyBindingDefOf.Misc5,
-                                    icon = ContentFinder<Texture2D>.Get("UI/Gizmos/Everstone/Everstone"),                                   
+                                    icon = ContentFinder<Texture2D>.Get("UI/Gizmos/Everstone/Everstone"),
                                     toggleAction = delegate
                                     {
                                         flagEverstoneOn = !flagEverstoneOn;
@@ -74,15 +71,17 @@ namespace PokeWorld
                     }
                     else
                     {
-                        Command_Action command_Action = new Command_Action();
-                        command_Action.action = delegate
+                        Command_Action command_Action = new Command_Action
                         {
-                            CancelEvolution(true);
+                            action = delegate
+                            {
+                                CancelEvolution(true);
+                            },
+                            defaultLabel = "PW_StopEvolution".Translate(),
+                            defaultDesc = "PW_StopEvolutionDesc".Translate(),
+                            hotKey = KeyBindingDefOf.Misc5,
+                            icon = TexCommand.ClearPrioritizedWork
                         };
-                        command_Action.defaultLabel = "PW_StopEvolution".Translate();
-                        command_Action.defaultDesc = "PW_StopEvolutionDesc".Translate();
-                        command_Action.hotKey = KeyBindingDefOf.Misc5;
-                        command_Action.icon = TexCommand.ClearPrioritizedWork;
                         yield return command_Action;
                     }
                 }
@@ -116,7 +115,7 @@ namespace PokeWorld
                         {
                             Messages.Message("PW_MessageLevelIncrease".Translate(pokemonHolder.Label, level), pokemonHolder, MessageTypeDefOf.NeutralEvent);
                         }
-                    }                   
+                    }
                     if (level >= 100)
                     {
                         level = 100;
@@ -147,13 +146,13 @@ namespace PokeWorld
                     if (PokeWorldSettings.GenerationAllowed(evo.pawnKind.race.GetCompProperties<CompProperties_Pokemon>().generation)
                     && evo.requirement == EvolutionRequirement.level && level >= evo.level
                     && comp.friendshipTracker.EvolutionAllowed(evo.friendship)
-                    && (evo.gender == Gender.None || pokemonHolder.gender == evo.gender))                   
+                    && (evo.gender == Gender.None || pokemonHolder.gender == evo.gender))
                     {
                         if (evo.otherRequirement != OtherEvolutionRequirement.none)
                         {
                             int attack = (int)pokemonHolder.GetStatValue(DefDatabase<StatDef>.GetNamed("PW_Attack"));
                             int defense = (int)pokemonHolder.GetStatValue(DefDatabase<StatDef>.GetNamed("PW_Defense"));
-                            if(evo.otherRequirement == OtherEvolutionRequirement.attack && !(attack > defense))
+                            if (evo.otherRequirement == OtherEvolutionRequirement.attack && !(attack > defense))
                             {
                                 continue;
                             }
@@ -161,7 +160,7 @@ namespace PokeWorld
                             {
                                 continue;
                             }
-                            else if(evo.otherRequirement == OtherEvolutionRequirement.balanced && !(attack == defense))
+                            else if (evo.otherRequirement == OtherEvolutionRequirement.balanced && !(attack == defense))
                             {
                                 continue;
                             }
@@ -212,7 +211,7 @@ namespace PokeWorld
 
         public void UpdateEvolutionProcess()
         {
-            if(pokemonHolder.Map.designationManager.DesignationOn(pokemonHolder, DesignationDefOf.Slaughter) != null)
+            if (pokemonHolder.Map.designationManager.DesignationOn(pokemonHolder, DesignationDefOf.Slaughter) != null)
             {
                 CancelEvolution(true);
             }
@@ -231,7 +230,7 @@ namespace PokeWorld
                     Evolve(evolutionDefList);
                 }
                 evolutionCountDown -= 1;
-            }      
+            }
         }
 
         public void CancelEvolution(bool scared = false)
@@ -252,22 +251,19 @@ namespace PokeWorld
                 Copy(preEvoPokemon, postEvoPokemon);
                 postEvoPokemon.health.Reset();
                 GenSpawn.Spawn(postEvoPokemon, preEvoPokemon.Position, preEvoPokemon.Map);
-                if(faction == Faction.OfPlayer)
+                if (faction == Faction.OfPlayer)
                 {
                     Find.World.GetComponent<PokedexManager>().AddPokemonKindCaught(postEvoPokemon.kindDef);
-                }               
+                }
             }
-            if (preEvoPokemon.inventory != null)
-            {
-                preEvoPokemon.inventory.DropAllNearPawn(preEvoPokemon.Position);
-            }
+            preEvoPokemon.inventory?.DropAllNearPawn(preEvoPokemon.Position);
             if (preEvoPokemon.carryTracker != null && preEvoPokemon.carryTracker.CarriedThing != null)
             {
                 preEvoPokemon.carryTracker.TryDropCarriedThing(preEvoPokemon.Position, ThingPlaceMode.Near, out Thing carriedThing);
-            }         
-            if(preEvoPokemon.health.hediffSet != null)
+            }
+            if (preEvoPokemon.health.hediffSet != null)
             {
-                foreach(Hediff hediff in preEvoPokemon.health.hediffSet.hediffs)
+                foreach (Hediff hediff in preEvoPokemon.health.hediffSet.hediffs)
                 {
                     if (hediff.def != null && hediff.def.countsAsAddedPartOrImplant)
                     {
@@ -312,7 +308,7 @@ namespace PokeWorld
             if (evolution.RaceProps.hasGenders)
             {
                 evolution.gender = pokemon.gender;
-            }      
+            }
             evolution.records = pokemon.records;
             evolution.relations.ClearAllRelations();
             foreach (DirectPawnRelation relation in pokemon.relations.DirectRelations.ToList())
@@ -347,7 +343,7 @@ namespace PokeWorld
                 }
             }
             evolution.playerSettings.animalsReleased = pokemon.playerSettings.animalsReleased;
-            evolution.playerSettings.AreaRestriction = pokemon.playerSettings.AreaRestriction;
+            evolution.playerSettings.AreaRestrictionInPawnCurrentMap = pokemon.playerSettings.AreaRestrictionInPawnCurrentMap;
             evolution.playerSettings.displayOrder = pokemon.playerSettings.displayOrder;
             evolution.playerSettings.followDrafted = pokemon.playerSettings.followDrafted;
             evolution.playerSettings.followFieldwork = pokemon.playerSettings.followFieldwork;

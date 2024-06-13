@@ -1,12 +1,4 @@
-﻿//////using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RimWorld;
-using Verse;
-
-namespace PokeWorld
+﻿namespace PokeWorld
 {
     public static class PokemonComponentsUtility
     {
@@ -24,7 +16,7 @@ namespace PokeWorld
             {
                 comp.friendshipTracker = new FriendshipTracker(comp);
             }
-            if(comp.statTracker == null)
+            if (comp.statTracker == null)
             {
                 comp.statTracker = new StatTracker(comp);
             }
@@ -32,37 +24,19 @@ namespace PokeWorld
             {
                 comp.moveTracker = new MoveTracker(comp);
             }
-            if(comp.formTracker == null && comp.Props.forms != null)
+            if (comp.formTracker == null && comp.Props.forms != null)
             {
                 comp.formTracker = new FormTracker(comp);
             }
         }
         public static void ExposeData(CompPokemon comp)
         {
-            if (comp.shinyTracker != null)
-            {
-                comp.shinyTracker.ExposeData();
-            }
-            if (comp.levelTracker != null)
-            {
-                comp.levelTracker.ExposeData();
-            }
-            if (comp.friendshipTracker != null)
-            {
-                comp.friendshipTracker.ExposeData();
-            }
-            if (comp.statTracker != null)
-            {
-                comp.statTracker.ExposeData();
-            }
-            if (comp.moveTracker != null)
-            {
-                comp.moveTracker.ExposeData();
-            }
-            if (comp.formTracker != null)
-            {
-                comp.formTracker.ExposeData();
-            }
+            comp.shinyTracker?.ExposeData();
+            comp.levelTracker?.ExposeData();
+            comp.friendshipTracker?.ExposeData();
+            comp.statTracker?.ExposeData();
+            comp.moveTracker?.ExposeData();
+            comp.formTracker?.ExposeData();
         }
     }
 }

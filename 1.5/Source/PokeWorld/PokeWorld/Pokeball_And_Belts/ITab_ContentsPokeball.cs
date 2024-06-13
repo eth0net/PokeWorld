@@ -192,10 +192,10 @@ namespace PokeWorld
 				Text.WordWrap = false;
 				Widgets.Label(rect4, str2.Truncate(rect4.width));
 				Text.WordWrap = true;
-				if(comp.types != null)
+				if(comp.Types != null)
                 {
 					int x = 0;
-					foreach(TypeDef typeDef in comp.types)
+					foreach(TypeDef typeDef in comp.Types)
                     {
 						Rect rect5 = new Rect(240f + 40f * x, curY + 7, 32, 14);
 						Widgets.DrawTextureFitted(rect5, typeDef.uiIcon, 1);

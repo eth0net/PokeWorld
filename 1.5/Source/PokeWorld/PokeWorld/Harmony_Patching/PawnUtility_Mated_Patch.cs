@@ -17,7 +17,7 @@ namespace PokeWorld
 		public static bool Prefix(Pawn __0, Pawn __1)
 		{
 			CompPokemon comp = __1.TryGetComp<CompPokemon>();
-			if (comp == null || !comp.eggGroups.Contains(DefDatabase<EggGroupDef>.GetNamed("Ditto")))
+			if (comp == null || !comp.EggGroups.Contains(DefDatabase<EggGroupDef>.GetNamed("Ditto")))
 			{
 				return true;
 			}

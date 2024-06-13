@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using HarmonyLib;
 using RimWorld;
+using System.Collections.Generic;
 using Verse;
-using HarmonyLib;
 
 namespace PokeWorld
 {
     [HarmonyPatch(typeof(ManhunterPackGenStepUtility))]
-    [HarmonyPatch("TryGetAnimalsKind")]
+    [HarmonyPatch(nameof(ManhunterPackGenStepUtility.TryGetAnimalsKind))]
     class ManhunterPackGenStepUtility_TryGetAnimalsKind_Patch
     {
         public static bool Prefix(float __0, int __1, out PawnKindDef __2, ref bool __result)
@@ -19,14 +15,14 @@ namespace PokeWorld
             {
                 List<PawnKindDef> list = new List<PawnKindDef>();
                 for (int i = 0; i < 50; i++)
-                {                   
-                    if(!Pokemon_ManhunterPackIncidentUtility.TryFindManhunterAnimalKind(__0, __1, out list))
+                {
+                    if (!Pokemon_ManhunterPackIncidentUtility.TryFindManhunterAnimalKind(__0, __1, out list))
                     {
                         continue;
                     }
                     break;
                 }
-                if(list.Count <= 0)
+                if (list.Count <= 0)
                 {
                     for (int j = 0; j < 50; j++)
                     {
@@ -35,7 +31,7 @@ namespace PokeWorld
                             continue;
                         }
                         break;
-                    }                    
+                    }
                 }
                 if (list.Count <= 0)
                 {
@@ -46,14 +42,14 @@ namespace PokeWorld
                 {
                     __2 = list.RandomElement();
                     __result = true;
-                }               
+                }
             }
             else
             {
                 PawnKindDef kind = null;
                 for (int i = 0; i < 50; i++)
                 {
-                    if (!ManhunterPackIncidentUtility.TryFindManhunterAnimalKind(__0, __1, out kind))
+                    if (!AggressiveAnimalIncidentUtility.TryFindAggressiveAnimalKind(__0, __1, out kind))
                     {
                         continue;
                     }
@@ -63,7 +59,7 @@ namespace PokeWorld
                 {
                     for (int j = 0; j < 50; j++)
                     {
-                        if (!ManhunterPackIncidentUtility.TryFindManhunterAnimalKind(__0, -1, out kind))
+                        if (!AggressiveAnimalIncidentUtility.TryFindAggressiveAnimalKind(__0, -1, out kind))
                         {
                             continue;
                         }

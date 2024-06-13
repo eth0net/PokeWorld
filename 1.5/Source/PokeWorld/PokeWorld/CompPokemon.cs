@@ -1,14 +1,9 @@
-﻿using System;
-using System.Reflection;
-using System.Runtime.CompilerServices;
+﻿using RimWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RimWorld;
-using Verse;
-using Verse.AI;
 using UnityEngine;
+using Verse;
 
 namespace PokeWorld
 {
@@ -18,8 +13,8 @@ namespace PokeWorld
         public override void Initialize(CompProperties props)
         {
             base.Initialize(props);
-            PokemonComponentsUtility.CreateInitialComponents(this);         
-            statTracker.UpdateStats();                  
+            PokemonComponentsUtility.CreateInitialComponents(this);
+            statTracker.UpdateStats();
         }
 
         public override void PostSpawnSetup(bool respawningAfterLoad)
@@ -32,28 +27,16 @@ namespace PokeWorld
                 {
                     pokedex.AddPokemonKindSeen(Pokemon.kindDef);
                 }
-            }    
-            if(statTracker != null)
-            {
-                statTracker.UpdateStats();
             }
+            statTracker?.UpdateStats();
         }
 
         public override void CompTick()
         {
             base.CompTick();
-            if (levelTracker != null)
-            {
-                levelTracker.LevelTick();
-            }
-            if (friendshipTracker != null)
-            {
-                friendshipTracker.FriendshipTick();
-            }
-            if (formTracker != null)
-            {
-                formTracker.FormTick();
-            }
+            levelTracker?.LevelTick();
+            friendshipTracker?.FriendshipTick();
+            formTracker?.FormTick();
             if (tryCatchCooldown > 0)
             {
                 tryCatchCooldown -= 1;
@@ -75,7 +58,7 @@ namespace PokeWorld
             {
                 flagIsPokedexCaught = Find.World.GetComponent<PokedexManager>().IsPokemonCaught(Pokemon.kindDef);
             }
-            else if(!(bool)flagIsPokedexCaught && Pokemon.Faction == Faction.OfPlayer)
+            else if (!(bool)flagIsPokedexCaught && Pokemon.Faction == Faction.OfPlayer)
             {
                 Find.World.GetComponent<PokedexManager>().AddPokemonKindCaught(Pokemon.kindDef);
                 flagIsPokedexCaught = true;
@@ -85,10 +68,7 @@ namespace PokeWorld
         public override void CompTickRare()
         {
             base.CompTickRare();
-            if (shinyTracker != null)
-            {
-                shinyTracker.ShinyTickRare();
-            }
+            shinyTracker?.ShinyTickRare();
         }
 
         public override IEnumerable<StatDrawEntry> SpecialDisplayStats()
@@ -108,7 +88,7 @@ namespace PokeWorld
                 }
                 yield return new StatDrawEntry(DefDatabase<StatCategoryDef>.GetNamed("PW_PokeWorldStat"), "PW_Nature".Translate(), natureLabel, natureDescription, 4050);
             }
-                       
+
             string eggGroupValue = "";
             string eggGroupDescription = "PW_StatEggGroupDesc".Translate() + "\n";
             string typeValue = "";
@@ -117,7 +97,7 @@ namespace PokeWorld
             string evolutionDescription = "PW_StatEvolutionDesc".Translate() + "\n";
             if (Find.World.GetComponent<PokedexManager>().IsPokemonCaught(parent.def.race.AnyPawnKind))
             {
-                foreach (EggGroupDef eggGroupDef in eggGroups)
+                foreach (EggGroupDef eggGroupDef in EggGroups)
                 {
                     if (eggGroupValue.Length > 0)
                     {
@@ -126,13 +106,13 @@ namespace PokeWorld
                     eggGroupValue += eggGroupDef.LabelCap;
                     eggGroupDescription += "\n" + "PW_EggGroupLabelAndDesc".Translate(eggGroupDef.LabelCap, eggGroupDef.description);
                 }
-                for(int x = 0; x < types.Count(); x++)
+                for (int x = 0; x < Types.Count(); x++)
                 {
                     if (typeValue.Length > 0)
                     {
                         typeValue += ", ";
                     }
-                    string text;                   
+                    string text;
                     if (x == 0)
                     {
                         text = "PW_TypePrimary".Translate();
@@ -144,13 +124,13 @@ namespace PokeWorld
                     else
                     {
                         text = "PW_Type".Translate();
-                    }                   
-                    typeValue += types[x].LabelCap;
-                    typeDescription += "\n" + "PW_TypeName".Translate(text, types[x].LabelCap);
+                    }
+                    typeValue += Types[x].LabelCap;
+                    typeDescription += "\n" + "PW_TypeName".Translate(text, Types[x].LabelCap);
                 }
-                if (canEvolve)
+                if (CanEvolve)
                 {
-                    foreach (Evolution evolution in evolutions)
+                    foreach (Evolution evolution in Evolutions)
                     {
                         if (evolutionValue.Length > 0)
                         {
@@ -212,7 +192,7 @@ namespace PokeWorld
                                     default:
                                         evolutionDescription += "\n" + "PW_StatEvolutionNeedFixedLevel".Translate(text2, evolution.level, evolutionLabel);
                                         break;
-                                }                        
+                                }
                             }
                             else
                             {
@@ -259,8 +239,8 @@ namespace PokeWorld
                 eggGroupDescription += "\n" + "PW_StatCatchPokemonToLearnMore".Translate();
                 typeDescription += "\n" + "PW_StatCatchPokemonToLearnMore".Translate();
                 evolutionDescription += "\n" + "PW_StatCatchPokemonToLearnMore".Translate();
-            }                  
-            yield return new StatDrawEntry(DefDatabase<StatCategoryDef>.GetNamed("PW_PokeWorldStat"), "PW_EggGroup".Translate(), eggGroupValue, eggGroupDescription, 4049);           
+            }
+            yield return new StatDrawEntry(DefDatabase<StatCategoryDef>.GetNamed("PW_PokeWorldStat"), "PW_EggGroup".Translate(), eggGroupValue, eggGroupDescription, 4049);
             yield return new StatDrawEntry(DefDatabase<StatCategoryDef>.GetNamed("PW_PokeWorldStat"), "PW_Type".Translate(), typeValue, typeDescription, 4054);
             yield return new StatDrawEntry(DefDatabase<StatCategoryDef>.GetNamed("PW_PokeWorldStat"), "PW_Evolution".Translate(), evolutionValue, evolutionDescription, 4050);
         }
@@ -315,7 +295,7 @@ namespace PokeWorld
         public override void PostExposeData()
         {
             base.PostExposeData();
-            PokemonComponentsUtility.ExposeData(this);                     
+            PokemonComponentsUtility.ExposeData(this);
             Scribe_Values.Look(ref wantPutInBall, "wantPutInBall", defaultValue: false);
             Scribe_Values.Look(ref inBall, "inBall", defaultValue: false);
             Scribe_Defs.Look(ref ballDef, "ballDef");
@@ -331,10 +311,7 @@ namespace PokeWorld
             if (PokemonMasterUtility.IsPokemonMasterDrafted(Pokemon))
             {
                 PokemonMasterUtility.DrawObedienceRadiusRingAroundMaster(Pokemon);
-                if (Pokemon.pather.curPath != null)
-                {
-                    Pokemon.pather.curPath.DrawPath(Pokemon);
-                }
+                Pokemon.pather.curPath?.DrawPath(Pokemon);
                 Pokemon.jobs.DrawLinesBetweenTargets();
             }
         }
@@ -366,41 +343,41 @@ namespace PokeWorld
                 Pokemon.training.SetWantedRecursive(DefDatabase<TrainableDef>.GetNamed("Obedience"), true);
                 Find.World.GetComponent<PokedexManager>().AddPokemonKindCaught(Pokemon.kindDef);
             }
-            else if(action == TradeAction.PlayerSells)
+            else if (action == TradeAction.PlayerSells)
             {
                 Pokemon.SetFaction(trader.Faction);
             }
         }
 
         public CompProperties_Pokemon Props => (CompProperties_Pokemon)this.props;
-        public int pokedexNumber => Props.pokedexNumber;
-        public int generation => Props.generation;
-        public List<TypeDef> types => Props.types;
-        public bool starter => Props.starter;
-        public int rarity => Props.rarity;
-        public bool canEvolve => Props.canEvolve;
-        public int evolutionLine => Props.evolutionLine;
-        public List<Evolution> evolutions => Props.evolutions;
-        public List<Move> moves => Props.moves;
-        public List<PokemonAttribute> attributes => Props.attributes;
-        public string expCategory => Props.expCategory;
-        public int wildLevelMin => Props.wildLevelMin;
-        public int wildLevelMax => Props.wildLevelMax;
-        public List<EggGroupDef> eggGroups => Props.eggGroups;
-        public int baseHP => Props.baseHP;
-        public int baseAttack => Props.baseAttack;
-        public int baseDefense => Props.baseDefense;
-        public int baseSpAttack => Props.baseSpAttack;
-        public int baseSpDefense => Props.baseSpDefense;
-        public int baseSpeed => Props.baseSpeed;
-        public int baseFriendship => Props.baseFriendship;
+        public int PokedexNumber => Props.pokedexNumber;
+        public int Generation => Props.generation;
+        public List<TypeDef> Types => Props.types;
+        public bool Starter => Props.starter;
+        public int Rarity => Props.rarity;
+        public bool CanEvolve => Props.canEvolve;
+        public int EvolutionLine => Props.evolutionLine;
+        public List<Evolution> Evolutions => Props.evolutions;
+        public List<Move> Moves => Props.moves;
+        public List<PokemonAttribute> Attributes => Props.attributes;
+        public string ExpCategory => Props.expCategory;
+        public int WildLevelMin => Props.wildLevelMin;
+        public int WildLevelMax => Props.wildLevelMax;
+        public List<EggGroupDef> EggGroups => Props.eggGroups;
+        public int BaseHP => Props.baseHP;
+        public int BaseAttack => Props.baseAttack;
+        public int BaseDefense => Props.baseDefense;
+        public int BaseSpAttack => Props.baseSpAttack;
+        public int BaseSpDefense => Props.baseSpDefense;
+        public int BaseSpeed => Props.baseSpeed;
+        public int BaseFriendship => Props.baseFriendship;
         public List<EVYield> EVYields => Props.EVYields;
-        public int catchRate => Props.catchRate;
-        public float femaleRatio => Props.femaleRatio;     
-        public float shinyChance => Props.shinyChance;
-        public FormChangerCondition formChangerCondition => Props.formChangerCondition;
-        public bool showFormLabel => Props.showFormLabel;
-        public List<PokemonForm> forms => Props.forms;
+        public int CatchRate => Props.catchRate;
+        public float FemaleRatio => Props.femaleRatio;
+        public float ShinyChance => Props.shinyChance;
+        public FormChangerCondition FormChangerCondition => Props.formChangerCondition;
+        public bool ShowFormLabel => Props.showFormLabel;
+        public List<PokemonForm> Forms => Props.forms;
 
         public ShinyTracker shinyTracker;
         public LevelTracker levelTracker;

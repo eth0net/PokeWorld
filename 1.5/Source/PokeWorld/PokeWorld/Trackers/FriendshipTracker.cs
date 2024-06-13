@@ -25,7 +25,7 @@ namespace PokeWorld
         {
             this.comp = comp;
             pokemonHolder = (Pawn)comp.parent;
-            baseFriendship = comp.baseFriendship;
+            baseFriendship = comp.BaseFriendship;
             friendship = baseFriendship;
         }
         public void FriendshipTick()

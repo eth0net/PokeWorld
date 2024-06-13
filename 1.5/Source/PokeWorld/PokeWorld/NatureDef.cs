@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RimWorld;
+﻿using RimWorld;
 using Verse;
 
 namespace PokeWorld
@@ -14,9 +9,10 @@ namespace PokeWorld
         public StatDef decreasedStat;
         public float increaseMult = 1.1f;
         public float decreaseMult = 0.9f;
+
         public float GetMultiplier(StatDef stat)
         {
-            if(increasedStat != null && decreasedStat != null && increasedStat != decreasedStat)
+            if (increasedStat != null && decreasedStat != null && increasedStat != decreasedStat)
             {
                 if (stat == increasedStat)
                 {

@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Verse;
-using Verse.AI;
-using HarmonyLib;
+﻿using HarmonyLib;
 using RimWorld;
+using Verse;
 
 namespace PokeWorld
 {
@@ -18,10 +12,7 @@ namespace PokeWorld
         {
             Thing thing = __instance.job.targetA.Thing;
             CompPokemonSpawner comp = thing.TryGetComp<CompPokemonSpawner>();
-            if (comp != null)
-            {
-                comp.TickAction(__instance);                
-            }
+            comp?.TickAction(__instance);
         }
     }
 }

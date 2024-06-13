@@ -20,7 +20,7 @@ namespace PokeWorld
             CompPokemon comp = pawn.TryGetComp<CompPokemon>();
             if (comp != null)
             {
-                if (comp.types.Contains(type))
+                if (comp.Types.Contains(type))
                 {
                     return true;
                 }

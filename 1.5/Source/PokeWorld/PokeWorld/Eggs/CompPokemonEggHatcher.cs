@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RimWorld;
-using Verse;
+﻿using RimWorld;
 using RimWorld.Planet;
-using UnityEngine;
+using Verse;
 
 namespace PokeWorld
 {
     public class CompPokemonEggHatcher : CompHatcher
     {
         private float pokemonEggGestateProgress;
+
         public override void CompTick()
         {
             if (!TemperatureDamaged)
@@ -25,11 +20,13 @@ namespace PokeWorld
                 }
             }
         }
+
         public override void PostExposeData()
         {
             base.PostExposeData();
             Scribe_Values.Look(ref pokemonEggGestateProgress, "PW_pokemonEggGestateProgress", 0f);
         }
+
         public override string CompInspectStringExtra()
         {
 
@@ -54,10 +51,12 @@ namespace PokeWorld
             }
             return null;
         }
+
         public override string TransformLabel(string label)
         {
             return "PW_PokemonEgg".Translate();
         }
+
         public void HatchPokemon()
         {
             try
@@ -67,7 +66,7 @@ namespace PokeWorld
                 {
                     Pawn pawn = PawnGenerator.GeneratePawn(request);
                     CompPokemon comp = pawn.TryGetComp<CompPokemon>();
-                    if(comp != null)
+                    if (comp != null)
                     {
                         comp.levelTracker.level = 1;
                         comp.levelTracker.UpdateExpToNextLvl();
@@ -81,15 +80,15 @@ namespace PokeWorld
                             {
                                 if (pawn.playerSettings != null && hatcheeParent.playerSettings != null && hatcheeParent.Faction == hatcheeFaction)
                                 {
-                                    pawn.playerSettings.AreaRestriction = hatcheeParent.playerSettings.AreaRestriction;
+                                    pawn.playerSettings.AreaRestrictionInPawnCurrentMap = hatcheeParent.playerSettings.AreaRestrictionInPawnCurrentMap;
                                 }
                                 if (pawn.RaceProps.IsFlesh)
                                 {
                                     pawn.relations.AddDirectRelation(PawnRelationDefOf.Parent, hatcheeParent);
                                 }
-                                if(comp.formTracker != null)
+                                if (comp.formTracker != null)
                                 {
-                                    if(hatcheeParent.TryGetComp<CompDittoEggLayer>() != null && otherParent != null)
+                                    if (hatcheeParent.TryGetComp<CompDittoEggLayer>() != null && otherParent != null)
                                     {
                                         CompPokemon comp2 = otherParent.TryGetComp<CompPokemon>();
                                         if (comp2 != null && comp2.formTracker != null)
@@ -104,7 +103,7 @@ namespace PokeWorld
                                         {
                                             comp.formTracker.TryInheritFormFromParent(comp3.formTracker);
                                         }
-                                    }                                
+                                    }
                                 }
                             }
                             if (otherParent != null && (hatcheeParent == null || hatcheeParent.gender != otherParent.gender) && pawn.RaceProps.IsFlesh)
@@ -119,7 +118,7 @@ namespace PokeWorld
                         if (parent.Spawned)
                         {
                             FilthMaker.TryMakeFilth(parent.Position, parent.Map, ThingDefOf.Filth_AmnioticFluid);
-                        }                      
+                        }
                     }
                     else
                     {

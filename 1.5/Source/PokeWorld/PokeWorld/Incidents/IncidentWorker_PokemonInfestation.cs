@@ -8,6 +8,7 @@ using Verse;
 using Verse.AI.Group;
 using Verse.Sound;
 using UnityEngine;
+using LudeonTK;
 
 
 
@@ -19,13 +20,12 @@ namespace PokeWorld
 
 		protected override bool CanFireNowSub(IncidentParms parms)
 		{
-			Map map = (Map)parms.target;
-			IntVec3 cell;
-			if (base.CanFireNowSub(parms) && HiveUtility.TotalSpawnedHivesCount(map) < 30)
-			{
-				return InfestationCellFinder.TryFindCell(out cell, map);
-			}
-			return false;
+            Map map = (Map)parms.target;
+            if (base.CanFireNowSub(parms) && HiveUtility.TotalSpawnedHivesCount(map) < 30)
+            {
+                return InfestationCellFinder.TryFindCell(out _, map);
+            }
+            return false;
 		}
 
 		protected override bool TryExecuteWorker(IncidentParms parms)
@@ -78,7 +78,7 @@ namespace PokeWorld
 							}
 						}
 					}
-					return flag ? true : false;
+					return flag;
 				}, map, out cell))
 				{
 					return null;
@@ -135,25 +135,25 @@ namespace PokeWorld
 
 		private Sustainer sustainer;
 
-		private static MaterialPropertyBlock matPropertyBlock = new MaterialPropertyBlock();
+		private static readonly MaterialPropertyBlock matPropertyBlock = new MaterialPropertyBlock();
 
 		private readonly FloatRange ResultSpawnDelay = new FloatRange(26f, 30f);
 
-		[TweakValue("Gameplay", 0f, 1f)]
-		private static float DustMoteSpawnMTB = 0.2f;
+        [TweakValue("Gameplay", 0f, 1f)]
+        private static readonly float DustMoteSpawnMTB = 0.2f;
 
-		[TweakValue("Gameplay", 0f, 1f)]
-		private static float FilthSpawnMTB = 0.3f;
+        [TweakValue("Gameplay", 0f, 1f)]
+        private static readonly float FilthSpawnMTB = 0.3f;
 
-		[TweakValue("Gameplay", 0f, 10f)]
-		private static float FilthSpawnRadius = 3f;
+        [TweakValue("Gameplay", 0f, 10f)]
+        private static readonly float FilthSpawnRadius = 3f;
 
-		private static readonly Material TunnelMaterial = MaterialPool.MatFrom("Things/Filth/Grainy/GrainyA", ShaderDatabase.Transparent);
+        private static readonly Material TunnelMaterial = MaterialPool.MatFrom("Things/Filth/Grainy/GrainyA", ShaderDatabase.Transparent);
 
-		private static List<ThingDef> filthTypes = new List<ThingDef>();
+        private static readonly List<ThingDef> filthTypes = new List<ThingDef>();
 
-		public static void ResetStaticData()
-		{
+        public static void ResetStaticData()
+        {
 			filthTypes.Clear();
 			filthTypes.Add(ThingDefOf.Filth_Dirt);
 			filthTypes.Add(ThingDefOf.Filth_Dirt);
@@ -189,15 +189,17 @@ namespace PokeWorld
 			}
 			sustainer.Maintain();
 			Vector3 vector = base.Position.ToVector3Shifted();
-			if (Rand.MTBEventOccurs(FilthSpawnMTB, 1f, 1.TicksToSeconds()) && CellFinder.TryFindRandomReachableCellNear(base.Position, base.Map, FilthSpawnRadius, TraverseParms.For(TraverseMode.NoPassClosedDoors), null, null, out var result))
+			if (Rand.MTBEventOccurs(FilthSpawnMTB, 1f, 1.TicksToSeconds()) && CellFinder.TryFindRandomReachableNearbyCell(base.Position, base.Map, FilthSpawnRadius, TraverseParms.For(TraverseMode.NoPassClosedDoors), null, null, out var result))
 			{
 				FilthMaker.TryMakeFilth(result, base.Map, filthTypes.RandomElement());
 			}
 			if (Rand.MTBEventOccurs(DustMoteSpawnMTB, 1f, 1.TicksToSeconds()))
 			{
-				Vector3 loc = new Vector3(vector.x, 0f, vector.z);
-				loc.y = AltitudeLayer.MoteOverhead.AltitudeFor();
-				FleckMaker.ThrowDustPuffThick(loc, base.Map, Rand.Range(1.5f, 3f), new Color(1f, 1f, 1f, 2.5f));
+                Vector3 loc = new Vector3(vector.x, 0f, vector.z)
+                {
+                    y = AltitudeLayer.MoteOverhead.AltitudeFor()
+                };
+                FleckMaker.ThrowDustPuffThick(loc, base.Map, Rand.Range(1.5f, 3f), new Color(1f, 1f, 1f, 2.5f));
 			}
 			if (secondarySpawnTick > Find.TickManager.TicksGame)
 			{
@@ -253,21 +255,21 @@ namespace PokeWorld
 			}
 		}
 
-		public override void Draw()
+		protected override void DrawAt(Vector3 drawLoc, bool flip = false)
 		{
 			Rand.PushState();
 			Rand.Seed = thingIDNumber;
 			for (int i = 0; i < 6; i++)
 			{
-				DrawDustPart(Rand.Range(0f, 360f), Rand.Range(0.9f, 1.1f) * (float)Rand.Sign * 4f, Rand.Range(1f, 1.5f));
+				DrawDustPart(drawLoc, Rand.Range(0f, 360f), Rand.Range(0.9f, 1.1f) * (float)Rand.Sign * 4f, Rand.Range(1f, 1.5f));
 			}
 			Rand.PopState();
 		}
 
-		private void DrawDustPart(float initialAngle, float speedMultiplier, float scale)
+		private void DrawDustPart(Vector3 drawLoc, float initialAngle, float speedMultiplier, float scale)
 		{
 			float num = (Find.TickManager.TicksGame - secondarySpawnTick).TicksToSeconds();
-			Vector3 pos = base.Position.ToVector3ShiftedWithAltitude(AltitudeLayer.Filth);
+			Vector3 pos = drawLoc.ToIntVec3().ToVector3ShiftedWithAltitude(AltitudeLayer.Filth);
 			pos.y += 3f / 70f * Rand.Range(0f, 1f);
 			Color value = new Color(0.470588237f, 98f / 255f, 83f / 255f, 0.7f);
 			matPropertyBlock.SetColor(ShaderPropertyIDs.Color, value);

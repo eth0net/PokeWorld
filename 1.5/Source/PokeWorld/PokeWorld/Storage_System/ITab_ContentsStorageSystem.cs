@@ -61,7 +61,7 @@ namespace PokeWorld
 				}
 				if (flagSortDex)
 				{
-					return listInt.OrderBy((Thing x) => x.TryGetComp<CompPokemon>().pokedexNumber).ToList();
+					return listInt.OrderBy((Thing x) => x.TryGetComp<CompPokemon>().PokedexNumber).ToList();
 				}
 				else if (flagSortName)
                 {
@@ -203,7 +203,7 @@ namespace PokeWorld
 				Widgets.Label(rect6, str2.Truncate(rect6.width));
 				Text.WordWrap = true;
 				int x = 0;
-				foreach(TypeDef typeDef in comp.types)
+				foreach(TypeDef typeDef in comp.Types)
                 {
 					Rect rect7 = new Rect(240f + 40f * x, y + 7, 32, 14);
 					Widgets.DrawTextureFitted(rect7, typeDef.uiIcon, 1);

@@ -69,7 +69,7 @@ namespace PokeWorld
                 {
                     name = GetShinyStar() + name;
                 }
-                if(comp.formTracker != null && comp.showFormLabel && (pawn.Faction == null || pawn.Faction != null && (!pawn.Faction.IsPlayer || pawn.Name.Numerical)))
+                if(comp.formTracker != null && comp.ShowFormLabel && (pawn.Faction == null || pawn.Faction != null && (!pawn.Faction.IsPlayer || pawn.Name.Numerical)))
                 {
                     name += " " + GetFormLabel(comp);
                 }          
@@ -84,7 +84,7 @@ namespace PokeWorld
         {
             if(comp.formTracker.currentFormIndex != -1)
             {
-                return comp.forms[comp.formTracker.currentFormIndex].label;
+                return comp.Forms[comp.formTracker.currentFormIndex].label;
             }
             return "";
         }

@@ -1,12 +1,8 @@
-﻿using System;
+﻿using HarmonyLib;
+using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RimWorld;
 using Verse;
-using UnityEngine;
-using HarmonyLib;
 
 namespace PokeWorld
 {
@@ -28,7 +24,7 @@ namespace PokeWorld
         }
     }
 
-    [HarmonyPatch(typeof(ManhunterPackIncidentUtility))]
+    [HarmonyPatch(typeof(IncidentWorker_FarmAnimalsWanderIn))]
     [HarmonyPatch("TryFindManhunterAnimalKind")]
     class ManhunterPackIncidentUtility_TryFindManhunterAnimalKind_Patch
     {
@@ -44,7 +40,7 @@ namespace PokeWorld
                 IEnumerable<PawnKindDef> source = DefDatabase<PawnKindDef>.AllDefs.Where((PawnKindDef k) => k.RaceProps.Animal && !k.race.HasComp(typeof(CompPokemon)) && k.canArriveManhunter && (__1 == -1 || Find.World.tileTemperatures.SeasonAndOutdoorTemperatureAcceptableFor(__1, k.race)));
                 if (source.Any())
                 {
-                    if (source.TryRandomElementByWeight((PawnKindDef a) => ManhunterPackIncidentUtility.ManhunterAnimalWeight(a, __0), out __2))
+                    if (source.TryRandomElementByWeight((PawnKindDef a) => AggressiveAnimalIncidentUtility.AnimalWeight(a, __0), out __2))
                     {
                         __result = true;
                     }
@@ -63,8 +59,8 @@ namespace PokeWorld
                 {
                     __2 = null;
                     __result = false;
-                }                
-            }            
+                }
+            }
         }
     }
     [HarmonyPatch(typeof(IncidentWorker_Infestation))]
@@ -125,7 +121,7 @@ namespace PokeWorld
     {
         public static bool Prefix(FiringIncident __0, ref bool __result)
         {
-            if(__0.def.Worker.def == DefDatabase<IncidentDef>.GetNamed("Alphabeavers"))
+            if (__0.def.Worker.def == DefDatabase<IncidentDef>.GetNamed("Alphabeavers"))
             {
                 if (PokeWorldSettings.OkforPokemon())
                 {

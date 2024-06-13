@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Verse;
 
 namespace PokeWorld
@@ -11,7 +7,7 @@ namespace PokeWorld
     {
 
         public CompProperties_HealingItem Props => (CompProperties_HealingItem)this.props;
-        public float healingAmount => Props.healingAmount;
+        public float HealingAmount => Props.healingAmount;
     }
 
     class CompProperties_HealingItem : CompProperties

@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using RimWorld;
+using System;
 using Verse;
-using RimWorld;
 
 namespace PokeWorld
 {
@@ -14,13 +10,17 @@ namespace PokeWorld
         public bool canSpawn = true;
         public int timer = 0;
         public int delay;
-        public CompProperties_PokemonSpawner Props => (CompProperties_PokemonSpawner)this.props;        
-        public PawnKindDef pawnKind => Props.pawnKind;
+
+        public CompProperties_PokemonSpawner Props => (CompProperties_PokemonSpawner)this.props;
+
+        public PawnKindDef PawnKind => Props.pawnKind;
+
         public override void Initialize(CompProperties props)
         {
             base.Initialize(props);
             delay = Props.delay.RandomInRange;
         }
+        
         public override void PostExposeData()
         {
             base.PostExposeData();
@@ -29,6 +29,7 @@ namespace PokeWorld
             Scribe_Values.Look(ref active, "active", defaultValue: false);
             Scribe_Values.Look(ref canSpawn, "canSpawn", defaultValue: false);
         }
+        
         public override void CompTick()
         {
             base.CompTick();
@@ -37,7 +38,7 @@ namespace PokeWorld
                 timer += 1;
                 if (timer > delay && parent.Spawned)
                 {
-                    Pawn pokemon = PokemonGeneratorUtility.GenerateAndSpawnNewPokemon(pawnKind, null, parent.Position, parent.Map);
+                    Pawn pokemon = PokemonGeneratorUtility.GenerateAndSpawnNewPokemon(PawnKind, null, parent.Position, parent.Map);
                     pokemon.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Manhunter);
                     Find.LetterStack.ReceiveLetter("PW_WildRotomLetterLabel".Translate(), "PW_WildRotomLetterText".Translate(), LetterDefOf.ThreatBig, pokemon);
                     active = false;
@@ -45,21 +46,23 @@ namespace PokeWorld
                 }
             }
         }
+        
         public void TickAction(JobDriver_WatchTelevision jobDriver)
         {
             Thing television = jobDriver.job.targetA.Thing;
             Pawn pawn = jobDriver.pawn;
             if (canSpawn && television != null && television.TryGetComp<CompPokemonSpawner>() == this && television.Spawned && pawn != null && pawn.Faction.IsPlayer && PokeWorldSettings.allowGen4)
             {
-                if (!active && television.Map.GameConditionManager.ConditionIsActive(GameConditionDefOf.Eclipse))               
+                if (!active && television.Map.GameConditionManager.ConditionIsActive(GameConditionDefOf.Eclipse))
                 {
                     string name = pawn.LabelShort;
                     Find.LetterStack.ReceiveLetter("PW_MalevolentTVLetterLabel".Translate(), "PW_MalevolentTVLetterText".Translate(name), LetterDefOf.ThreatSmall, television);
                     active = true;
-                }                    
+                }
             }
         }
     }
+    
     public class CompProperties_PokemonSpawner : CompProperties
     {
         public PawnKindDef pawnKind;

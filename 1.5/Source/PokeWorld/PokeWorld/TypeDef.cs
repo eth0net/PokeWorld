@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RimWorld;
-using Verse;
+﻿using System.Collections.Generic;
 using UnityEngine;
+using Verse;
 
 namespace PokeWorld
 {
@@ -29,13 +24,13 @@ namespace PokeWorld
             base.PostLoad();
             LongEventHandler.ExecuteWhenFinished(delegate
             {
-                uiIcon = ContentFinder<Texture2D>.Get(uiIconPath);                              
+                uiIcon = ContentFinder<Texture2D>.Get(uiIconPath);
             });
         }
 
         public float GetDamageMultiplier(TypeDef attackType)
         {
-            if(resistances != null)
+            if (resistances != null)
             {
                 foreach (TypeDef def in resistances)
                 {

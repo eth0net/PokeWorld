@@ -34,7 +34,7 @@ namespace PokeWorld
                         if (targetComp != null)
                         {
                             defense = targetComp.statTracker.defenseStat;
-                            foreach(TypeDef typeDef in targetComp.types)
+                            foreach(TypeDef typeDef in targetComp.Types)
                             {
                                 typeMultiplier *= typeDef.GetDamageMultiplier(casterComp.moveTracker.lastUsedMove.type);
                             }

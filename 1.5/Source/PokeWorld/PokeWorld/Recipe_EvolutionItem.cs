@@ -1,11 +1,6 @@
-﻿using System;
+﻿using RimWorld;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RimWorld;
 using Verse;
-using UnityEngine;
 
 namespace PokeWorld
 {
@@ -19,19 +14,21 @@ namespace PokeWorld
                 pawn.GetComp<CompPokemon>().levelTracker.TryEvolveWithItem(ingredients[0]);
             }
         }
+
         public override bool AvailableOnNow(Thing thing, BodyPartRecord part = null)
         {
-            if(thing is Pawn pawn)
+            if (thing is Pawn pawn)
             {
                 CompPokemon comp = pawn.TryGetComp<CompPokemon>();
-                if (comp != null && comp.evolutions != null) {
-                    foreach(Evolution evo in comp.evolutions)
+                if (comp != null && comp.Evolutions != null)
+                {
+                    foreach (Evolution evo in comp.Evolutions)
                     {
                         if (PokeWorldSettings.GenerationAllowed(evo.pawnKind.race.GetCompProperties<CompProperties_Pokemon>().generation))
                         {
                             return true;
                         }
-                    }                    
+                    }
                 }
             }
             return false;

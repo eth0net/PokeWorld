@@ -1,11 +1,8 @@
-﻿using System;
+﻿using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RimWorld;
-using Verse;
 using UnityEngine;
+using Verse;
 
 namespace PokeWorld
 {
@@ -20,28 +17,28 @@ namespace PokeWorld
         {
             this.comp = comp;
             pokemonHolder = comp.Pokemon;
-            if (comp.formChangerCondition == FormChangerCondition.Fixed)
+            if (comp.FormChangerCondition == FormChangerCondition.Fixed)
             {
-                ChangeIntoFixed(comp.forms.RandomElementByWeight((PokemonForm form) => form.weight));
+                ChangeIntoFixed(comp.Forms.RandomElementByWeight((PokemonForm form) => form.weight));
             }
-            else if(currentFormIndex == -1)
+            else if (currentFormIndex == -1)
             {
-                IEnumerable<PokemonForm> forms = comp.forms.Where((PokemonForm x) => x.isDefault);
+                IEnumerable<PokemonForm> forms = comp.Forms.Where((PokemonForm x) => x.isDefault);
                 if (forms.Any())
                 {
                     ChangeIntoFixed(forms.First());
                     return;
                 }
-            }                        
+            }
         }
         public bool TryInheritFormFromPreEvo(FormTracker preEvoFormTracker)
         {
-            if(comp.formChangerCondition == FormChangerCondition.Fixed)
+            if (comp.FormChangerCondition == FormChangerCondition.Fixed)
             {
                 string key = preEvoFormTracker.GetCurrentFormKey();
-                if(key != "")
+                if (key != "")
                 {
-                    IEnumerable<PokemonForm> forms = comp.forms.Where((PokemonForm form) => form.texPathKey == key);
+                    IEnumerable<PokemonForm> forms = comp.Forms.Where((PokemonForm form) => form.texPathKey == key);
                     if (forms.Any())
                     {
                         ChangeIntoFixed(forms.First());
@@ -53,12 +50,12 @@ namespace PokeWorld
         }
         public bool TryInheritFormFromParent(FormTracker parentFormTracker)
         {
-            if (comp.formChangerCondition == FormChangerCondition.Fixed)
+            if (comp.FormChangerCondition == FormChangerCondition.Fixed)
             {
                 string key = parentFormTracker.GetCurrentFormKey();
                 if (key != "")
                 {
-                    IEnumerable<PokemonForm> forms = comp.forms.Where((PokemonForm form) => form.texPathKey == key);
+                    IEnumerable<PokemonForm> forms = comp.Forms.Where((PokemonForm form) => form.texPathKey == key);
                     if (forms.Any())
                     {
                         ChangeIntoFixed(forms.First());
@@ -72,16 +69,18 @@ namespace PokeWorld
         {
             if (pokemonHolder.Faction != null && pokemonHolder.Faction.IsPlayer)
             {
-                if(comp.formChangerCondition == FormChangerCondition.Selectable)
+                if (comp.FormChangerCondition == FormChangerCondition.Selectable)
                 {
-                    Command_Action command_Action = new Command_Action();
-                    command_Action.action = delegate
+                    Command_Action command_Action = new Command_Action
                     {
-                        ProcessInput();
+                        action = delegate
+                        {
+                            ProcessInput();
+                        }
                     };
-                    if(currentFormIndex != -1)
+                    if (currentFormIndex != -1)
                     {
-                        command_Action.defaultLabel = "PW_FormName".Translate(comp.forms[currentFormIndex].label);
+                        command_Action.defaultLabel = "PW_FormName".Translate(comp.Forms[currentFormIndex].label);
                     }
                     else
                     {
@@ -89,14 +88,14 @@ namespace PokeWorld
                     }
                     command_Action.defaultDesc = "PW_ChangeForm".Translate();
                     command_Action.hotKey = KeyBindingDefOf.Misc3;
-                    command_Action.icon = ContentFinder<Texture2D>.Get(pokemonHolder.Drawer.renderer.graphics.nakedGraphic.path + "_east");
+                    command_Action.icon = ContentFinder<Texture2D>.Get(pokemonHolder.Drawer.renderer.BodyGraphic.path + "_east");
                     yield return command_Action;
                 }
             }
         }
         private bool CanUseForm(PokemonForm form)
         {
-            if (comp.forms.Contains(form) && CheckTimeOfDay(form) && CheckWeather(form) && CheckBiome(form))
+            if (comp.Forms.Contains(form) && CheckTimeOfDay(form) && CheckWeather(form) && CheckBiome(form))
             {
                 return true;
             }
@@ -105,7 +104,7 @@ namespace PokeWorld
         private bool CheckWeather(PokemonForm form)
         {
             WeatherDef currentWeather = pokemonHolder.Map.weatherManager.curWeather;
-            if((form.includeWeathers == null || form.includeWeathers.Contains(currentWeather)) && (form.excludeWeathers == null || !form.excludeWeathers.Contains(currentWeather)))
+            if ((form.includeWeathers == null || form.includeWeathers.Contains(currentWeather)) && (form.excludeWeathers == null || !form.excludeWeathers.Contains(currentWeather)))
             {
                 return true;
             }
@@ -120,10 +119,10 @@ namespace PokeWorld
             int currentMapTime = GenLocalDate.HourOfDay(pokemonHolder.Map);
             if (form.timeOfDay == TimeOfDay.Day)
             {
-                if(7 <= currentMapTime && currentMapTime < 19)
+                if (7 <= currentMapTime && currentMapTime < 19)
                 {
                     return true;
-                }           
+                }
             }
             if (form.timeOfDay == TimeOfDay.Night)
             {
@@ -135,7 +134,7 @@ namespace PokeWorld
             return false;
         }
         private bool CheckBiome(PokemonForm form)
-        {         
+        {
             BiomeDef currentBiome = pokemonHolder.Map.Biome;
             if ((form.includeBiomes == null || form.includeBiomes.Contains(currentBiome)) && (form.excludeBiomes == null || !form.excludeBiomes.Contains(currentBiome)))
             {
@@ -145,40 +144,40 @@ namespace PokeWorld
         }
         public string GetCurrentFormKey()
         {
-            if(currentFormIndex == -1)
+            if (currentFormIndex == -1)
             {
                 return "";
             }
             else
             {
-                return comp.forms[currentFormIndex].texPathKey;
+                return comp.Forms[currentFormIndex].texPathKey;
             }
         }
         private void ReturnToBaseForm()
         {
             currentFormIndex = -1;
-            pokemonHolder.Drawer.renderer.graphics.ResolveAllGraphics();
+            pokemonHolder.Drawer.renderer.SetAllGraphicsDirty();
         }
         private void ChangeInto(PokemonForm form)
         {
-            currentFormIndex = comp.forms.IndexOf(form);
+            currentFormIndex = comp.Forms.IndexOf(form);
             for (int i = 0; i < 6; i++)
             {
                 FleckMaker.ThrowDustPuff(pokemonHolder.Position, pokemonHolder.Map, 2f);
             }
-            pokemonHolder.Drawer.renderer.graphics.ResolveAllGraphics();
+            pokemonHolder.Drawer.renderer.SetAllGraphicsDirty();
         }
         private void ChangeIntoFixed(PokemonForm form)
         {
-            currentFormIndex = comp.forms.IndexOf(form);      
+            currentFormIndex = comp.Forms.IndexOf(form);
         }
         public void FormTick()
         {
-            if (comp.formChangerCondition == FormChangerCondition.Environment && pokemonHolder.Spawned)
+            if (comp.FormChangerCondition == FormChangerCondition.Environment && pokemonHolder.Spawned)
             {
-                if (currentFormIndex == -1 || comp.forms[currentFormIndex].isDefault || !CanUseForm(comp.forms[currentFormIndex]))
+                if (currentFormIndex == -1 || comp.Forms[currentFormIndex].isDefault || !CanUseForm(comp.Forms[currentFormIndex]))
                 {
-                    foreach (PokemonForm form in comp.forms)
+                    foreach (PokemonForm form in comp.Forms)
                     {
                         if (!form.isDefault && CanUseForm(form))
                         {
@@ -186,20 +185,20 @@ namespace PokeWorld
                             return;
                         }
                     }
-                    if (currentFormIndex == -1 || !comp.forms[currentFormIndex].isDefault)
+                    if (currentFormIndex == -1 || !comp.Forms[currentFormIndex].isDefault)
                     {
-                        IEnumerable<PokemonForm> forms = comp.forms.Where((PokemonForm x) => x.isDefault);
-                        if(forms.Any())
+                        IEnumerable<PokemonForm> forms = comp.Forms.Where((PokemonForm x) => x.isDefault);
+                        if (forms.Any())
                         {
                             ChangeInto(forms.First());
                             return;
                         }
-                        if(currentFormIndex != -1)
+                        if (currentFormIndex != -1)
                         {
                             ReturnToBaseForm();
-                        }                                     
-                    }                        
-                }             
+                        }
+                    }
+                }
             }
         }
         private bool CanKeepCurrentForm(PokemonForm form)
@@ -213,24 +212,26 @@ namespace PokeWorld
         private void ProcessInput()
         {
             List<FloatMenuOption> list = new List<FloatMenuOption>();
-            foreach (PokemonForm form in comp.forms)
+            foreach (PokemonForm form in comp.Forms)
             {
                 FloatMenuOption floatMenuOption = new FloatMenuOption(form.label.CapitalizeFirst(), delegate
                 {
-                    if(comp.forms[currentFormIndex] != form)
+                    if (comp.Forms[currentFormIndex] != form)
                     {
                         ChangeInto(form);
                     }
                 });
-                list.Add(floatMenuOption);            
+                list.Add(floatMenuOption);
             }
             if (list.Count == 0)
             {
                 Messages.Message("PW_NoFormsChangeInto".Translate(), MessageTypeDefOf.RejectInput, historical: false);
                 return;
             }
-            FloatMenu floatMenu = new FloatMenu(list);
-            floatMenu.vanishIfMouseDistant = true;
+            FloatMenu floatMenu = new FloatMenu(list)
+            {
+                vanishIfMouseDistant = true
+            };
             Find.WindowStack.Add(floatMenu);
         }
 

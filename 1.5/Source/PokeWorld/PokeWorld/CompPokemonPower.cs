@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RimWorld;
-using Verse;
+﻿using RimWorld;
 using UnityEngine;
+using Verse;
 
 namespace PokeWorld
 {
     public class CompPokemonPower : CompPowerTrader
     {
-        private float maxDistance = 7.5f;
+        private readonly float maxDistance = 7.5f;
 
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
@@ -21,8 +16,8 @@ namespace PokeWorld
 
         public override void CompTick()
         {
-            base.CompTick();                        
-            if(parent is Pawn pawn && pawn.Spawned && !pawn.Dead && pawn.Faction != null && pawn.Faction.IsPlayer)
+            base.CompTick();
+            if (parent is Pawn pawn && pawn.Spawned && !pawn.Dead && pawn.Faction != null && pawn.Faction.IsPlayer)
             {
                 if (!PowerOn)
                 {
@@ -33,14 +28,14 @@ namespace PokeWorld
                 {
                     parent.Map.powerNetManager.Notify_ConnectorWantsConnect(this);
                 }
-                else if(PowerNet != null && connectParent != null)
+                else if (PowerNet != null && connectParent != null)
                 {
                     if (IntVec3Utility.DistanceTo(parent.Position, connectParent.parent.Position) > maxDistance + connectParent.parent.def.Size.Magnitude)
                     {
                         parent.Map.powerNetManager.Notify_ConnectorDespawned(this);
                     }
                 }
-                else if(PowerNet != null && connectParent == null)
+                else if (PowerNet != null && connectParent == null)
                 {
                     PowerNet.DeregisterConnector(this);
                 }
@@ -56,15 +51,15 @@ namespace PokeWorld
                     }
                     connectParent = null;
                 }
-            }            
+            }
         }
         public override void ResetPowerVars()
         {
             base.ResetPowerVars();
-            if(parent is Pawn pawn && pawn.Spawned && !pawn.Dead && pawn.Faction != null && pawn.Faction.IsPlayer)
+            if (parent is Pawn pawn && pawn.Spawned && !pawn.Dead && pawn.Faction != null && pawn.Faction.IsPlayer)
             {
-                PowerOutput = (pawn.Starving() ? 1f : -1f) * (Props.PowerConsumption * Mathf.Sqrt(pawn.TryGetComp<CompPokemon>().levelTracker.level) / 2);         
-            }       
+                PowerOutput = (pawn.Starving() ? 1f : -1f) * (Props.PowerConsumption * Mathf.Sqrt(pawn.TryGetComp<CompPokemon>().levelTracker.level) / 2);
+            }
         }
         public override void SetUpPowerVars()
         {
@@ -76,7 +71,7 @@ namespace PokeWorld
         }
         public override string CompInspectStringExtra()
         {
-            if(parent is Pawn pawn && pawn.Spawned && !pawn.Dead && pawn.Faction != null && pawn.Faction.IsPlayer)
+            if (parent is Pawn pawn && pawn.Spawned && !pawn.Dead && pawn.Faction != null && pawn.Faction.IsPlayer)
             {
                 string text = (PowerOutput < 0) ? ((string)("PowerNeeded".Translate() + ": " + (0f - PowerOutput).ToString("#####0") + " W")) : ((string)("PowerOutput".Translate() + ": " + PowerOutput.ToString("#####0") + " W"));
                 if (PowerNet == null)
@@ -86,6 +81,6 @@ namespace PokeWorld
                 return text;
             }
             return null;
-        }       
+        }
     }
 }

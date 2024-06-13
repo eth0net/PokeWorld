@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using RimWorld;
 using Verse;
 using UnityEngine;
+using LudeonTK;
 
 namespace PokeWorld
 {
@@ -17,12 +18,12 @@ namespace PokeWorld
 		private const float InfoHeaderHeight = 50f;
 
 		[TweakValue("Interface", -100f, 300f)]
-		private static float PokemonMoveLeft = 220f;
+		private static readonly float PokemonMoveLeft = 220f;
 
 		[TweakValue("Interface", -100f, 300f)]
-		private static float PokemonMoveTop = 0f;
+        private static readonly float PokemonMoveTop = 0f;
 
-		private static readonly Texture2D LearnedTrainingTex = ContentFinder<Texture2D>.Get("UI/Icons/FixedCheck");
+        private static readonly Texture2D LearnedTrainingTex = ContentFinder<Texture2D>.Get("UI/Icons/FixedCheck");
 
 		private static readonly Texture2D LearnedNotTrainingTex = ContentFinder<Texture2D>.Get("UI/Icons/FixedCheckOff");
 
