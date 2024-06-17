@@ -1,5 +1,6 @@
 ﻿using HarmonyLib;
 using RimWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Verse;
@@ -37,9 +38,10 @@ namespace PokeWorld
 
     [HarmonyPatch(typeof(Mineable))]
     [HarmonyPatch("TrySpawnYield")]
+    [HarmonyPatch(new Type[] { typeof(Map), typeof(bool), typeof(Pawn) })]
     public class Mineable_TrySpawnYield_Patch
     {
-        public static void Postfix(Mineable __instance, Map __0, Pawn __3)
+        public static void Postfix(Mineable __instance, Map __0, Pawn __2)
         {
             CompPokFossilsEvoStoneDropper comp = __instance.TryGetComp<CompPokFossilsEvoStoneDropper>();
             if (comp != null)
@@ -50,15 +52,15 @@ namespace PokeWorld
                     Thing thing = ThingMaker.MakeThing(def);
                     thing.stackCount = 1;
                     GenPlace.TryPlaceThing(thing, __instance.Position, __0, ThingPlaceMode.Near, ForbidIfNecessary);
-                    if (__3 != null && __3.Faction == Faction.OfPlayer)
+                    if (__2 != null && __2.Faction == Faction.OfPlayer)
                     {
-                        Messages.Message("PW_FoundFossilOrEvoStone".Translate(__3.LabelShortCap, thing.Label), thing, MessageTypeDefOf.PositiveEvent);
+                        Messages.Message("PW_FoundFossilOrEvoStone".Translate(__2.LabelShortCap, thing.Label), thing, MessageTypeDefOf.PositiveEvent);
                     }
                 }
             }
             void ForbidIfNecessary(Thing thing, int count)
             {
-                if ((__3 == null || !__3.IsColonist) && thing.def.EverHaulable && !thing.def.designateHaulable)
+                if ((__2 == null || !__2.IsColonist) && thing.def.EverHaulable && !thing.def.designateHaulable)
                 {
                     thing.SetForbidden(value: true, warnOnFail: false);
                 }

@@ -2,6 +2,7 @@
 using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using Verse;
 
 namespace PokeWorld
@@ -24,10 +25,18 @@ namespace PokeWorld
         }
     }
 
-    [HarmonyPatch(typeof(IncidentWorker_FarmAnimalsWanderIn))]
-    [HarmonyPatch("TryFindManhunterAnimalKind")]
-    class ManhunterPackIncidentUtility_TryFindManhunterAnimalKind_Patch
+    [HarmonyPatch]
+    class AggressiveAnimalIncidentUtility_TryFindAggressiveAnimalKind_Patch
     {
+        public static MethodBase TargetMethod()
+        {
+            return AccessTools.Method(
+                typeof(AggressiveAnimalIncidentUtility),
+                nameof(AggressiveAnimalIncidentUtility.TryFindAggressiveAnimalKind),
+                new[] { typeof(float), typeof(int), typeof(PawnKindDef).MakeByRefType() }
+            );
+        }
+
         public static void Postfix(float __0, int __1, out PawnKindDef __2, ref bool __result)
         {
             if (PokeWorldSettings.OkforPokemon())
@@ -63,6 +72,7 @@ namespace PokeWorld
             }
         }
     }
+
     [HarmonyPatch(typeof(IncidentWorker_Infestation))]
     [HarmonyPatch("TryExecuteWorker")]
     class IncidentWorker_Infestation_TryExecuteWorker_Patch

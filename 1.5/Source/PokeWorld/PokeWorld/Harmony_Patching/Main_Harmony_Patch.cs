@@ -8,6 +8,7 @@ namespace PokeWorld
     {
         static Main()
         {
+            Harmony.DEBUG = true;
             var harmony = new Harmony("com.Rimworld.PokeWorld");
             harmony.PatchAll();
         }
