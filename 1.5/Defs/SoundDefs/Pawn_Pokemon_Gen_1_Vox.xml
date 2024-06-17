@@ -1,0 +1,2873 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <SoundDef>
+    <defName>Pawn_Bulbasaur_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/001_Bulbasaur</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Ivysaur_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/002_Ivysaur</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Venusaur_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/003_Venusaur</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Charmander_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/004_Charmander</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Charmeleon_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/005_Charmeleon</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Charizard_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/006_Charizard</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Squirtle_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/007_Squirtle</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Wartortle_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/008_Wartortle</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Blastoise_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/009_Blastoise</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Caterpie_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/010_Caterpie</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Metapod_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/011_Metapod</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Butterfree_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/012_Butterfree</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Weedle_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/013_Weedle</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Kakuna_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/014_Kakuna</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Beedrill_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/015_Beedrill</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Pidgey_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/016_Pidgey</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Pidgeotto_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/017_Pidgeotto</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Pidgeot_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/018_Pidgeot</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Rattata_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/019_Rattata</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Raticate_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/020_Raticate</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Spearow_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/021_Spearow</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Fearow_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/022_Fearow</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Ekans_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/023_Ekans</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Arbok_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/024_Arbok</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Pikachu_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/025_Pikachu</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Raichu_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/026_Raichu</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Sandshrew_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/027_Sandshrew</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Sandslash_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/028_Sandslash</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_NidoranF_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/029_NidoranF</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Nidorina_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/030_Nidorina</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Nidoqueen_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/031_Nidoqueen</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_NidoranM_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/032_NidoranM</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Nidorino_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/033_Nidorino</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Nidoking_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/034_Nidoking</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Clefairy_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/035_Clefairy</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Clefable_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/036_Clefable</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Vulpix_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/037_Vulpix</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Ninetales_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/038_Ninetales</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Jigglypuff_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/039_Jigglypuff</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Wigglytuff_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/040_Wigglytuff</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Zubat_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/041_Zubat</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Golbat_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/042_Golbat</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Oddish_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/043_Oddish</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Gloom_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/044_Gloom</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Vileplume_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/045_Vileplume</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Paras_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/046_Paras</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Parasect_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/047_Parasect</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Venonat_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/048_Venonat</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Venomoth_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/049_Venomoth</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Diglett_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/050_Diglett</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Dugtrio_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/051_Dugtrio</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Meowth_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/052_Meowth</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Persian_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/053_Persian</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Psyduck_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/054_Psyduck</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Golduck_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/055_Golduck</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Mankey_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/056_Mankey</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Primeape_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/057_Primeape</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Growlithe_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/058_Growlithe</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Arcanine_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/059_Arcanine</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Poliwag_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/060_Poliwag</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Poliwhirl_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/061_Poliwhirl</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Poliwrath_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/062_Poliwrath</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Abra_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/063_Abra</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Kadabra_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/064_Kadabra</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Alakazam_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/065_Alakazam</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Machop_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/066_Machop</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Machoke_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/067_Machoke</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Machamp_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/068_Machamp</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Bellsprout_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/069_Bellsprout</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Weepinbell_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/070_Weepinbell</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Victreebel_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/071_Victreebel</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Tentacool_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/072_Tentacool</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Tentacruel_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/073_Tentacruel</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Geodude_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/074_Geodude</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Graveler_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/075_Graveler</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Golem_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/076_Golem</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Ponyta_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/077_Ponyta</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Rapidash_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/078_Rapidash</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Slowpoke_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/079_Slowpoke</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Slowbro_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/080_Slowbro</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Magnemite_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/081_Magnemite</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Magneton_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/082_Magneton</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Farfetchd_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/083_Farfetchd</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Doduo_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/084_Doduo</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Dodrio_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/085_Dodrio</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Seel_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/086_Seel</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Dewgong_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/087_Dewgong</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Grimer_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/088_Grimer</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Muk_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/089_Muk</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Shellder_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/090_Shellder</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Cloyster_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/091_Cloyster</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Gastly_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/092_Gastly</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Haunter_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/093_Haunter</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Gengar_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/094_Gengar</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Onix_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/095_Onix</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Drowzee_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/096_Drowzee</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Hypno_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/097_Hypno</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Krabby_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/098_Krabby</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Kingler_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/099_Kingler</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Voltorb_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/100_Voltorb</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Electrode_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/101_Electrode</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Exeggcute_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/102_Exeggcute</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Exeggutor_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/103_Exeggutor</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Cubone_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/104_Cubone</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Marowak_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/105_Marowak</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Hitmonlee_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/106_Hitmonlee</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Hitmonchan_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/107_Hitmonchan</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Lickitung_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/108_Lickitung</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Koffing_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/109_Koffing</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Weezing_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/110_Weezing</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Rhyhorn_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/111_Rhyhorn</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Rhydon_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/112_Rhydon</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Chansey_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/113_Chansey</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Tangela_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/114_Tangela</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Kangaskhan_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/115_Kangaskhan</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Horsea_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/116_Horsea</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Seadra_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/117_Seadra</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Goldeen_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/118_Goldeen</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Seaking_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/119_Seaking</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Staryu_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/120_Staryu</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Starmie_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/121_Starmie</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_MrMime_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/122_MrMime</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Scyther_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/123_Scyther</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Jynx_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/124_Jynx</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Electabuzz_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/125_Electabuzz</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Magmar_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/126_Magmar</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Pinsir_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/127_Pinsir</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Tauros_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/128_Tauros</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Magikarp_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/129_Magikarp</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Gyarados_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/130_Gyarados</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Lapras_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/131_Lapras</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Ditto_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/132_Ditto</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Eevee_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/133_Eevee</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Vaporeon_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/134_Vaporeon</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Jolteon_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/135_Jolteon</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Flareon_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/136_Flareon</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Porygon_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/137_Porygon</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Omanyte_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/138_Omanyte</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Omastar_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/139_Omastar</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Kabuto_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/140_Kabuto</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Kabutops_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/141_Kabutops</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Aerodactyl_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/142_Aerodactyl</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Snorlax_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/143_Snorlax</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Articuno_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/144_Articuno</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Zapdos_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/145_Zapdos</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Moltres_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/146_Moltres</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Dratini_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/147_Dratini</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Dragonair_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/148_Dragonair</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Dragonite_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/149_Dragonite</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Mewtwo_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/150_Mewtwo</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_Mew_Call</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pokemon/Gen_1/151_Mew</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~24</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

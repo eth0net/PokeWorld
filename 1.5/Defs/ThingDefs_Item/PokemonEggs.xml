@@ -1,0 +1,3380 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggBulbasaur</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Bulbasaur</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggCharmander</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Charmander</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>70</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggSquirtle</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Squirtle</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggCaterpie</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>10</hatcherDaystoHatch>
+        <hatcherPawn>PW_Caterpie</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggWeedle</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>10</hatcherDaystoHatch>
+        <hatcherPawn>PW_Weedle</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggPidgey</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>10</hatcherDaystoHatch>
+        <hatcherPawn>PW_Pidgey</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggRattata</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>10</hatcherDaystoHatch>
+        <hatcherPawn>PW_Rattata</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggSpearow</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>10</hatcherDaystoHatch>
+        <hatcherPawn>PW_Spearow</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggEkans</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Ekans</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggSandshrew</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Sandshrew</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggNidoranF</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_NidoranF</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggNidoranM</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_NidoranM</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggVulpix</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Vulpix</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>70</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggZubat</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>10</hatcherDaystoHatch>
+        <hatcherPawn>PW_Zubat</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggOddish</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Oddish</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggParas</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Paras</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggVenonat</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Venonat</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggDiglett</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Diglett</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggMeowth</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Meowth</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggPsyduck</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Psyduck</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggMankey</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Mankey</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggGrowlithe</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Growlithe</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>70</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggPoliwag</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Poliwag</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggAbra</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Abra</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggMachop</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Machop</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggBellsprout</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Bellsprout</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggTentacool</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Tentacool</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggGeodude</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>10</hatcherDaystoHatch>
+        <hatcherPawn>PW_Geodude</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggPonyta</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Ponyta</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>70</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggSlowpoke</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Slowpoke</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggMagnemite</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Magnemite</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggFarfetchd</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Farfetchd</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggDoduo</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Doduo</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggSeel</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Seel</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggGrimer</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Grimer</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggShellder</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Shellder</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggGastly</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Gastly</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggOnix</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>16</hatcherDaystoHatch>
+        <hatcherPawn>PW_Onix</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggDrowzee</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Drowzee</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggKrabby</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Krabby</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggVoltorb</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Voltorb</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggExeggcute</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Exeggcute</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggCubone</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Cubone</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggLickitung</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Lickitung</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggKoffing</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Koffing</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggRhyhorn</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Rhyhorn</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggTangela</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Tangela</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggKangaskhan</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Kangaskhan</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggHorsea</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Horsea</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggGoldeen</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Goldeen</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggStaryu</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Staryu</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggScyther</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>16</hatcherDaystoHatch>
+        <hatcherPawn>PW_Scyther</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggPinsir</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>16</hatcherDaystoHatch>
+        <hatcherPawn>PW_Pinsir</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggTauros</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Tauros</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggMagikarp</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>3</hatcherDaystoHatch>
+        <hatcherPawn>PW_Magikarp</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggLapras</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>26</hatcherDaystoHatch>
+        <hatcherPawn>PW_Lapras</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>-20</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggEevee</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>23</hatcherDaystoHatch>
+        <hatcherPawn>PW_Eevee</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggPorygon</defName>
+    <tradeability>None</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Porygon</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggOmanyte</defName>
+    <tradeability>None</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>20</hatcherDaystoHatch>
+        <hatcherPawn>PW_Omanyte</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggKabuto</defName>
+    <tradeability>None</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>20</hatcherDaystoHatch>
+        <hatcherPawn>PW_Kabuto</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggAerodactyl</defName>
+    <tradeability>None</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>23</hatcherDaystoHatch>
+        <hatcherPawn>PW_Aerodactyl</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggDratini</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>26</hatcherDaystoHatch>
+        <hatcherPawn>PW_Dratini</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggChikorita</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Chikorita</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggCyndaquil</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Cyndaquil</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>70</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggTotodile</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Totodile</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggSentret</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>10</hatcherDaystoHatch>
+        <hatcherPawn>PW_Sentret</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggHoothoot</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>10</hatcherDaystoHatch>
+        <hatcherPawn>PW_Hoothoot</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggLedyba</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>10</hatcherDaystoHatch>
+        <hatcherPawn>PW_Ledyba</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggSpinarak</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>10</hatcherDaystoHatch>
+        <hatcherPawn>PW_Spinarak</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggChinchou</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Chinchou</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggPichu</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>6</hatcherDaystoHatch>
+        <hatcherPawn>PW_Pichu</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggCleffa</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>6</hatcherDaystoHatch>
+        <hatcherPawn>PW_Cleffa</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggIgglybuff</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>6</hatcherDaystoHatch>
+        <hatcherPawn>PW_Igglybuff</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggTogepi</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>6</hatcherDaystoHatch>
+        <hatcherPawn>PW_Togepi</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggNatu</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Natu</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggMareep</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Mareep</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggHoppip</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Hoppip</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggAipom</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Aipom</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggSunkern</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Sunkern</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggYanma</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Yanma</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggWooper</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Wooper</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggMurkrow</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Murkrow</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggMisdreavus</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>16</hatcherDaystoHatch>
+        <hatcherPawn>PW_Misdreavus</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggGirafarig</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Girafarig</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggPineco</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Pineco</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggDunsparce</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Dunsparce</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggGligar</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Gligar</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggSnubbull</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Snubbull</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggQwilfish</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Qwilfish</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggShuckle</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Shuckle</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggHeracross</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>16</hatcherDaystoHatch>
+        <hatcherPawn>PW_Heracross</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggSneasel</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Sneasel</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>-20</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggTeddiursa</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Teddiursa</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggSlugma</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Slugma</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>70</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggSwinub</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Swinub</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>-20</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggCorsola</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Corsola</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggRemoraid</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Remoraid</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggDelibird</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Delibird</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>-20</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggSkarmory</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>16</hatcherDaystoHatch>
+        <hatcherPawn>PW_Skarmory</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggHoundour</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Houndour</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>70</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggPhanpy</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Phanpy</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggStantler</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Stantler</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggSmeargle</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Smeargle</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggTyrogue</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>16</hatcherDaystoHatch>
+        <hatcherPawn>PW_Tyrogue</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggSmoochum</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>16</hatcherDaystoHatch>
+        <hatcherPawn>PW_Smoochum</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>-20</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggElekid</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>16</hatcherDaystoHatch>
+        <hatcherPawn>PW_Elekid</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggMagby</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>16</hatcherDaystoHatch>
+        <hatcherPawn>PW_Magby</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>70</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggMiltank</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Miltank</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggLarvitar</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>26</hatcherDaystoHatch>
+        <hatcherPawn>PW_Larvitar</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggTreecko</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Treecko</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggTorchic</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Torchic</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>70</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggMudkip</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Mudkip</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggPoochyena</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>10</hatcherDaystoHatch>
+        <hatcherPawn>PW_Poochyena</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggZigzagoon</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>10</hatcherDaystoHatch>
+        <hatcherPawn>PW_Zigzagoon</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggWurmple</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>10</hatcherDaystoHatch>
+        <hatcherPawn>PW_Wurmple</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggLotad</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>10</hatcherDaystoHatch>
+        <hatcherPawn>PW_Lotad</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggSeedot</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>10</hatcherDaystoHatch>
+        <hatcherPawn>PW_Seedot</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggTaillow</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>10</hatcherDaystoHatch>
+        <hatcherPawn>PW_Taillow</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggWingull</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Wingull</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggRalts</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Ralts</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggSurskit</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>10</hatcherDaystoHatch>
+        <hatcherPawn>PW_Surskit</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggShroomish</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>10</hatcherDaystoHatch>
+        <hatcherPawn>PW_Shroomish</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggSlakoth</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>10</hatcherDaystoHatch>
+        <hatcherPawn>PW_Slakoth</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggNincada</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>10</hatcherDaystoHatch>
+        <hatcherPawn>PW_Nincada</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggWhismur</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Whismur</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggMakuhita</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Makuhita</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggAzurill</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>6</hatcherDaystoHatch>
+        <hatcherPawn>PW_Azurill</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggNosepass</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Nosepass</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggSkitty</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>10</hatcherDaystoHatch>
+        <hatcherPawn>PW_Skitty</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggSableye</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>16</hatcherDaystoHatch>
+        <hatcherPawn>PW_Sableye</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggMawile</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Mawile</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggAron</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>23</hatcherDaystoHatch>
+        <hatcherPawn>PW_Aron</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggMeditite</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Meditite</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggElectrike</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Electrike</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggPlusle</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Plusle</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggMinun</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Minun</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggVolbeat</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>10</hatcherDaystoHatch>
+        <hatcherPawn>PW_Volbeat</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggIllumise</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>10</hatcherDaystoHatch>
+        <hatcherPawn>PW_Illumise</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggGulpin</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Gulpin</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggCarvanha</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Carvanha</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggWailmer</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>26</hatcherDaystoHatch>
+        <hatcherPawn>PW_Wailmer</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggNumel</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Numel</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>70</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggTorkoal</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Torkoal</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>70</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggSpoink</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Spoink</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggSpinda</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>10</hatcherDaystoHatch>
+        <hatcherPawn>PW_Spinda</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggTrapinch</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Trapinch</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggCacnea</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Cacnea</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggSwablu</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Swablu</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggZangoose</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Zangoose</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggSeviper</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Seviper</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggLunatone</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>16</hatcherDaystoHatch>
+        <hatcherPawn>PW_Lunatone</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggSolrock</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>16</hatcherDaystoHatch>
+        <hatcherPawn>PW_Solrock</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggBarboach</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Barboach</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggCorphish</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>10</hatcherDaystoHatch>
+        <hatcherPawn>PW_Corphish</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggBaltoy</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Baltoy</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggLileep</defName>
+    <tradeability>None</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>20</hatcherDaystoHatch>
+        <hatcherPawn>PW_Lileep</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggAnorith</defName>
+    <tradeability>None</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>20</hatcherDaystoHatch>
+        <hatcherPawn>PW_Anorith</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggFeebas</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Feebas</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggCastform</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>16</hatcherDaystoHatch>
+        <hatcherPawn>PW_Castform</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggKecleon</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Kecleon</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggShuppet</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>16</hatcherDaystoHatch>
+        <hatcherPawn>PW_Shuppet</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggDuskull</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>16</hatcherDaystoHatch>
+        <hatcherPawn>PW_Duskull</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggTropius</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>16</hatcherDaystoHatch>
+        <hatcherPawn>PW_Tropius</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggAbsol</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>16</hatcherDaystoHatch>
+        <hatcherPawn>PW_Absol</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggWynaut</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Wynaut</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggSnorunt</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Snorunt</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>-20</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggSpheal</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Spheal</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>-20</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggClamperl</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Clamperl</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggRelicanth</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>26</hatcherDaystoHatch>
+        <hatcherPawn>PW_Relicanth</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggLuvdisc</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Luvdisc</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggBagon</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>26</hatcherDaystoHatch>
+        <hatcherPawn>PW_Bagon</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggBeldum</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>26</hatcherDaystoHatch>
+        <hatcherPawn>PW_Beldum</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggTurtwig</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Turtwig</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggChimchar</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Chimchar</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>70</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggPiplup</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Piplup</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggStarly</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>10</hatcherDaystoHatch>
+        <hatcherPawn>PW_Starly</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggBidoof</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>10</hatcherDaystoHatch>
+        <hatcherPawn>PW_Bidoof</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggKricketot</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>10</hatcherDaystoHatch>
+        <hatcherPawn>PW_Kricketot</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggShinx</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Shinx</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggBudew</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Budew</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggCranidos</defName>
+    <tradeability>None</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>20</hatcherDaystoHatch>
+        <hatcherPawn>PW_Cranidos</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggShieldon</defName>
+    <tradeability>None</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>20</hatcherDaystoHatch>
+        <hatcherPawn>PW_Shieldon</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggBurmy</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>10</hatcherDaystoHatch>
+        <hatcherPawn>PW_Burmy</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggCombee</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>10</hatcherDaystoHatch>
+        <hatcherPawn>PW_Combee</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggPachirisu</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>6</hatcherDaystoHatch>
+        <hatcherPawn>PW_Pachirisu</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggBuizel</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Buizel</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggCherubi</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Cherubi</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggShellos</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Shellos</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggDrifloon</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>20</hatcherDaystoHatch>
+        <hatcherPawn>PW_Drifloon</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggBuneary</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Buneary</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggGlameow</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Glameow</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggChingling</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>16</hatcherDaystoHatch>
+        <hatcherPawn>PW_Chingling</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggStunky</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Stunky</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggBronzor</defName>
+    <tradeability>None</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Bronzor</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggBonsly</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Bonsly</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggMimeJr</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>16</hatcherDaystoHatch>
+        <hatcherPawn>PW_MimeJr</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggHappiny</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>26</hatcherDaystoHatch>
+        <hatcherPawn>PW_Happiny</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggChatot</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Chatot</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggSpiritomb</defName>
+    <tradeability>None</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>20</hatcherDaystoHatch>
+        <hatcherPawn>PW_Spiritomb</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggGible</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>26</hatcherDaystoHatch>
+        <hatcherPawn>PW_Gible</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggMunchlax</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>26</hatcherDaystoHatch>
+        <hatcherPawn>PW_Munchlax</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggRiolu</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>16</hatcherDaystoHatch>
+        <hatcherPawn>PW_Riolu</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggHippopotas</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>20</hatcherDaystoHatch>
+        <hatcherPawn>PW_Hippopotas</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggSkorupi</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Skorupi</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggCroagunk</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>6</hatcherDaystoHatch>
+        <hatcherPawn>PW_Croagunk</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggCarnivine</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>16</hatcherDaystoHatch>
+        <hatcherPawn>PW_Carnivine</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggFinneon</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Finneon</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggMantyke</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>16</hatcherDaystoHatch>
+        <hatcherPawn>PW_Mantyke</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggSnover</defName>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Snover</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>-20</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggRotom</defName>
+    <tradeability>None</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>13</hatcherDaystoHatch>
+        <hatcherPawn>PW_Rotom</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokemonEggBase">
+    <defName>PW_EggPhione</defName>
+    <tradeability>None</tradeability>
+    <comps>
+      <li Class="PokeWorld.CompProperties_PokemonEggHatcher">
+        <hatcherDaystoHatch>26</hatcherDaystoHatch>
+        <hatcherPawn>PW_Phione</hatcherPawn>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

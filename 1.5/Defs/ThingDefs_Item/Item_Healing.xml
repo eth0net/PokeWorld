@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MedicineBase" Name="PokeMedicineBase" Abstract="True">  
+    <thingClass>ThingWithComps</thingClass>  
+    <graphicData>
+      <drawSize>0.7</drawSize>
+    </graphicData>
+    <thingCategories Inherit="false">
+      <li>PW_HealingItem</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="PokeMedicineBase" Name="MakeablePokeMedicineBase" Abstract="True">  
+    <recipeMaker>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="MakeablePokeMedicineBase">
+    <defName>PW_Potion</defName>
+    <label>Potion</label>
+    <description>A spray-type medicine for treating Pokémon wounds made from highly concentrated fruits or berries. It can be used to heal a slightly injured Pokémon. It cannot however heal scars or grow back lost limbs.</description>
+    <graphicData>
+      <texPath>Things/Item/Healing/Potion</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Neolithic</techLevel>
+    <statBases>
+      <MarketValue>10</MarketValue>
+      <Mass>0.35</Mass>
+      <Flammability>0.7</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <WorkToMake>300</WorkToMake>
+    </statBases>
+    <costStuffCount>15</costStuffCount>
+    <stuffCategories>
+      <li>PW_Fruit</li>
+    </stuffCategories>
+    <recipeMaker>
+      <researchPrerequisite>PW_PotionResearch</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>2</Crafting>
+        <Intellectual>2</Intellectual>
+      </skillRequirements>
+    </recipeMaker>
+    <comps>
+      <li Class="PokeWorld.CompProperties_HealingItem">
+        <healingAmount>20</healingAmount>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="MakeablePokeMedicineBase">
+    <defName>PW_HyperPotion</defName>
+    <label>Hyper Potion</label>
+    <description>A spray-type medicine for treating Pokémon wounds made with industrial-era medicine. It can be used to heal a Pokémon injured in combat. It cannot however heal scars or grow back lost limbs.</description>
+    <graphicData>
+      <texPath>Things/Item/Healing/Hyper_Potion</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Industrial</techLevel>
+    <statBases>
+      <MarketValue>20</MarketValue>
+      <Mass>0.35</Mass>
+      <Flammability>0.7</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <WorkToMake>700</WorkToMake>
+    </statBases>
+    <costList>
+      <Neutroamine>2</Neutroamine>
+    </costList>
+    <recipeMaker>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <researchPrerequisite>PW_HyperPotionResearch</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+        <Intellectual>5</Intellectual>
+      </skillRequirements>
+    </recipeMaker>
+    <comps>
+      <li Class="PokeWorld.CompProperties_HealingItem">
+        <healingAmount>50</healingAmount>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PokeMedicineBase">
+    <defName>PW_MaxPotion</defName>
+    <label>Max Potion</label>
+    <description>A spray-type medicine for treating Pokémon wounds, probably manufactured on a distant glitterworld. It can be used to heal a heavily injured Pokémon. It cannot however heal scars or grow back lost limbs.</description>
+    <graphicData>
+      <texPath>Things/Item/Healing/Max_Potion</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Ultra</techLevel>
+    <statBases>
+      <MarketValue>40</MarketValue>
+      <Mass>0.35</Mass>
+      <Flammability>0.7</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+    </statBases>
+    <comps>
+      <li Class="PokeWorld.CompProperties_HealingItem">
+        <healingAmount>120</healingAmount>
+      </li>
+    </comps>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags><li>RewardStandardHighFreq</li></thingSetMakerTags>
+  </ThingDef>
+
+  <ThingDef ParentName="PokeMedicineBase" Name="PW_PokemonSerumBase" Abstract="True">
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MaxHitPoints>30</MaxHitPoints>
+      <Mass>0.2</Mass>
+      <DeteriorationRate>2.0</DeteriorationRate>
+      <Flammability>1</Flammability>
+    </statBases>
+    <techLevel>Ultra</techLevel>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+  </ThingDef>
+
+  <ThingDef ParentName="PW_PokemonSerumBase">
+    <defName>PW_HealPowder</defName>
+    <label>Heal Powder</label>
+    <description>A very bitter Pokémon medicine. When consumed, it heals the single worst health condition affecting a Pokémon at any given time. Works even on health conditions that would otherwise be incurable. The powder can even transmute itself into organic matter, forming new limbs or organs as needed. Be aware that Pokémon dislike the bitter taste and treating one with a Heal Powder will lower their friendship towards you.</description>
+    <graphicData>
+      <texPath>Things/Item/Healing/HealPowder</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <stackLimit>10</stackLimit>
+    <statBases>
+      <MarketValue>400</MarketValue>
+      <WorkToMake>1000</WorkToMake>
+    </statBases>
+    <costList>
+      <Neutroamine>1</Neutroamine>
+      <Luciferium>3</Luciferium>
+      <MedicineHerbal>2</MedicineHerbal>
+    </costList>
+    <recipeMaker>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <researchPrerequisite>PW_HealPowderResearch</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+        <Intellectual>8</Intellectual>
+      </skillRequirements>
+    </recipeMaker>
+    <thingSetMakerTags>
+      <li>RewardStandardHighFreq</li>
+    </thingSetMakerTags>
+  </ThingDef>
+
+<!--
+
+  <ThingDef ParentName="PW_PokemonSerumBase">
+    <defName>PW_SacredAsh</defName>
+    <label>Sacred Ash</label>
+    <description>This extremely rare and valuable ash can bring a Pokémon back from the dead. Administered to a Pokémon corpse, it will repair broken-down tissues and kickstart the body back to life. Unfortunately, the resurrected sometimes come back with brain damage, blindness, or progressive psychosis. Outcomes are better when the ash is administered to a fresher body. If a body is preserved, it can even be resurrected long after death.</description>
+    <graphicData>
+      <texPath>Things/Item/Healing/SacredAsh</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stackLimit>10</stackLimit>
+    <statBases>
+      <MarketValue>1000</MarketValue>
+    </statBases>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Use resurrector mech serum</useLabel>
+        <useDuration>0</useDuration>
+      </li>
+      <li Class="CompProperties_Targetable">
+        <compClass>CompTargetable_SingleCorpse</compClass>
+        <fleshCorpsesOnly>true</fleshCorpsesOnly>
+        <nonDessicatedCorpsesOnly>true</nonDessicatedCorpsesOnly>
+      </li>
+      <li>
+        <compClass>CompTargetEffect_Resurrect</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+-->
+
+  <!--=============== Recipes ====================-->
+
+  <RecipeDef Name="PW_HealingItemRecipeBase" Abstract="True">
+    <workerClass>Pokeworld.Recipe_HealingItem</workerClass>
+    <targetsBodyPart>false</targetsBodyPart>
+    <anesthetize>false</anesthetize>
+    <workAmount>200</workAmount>
+    <dontShowIfAnyIngredientMissing>true</dontShowIfAnyIngredientMissing>
+    <surgerySuccessChanceFactor>99999</surgerySuccessChanceFactor>
+  </RecipeDef>
+
+  <RecipeDef ParentName="PW_HealingItemRecipeBase">
+    <defName>PW_AdministerPotion</defName>
+    <label>administer potion</label>
+    <description>Administer a potion.</description>
+    <jobString>Administering potion.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>PW_Potion</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>PW_Potion</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
+  <RecipeDef ParentName="PW_HealingItemRecipeBase">
+    <defName>PW_AdministerHyperPotion</defName>
+    <label>administer hyper potion</label>
+    <description>Administer an hyper potion.</description>
+    <jobString>Administering hyper potion.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>PW_HyperPotion</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>PW_HyperPotion</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
+  <RecipeDef ParentName="PW_HealingItemRecipeBase">
+    <defName>PW_AdministerMaxPotion</defName>
+    <label>administer max potion</label>
+    <description>Administer a max potion.</description>
+    <jobString>Administering max potion.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>PW_MaxPotion</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>PW_MaxPotion</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>PW_AdministerHealPowder</defName>
+    <label>administer Heal Powder</label>
+    <description>Administer a Heal Powder.</description>
+    <workerClass>Pokeworld.Recipe_HealPowder</workerClass>
+    <jobString>Administering Heal Powder.</jobString>
+    <targetsBodyPart>false</targetsBodyPart>
+    <anesthetize>false</anesthetize>
+    <workAmount>400</workAmount>
+    <dontShowIfAnyIngredientMissing>true</dontShowIfAnyIngredientMissing>
+    <surgerySuccessChanceFactor>99999</surgerySuccessChanceFactor>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>PW_HealPowder</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>PW_HealPowder</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
+</Defs>
