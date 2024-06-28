@@ -1,372 +1,396 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ThingDef ParentName="ResourceBase" Name="PW_FossilBase" Abstract="True">
-    <thingClass>ThingWithComps</thingClass>
-    <resourceReadoutPriority>Middle</resourceReadoutPriority>
-    <useHitPoints>false</useHitPoints>
-    <statBases>
-      <Mass>0.5</Mass>
-      <Flammability>0</Flammability>
-      <MarketValue>100</MarketValue>
-      <Beauty>6</Beauty>
-    </statBases>
-    <graphicData>
-      <drawSize>0.65</drawSize>
-    </graphicData>
-    <soundDrop>Stone_Drop</soundDrop>
-    <techLevel>Neolithic</techLevel>
-    <thingSetMakerTags>
-      <li>PW_RewardFossil</li>
-    </thingSetMakerTags>
-    <tradeability>Buyable</tradeability>
-    <stackLimit>10</stackLimit>
-    <thingCategories>
-      <li>PW_Fossils</li>
-    </thingCategories>
-  </ThingDef>
+    <ThingDef ParentName="ResourceBase" Name="PW_FossilBase" Abstract="True">
+        <thingClass>ThingWithComps</thingClass>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <useHitPoints>false</useHitPoints>
+        <statBases>
+            <Mass>0.5</Mass>
+            <Flammability>0</Flammability>
+            <MarketValue>100</MarketValue>
+            <Beauty>6</Beauty>
+        </statBases>
+        <graphicData>
+            <drawSize>0.65</drawSize>
+        </graphicData>
+        <soundDrop>Stone_Drop</soundDrop>
+        <techLevel>Neolithic</techLevel>
+        <thingSetMakerTags>
+            <li>PW_RewardFossil</li>
+        </thingSetMakerTags>
+        <tradeability>Buyable</tradeability>
+        <stackLimit>10</stackLimit>
+        <thingCategories>
+            <li>PW_Fossils</li>
+        </thingCategories>
+    </ThingDef>
 
-<!-- ========================= -->
+    <!-- ========================= -->
 
-  <ThingDef ParentName="PW_FossilBase">
-    <defName>PW_HelixFossil</defName>
-    <label>Helix Fossil</label>
-    <description>A fossil of an ancient Pokémon that lived in the sea. It appears to be part of a seashell.</description>
-    <graphicData>
-      <texPath>Things/Item/Fossils/Helix_Fossil</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>    
-  </ThingDef>
+    <ThingDef ParentName="PW_FossilBase">
+        <defName>PW_HelixFossil</defName>
+        <label>Helix Fossil</label>
+        <description>A fossil of an ancient Pokémon that lived in the sea. It appears to be part of a seashell.
+        </description>
+        <graphicData>
+            <texPath>Things/Item/Fossils/Helix_Fossil</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+    </ThingDef>
 
-  <ThingDef ParentName="PW_FossilBase">
-    <defName>PW_DomeFossil</defName>
-    <label>Dome Fossil</label>
-    <description>A fossil of an ancient Pokémon that lived in the sea. It appears to be part of a shell or carapace.</description>
-    <graphicData>
-      <texPath>Things/Item/Fossils/Dome_Fossil</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>  
-  </ThingDef>
+    <ThingDef ParentName="PW_FossilBase">
+        <defName>PW_DomeFossil</defName>
+        <label>Dome Fossil</label>
+        <description>A fossil of an ancient Pokémon that lived in the sea. It appears to be part of a shell or
+            carapace.
+        </description>
+        <graphicData>
+            <texPath>Things/Item/Fossils/Dome_Fossil</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+    </ThingDef>
 
-  <ThingDef ParentName="PW_FossilBase">
-    <defName>PW_OldAmber</defName>
-    <label>Old Amber</label>
-    <description>A piece of amber that still contains the genetic material of an ancient Pokémon. It's clear with a tawny, reddish tint.</description>
-    <graphicData>
-      <texPath>Things/Item/Fossils/Old_Amber</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>0.5</drawSize>
-    </graphicData>  
-  </ThingDef>
+    <ThingDef ParentName="PW_FossilBase">
+        <defName>PW_OldAmber</defName>
+        <label>Old Amber</label>
+        <description>A piece of amber that still contains the genetic material of an ancient Pokémon. It's clear with a
+            tawny, reddish tint.
+        </description>
+        <graphicData>
+            <texPath>Things/Item/Fossils/Old_Amber</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.5</drawSize>
+        </graphicData>
+    </ThingDef>
 
-  <ThingDef ParentName="PW_FossilBase">
-    <defName>PW_RootFossil</defName>
-    <label>Root Fossil</label>
-    <description>A fossil of an ancient Pokémon that lived in the sea. It appears to be part of a plant root.</description>
-    <graphicData>
-      <texPath>Things/Item/Fossils/Root_Fossil</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>   
-  </ThingDef>
+    <ThingDef ParentName="PW_FossilBase">
+        <defName>PW_RootFossil</defName>
+        <label>Root Fossil</label>
+        <description>A fossil of an ancient Pokémon that lived in the sea. It appears to be part of a plant root.
+        </description>
+        <graphicData>
+            <texPath>Things/Item/Fossils/Root_Fossil</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+    </ThingDef>
 
-  <ThingDef ParentName="PW_FossilBase">
-    <defName>PW_ClawFossil</defName>
-    <label>Claw Fossil</label>
-    <description>A fossil of an ancient Pokémon that lived in the sea. It appears to be part of a claw.</description>
-    <graphicData>
-      <texPath>Things/Item/Fossils/Claw_Fossil</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>  
-  </ThingDef>
+    <ThingDef ParentName="PW_FossilBase">
+        <defName>PW_ClawFossil</defName>
+        <label>Claw Fossil</label>
+        <description>A fossil of an ancient Pokémon that lived in the sea. It appears to be part of a claw.
+        </description>
+        <graphicData>
+            <texPath>Things/Item/Fossils/Claw_Fossil</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+    </ThingDef>
 
-  <ThingDef ParentName="PW_FossilBase">
-    <defName>PW_SkullFossil</defName>
-    <label>Skull Fossil</label>
-    <description>A fossil from an ancient Pokémon that lived on the land. It appears to be part of a head.</description>
-    <graphicData>
-      <texPath>Things/Item/Fossils/Skull_Fossil</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>  
-  </ThingDef>
+    <ThingDef ParentName="PW_FossilBase">
+        <defName>PW_SkullFossil</defName>
+        <label>Skull Fossil</label>
+        <description>A fossil from an ancient Pokémon that lived on the land. It appears to be part of a head.
+        </description>
+        <graphicData>
+            <texPath>Things/Item/Fossils/Skull_Fossil</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+    </ThingDef>
 
-  <ThingDef ParentName="PW_FossilBase">
-    <defName>PW_ArmorFossil</defName>
-    <label>Armor Fossil</label>
-    <description>A fossil from an ancient Pokémon that lived on the land. It appears to be part of a head.</description>
-    <graphicData>
-      <texPath>Things/Item/Fossils/Armor_Fossil</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>   
-  </ThingDef>
+    <ThingDef ParentName="PW_FossilBase">
+        <defName>PW_ArmorFossil</defName>
+        <label>Armor Fossil</label>
+        <description>A fossil from an ancient Pokémon that lived on the land. It appears to be part of a head.
+        </description>
+        <graphicData>
+            <texPath>Things/Item/Fossils/Armor_Fossil</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+    </ThingDef>
 
-  <ThingDef ParentName="PW_FossilBase">
-    <defName>PW_OddKeystone</defName>
-    <label>Odd Keystone</label>
-    <description>A vital item that is needed to keep a stone tower from collapsing. Voices can be heard from it occasionally.</description>
-    <graphicData>
-      <texPath>Things/Item/Fossils/Odd_Keystone</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <statBases>
-      <MarketValue>0</MarketValue>
-      <Beauty>-4</Beauty>
-    </statBases>
-    <tradeability>None</tradeability>
-    <stackLimit>1</stackLimit>
-    <thingCategories Inherit="false">
-      <li>PW_Item</li>
-    </thingCategories>
-  </ThingDef>
+    <ThingDef ParentName="PW_FossilBase">
+        <defName>PW_OddKeystone</defName>
+        <label>Odd Keystone</label>
+        <description>A vital item that is needed to keep a stone tower from collapsing. Voices can be heard from it
+            occasionally.
+        </description>
+        <graphicData>
+            <texPath>Things/Item/Fossils/Odd_Keystone</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>0</MarketValue>
+            <Beauty>-4</Beauty>
+        </statBases>
+        <tradeability>None</tradeability>
+        <stackLimit>1</stackLimit>
+        <thingCategories Inherit="false">
+            <li>PW_Item</li>
+        </thingCategories>
+    </ThingDef>
 
-  <ThingDef ParentName="PW_FossilBase">
-    <defName>PW_CoverFossil</defName>
-    <label>Cover Fossil</label>
-    <description>A fossil of an ancient Pokémon that lived in the sea in ancient times. It appears to be part of its back.</description>
-    <graphicData>
-      <texPath>Things/Item/Fossils/Cover_Fossil</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>   
-  </ThingDef>
+    <ThingDef ParentName="PW_FossilBase">
+        <defName>PW_CoverFossil</defName>
+        <label>Cover Fossil</label>
+        <description>A fossil of an ancient Pokémon that lived in the sea in ancient times. It appears to be part of its
+            back.
+        </description>
+        <graphicData>
+            <texPath>Things/Item/Fossils/Cover_Fossil</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+    </ThingDef>
 
-  <ThingDef ParentName="PW_FossilBase">
-    <defName>PW_PlumeFossil</defName>
-    <label>Plume Fossil</label>
-    <description>A fossil of an ancient Pokémon that flew in the sky in ancient times. It appears to be part of its wing.</description>
-    <graphicData>
-      <texPath>Things/Item/Fossils/Plume_Fossil</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>   
-  </ThingDef>
+    <ThingDef ParentName="PW_FossilBase">
+        <defName>PW_PlumeFossil</defName>
+        <label>Plume Fossil</label>
+        <description>A fossil of an ancient Pokémon that flew in the sky in ancient times. It appears to be part of its
+            wing.
+        </description>
+        <graphicData>
+            <texPath>Things/Item/Fossils/Plume_Fossil</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+    </ThingDef>
 
-  <ThingDef ParentName="PW_FossilBase">
-    <defName>PW_JawFossil</defName>
-    <label>Jaw Fossil</label>
-    <description>A fossil from a prehistoric Pokémon that once lived on the land. It looks as if it could be a piece of a large jaw.</description>
-    <graphicData>
-      <texPath>Things/Item/Fossils/Jaw_Fossil</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>   
-  </ThingDef>
+    <ThingDef ParentName="PW_FossilBase">
+        <defName>PW_JawFossil</defName>
+        <label>Jaw Fossil</label>
+        <description>A fossil from a prehistoric Pokémon that once lived on the land. It looks as if it could be a piece
+            of a large jaw.
+        </description>
+        <graphicData>
+            <texPath>Things/Item/Fossils/Jaw_Fossil</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+    </ThingDef>
 
-  <ThingDef ParentName="PW_FossilBase">
-    <defName>PW_SailFossil</defName>
-    <label>Sail Fossil</label>
-    <description>A fossil from a prehistoric Pokémon that once lived on land. It looks like the impression from a skin sail.</description>
-    <graphicData>
-      <texPath>Things/Item/Fossils/Plume_Fossil</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>   
-  </ThingDef>
+    <ThingDef ParentName="PW_FossilBase">
+        <defName>PW_SailFossil</defName>
+        <label>Sail Fossil</label>
+        <description>A fossil from a prehistoric Pokémon that once lived on land. It looks like the impression from a
+            skin sail.
+        </description>
+        <graphicData>
+            <texPath>Things/Item/Fossils/Plume_Fossil</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+    </ThingDef>
 
-  <ThingDef ParentName="PW_FossilBase">
-    <defName>PW_DrakeFossil</defName>
-    <label>Fossilized Drake</label>
-    <description>The fossil of an ancient Pokémon that once roamed the land. What it looked like is a mystery.</description>
-    <graphicData>
-      <texPath>Things/Item/Fossils/Drake_Fossil</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>   
-  </ThingDef>
+    <ThingDef ParentName="PW_FossilBase">
+        <defName>PW_DrakeFossil</defName>
+        <label>Fossilized Drake</label>
+        <description>The fossil of an ancient Pokémon that once roamed the land. What it looked like is a mystery.
+        </description>
+        <graphicData>
+            <texPath>Things/Item/Fossils/Drake_Fossil</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+    </ThingDef>
 
-  <ThingDef ParentName="PW_FossilBase">
-    <defName>PW_DinoFossil</defName>
-    <label>Fossilized Dino</label>
-    <description>The fossil of an ancient Pokémon that once lived in the sea. What it looked like is a mystery.</description>
-    <graphicData>
-      <texPath>Things/Item/Fossils/Dino_Fossil</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>   
-  </ThingDef>
+    <ThingDef ParentName="PW_FossilBase">
+        <defName>PW_DinoFossil</defName>
+        <label>Fossilized Dino</label>
+        <description>The fossil of an ancient Pokémon that once lived in the sea. What it looked like is a mystery.
+        </description>
+        <graphicData>
+            <texPath>Things/Item/Fossils/Dino_Fossil</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+    </ThingDef>
 
-  <ThingDef ParentName="PW_FossilBase">
-    <defName>PW_BirdFossil</defName>
-    <label>Fossilized Bird</label>
-    <description>The fossil of an ancient Pokémon that once soared through the sky. What it looked like is a mystery.</description>
-    <graphicData>
-      <texPath>Things/Item/Fossils/Bird_Fossil</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>   
-  </ThingDef>
+    <ThingDef ParentName="PW_FossilBase">
+        <defName>PW_BirdFossil</defName>
+        <label>Fossilized Bird</label>
+        <description>The fossil of an ancient Pokémon that once soared through the sky. What it looked like is a
+            mystery.
+        </description>
+        <graphicData>
+            <texPath>Things/Item/Fossils/Bird_Fossil</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+    </ThingDef>
 
-  <ThingDef ParentName="PW_FossilBase">
-    <defName>PW_FishFossil</defName>
-    <label>Fossilized Fish</label>
-    <description>The fossil of an ancient Pokémon that once lived in the sea. What it looked like is a mystery.</description>
-    <graphicData>
-      <texPath>Things/Item/Fossils/Fish_Fossil</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>   
-  </ThingDef>
+    <ThingDef ParentName="PW_FossilBase">
+        <defName>PW_FishFossil</defName>
+        <label>Fossilized Fish</label>
+        <description>The fossil of an ancient Pokémon that once lived in the sea. What it looked like is a mystery.
+        </description>
+        <graphicData>
+            <texPath>Things/Item/Fossils/Fish_Fossil</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+    </ThingDef>
 
-  <!-- ================= -->
-  <ThingDef Name="PW_UnfinishedFossilBase" ParentName="UnfinishedBase" Abstract="true">
-    <label>unfinished Fossil</label>
-    <description>A Pokémon Fossil being revived.</description>
-    <useHitPoints>false</useHitPoints>
-    <statBases>
-      <Mass>0.5</Mass>
-      <Flammability>0</Flammability>
-      <Beauty>-4</Beauty>
-      <DeteriorationRate>0</DeteriorationRate>
-    </statBases>
-    <graphicData>
-      <drawSize>0.65</drawSize>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <stuffCategories Inherit="false" />
-  </ThingDef>
+    <!-- ================= -->
+    <ThingDef Name="PW_UnfinishedFossilBase" ParentName="UnfinishedBase" Abstract="true">
+        <label>unfinished Fossil</label>
+        <description>A Pokémon Fossil being revived.</description>
+        <useHitPoints>false</useHitPoints>
+        <statBases>
+            <Mass>0.5</Mass>
+            <Flammability>0</Flammability>
+            <Beauty>-4</Beauty>
+            <DeteriorationRate>0</DeteriorationRate>
+        </statBases>
+        <graphicData>
+            <drawSize>0.65</drawSize>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <stuffCategories Inherit="false"/>
+    </ThingDef>
 
-  <ThingDef ParentName="PW_UnfinishedFossilBase">
-  	<defName>PW_UnfinishedHelixFossil</defName>
-    <label>unfinished Helix Fossil</label>
-    <description>A Helix Fossil being revived.</description>  
-    <graphicData>
-      <texPath>Things/Item/Fossils/Helix_Fossil</texPath>
-    </graphicData>
-  </ThingDef>
+    <ThingDef ParentName="PW_UnfinishedFossilBase">
+        <defName>PW_UnfinishedHelixFossil</defName>
+        <label>unfinished Helix Fossil</label>
+        <description>A Helix Fossil being revived.</description>
+        <graphicData>
+            <texPath>Things/Item/Fossils/Helix_Fossil</texPath>
+        </graphicData>
+    </ThingDef>
 
-  <ThingDef ParentName="PW_UnfinishedFossilBase">
-  	<defName>PW_UnfinishedDomeFossil</defName>
-    <label>unfinished Dome Fossil</label>
-    <description>A Dome Fossil being revived.</description>  
-    <graphicData>
-      <texPath>Things/Item/Fossils/Dome_Fossil</texPath>
-    </graphicData>
-  </ThingDef>
+    <ThingDef ParentName="PW_UnfinishedFossilBase">
+        <defName>PW_UnfinishedDomeFossil</defName>
+        <label>unfinished Dome Fossil</label>
+        <description>A Dome Fossil being revived.</description>
+        <graphicData>
+            <texPath>Things/Item/Fossils/Dome_Fossil</texPath>
+        </graphicData>
+    </ThingDef>
 
-  <ThingDef ParentName="PW_UnfinishedFossilBase">
-  	<defName>PW_UnfinishedOldAmber</defName>
-    <label>unfinished Old Amber</label>
-    <description>An Old Amber being revived.</description>  
-    <graphicData>
-      <texPath>Things/Item/Fossils/Old_Amber</texPath>
-      <drawSize>0.5</drawSize>
-    </graphicData>
-  </ThingDef>
+    <ThingDef ParentName="PW_UnfinishedFossilBase">
+        <defName>PW_UnfinishedOldAmber</defName>
+        <label>unfinished Old Amber</label>
+        <description>An Old Amber being revived.</description>
+        <graphicData>
+            <texPath>Things/Item/Fossils/Old_Amber</texPath>
+            <drawSize>0.5</drawSize>
+        </graphicData>
+    </ThingDef>
 
-  <ThingDef ParentName="PW_UnfinishedFossilBase">
-  	<defName>PW_UnfinishedRootFossil</defName>
-    <label>unfinished Root Fossil</label>
-    <description>A Root Fossil being revived.</description>  
-    <graphicData>
-      <texPath>Things/Item/Fossils/Root_Fossil</texPath>
-    </graphicData>
-  </ThingDef>
+    <ThingDef ParentName="PW_UnfinishedFossilBase">
+        <defName>PW_UnfinishedRootFossil</defName>
+        <label>unfinished Root Fossil</label>
+        <description>A Root Fossil being revived.</description>
+        <graphicData>
+            <texPath>Things/Item/Fossils/Root_Fossil</texPath>
+        </graphicData>
+    </ThingDef>
 
-  <ThingDef ParentName="PW_UnfinishedFossilBase">
-  	<defName>PW_UnfinishedClawFossil</defName>
-    <label>unfinished Claw Fossil</label>
-    <description>A Claw Fossil being revived.</description>  
-    <graphicData>
-      <texPath>Things/Item/Fossils/Claw_Fossil</texPath>
-    </graphicData>
-  </ThingDef>
+    <ThingDef ParentName="PW_UnfinishedFossilBase">
+        <defName>PW_UnfinishedClawFossil</defName>
+        <label>unfinished Claw Fossil</label>
+        <description>A Claw Fossil being revived.</description>
+        <graphicData>
+            <texPath>Things/Item/Fossils/Claw_Fossil</texPath>
+        </graphicData>
+    </ThingDef>
 
-  <ThingDef ParentName="PW_UnfinishedFossilBase">
-  	<defName>PW_UnfinishedSkullFossil</defName>
-    <label>unfinished Skull Fossil</label>
-    <description>A Skull Fossil being revived.</description>  
-    <graphicData>
-      <texPath>Things/Item/Fossils/Skull_Fossil</texPath>
-    </graphicData>
-  </ThingDef>
+    <ThingDef ParentName="PW_UnfinishedFossilBase">
+        <defName>PW_UnfinishedSkullFossil</defName>
+        <label>unfinished Skull Fossil</label>
+        <description>A Skull Fossil being revived.</description>
+        <graphicData>
+            <texPath>Things/Item/Fossils/Skull_Fossil</texPath>
+        </graphicData>
+    </ThingDef>
 
-  <ThingDef ParentName="PW_UnfinishedFossilBase">
-  	<defName>PW_UnfinishedArmorFossil</defName>
-    <label>unfinished Armor Fossil</label>
-    <description>An Armor Fossil being revived.</description>  
-    <graphicData>
-      <texPath>Things/Item/Fossils/Armor_Fossil</texPath>
-    </graphicData>
-  </ThingDef>
+    <ThingDef ParentName="PW_UnfinishedFossilBase">
+        <defName>PW_UnfinishedArmorFossil</defName>
+        <label>unfinished Armor Fossil</label>
+        <description>An Armor Fossil being revived.</description>
+        <graphicData>
+            <texPath>Things/Item/Fossils/Armor_Fossil</texPath>
+        </graphicData>
+    </ThingDef>
 
-  <ThingDef ParentName="PW_UnfinishedFossilBase">
-    <defName>PW_UnfinishedOddKeystone</defName>
-    <label>unfinished Odd Keystone</label>
-    <description>An Odd Keystone being opened.</description>  
-    <graphicData>
-      <texPath>Things/Item/Fossils/Odd_Keystone</texPath>
-    </graphicData>
-  </ThingDef>
+    <ThingDef ParentName="PW_UnfinishedFossilBase">
+        <defName>PW_UnfinishedOddKeystone</defName>
+        <label>unfinished Odd Keystone</label>
+        <description>An Odd Keystone being opened.</description>
+        <graphicData>
+            <texPath>Things/Item/Fossils/Odd_Keystone</texPath>
+        </graphicData>
+    </ThingDef>
 
-  <ThingDef ParentName="PW_UnfinishedFossilBase">
-    <defName>PW_UnfinishedCoverFossil</defName>
-    <label>unfinished Cover Fossil</label>
-    <description>A Cover Fossil being revived.</description>
-    <graphicData>
-      <texPath>Things/Item/Fossils/Cover_Fossil</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>   
-  </ThingDef>
+    <ThingDef ParentName="PW_UnfinishedFossilBase">
+        <defName>PW_UnfinishedCoverFossil</defName>
+        <label>unfinished Cover Fossil</label>
+        <description>A Cover Fossil being revived.</description>
+        <graphicData>
+            <texPath>Things/Item/Fossils/Cover_Fossil</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+    </ThingDef>
 
-  <ThingDef ParentName="PW_UnfinishedFossilBase">
-    <defName>PW_UnfinishedPlumeFossil</defName>
-    <label>unfinished Plume Fossil</label>
-    <description>A Plume Fossil being revived.</description>
-    <graphicData>
-      <texPath>Things/Item/Fossils/Plume_Fossil</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>   
-  </ThingDef>
+    <ThingDef ParentName="PW_UnfinishedFossilBase">
+        <defName>PW_UnfinishedPlumeFossil</defName>
+        <label>unfinished Plume Fossil</label>
+        <description>A Plume Fossil being revived.</description>
+        <graphicData>
+            <texPath>Things/Item/Fossils/Plume_Fossil</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+    </ThingDef>
 
-  <ThingDef ParentName="PW_UnfinishedFossilBase">
-    <defName>PW_UnfinishedJawFossil</defName>
-    <label>unfinished Jaw Fossil</label>
-    <description>A Jaw Fossil being revived.</description>
-    <graphicData>
-      <texPath>Things/Item/Fossils/Jaw_Fossil</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>   
-  </ThingDef>
+    <ThingDef ParentName="PW_UnfinishedFossilBase">
+        <defName>PW_UnfinishedJawFossil</defName>
+        <label>unfinished Jaw Fossil</label>
+        <description>A Jaw Fossil being revived.</description>
+        <graphicData>
+            <texPath>Things/Item/Fossils/Jaw_Fossil</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+    </ThingDef>
 
-  <ThingDef ParentName="PW_UnfinishedFossilBase">
-    <defName>PW_UnfinishedSailFossil</defName>
-    <label>unfinished Sail Fossil</label>
-    <description>A Sail Fossil being revived.</description>
-    <graphicData>
-      <texPath>Things/Item/Fossils/Plume_Fossil</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>   
-  </ThingDef>
+    <ThingDef ParentName="PW_UnfinishedFossilBase">
+        <defName>PW_UnfinishedSailFossil</defName>
+        <label>unfinished Sail Fossil</label>
+        <description>A Sail Fossil being revived.</description>
+        <graphicData>
+            <texPath>Things/Item/Fossils/Plume_Fossil</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+    </ThingDef>
 
-  <ThingDef ParentName="PW_UnfinishedFossilBase">
-    <defName>PW_UnfinishedDrakeBirdFossil</defName>
-    <label>unfinished Fossilized Drake and Bird</label>
-    <description>A Fossilized Drake and Bird being combined.</description>
-    <graphicData>
-      <texPath>Things/Item/Fossils/DrakeBird_Fossil</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>   
-  </ThingDef>
+    <ThingDef ParentName="PW_UnfinishedFossilBase">
+        <defName>PW_UnfinishedDrakeBirdFossil</defName>
+        <label>unfinished Fossilized Drake and Bird</label>
+        <description>A Fossilized Drake and Bird being combined.</description>
+        <graphicData>
+            <texPath>Things/Item/Fossils/DrakeBird_Fossil</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+    </ThingDef>
 
-  <ThingDef ParentName="PW_UnfinishedFossilBase">
-    <defName>PW_UnfinishedDrakeFishFossil</defName>
-    <label>unfinished Fossilized Drake and Fish</label>
-    <description>A Fossilized Drake and Fish being combined.</description>
-    <graphicData>
-      <texPath>Things/Item/Fossils/DrakeFish_Fossil</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>   
-  </ThingDef>
+    <ThingDef ParentName="PW_UnfinishedFossilBase">
+        <defName>PW_UnfinishedDrakeFishFossil</defName>
+        <label>unfinished Fossilized Drake and Fish</label>
+        <description>A Fossilized Drake and Fish being combined.</description>
+        <graphicData>
+            <texPath>Things/Item/Fossils/DrakeFish_Fossil</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+    </ThingDef>
 
-  <ThingDef ParentName="PW_UnfinishedFossilBase">
-    <defName>PW_UnfinishedDinoBirdFossil</defName>
-    <label>unfinished Fossilized Dino and Bird</label>
-    <description>A Fossilized Dino and Bird being combined.</description>
-    <graphicData>
-      <texPath>Things/Item/Fossils/DinoBird_Fossil</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>   
-  </ThingDef>
+    <ThingDef ParentName="PW_UnfinishedFossilBase">
+        <defName>PW_UnfinishedDinoBirdFossil</defName>
+        <label>unfinished Fossilized Dino and Bird</label>
+        <description>A Fossilized Dino and Bird being combined.</description>
+        <graphicData>
+            <texPath>Things/Item/Fossils/DinoBird_Fossil</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+    </ThingDef>
 
-  <ThingDef ParentName="PW_UnfinishedFossilBase">
-    <defName>PW_UnfinishedDinoFishFossil</defName>
-    <label>unfinished Fossilized Dino and Fish</label>
-    <description>A Fossilized Dino and Fish being combined.</description>
-    <graphicData>
-      <texPath>Things/Item/Fossils/DinoFish_Fossil</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>   
-  </ThingDef>
+    <ThingDef ParentName="PW_UnfinishedFossilBase">
+        <defName>PW_UnfinishedDinoFishFossil</defName>
+        <label>unfinished Fossilized Dino and Fish</label>
+        <description>A Fossilized Dino and Fish being combined.</description>
+        <graphicData>
+            <texPath>Things/Item/Fossils/DinoFish_Fossil</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+    </ThingDef>
 
 </Defs>

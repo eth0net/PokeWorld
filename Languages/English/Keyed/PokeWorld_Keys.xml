@@ -2,206 +2,243 @@
 
 <LanguageData>
 
-  <PW_PokeWorld>PokéWorld</PW_PokeWorld>
-  <PW_Pokemon>Pokémon</PW_Pokemon>
+    <PW_PokeWorld>PokéWorld</PW_PokeWorld>
+    <PW_Pokemon>Pokémon</PW_Pokemon>
 
-  <PW_CompPokemonEggHatcherSoon>Sounds can be heard coming from inside! This Egg will hatch soon!</PW_CompPokemonEggHatcherSoon>
-  <PW_CompPokemonEggHatcherClose>It appears to move occasionally. It may be close to hatching.</PW_CompPokemonEggHatcherClose>
-  <PW_CompPokemonEggHatcherNotClose>What Pokémon will hatch from this Egg? It doesn't seem close to hatching.</PW_CompPokemonEggHatcherNotClose>
-  <PW_CompPokemonEggHatcherLong>It looks like this Egg will take a long time to hatch.</PW_CompPokemonEggHatcherLong>
+    <PW_CompPokemonEggHatcherSoon>Sounds can be heard coming from inside! This Egg will hatch soon!
+    </PW_CompPokemonEggHatcherSoon>
+    <PW_CompPokemonEggHatcherClose>It appears to move occasionally. It may be close to hatching.
+    </PW_CompPokemonEggHatcherClose>
+    <PW_CompPokemonEggHatcherNotClose>What Pokémon will hatch from this Egg? It doesn't seem close to hatching.
+    </PW_CompPokemonEggHatcherNotClose>
+    <PW_CompPokemonEggHatcherLong>It looks like this Egg will take a long time to hatch.</PW_CompPokemonEggHatcherLong>
 
-  <PW_Nature>Nature</PW_Nature>
-  <PW_StatNatureDesc>Determines this Pokémon's personality, and influences its growth.</PW_StatNatureDesc>
-  <PW_StatNatureChangeDesc>Increased stat (+10%): {0}\nDecreased stat (-10%): {1}</PW_StatNatureChangeDesc>
-  <PW_StatNatureNoChangeDesc>This Pokémon's stats aren't affected by its nature.</PW_StatNatureNoChangeDesc>
+    <PW_Nature>Nature</PW_Nature>
+    <PW_StatNatureDesc>Determines this Pokémon's personality, and influences its growth.</PW_StatNatureDesc>
+    <PW_StatNatureChangeDesc>Increased stat (+10%): {0}\nDecreased stat (-10%): {1}</PW_StatNatureChangeDesc>
+    <PW_StatNatureNoChangeDesc>This Pokémon's stats aren't affected by its nature.</PW_StatNatureNoChangeDesc>
 
-  <PW_EggGroup>Egg Group</PW_EggGroup>
-  <PW_StatEggGroupDesc>The Egg Group this Pokémon belongs to. If two happy Pokémon of opposite genders share the same Egg Group, they may breed together.</PW_StatEggGroupDesc>
-  <PW_EggGroupLabelAndDesc>{0}: {1}</PW_EggGroupLabelAndDesc>
-  <PW_StatUnknownEggGroup>Unknown</PW_StatUnknownEggGroup>
+    <PW_EggGroup>Egg Group</PW_EggGroup>
+    <PW_StatEggGroupDesc>The Egg Group this Pokémon belongs to. If two happy Pokémon of opposite genders share the same
+        Egg Group, they may breed together.
+    </PW_StatEggGroupDesc>
+    <PW_EggGroupLabelAndDesc>{0}: {1}</PW_EggGroupLabelAndDesc>
+    <PW_StatUnknownEggGroup>Unknown</PW_StatUnknownEggGroup>
 
-  <PW_Type>Type</PW_Type>
-  <PW_TypeName>{0}: {1}</PW_TypeName>
-  <PW_TypePrimary>Primary type</PW_TypePrimary>
-  <PW_TypeSecondary>Secondary type</PW_TypeSecondary>
-  <PW_StatTypeDesc>The type of this Pokémon. The type of a Pokémon typically defines which types of damaging moves is super effective against it, which types of damaging moves is not very effective against it, and which types of damaging moves is completely ineffective against it. If the type of a move matches one of the types of the Pokémon using it, it gains a boost in power.</PW_StatTypeDesc>
-  <PW_StatUnknownType>Unknown</PW_StatUnknownType>
+    <PW_Type>Type</PW_Type>
+    <PW_TypeName>{0}: {1}</PW_TypeName>
+    <PW_TypePrimary>Primary type</PW_TypePrimary>
+    <PW_TypeSecondary>Secondary type</PW_TypeSecondary>
+    <PW_StatTypeDesc>The type of this Pokémon. The type of a Pokémon typically defines which types of damaging moves is
+        super effective against it, which types of damaging moves is not very effective against it, and which types of
+        damaging moves is completely ineffective against it. If the type of a move matches one of the types of the
+        Pokémon using it, it gains a boost in power.
+    </PW_StatTypeDesc>
+    <PW_StatUnknownType>Unknown</PW_StatUnknownType>
 
-  <PW_DesignationPutInPokeball>Put in Poké Ball</PW_DesignationPutInPokeball>
-  <PW_DesignationPutInPokeballDesc>Put the Pokémon back in its Poké Ball</PW_DesignationPutInPokeballDesc>
-  <PW_DesignationPutInPokeballWarning>Must designate an owned Pokémon</PW_DesignationPutInPokeballWarning>
+    <PW_DesignationPutInPokeball>Put in Poké Ball</PW_DesignationPutInPokeball>
+    <PW_DesignationPutInPokeballDesc>Put the Pokémon back in its Poké Ball</PW_DesignationPutInPokeballDesc>
+    <PW_DesignationPutInPokeballWarning>Must designate an owned Pokémon</PW_DesignationPutInPokeballWarning>
 
-  <PW_DesignationStoreInPC>Store in PC</PW_DesignationStoreInPC>
-  <PW_DesignationStoreInPCDesc>Store the Pokémon in a PC</PW_DesignationStoreInPCDesc>
-  <PW_DesignationStoreInPCWarning>Must designate an owned Poké Ball</PW_DesignationStoreInPCWarning>
+    <PW_DesignationStoreInPC>Store in PC</PW_DesignationStoreInPC>
+    <PW_DesignationStoreInPCDesc>Store the Pokémon in a PC</PW_DesignationStoreInPCDesc>
+    <PW_DesignationStoreInPCWarning>Must designate an owned Poké Ball</PW_DesignationStoreInPCWarning>
 
-  <PW_IncidentBabyPokemon>Baby Pokémon join</PW_IncidentBabyPokemon>
-  <PW_IncidentBabyPokemonDesc>A baby {0}, abandoned or lost, has wandered into the area.\n\nIt seems accustomed to human contact and is joining your colony.</PW_IncidentBabyPokemonDesc>
+    <PW_IncidentBabyPokemon>Baby Pokémon join</PW_IncidentBabyPokemon>
+    <PW_IncidentBabyPokemonDesc>A baby {0}, abandoned or lost, has wandered into the area.\n\nIt seems accustomed to
+        human contact and is joining your colony.
+    </PW_IncidentBabyPokemonDesc>
 
-  <PW_SettingsWildPokemonFrequency>Wild Pokémon frequency:</PW_SettingsWildPokemonFrequency>
-  <PW_SettingsWildPokemonFrequencyDesc>The percentage of Pokémon found in the wild (from 0% to 100%) over other creatures, such as vanilla Rimworld animals and other modded creatures.\nThis setting affects wild creatures spawn, creatures in incidents, and those sold by traders (Can be changed anytime).\nNote: This setting may not work properly when playing with other mods featuring new animals and animal related events.</PW_SettingsWildPokemonFrequencyDesc>
-  <PW_SettingsNoPokemon>No Pokémon</PW_SettingsNoPokemon>
-  <PW_SettingsOnlyPokemon>Only Pokémon</PW_SettingsOnlyPokemon>
-  <PW_SettingsWarningGenAllowed>Note: You may, on rare occasions, encounter Pokémon from unselected generations, especially when playing with other mods featuring new animal related events.</PW_SettingsWarningGenAllowed>
-  <PW_SettingsAllowPokemonInfestation>Allow Pokémon infestations:</PW_SettingsAllowPokemonInfestation>
-  <PW_SettingsAllowNPCPokemonPack>Allow NPC trade caravans to have Pokémon as pack:</PW_SettingsAllowNPCPokemonPack>
-  <PW_SettingsAllowGeneration>Allow Gen. {0} Pokémon:</PW_SettingsAllowGeneration>
-  <PW_SettingsAllowPokemonInRaid>Allow Pokémon in raids:</PW_SettingsAllowPokemonInRaid>
-  <PW_SettingsEnableShinyMote>Enable Shiny Pokémon animation (Causes desync in multiplayer):</PW_SettingsEnableShinyMote>
+    <PW_SettingsWildPokemonFrequency>Wild Pokémon frequency:</PW_SettingsWildPokemonFrequency>
+    <PW_SettingsWildPokemonFrequencyDesc>The percentage of Pokémon found in the wild (from 0% to 100%) over other
+        creatures, such as vanilla Rimworld animals and other modded creatures.\nThis setting affects wild creatures
+        spawn, creatures in incidents, and those sold by traders (Can be changed anytime).\nNote: This setting may not
+        work properly when playing with other mods featuring new animals and animal related events.
+    </PW_SettingsWildPokemonFrequencyDesc>
+    <PW_SettingsNoPokemon>No Pokémon</PW_SettingsNoPokemon>
+    <PW_SettingsOnlyPokemon>Only Pokémon</PW_SettingsOnlyPokemon>
+    <PW_SettingsWarningGenAllowed>Note: You may, on rare occasions, encounter Pokémon from unselected generations,
+        especially when playing with other mods featuring new animal related events.
+    </PW_SettingsWarningGenAllowed>
+    <PW_SettingsAllowPokemonInfestation>Allow Pokémon infestations:</PW_SettingsAllowPokemonInfestation>
+    <PW_SettingsAllowNPCPokemonPack>Allow NPC trade caravans to have Pokémon as pack:</PW_SettingsAllowNPCPokemonPack>
+    <PW_SettingsAllowGeneration>Allow Gen. {0} Pokémon:</PW_SettingsAllowGeneration>
+    <PW_SettingsAllowPokemonInRaid>Allow Pokémon in raids:</PW_SettingsAllowPokemonInRaid>
+    <PW_SettingsEnableShinyMote>Enable Shiny Pokémon animation (Causes desync in multiplayer):
+    </PW_SettingsEnableShinyMote>
 
-  <PW_PokeballContainsShort>Contains: {0}.</PW_PokeballContainsShort>
-  <PW_PokeballContainsLongGendered>Contains: {0}, level {1} {2} {3}.</PW_PokeballContainsLongGendered>
-  <PW_PokeballContainsLongNoGender>Contains: {0}, level {1} {2}.</PW_PokeballContainsLongNoGender>
-  
-  <PW_TextMoteCatchFailed>Failed!\n{0} chance</PW_TextMoteCatchFailed>
-  <PW_TextMoteCatchFailedNotPokemon>Failed!\nNot a Pokémon!</PW_TextMoteCatchFailedNotPokemon>
-  <PW_TextMoteCatchFailedAlreadyOwned>Failed!\nAlready owned!</PW_TextMoteCatchFailedAlreadyOwned>
-  <PW_TextMoteCatchFailedDodged>Dodged!</PW_TextMoteCatchFailedDodged>
-  <PW_TextMoteCatchFailedFainted>Failed!\nCan't catch a fainted Pokémon!</PW_TextMoteCatchFailedFainted>
-  <PW_TextMoteDownedChanceToDie>Chance to die: {0}</PW_TextMoteDownedChanceToDie>
-  <PW_MessagePokemonCatchDied>The {0} you attempted to catch died because it was too weak!</PW_MessagePokemonCatchDied>
+    <PW_PokeballContainsShort>Contains: {0}.</PW_PokeballContainsShort>
+    <PW_PokeballContainsLongGendered>Contains: {0}, level {1} {2} {3}.</PW_PokeballContainsLongGendered>
+    <PW_PokeballContainsLongNoGender>Contains: {0}, level {1} {2}.</PW_PokeballContainsLongNoGender>
 
-  <PW_TabPokeballContents>Contents</PW_TabPokeballContents>
-  <PW_ContainedPokemon>Contained Pokémon</PW_ContainedPokemon>
-  <PW_LevelShort>Lv.{0}</PW_LevelShort>
-  <PW_LevelLong>Level {0}</PW_LevelLong>
+    <PW_TextMoteCatchFailed>Failed!\n{0} chance</PW_TextMoteCatchFailed>
+    <PW_TextMoteCatchFailedNotPokemon>Failed!\nNot a Pokémon!</PW_TextMoteCatchFailedNotPokemon>
+    <PW_TextMoteCatchFailedAlreadyOwned>Failed!\nAlready owned!</PW_TextMoteCatchFailedAlreadyOwned>
+    <PW_TextMoteCatchFailedDodged>Dodged!</PW_TextMoteCatchFailedDodged>
+    <PW_TextMoteCatchFailedFainted>Failed!\nCan't catch a fainted Pokémon!</PW_TextMoteCatchFailedFainted>
+    <PW_TextMoteDownedChanceToDie>Chance to die: {0}</PW_TextMoteDownedChanceToDie>
+    <PW_MessagePokemonCatchDied>The {0} you attempted to catch died because it was too weak!
+    </PW_MessagePokemonCatchDied>
 
-  <PW_Pokedex>Pokédex</PW_Pokedex>
-  <PW_PokedexNamed>{0}'s Pokédex</PW_PokedexNamed>
-  <PW_PokedexPokemonSeenCount>Pokémon seen: {0}</PW_PokedexPokemonSeenCount>
-  <PW_PokedexPokemonCaughtCount>Pokémon caught: {0}</PW_PokedexPokemonCaughtCount>
-  <PW_PokedexPokemonUnseenLabel>???</PW_PokedexPokemonUnseenLabel>
+    <PW_TabPokeballContents>Contents</PW_TabPokeballContents>
+    <PW_ContainedPokemon>Contained Pokémon</PW_ContainedPokemon>
+    <PW_LevelShort>Lv.{0}</PW_LevelShort>
+    <PW_LevelLong>Level {0}</PW_LevelLong>
 
-  <PW_Moves>Moves</PW_Moves>
-  <PW_Melee>Melee</PW_Melee>
-  <PW_Power>Power</PW_Power>
-  <PW_Range>Range</PW_Range>
-  <PW_Used>Enabled</PW_Used>
-  <PW_TabMovesPokemonLevel>{0} level: {1}</PW_TabMovesPokemonLevel>
-  <PW_TabMovesPokemonExperience>{0} experience: {1}/{2}</PW_TabMovesPokemonExperience>
-  <PW_PowerMeleeMove>Power: {0} (Melee)</PW_PowerMeleeMove>
-  <PW_PowerRangedMove>Power: {0} (Range: {1})</PW_PowerRangedMove>
-  <PW_MoveUnlockAt>Unlock at level: {0}</PW_MoveUnlockAt>
+    <PW_Pokedex>Pokédex</PW_Pokedex>
+    <PW_PokedexNamed>{0}'s Pokédex</PW_PokedexNamed>
+    <PW_PokedexPokemonSeenCount>Pokémon seen: {0}</PW_PokedexPokemonSeenCount>
+    <PW_PokedexPokemonCaughtCount>Pokémon caught: {0}</PW_PokedexPokemonCaughtCount>
+    <PW_PokedexPokemonUnseenLabel>???</PW_PokedexPokemonUnseenLabel>
 
-  <PW_WarningNoMaster>This Pokémon has no master</PW_WarningNoMaster>
-  <PW_WarningMasterNotDrafted>This Pokémon's master is not drafted</PW_WarningMasterNotDrafted>
-  <PW_WarningMasterTooFar>This Pokémon's master is too far</PW_WarningMasterTooFar>
-  <PW_WarningTargetTooFarFromMaster>Target too far from master</PW_WarningTargetTooFarFromMaster>
-  <PW_CannotGoNoMaster>Cannot go here: Pokémon has no master</PW_CannotGoNoMaster>
-  <PW_CannotGoTooFarFromMaster>Cannot go here: too far from master</PW_CannotGoTooFarFromMaster>
-  <PW_CannotAttackNoMaster>Cannot attack: Pokémon has no master</PW_CannotAttackNoMaster>
-  <PW_CannotAttackTooFarFromMaster>Cannot attack: too far from master</PW_CannotAttackTooFarFromMaster>
+    <PW_Moves>Moves</PW_Moves>
+    <PW_Melee>Melee</PW_Melee>
+    <PW_Power>Power</PW_Power>
+    <PW_Range>Range</PW_Range>
+    <PW_Used>Enabled</PW_Used>
+    <PW_TabMovesPokemonLevel>{0} level: {1}</PW_TabMovesPokemonLevel>
+    <PW_TabMovesPokemonExperience>{0} experience: {1}/{2}</PW_TabMovesPokemonExperience>
+    <PW_PowerMeleeMove>Power: {0} (Melee)</PW_PowerMeleeMove>
+    <PW_PowerRangedMove>Power: {0} (Range: {1})</PW_PowerRangedMove>
+    <PW_MoveUnlockAt>Unlock at level: {0}</PW_MoveUnlockAt>
 
-  <PW_LegendaryTitle>Legendary Pokémon: {0}</PW_LegendaryTitle>
+    <PW_WarningNoMaster>This Pokémon has no master</PW_WarningNoMaster>
+    <PW_WarningMasterNotDrafted>This Pokémon's master is not drafted</PW_WarningMasterNotDrafted>
+    <PW_WarningMasterTooFar>This Pokémon's master is too far</PW_WarningMasterTooFar>
+    <PW_WarningTargetTooFarFromMaster>Target too far from master</PW_WarningTargetTooFarFromMaster>
+    <PW_CannotGoNoMaster>Cannot go here: Pokémon has no master</PW_CannotGoNoMaster>
+    <PW_CannotGoTooFarFromMaster>Cannot go here: too far from master</PW_CannotGoTooFarFromMaster>
+    <PW_CannotAttackNoMaster>Cannot attack: Pokémon has no master</PW_CannotAttackNoMaster>
+    <PW_CannotAttackTooFarFromMaster>Cannot attack: too far from master</PW_CannotAttackTooFarFromMaster>
 
-  <PW_StatCatchRateDesc>Chance of successfully catching this Pokémon when at full health with a normal Poké Ball belt: {0}</PW_StatCatchRateDesc>
-  <PW_StatExperienceDesc>Experience: {0} / {1}</PW_StatExperienceDesc>
-  <PW_StatExperienceProgress>Progress to next level: {0}</PW_StatExperienceProgress>
-  <PW_StatFriendshipMaximum>Maximum</PW_StatFriendshipMaximum>
-  <PW_StatFriendshipVeryHigh>Very high</PW_StatFriendshipVeryHigh>
-  <PW_StatFriendshipHigh>High</PW_StatFriendshipHigh>
-  <PW_StatFriendshipAverage>Average</PW_StatFriendshipAverage>
-  <PW_StatFriendshipPoor>Poor</PW_StatFriendshipPoor>
-  <PW_StatFriendshipVeryPoor>Very poor</PW_StatFriendshipVeryPoor>
-  <PW_StatFriendshipTerrible>Terrible</PW_StatFriendshipTerrible>
-  <PW_StatBaseValue>Base value: {0} (x{1})</PW_StatBaseValue>
-  <PW_StatIndividualValue>IV: +{0}</PW_StatIndividualValue>
-  <PW_StatEffortValue>EV: +{0}</PW_StatEffortValue>
-  <PW_StatLevel>Level {0}: x{1}</PW_StatLevel>
-  <PW_StatHPAddLevel>Level {0}: +{1}</PW_StatHPAddLevel>
-  <PW_StatAdd>Finalize: +{0}</PW_StatAdd>
-  <PW_StatNatureMultiplier>Nature: x{0}</PW_StatNatureMultiplier>
-  <PW_StatFinalValue>Final value: {0}</PW_StatFinalValue>
-  <PW_StatXPYieldCombatPower>Combat power: x{0}</PW_StatXPYieldCombatPower>
-  <PW_StatXPYieldApparel>Apparel: +{0}</PW_StatXPYieldApparel>
-  <PW_StatXPYieldWeapon>Weapon: +{0}</PW_StatXPYieldWeapon>
-  <PW_StatXPYieldMeleeDPS>Melee DPS: +{0}</PW_StatXPYieldMeleeDPS>
+    <PW_LegendaryTitle>Legendary Pokémon: {0}</PW_LegendaryTitle>
 
-  <PW_StorageSystemContainedPokemon>Contained Pokémon ({0}/{1})</PW_StorageSystemContainedPokemon>
-  <PW_StorageSystemOrderByNumber>Order by Pokédex number:</PW_StorageSystemOrderByNumber>
-  <PW_StorageSystemOrderByName>Order by Pokémon name:</PW_StorageSystemOrderByName>
-  <PW_StorageSystemOrderByLevel>Order by Pokémon level:</PW_StorageSystemOrderByLevel>
-  <PW_StorageSystemPCNotPowered>The PC isn't powered!</PW_StorageSystemPCNotPowered>
-  <PW_TabPCContents>Contents</PW_TabPCContents>
+    <PW_StatCatchRateDesc>Chance of successfully catching this Pokémon when at full health with a normal Poké Ball belt:
+        {0}
+    </PW_StatCatchRateDesc>
+    <PW_StatExperienceDesc>Experience: {0} / {1}</PW_StatExperienceDesc>
+    <PW_StatExperienceProgress>Progress to next level: {0}</PW_StatExperienceProgress>
+    <PW_StatFriendshipMaximum>Maximum</PW_StatFriendshipMaximum>
+    <PW_StatFriendshipVeryHigh>Very high</PW_StatFriendshipVeryHigh>
+    <PW_StatFriendshipHigh>High</PW_StatFriendshipHigh>
+    <PW_StatFriendshipAverage>Average</PW_StatFriendshipAverage>
+    <PW_StatFriendshipPoor>Poor</PW_StatFriendshipPoor>
+    <PW_StatFriendshipVeryPoor>Very poor</PW_StatFriendshipVeryPoor>
+    <PW_StatFriendshipTerrible>Terrible</PW_StatFriendshipTerrible>
+    <PW_StatBaseValue>Base value: {0} (x{1})</PW_StatBaseValue>
+    <PW_StatIndividualValue>IV: +{0}</PW_StatIndividualValue>
+    <PW_StatEffortValue>EV: +{0}</PW_StatEffortValue>
+    <PW_StatLevel>Level {0}: x{1}</PW_StatLevel>
+    <PW_StatHPAddLevel>Level {0}: +{1}</PW_StatHPAddLevel>
+    <PW_StatAdd>Finalize: +{0}</PW_StatAdd>
+    <PW_StatNatureMultiplier>Nature: x{0}</PW_StatNatureMultiplier>
+    <PW_StatFinalValue>Final value: {0}</PW_StatFinalValue>
+    <PW_StatXPYieldCombatPower>Combat power: x{0}</PW_StatXPYieldCombatPower>
+    <PW_StatXPYieldApparel>Apparel: +{0}</PW_StatXPYieldApparel>
+    <PW_StatXPYieldWeapon>Weapon: +{0}</PW_StatXPYieldWeapon>
+    <PW_StatXPYieldMeleeDPS>Melee DPS: +{0}</PW_StatXPYieldMeleeDPS>
 
-  <PW_TipAlreadyCaught>Species already caught</PW_TipAlreadyCaught>
-  <PW_TipInPokeball>In Poké Ball</PW_TipInPokeball>
+    <PW_StorageSystemContainedPokemon>Contained Pokémon ({0}/{1})</PW_StorageSystemContainedPokemon>
+    <PW_StorageSystemOrderByNumber>Order by Pokédex number:</PW_StorageSystemOrderByNumber>
+    <PW_StorageSystemOrderByName>Order by Pokémon name:</PW_StorageSystemOrderByName>
+    <PW_StorageSystemOrderByLevel>Order by Pokémon level:</PW_StorageSystemOrderByLevel>
+    <PW_StorageSystemPCNotPowered>The PC isn't powered!</PW_StorageSystemPCNotPowered>
+    <PW_TabPCContents>Contents</PW_TabPCContents>
 
-  <PW_FormName>{0} form</PW_FormName>
-  <PW_BaseForm>Base form</PW_BaseForm>
-  <PW_ChangeForm>Change form</PW_ChangeForm>
-  <PW_NoFormsChangeInto>No forms to change into!</PW_NoFormsChangeInto>
+    <PW_TipAlreadyCaught>Species already caught</PW_TipAlreadyCaught>
+    <PW_TipInPokeball>In Poké Ball</PW_TipInPokeball>
 
-  <PW_PokemonLovesYou>{0} loves you!</PW_PokemonLovesYou>
-  <PW_FriendshipStatementReallyHappy>{0} looks really happy!</PW_FriendshipStatementReallyHappy>
-  <PW_FriendshipStatementTrusts>{0} really trusts you.</PW_FriendshipStatementTrusts>
-  <PW_FriendshipStatementSortHappy>{0} looks sort of happy.</PW_FriendshipStatementSortHappy>
-  <PW_FriendshipStatementCute>{0}'s quite cute.</PW_FriendshipStatementCute>
-  <PW_FriendshipStatementNotUsed>{0}'s not used to you.</PW_FriendshipStatementNotUsed>
-  <PW_FriendshipStatementMean>{0} looks mean.</PW_FriendshipStatementMean>
-  
-  <PW_TakeBackEverstone>Take back Everstone</PW_TakeBackEverstone>
-  <PW_TakeBackEverstoneDesc>Allows the Pokémon to evolve naturally by taking back its Everstone</PW_TakeBackEverstoneDesc>
-  <PW_GiveEverstone>Give Everstone</PW_GiveEverstone>
-  <PW_GiveEverstoneDesc>Prevent the Pokémon from evolving by giving it an Everstone</PW_GiveEverstoneDesc>
-  <PW_StopEvolution>Stop evolution</PW_StopEvolution>
-  <PW_StopEvolutionDesc>Scare the Pokémon to prevent it from evolving</PW_StopEvolutionDesc>
-  <PW_LevelIncrease>↑Level {0}</PW_LevelIncrease>
-  <PW_MessageLevelIncrease>{0} has reached level {1}!</PW_MessageLevelIncrease>
-  <PW_MessageEverstonePreventsEvolution>{0} tried to evolve, but was prevented by its Everstone!</PW_MessageEverstonePreventsEvolution>
-  <PW_MessageEvolving>{0} is evolving!</PW_MessageEvolving>
-  <PW_MessageStoppedEvolving>{0} stopped evolving!</PW_MessageStoppedEvolving>
-  <PW_MessageScaredStoppedEvolving>{0} was scared and stopped evolving!</PW_MessageScaredStoppedEvolving>
+    <PW_FormName>{0} form</PW_FormName>
+    <PW_BaseForm>Base form</PW_BaseForm>
+    <PW_ChangeForm>Change form</PW_ChangeForm>
+    <PW_NoFormsChangeInto>No forms to change into!</PW_NoFormsChangeInto>
 
-  <PW_ShinyPokemonLetter>Shiny Pokémon</PW_ShinyPokemonLetter>
-  <PW_ShinyPokemonLetterDesc>A rare Pokémon has entered the area! It shines with a peculiar color.\n\nYou should try to catch it before it leaves.</PW_ShinyPokemonLetterDesc>
+    <PW_PokemonLovesYou>{0} loves you!</PW_PokemonLovesYou>
+    <PW_FriendshipStatementReallyHappy>{0} looks really happy!</PW_FriendshipStatementReallyHappy>
+    <PW_FriendshipStatementTrusts>{0} really trusts you.</PW_FriendshipStatementTrusts>
+    <PW_FriendshipStatementSortHappy>{0} looks sort of happy.</PW_FriendshipStatementSortHappy>
+    <PW_FriendshipStatementCute>{0}'s quite cute.</PW_FriendshipStatementCute>
+    <PW_FriendshipStatementNotUsed>{0}'s not used to you.</PW_FriendshipStatementNotUsed>
+    <PW_FriendshipStatementMean>{0} looks mean.</PW_FriendshipStatementMean>
 
-  <PW_MalevolentTVLetterLabel>Malevolent TV</PW_MalevolentTVLetterLabel>
-  <PW_MalevolentTVLetterText>While watching the megascreen television, {0} senses an oddly malevolent feeling coming from it.....\n\nAlmost as if it's staring.....</PW_MalevolentTVLetterText>
+    <PW_TakeBackEverstone>Take back Everstone</PW_TakeBackEverstone>
+    <PW_TakeBackEverstoneDesc>Allows the Pokémon to evolve naturally by taking back its Everstone
+    </PW_TakeBackEverstoneDesc>
+    <PW_GiveEverstone>Give Everstone</PW_GiveEverstone>
+    <PW_GiveEverstoneDesc>Prevent the Pokémon from evolving by giving it an Everstone</PW_GiveEverstoneDesc>
+    <PW_StopEvolution>Stop evolution</PW_StopEvolution>
+    <PW_StopEvolutionDesc>Scare the Pokémon to prevent it from evolving</PW_StopEvolutionDesc>
+    <PW_LevelIncrease>↑Level {0}</PW_LevelIncrease>
+    <PW_MessageLevelIncrease>{0} has reached level {1}!</PW_MessageLevelIncrease>
+    <PW_MessageEverstonePreventsEvolution>{0} tried to evolve, but was prevented by its Everstone!
+    </PW_MessageEverstonePreventsEvolution>
+    <PW_MessageEvolving>{0} is evolving!</PW_MessageEvolving>
+    <PW_MessageStoppedEvolving>{0} stopped evolving!</PW_MessageStoppedEvolving>
+    <PW_MessageScaredStoppedEvolving>{0} was scared and stopped evolving!</PW_MessageScaredStoppedEvolving>
 
-  <PW_WildRotomLetterLabel>Wild Rotom</PW_WildRotomLetterLabel>
-  <PW_WildRotomLetterText>It looks like there's a Pokemon in the TV!\n\nA wild Rotom has appeared!</PW_WildRotomLetterText>
+    <PW_ShinyPokemonLetter>Shiny Pokémon</PW_ShinyPokemonLetter>
+    <PW_ShinyPokemonLetterDesc>A rare Pokémon has entered the area! It shines with a peculiar color.\n\nYou should try
+        to catch it before it leaves.
+    </PW_ShinyPokemonLetterDesc>
 
-  <PW_PriceFactorLevel>Level {0}: x{1}</PW_PriceFactorLevel>
-  <PW_PriceFactorShiny>★Shiny: x{0}</PW_PriceFactorShiny>
+    <PW_MalevolentTVLetterLabel>Malevolent TV</PW_MalevolentTVLetterLabel>
+    <PW_MalevolentTVLetterText>While watching the megascreen television, {0} senses an oddly malevolent feeling coming
+        from it.....\n\nAlmost as if it's staring.....
+    </PW_MalevolentTVLetterText>
 
-  <PW_FoundFossilOrEvoStone>{0} has found a {1}</PW_FoundFossilOrEvoStone>
-  <PW_ResurrectedFossil>{0} succesfully resurrected a {1}!</PW_ResurrectedFossil>
-  <PW_CraftedPokemon>{0} succesfully crafted a {1}!</PW_CraftedPokemon>
-  <PW_UnleashedPokemon>{0} unleashed a {1}!</PW_UnleashedPokemon>
-  
-  <PW_PokemonEgg>Pokémon Egg</PW_PokemonEgg>
+    <PW_WildRotomLetterLabel>Wild Rotom</PW_WildRotomLetterLabel>
+    <PW_WildRotomLetterText>It looks like there's a Pokemon in the TV!\n\nA wild Rotom has appeared!
+    </PW_WildRotomLetterText>
 
-  <PW_CantStoreBallInPCWarning>You can't store the content of this Poké Ball in a PC!</PW_CantStoreBallInPCWarning>
+    <PW_PriceFactorLevel>Level {0}: x{1}</PW_PriceFactorLevel>
+    <PW_PriceFactorShiny>★Shiny: x{0}</PW_PriceFactorShiny>
 
-  <PW_InspectLevelExperiencePlayerPokemon>Lv.{0}, exp: {1}/{2}</PW_InspectLevelExperiencePlayerPokemon>
-  <PW_InspectLevelExperienceNonPlayerPokemon>Lv.{0}</PW_InspectLevelExperienceNonPlayerPokemon>
+    <PW_FoundFossilOrEvoStone>{0} has found a {1}</PW_FoundFossilOrEvoStone>
+    <PW_ResurrectedFossil>{0} succesfully resurrected a {1}!</PW_ResurrectedFossil>
+    <PW_CraftedPokemon>{0} succesfully crafted a {1}!</PW_CraftedPokemon>
+    <PW_UnleashedPokemon>{0} unleashed a {1}!</PW_UnleashedPokemon>
 
-  <PW_Evolution>Evolution</PW_Evolution>
-  <PW_StatEvolutionDesc>Evolution is a process in which a Pokémon changes into a different species of Pokémon.\n\nEvolution is not merely a visual change, as Pokémon of a higher evolutionary stage have different stats, can learn different moves, and sometimes change types. Most Pokémon evolve once they reach a certain level or when exposed to an item. Others need particular conditions to evolve, such as beeing happy or levelling up at a specific time of the day.</PW_StatEvolutionDesc>
-  <PW_StatUnknownEvolution>Unknown</PW_StatUnknownEvolution>
-  <PW_StatCatchPokemonToLearnMore>You need to catch this Pokémon to learn more about its species.</PW_StatCatchPokemonToLearnMore>
-  <PW_StatNoEvolution>None</PW_StatNoEvolution>  
-  <PW_CannotEvolve>This Pokémon cannot evolve</PW_CannotEvolve>
+    <PW_PokemonEgg>Pokémon Egg</PW_PokemonEgg>
 
-  <PW_HappyPokemon>a happy {0}</PW_HappyPokemon>
-  <PW_MalePokemon>a male {0}</PW_MalePokemon>
-  <PW_FemalePokemon>a female {0}</PW_FemalePokemon>
-  <PW_HappyMalePokemon>a happy male {0}</PW_HappyMalePokemon>
-  <PW_HappyFemalePokemon>a happy female {0}</PW_HappyFemalePokemon>
+    <PW_CantStoreBallInPCWarning>You can't store the content of this Poké Ball in a PC!</PW_CantStoreBallInPCWarning>
 
-  <PW_CertainItem>certain item</PW_CertainItem>
-  <PW_StatEvolutionNeedItem>{0} requires a {1} to evolve into: {2}</PW_StatEvolutionNeedItem>
-  
-  <PW_StatEvolutionNeedFixedLevel>{0} needs to reach level {1} to evolve into: {2}</PW_StatEvolutionNeedFixedLevel>
-  <PW_StatEvolutionNeedFixedLevelDay>{0} needs to reach level {1} and level up during the day to evolve into: {2}</PW_StatEvolutionNeedFixedLevelDay>
-  <PW_StatEvolutionNeedFixedLevelNight>{0} needs to reach level {1} and level up during the night to evolve into: {2}</PW_StatEvolutionNeedFixedLevelNight>
-  
-  <PW_StatEvolutionNeedLevelUp>{0} needs to level up to evolve into: {1}</PW_StatEvolutionNeedLevelUp>
-  <PW_StatEvolutionNeedLevelUpDay>{0} needs to level up during the day to evolve into: {1}</PW_StatEvolutionNeedLevelUpDay>
-  <PW_StatEvolutionNeedLevelUpNight>{0} needs to level up during the night to evolve into: {1}</PW_StatEvolutionNeedLevelUpNight>
+    <PW_InspectLevelExperiencePlayerPokemon>Lv.{0}, exp: {1}/{2}</PW_InspectLevelExperiencePlayerPokemon>
+    <PW_InspectLevelExperienceNonPlayerPokemon>Lv.{0}</PW_InspectLevelExperienceNonPlayerPokemon>
 
-  
+    <PW_Evolution>Evolution</PW_Evolution>
+    <PW_StatEvolutionDesc>Evolution is a process in which a Pokémon changes into a different species of
+        Pokémon.\n\nEvolution is not merely a visual change, as Pokémon of a higher evolutionary stage have different
+        stats, can learn different moves, and sometimes change types. Most Pokémon evolve once they reach a certain
+        level or when exposed to an item. Others need particular conditions to evolve, such as beeing happy or levelling
+        up at a specific time of the day.
+    </PW_StatEvolutionDesc>
+    <PW_StatUnknownEvolution>Unknown</PW_StatUnknownEvolution>
+    <PW_StatCatchPokemonToLearnMore>You need to catch this Pokémon to learn more about its species.
+    </PW_StatCatchPokemonToLearnMore>
+    <PW_StatNoEvolution>None</PW_StatNoEvolution>
+    <PW_CannotEvolve>This Pokémon cannot evolve</PW_CannotEvolve>
 
-  
+    <PW_HappyPokemon>a happy {0}</PW_HappyPokemon>
+    <PW_MalePokemon>a male {0}</PW_MalePokemon>
+    <PW_FemalePokemon>a female {0}</PW_FemalePokemon>
+    <PW_HappyMalePokemon>a happy male {0}</PW_HappyMalePokemon>
+    <PW_HappyFemalePokemon>a happy female {0}</PW_HappyFemalePokemon>
+
+    <PW_CertainItem>certain item</PW_CertainItem>
+    <PW_StatEvolutionNeedItem>{0} requires a {1} to evolve into: {2}</PW_StatEvolutionNeedItem>
+
+    <PW_StatEvolutionNeedFixedLevel>{0} needs to reach level {1} to evolve into: {2}</PW_StatEvolutionNeedFixedLevel>
+    <PW_StatEvolutionNeedFixedLevelDay>{0} needs to reach level {1} and level up during the day to evolve into: {2}
+    </PW_StatEvolutionNeedFixedLevelDay>
+    <PW_StatEvolutionNeedFixedLevelNight>{0} needs to reach level {1} and level up during the night to evolve into:
+        {2}
+    </PW_StatEvolutionNeedFixedLevelNight>
+
+    <PW_StatEvolutionNeedLevelUp>{0} needs to level up to evolve into: {1}</PW_StatEvolutionNeedLevelUp>
+    <PW_StatEvolutionNeedLevelUpDay>{0} needs to level up during the day to evolve into: {1}
+    </PW_StatEvolutionNeedLevelUpDay>
+    <PW_StatEvolutionNeedLevelUpNight>{0} needs to level up during the night to evolve into: {1}
+    </PW_StatEvolutionNeedLevelUpNight>
+
+
 </LanguageData>
