@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version='1.0' encoding='utf8'?>
 <Defs>
-
     <QuestScriptDef>
         <defName>PW_Script_Articuno</defName>
         <autoAccept>true</autoAccept>
@@ -9,12 +8,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Articuno</li>
+                <li>questDescription-&gt;Legendary Pokémon: Articuno</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -70,7 +69,6 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
     <QuestScriptDef>
         <defName>PW_Script_Zapdos</defName>
         <autoAccept>true</autoAccept>
@@ -79,12 +77,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Zapdos</li>
+                <li>questDescription-&gt;Legendary Pokémon: Zapdos</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -140,7 +138,6 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
     <QuestScriptDef>
         <defName>PW_Script_Moltres</defName>
         <autoAccept>true</autoAccept>
@@ -149,12 +146,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Moltres</li>
+                <li>questDescription-&gt;Legendary Pokémon: Moltres</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -210,7 +207,6 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
     <QuestScriptDef>
         <defName>PW_Script_Mewtwo</defName>
         <autoAccept>true</autoAccept>
@@ -219,12 +215,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Mewtwo</li>
+                <li>questDescription-&gt;Legendary Pokémon: Mewtwo</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -280,7 +276,6 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
     <QuestScriptDef>
         <defName>PW_Script_Mew</defName>
         <autoAccept>true</autoAccept>
@@ -289,12 +284,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Mew</li>
+                <li>questDescription-&gt;Legendary Pokémon: Mew</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -350,7 +345,6 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
     <QuestScriptDef>
         <defName>PW_Script_Raikou</defName>
         <autoAccept>true</autoAccept>
@@ -359,12 +353,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Raikou</li>
+                <li>questDescription-&gt;Legendary Pokémon: Raikou</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -420,7 +414,6 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
     <QuestScriptDef>
         <defName>PW_Script_Entei</defName>
         <autoAccept>true</autoAccept>
@@ -429,12 +422,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Entei</li>
+                <li>questDescription-&gt;Legendary Pokémon: Entei</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -490,7 +483,6 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
     <QuestScriptDef>
         <defName>PW_Script_Suicune</defName>
         <autoAccept>true</autoAccept>
@@ -499,12 +491,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Suicune</li>
+                <li>questDescription-&gt;Legendary Pokémon: Suicune</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -560,7 +552,6 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
     <QuestScriptDef>
         <defName>PW_Script_Lugia</defName>
         <autoAccept>true</autoAccept>
@@ -569,12 +560,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Lugia</li>
+                <li>questDescription-&gt;Legendary Pokémon: Lugia</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -630,7 +621,6 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
     <QuestScriptDef>
         <defName>PW_Script_HoOh</defName>
         <autoAccept>true</autoAccept>
@@ -639,12 +629,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Ho-Oh</li>
+                <li>questDescription-&gt;Legendary Pokémon: Ho-Oh</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -700,7 +690,6 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
     <QuestScriptDef>
         <defName>PW_Script_Celebi</defName>
         <autoAccept>true</autoAccept>
@@ -709,12 +698,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Celebi</li>
+                <li>questDescription-&gt;Legendary Pokémon: Celebi</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -770,7 +759,6 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
     <QuestScriptDef>
         <defName>PW_Script_Regirock</defName>
         <autoAccept>true</autoAccept>
@@ -779,12 +767,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Regirock</li>
+                <li>questDescription-&gt;Legendary Pokémon: Regirock</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -840,7 +828,6 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
     <QuestScriptDef>
         <defName>PW_Script_Regice</defName>
         <autoAccept>true</autoAccept>
@@ -849,12 +836,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Regice</li>
+                <li>questDescription-&gt;Legendary Pokémon: Regice</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -910,7 +897,6 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
     <QuestScriptDef>
         <defName>PW_Script_Registeel</defName>
         <autoAccept>true</autoAccept>
@@ -919,12 +905,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Registeel</li>
+                <li>questDescription-&gt;Legendary Pokémon: Registeel</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -980,7 +966,6 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
     <QuestScriptDef>
         <defName>PW_Script_Latias</defName>
         <autoAccept>true</autoAccept>
@@ -989,12 +974,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Latias</li>
+                <li>questDescription-&gt;Legendary Pokémon: Latias</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -1050,7 +1035,6 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
     <QuestScriptDef>
         <defName>PW_Script_Latios</defName>
         <autoAccept>true</autoAccept>
@@ -1059,12 +1043,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Latios</li>
+                <li>questDescription-&gt;Legendary Pokémon: Latios</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -1120,7 +1104,6 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
     <QuestScriptDef>
         <defName>PW_Script_Kyogre</defName>
         <autoAccept>true</autoAccept>
@@ -1129,12 +1112,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Kyogre</li>
+                <li>questDescription-&gt;Legendary Pokémon: Kyogre</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -1190,7 +1173,6 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
     <QuestScriptDef>
         <defName>PW_Script_Groudon</defName>
         <autoAccept>true</autoAccept>
@@ -1199,12 +1181,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Groudon</li>
+                <li>questDescription-&gt;Legendary Pokémon: Groudon</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -1260,7 +1242,6 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
     <QuestScriptDef>
         <defName>PW_Script_Rayquaza</defName>
         <autoAccept>true</autoAccept>
@@ -1269,12 +1250,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Rayquaza</li>
+                <li>questDescription-&gt;Legendary Pokémon: Rayquaza</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -1330,7 +1311,6 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
     <QuestScriptDef>
         <defName>PW_Script_Jirachi</defName>
         <autoAccept>true</autoAccept>
@@ -1339,12 +1319,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Jirachi</li>
+                <li>questDescription-&gt;Legendary Pokémon: Jirachi</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -1400,7 +1380,6 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
     <QuestScriptDef>
         <defName>PW_Script_Deoxys</defName>
         <autoAccept>true</autoAccept>
@@ -1409,12 +1388,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Deoxys</li>
+                <li>questDescription-&gt;Legendary Pokémon: Deoxys</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -1470,7 +1449,6 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
     <QuestScriptDef>
         <defName>PW_Script_Uxie</defName>
         <autoAccept>true</autoAccept>
@@ -1479,12 +1457,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Uxie</li>
+                <li>questDescription-&gt;Legendary Pokémon: Uxie</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -1540,7 +1518,6 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
     <QuestScriptDef>
         <defName>PW_Script_Mesprit</defName>
         <autoAccept>true</autoAccept>
@@ -1549,12 +1526,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Mesprit</li>
+                <li>questDescription-&gt;Legendary Pokémon: Mesprit</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -1610,7 +1587,6 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
     <QuestScriptDef>
         <defName>PW_Script_Azelf</defName>
         <autoAccept>true</autoAccept>
@@ -1619,12 +1595,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Azelf</li>
+                <li>questDescription-&gt;Legendary Pokémon: Azelf</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -1680,7 +1656,6 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
     <QuestScriptDef>
         <defName>PW_Script_Dialga</defName>
         <autoAccept>true</autoAccept>
@@ -1689,12 +1664,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Dialga</li>
+                <li>questDescription-&gt;Legendary Pokémon: Dialga</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -1750,7 +1725,6 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
     <QuestScriptDef>
         <defName>PW_Script_Palkia</defName>
         <autoAccept>true</autoAccept>
@@ -1759,12 +1733,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Palkia</li>
+                <li>questDescription-&gt;Legendary Pokémon: Palkia</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -1820,7 +1794,6 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
     <QuestScriptDef>
         <defName>PW_Script_Heatran</defName>
         <autoAccept>true</autoAccept>
@@ -1829,12 +1802,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Heatran</li>
+                <li>questDescription-&gt;Legendary Pokémon: Heatran</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -1890,7 +1863,6 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
     <QuestScriptDef>
         <defName>PW_Script_Regigigas</defName>
         <autoAccept>true</autoAccept>
@@ -1899,12 +1871,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Regigigas</li>
+                <li>questDescription-&gt;Legendary Pokémon: Regigigas</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -1960,7 +1932,6 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
     <QuestScriptDef>
         <defName>PW_Script_Giratina</defName>
         <autoAccept>true</autoAccept>
@@ -1969,12 +1940,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Giratina</li>
+                <li>questDescription-&gt;Legendary Pokémon: Giratina</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -2030,7 +2001,6 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
     <QuestScriptDef>
         <defName>PW_Script_Cresselia</defName>
         <autoAccept>true</autoAccept>
@@ -2039,12 +2009,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Cresselia</li>
+                <li>questDescription-&gt;Legendary Pokémon: Cresselia</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -2100,77 +2070,6 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
-    <QuestScriptDef>
-        <defName>PW_Script_Phione</defName>
-        <autoAccept>true</autoAccept>
-        <defaultChallengeRating>4</defaultChallengeRating>
-        <isRootSpecial>true</isRootSpecial>
-        <affectedByPoints>false</affectedByPoints>
-        <questNameRules>
-            <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
-            </rulesStrings>
-        </questNameRules>
-        <questDescriptionRules>
-            <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Phione</li>
-            </rulesStrings>
-        </questDescriptionRules>
-        <root Class="QuestNode_Sequence">
-            <nodes>
-                <li Class="QuestNode_GetMap"/>
-                <li Class="QuestNode_Set">
-                    <name>siteDistRange</name>
-                    <value>15~30</value>
-                </li>
-                <li Class="QuestNode_GetSiteTile">
-                    <storeAs>siteTile</storeAs>
-                    <preferCloserTiles>false</preferCloserTiles>
-                </li>
-                <li Class="QuestNode_Set">
-                    <name>siteThreatChance</name>
-                    <value>0</value>
-                </li>
-                <li Class="QuestNode_Set">
-                    <name>legendaryKind</name>
-                    <value>PW_Phione</value>
-                </li>
-                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
-                    <storeAs>sitePartDefs</storeAs>
-                    <sitePartsTags>
-                        <li>
-                            <tag>PW_LegendaryPokemon</tag>
-                        </li>
-                    </sitePartsTags>
-                </li>
-                <li Class="QuestNode_GetDefaultSitePartsParams">
-                    <tile>$siteTile</tile>
-                    <sitePartDefs>$sitePartDefs</sitePartDefs>
-                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
-                </li>
-                <li Class="QuestNode_SubScript">
-                    <def>Util_GenerateSite</def>
-                    <parms>
-                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
-                    </parms>
-                </li>
-                <li Class="QuestNode_SpawnWorldObjects">
-                    <worldObjects>$site</worldObjects>
-                </li>
-                <li Class="QuestNode_AddPawnReward">
-                    <pawn>$legendaryPokemon</pawn>
-                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
-                    <rewardDetailsHidden>true</rewardDetailsHidden>
-                </li>
-                <li Class="QuestNode_NoWorldObject">
-                    <worldObject>$site</worldObject>
-                    <node Class="QuestNode_End"/>
-                </li>
-            </nodes>
-        </root>
-    </QuestScriptDef>
-
     <QuestScriptDef>
         <defName>PW_Script_Manaphy</defName>
         <autoAccept>true</autoAccept>
@@ -2179,12 +2078,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Manaphy</li>
+                <li>questDescription-&gt;Legendary Pokémon: Manaphy</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -2240,7 +2139,6 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
     <QuestScriptDef>
         <defName>PW_Script_Darkrai</defName>
         <autoAccept>true</autoAccept>
@@ -2249,12 +2147,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Darkrai</li>
+                <li>questDescription-&gt;Legendary Pokémon: Darkrai</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -2310,7 +2208,6 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
     <QuestScriptDef>
         <defName>PW_Script_Shaymin</defName>
         <autoAccept>true</autoAccept>
@@ -2319,12 +2216,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Shaymin</li>
+                <li>questDescription-&gt;Legendary Pokémon: Shaymin</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -2380,7 +2277,6 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
     <QuestScriptDef>
         <defName>PW_Script_Arceus</defName>
         <autoAccept>true</autoAccept>
@@ -2389,12 +2285,12 @@
         <affectedByPoints>false</affectedByPoints>
         <questNameRules>
             <rulesStrings>
-                <li>questName->Legendary Pokémon</li>
+                <li>questName-&gt;Legendary Pokémon</li>
             </rulesStrings>
         </questNameRules>
         <questDescriptionRules>
             <rulesStrings>
-                <li>questDescription->Legendary Pokémon: Arceus</li>
+                <li>questDescription-&gt;Legendary Pokémon: Arceus</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -2450,5 +2346,3799 @@
             </nodes>
         </root>
     </QuestScriptDef>
-
+    <QuestScriptDef>
+        <defName>PW_Script_Victini</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Victini</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Victini</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Cobalion</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Cobalion</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Cobalion</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Terrakion</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Terrakion</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Terrakion</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Virizion</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Virizion</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Virizion</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Tornadus</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Tornadus</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Tornadus</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Thundurus</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Thundurus</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Thundurus</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Reshiram</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Reshiram</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Reshiram</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Zekrom</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Zekrom</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Zekrom</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Landorus</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Landorus</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Landorus</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Kyurem</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Kyurem</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Kyurem</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Keldeo</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Keldeo</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Keldeo</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Meloetta</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Meloetta</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Meloetta</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Genesect</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Genesect</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Genesect</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Xerneas</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Xerneas</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Xerneas</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Yveltal</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Yveltal</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Yveltal</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Zygarde</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Zygarde</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Zygarde</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Diancie</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Diancie</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Diancie</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Hoopa</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Hoopa</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Hoopa</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Volcanion</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Volcanion</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Volcanion</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_TapuKoko</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Tapu Koko</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_TapuKoko</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_TapuLele</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Tapu Lele</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_TapuLele</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_TapuBulu</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Tapu Bulu</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_TapuBulu</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_TapuFini</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Tapu Fini</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_TapuFini</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Cosmog</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Cosmog</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Cosmog</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Cosmoem</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Cosmoem</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Cosmoem</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Solgaleo</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Solgaleo</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Solgaleo</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Lunala</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Lunala</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Lunala</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Nihilego</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Nihilego</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Nihilego</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Buzzwole</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Buzzwole</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Buzzwole</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Pheromosa</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Pheromosa</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Pheromosa</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Xurkitree</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Xurkitree</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Xurkitree</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Celesteela</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Celesteela</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Celesteela</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Kartana</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Kartana</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Kartana</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Guzzlord</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Guzzlord</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Guzzlord</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Necrozma</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Necrozma</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Necrozma</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Magearna</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Magearna</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Magearna</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Marshadow</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Marshadow</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Marshadow</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Poipole</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Poipole</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Poipole</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Naganadel</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Naganadel</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Naganadel</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Stakataka</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Stakataka</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Stakataka</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Blacephalon</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Blacephalon</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Blacephalon</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Zeraora</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Zeraora</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Zeraora</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Meltan</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Meltan</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Meltan</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Melmetal</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Melmetal</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Melmetal</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Zacian</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Zacian</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Zacian</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Zamazenta</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Zamazenta</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Zamazenta</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Eternatus</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Eternatus</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Eternatus</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Kubfu</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Kubfu</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Kubfu</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Urshifu</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Urshifu</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Urshifu</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Zarude</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Zarude</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Zarude</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Regieleki</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Regieleki</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Regieleki</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Regidrago</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Regidrago</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Regidrago</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Glastrier</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Glastrier</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Glastrier</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Spectrier</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Spectrier</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Spectrier</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+    <QuestScriptDef>
+        <defName>PW_Script_Calyrex</defName>
+        <autoAccept>true</autoAccept>
+        <defaultChallengeRating>4</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <affectedByPoints>false</affectedByPoints>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName-&gt;Legendary Pokémon</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-&gt;Legendary Pokémon: Calyrex</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap"/>
+                <li Class="QuestNode_Set">
+                    <name>siteDistRange</name>
+                    <value>15~30</value>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>false</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>siteThreatChance</name>
+                    <value>0</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>legendaryKind</name>
+                    <value>PW_Calyrex</value>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>PW_LegendaryPokemon</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_AddPawnReward">
+                    <pawn>$legendaryPokemon</pawn>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <rewardDetailsHidden>true</rewardDetailsHidden>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End"/>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
 </Defs>
