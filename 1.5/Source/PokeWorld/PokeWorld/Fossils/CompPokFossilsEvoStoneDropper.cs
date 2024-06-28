@@ -4,7 +4,7 @@ namespace PokeWorld
 {
     public class CompPokFossilsEvoStoneDropper : ThingComp
     {
-        public CompProperties_PokFossilsEvoStoneDropper Props => (CompProperties_PokFossilsEvoStoneDropper)this.props;
+        public CompProperties_PokFossilsEvoStoneDropper Props => (CompProperties_PokFossilsEvoStoneDropper)props;
 
         public float StoneDropRate => Props.stoneDropRate;
 
@@ -13,13 +13,12 @@ namespace PokeWorld
 
     public class CompProperties_PokFossilsEvoStoneDropper : CompProperties
     {
-        public float stoneDropRate;
-        
         public float fossilDropRate;
-        
+        public float stoneDropRate;
+
         public CompProperties_PokFossilsEvoStoneDropper()
         {
-            this.compClass = typeof(CompPokFossilsEvoStoneDropper);
+            compClass = typeof(CompPokFossilsEvoStoneDropper);
         }
     }
 }

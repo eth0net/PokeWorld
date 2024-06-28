@@ -1,6 +1,6 @@
-﻿using RimWorld;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using RimWorld;
 using Verse;
 using Verse.AI;
 
@@ -15,11 +15,11 @@ namespace PokeWorld
 
         protected override IEnumerable<Toil> MakeNewToils()
         {
-            Toil toil = new Toil
+            var toil = new Toil
             {
                 initAction = delegate
                 {
-                    base.Map.pawnDestinationReservationManager.Reserve(pawn, job, pawn.Position);
+                    Map.pawnDestinationReservationManager.Reserve(pawn, job, pawn.Position);
                     pawn.pather.StopDead();
                     CheckForAutoAttack();
                 },
@@ -30,35 +30,29 @@ namespace PokeWorld
                         Log.Error(string.Concat(pawn, " in eternal WaitCombat"));
                         ReadyForNextToil();
                     }
-                    if (pawn.Faction != null && pawn.Faction.IsPlayer && !PokemonMasterUtility.IsPokemonInMasterRange(pawn))
-                    {
+
+                    if (pawn.Faction != null && pawn.Faction.IsPlayer &&
+                        !PokemonMasterUtility.IsPokemonInMasterRange(pawn))
                         ReadyForNextToil();
-                    }
-                    else if ((Find.TickManager.TicksGame + pawn.thingIDNumber) % 4 == 0)
-                    {
-                        CheckForAutoAttack();
-                    }
+                    else if ((Find.TickManager.TicksGame + pawn.thingIDNumber) % 4 == 0) CheckForAutoAttack();
                 }
             };
             DecorateWaitToil(toil);
             toil.defaultCompleteMode = ToilCompleteMode.Never;
             if (pawn.mindState != null && pawn.mindState.duty != null && pawn.mindState.duty.focus != null)
             {
-                LocalTargetInfo focusLocal = pawn.mindState.duty.focus;
+                var focusLocal = pawn.mindState.duty.focus;
                 toil.handlingFacing = false;
-                toil.tickAction = (Action)Delegate.Combine(toil.tickAction, (Action)delegate
-                {
-                    pawn.rotationTracker.FaceTarget(focusLocal);
-                });
+                toil.tickAction = (Action)Delegate.Combine(toil.tickAction,
+                    (Action)delegate { pawn.rotationTracker.FaceTarget(focusLocal); });
             }
             else if (pawn.Faction != null && pawn.Faction.IsPlayer && PokemonMasterUtility.IsPokemonInMasterRange(pawn))
             {
                 toil.handlingFacing = false;
-                toil.tickAction = (Action)Delegate.Combine(toil.tickAction, (Action)delegate
-                {
-                    pawn.Rotation = Rot4.South;
-                });
+                toil.tickAction =
+                    (Action)Delegate.Combine(toil.tickAction, (Action)delegate { pawn.Rotation = Rot4.South; });
             }
+
             yield return toil;
         }
 
@@ -68,60 +62,50 @@ namespace PokeWorld
 
         public override void Notify_StanceChanged()
         {
-            if (pawn.stances.curStance is Stance_Mobile)
-            {
-                CheckForAutoAttack();
-            }
+            if (pawn.stances.curStance is Stance_Mobile) CheckForAutoAttack();
         }
 
         private void CheckForAutoAttack()
         {
-            if (base.pawn.Downed || base.pawn.stances.FullBodyBusy)
-            {
-                return;
-            }
+            if (this.pawn.Downed || this.pawn.stances.FullBodyBusy) return;
             collideWithPawns = false;
             Fire fire = null;
-            for (int i = 0; i < 9; i++)
+            for (var i = 0; i < 9; i++)
             {
-                IntVec3 c = base.pawn.Position + GenAdj.AdjacentCellsAndInside[i];
-                if (!c.InBounds(base.pawn.Map))
+                var c = this.pawn.Position + GenAdj.AdjacentCellsAndInside[i];
+                if (!c.InBounds(this.pawn.Map)) continue;
+                var thingList = c.GetThingList(Map);
+                for (var j = 0; j < thingList.Count; j++)
                 {
-                    continue;
-                }
-                List<Thing> thingList = c.GetThingList(base.Map);
-                for (int j = 0; j < thingList.Count; j++)
-                {
-                    if (thingList[j] is Pawn pawn && !pawn.Downed && base.pawn.HostileTo(pawn) && GenHostility.IsActiveThreatTo(pawn, base.pawn.Faction))
+                    if (thingList[j] is Pawn pawn && !pawn.Downed && this.pawn.HostileTo(pawn) &&
+                        GenHostility.IsActiveThreatTo(pawn, this.pawn.Faction))
                     {
-                        base.pawn.meleeVerbs.TryMeleeAttack(pawn);
+                        this.pawn.meleeVerbs.TryMeleeAttack(pawn);
                         collideWithPawns = true;
                         return;
                     }
-                    if (thingList[j] is Fire fire2 && (fire == null || fire2.fireSize < fire.fireSize || i == 8) && (fire2.parent == null || fire2.parent != base.pawn))
-                    {
-                        fire = fire2;
-                    }
+
+                    if (thingList[j] is Fire fire2 && (fire == null || fire2.fireSize < fire.fireSize || i == 8) &&
+                        (fire2.parent == null || fire2.parent != this.pawn)) fire = fire2;
                 }
             }
-            if (fire != null && (!base.pawn.InMentalState || base.pawn.MentalState.def.allowBeatfire))
+
+            if (fire != null && (!this.pawn.InMentalState || this.pawn.MentalState.def.allowBeatfire))
             {
-                base.pawn.natives.TryBeatFire(fire);
+                pawn.natives.TryBeatFire(fire);
             }
             else
             {
-                Verb currentEffectiveVerb = base.pawn.CurrentEffectiveVerb;
+                var currentEffectiveVerb = pawn.CurrentEffectiveVerb;
                 if (currentEffectiveVerb != null && !(currentEffectiveVerb.tool != null))
                 {
-                    TargetScanFlags targetScanFlags = TargetScanFlags.NeedLOSToAll | TargetScanFlags.NeedThreat | TargetScanFlags.NeedAutoTargetable;
-                    if (currentEffectiveVerb.IsIncendiary_Ranged())
-                    {
-                        targetScanFlags |= TargetScanFlags.NeedNonBurning;
-                    }
-                    Thing thing = (Thing)AttackTargetFinder.BestShootTargetFromCurrentPosition(base.pawn, targetScanFlags);
+                    var targetScanFlags = TargetScanFlags.NeedLOSToAll | TargetScanFlags.NeedThreat |
+                                          TargetScanFlags.NeedAutoTargetable;
+                    if (currentEffectiveVerb.IsIncendiary_Ranged()) targetScanFlags |= TargetScanFlags.NeedNonBurning;
+                    var thing = (Thing)AttackTargetFinder.BestShootTargetFromCurrentPosition(pawn, targetScanFlags);
                     if (thing != null)
                     {
-                        base.pawn.TryStartAttack(thing);
+                        pawn.TryStartAttack(thing);
                         collideWithPawns = true;
                     }
                 }

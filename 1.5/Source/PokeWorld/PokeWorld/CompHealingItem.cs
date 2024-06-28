@@ -3,19 +3,19 @@ using Verse;
 
 namespace PokeWorld
 {
-    class CompHealingItem : ThingComp
+    internal class CompHealingItem : ThingComp
     {
-
-        public CompProperties_HealingItem Props => (CompProperties_HealingItem)this.props;
+        public CompProperties_HealingItem Props => (CompProperties_HealingItem)props;
         public float HealingAmount => Props.healingAmount;
     }
 
-    class CompProperties_HealingItem : CompProperties
+    internal class CompProperties_HealingItem : CompProperties
     {
         public float healingAmount = 20;
+
         public CompProperties_HealingItem()
         {
-            this.compClass = typeof(CompHealingItem);
+            compClass = typeof(CompHealingItem);
         }
 
         public CompProperties_HealingItem(Type compClass) : base(compClass)

@@ -1,9 +1,8 @@
-﻿using HarmonyLib;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Emit;
+using HarmonyLib;
 using Verse;
-
 
 namespace PokeWorld
 {
@@ -41,30 +40,31 @@ namespace PokeWorld
 
     [HarmonyPatch(typeof(PawnRenderNode_AnimalPart))]
     [HarmonyPatch(nameof(PawnRenderNode_AnimalPart.GraphicFor))]
-    class PawnRenderNode_AnimalPart_GraphicFor_Patch
+    internal class PawnRenderNode_AnimalPart_GraphicFor_Patch
     {
-        static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
+        private static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
             var codes = new List<CodeInstruction>(instructions);
 
-            var index = codes.FindIndex(code => code.Calls(AccessTools.PropertyGetter(typeof(Pawn), nameof(Pawn.Dead))));
+            var index = codes.FindIndex(code =>
+                code.Calls(AccessTools.PropertyGetter(typeof(Pawn), nameof(Pawn.Dead))));
 
-            codes.InsertRange(index, new List<CodeInstruction>()
+            codes.InsertRange(index, new List<CodeInstruction>
             {
                 new CodeInstruction(OpCodes.Ldloca_S, 1),
                 CodeInstruction.Call(typeof(PawnRenderNode_AnimalPart_GraphicFor_Patch), nameof(TryApplyShinyForPawn)),
-                new CodeInstruction(OpCodes.Ldarg_1),
+                new CodeInstruction(OpCodes.Ldarg_1)
             });
 
             return codes.AsEnumerable();
         }
 
-        static void TryApplyShinyForPawn(Pawn pawn, ref Graphic graphic)
+        private static void TryApplyShinyForPawn(Pawn pawn, ref Graphic graphic)
         {
-            CompPokemon compPokemon = pawn.TryGetComp<CompPokemon>();
+            var compPokemon = pawn.TryGetComp<CompPokemon>();
             if (compPokemon != null && compPokemon.shinyTracker != null && compPokemon.shinyTracker.isShiny)
             {
-                GraphicData graphicData = new GraphicData();
+                var graphicData = new GraphicData();
                 graphicData.CopyFrom(graphic.data);
                 graphicData.texPath += "Shiny";
                 graphic = graphicData.Graphic;

@@ -1,7 +1,7 @@
-﻿using RimWorld;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Xml;
+using RimWorld;
 using Verse;
 
 namespace PokeWorld
@@ -14,24 +14,22 @@ namespace PokeWorld
 
         public PawnKindDef GetRandomFish(BiomeDef biome, TerrainDef terrain, ThingDef rod)
         {
-            List<FishingRatePokemonRecord> rates = biomes.Where((FishingRateBiomeRecord b) => b.biome == biome).First().terrains.Where((FishingRateTerrainRecord t) => t.terrain == terrain).First().rods.Where((FishingRateRodRecord r) => r.rod == rod).First().pokemons;
+            var rates = biomes.Where(b => b.biome == biome).First().terrains.Where(t => t.terrain == terrain).First()
+                .rods.Where(r => r.rod == rod).First().pokemons;
 
             rateTable = new Dictionary<PawnKindDef, float>();
 
-            for (int i = 0; i < rates.Count; i++)
-            {
+            for (var i = 0; i < rates.Count; i++)
                 if (rates[i].pokemon != null)
-                {
                     rateTable.Add(rates[i].pokemon, rates[i].rate);
-                }
-            }
 
-            return rateTable.Keys.RandomElementByWeight((PawnKindDef def) => rateTable[def]);
+            return rateTable.Keys.RandomElementByWeight(def => rateTable[def]);
         }
 
         public void LoadDataFromXmlCustom(XmlNode xmlRoot)
         {
-            biomes = DirectXmlToObject.ObjectFromXml<List<FishingRateBiomeRecord>>(xmlRoot.SelectSingleNode("biomes"), false);
+            biomes = DirectXmlToObject.ObjectFromXml<List<FishingRateBiomeRecord>>(xmlRoot.SelectSingleNode("biomes"),
+                false);
         }
 
         public class FishingRateBiomeRecord
@@ -49,9 +47,8 @@ namespace PokeWorld
 
         public class FishingRateTerrainRecord
         {
-            public TerrainDef terrain;
-
             public List<FishingRateRodRecord> rods = new List<FishingRateRodRecord>();
+            public TerrainDef terrain;
 
             public void LoadDataFromXmlCustom(XmlNode xmlRoot)
             {
@@ -62,9 +59,8 @@ namespace PokeWorld
 
         public class FishingRateRodRecord
         {
-            public ThingDef rod;
-
             public List<FishingRatePokemonRecord> pokemons = new List<FishingRatePokemonRecord>();
+            public ThingDef rod;
 
             public void LoadDataFromXmlCustom(XmlNode xmlRoot)
             {

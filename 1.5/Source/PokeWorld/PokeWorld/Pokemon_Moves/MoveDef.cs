@@ -1,30 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RimWorld;
-using Verse;
+﻿using Verse;
 
 namespace PokeWorld
 {
     public class MoveDef : Def
     {
-        public TypeDef type;
-        public MoveCategory category;
         public float accuracy;
-        public VerbProperties verb;
+        public MoveCategory category;
         public Tool tool;
+        public TypeDef type;
+        public VerbProperties verb;
+
         public bool IsStab(Pawn pawn)
         {
-            CompPokemon comp = pawn.TryGetComp<CompPokemon>();
+            var comp = pawn.TryGetComp<CompPokemon>();
             if (comp != null)
-            {
                 if (comp.Types.Contains(type))
-                {
                     return true;
-                }
-            }
             return false;
         }
     }

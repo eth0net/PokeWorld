@@ -2,5 +2,7 @@
 
 namespace PokeWorld
 {
-    public class EggGroupDef : Def { }
+    public class EggGroupDef : Def
+    {
+    }
 }

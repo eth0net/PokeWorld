@@ -4,7 +4,7 @@ using Verse;
 namespace PokeWorld
 {
     [StaticConstructorOnStartup]
-    class Main
+    internal class Main
     {
         static Main()
         {

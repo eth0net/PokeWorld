@@ -1,5 +1,5 @@
-﻿using RimWorld;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using RimWorld;
 using Verse;
 using Verse.AI;
 
@@ -22,11 +22,8 @@ namespace PokeWorld
             yield return Toils_General.Wait(LayEgg);
             yield return Toils_General.Do(delegate
             {
-                Thing thing = pawn.GetComp<CompDittoEggLayer>().ProduceEgg();
-                if (thing != null)
-                {
-                    GenSpawn.Spawn(thing, pawn.Position, pawn.Map).SetForbiddenIfOutsideHomeArea();
-                }
+                var thing = pawn.GetComp<CompDittoEggLayer>().ProduceEgg();
+                if (thing != null) GenSpawn.Spawn(thing, pawn.Position, pawn.Map).SetForbiddenIfOutsideHomeArea();
             });
         }
     }

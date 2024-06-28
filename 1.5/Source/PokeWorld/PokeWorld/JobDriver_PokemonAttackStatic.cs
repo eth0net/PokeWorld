@@ -1,5 +1,5 @@
-﻿using RimWorld;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using RimWorld;
 using Verse;
 using Verse.AI;
 
@@ -7,15 +7,14 @@ namespace PokeWorld
 {
     public class JobDriver_PokemonAttackStatic : JobDriver
     {
-        private bool startedIncapacitated;
-
         private int numAttacksMade;
+        private bool startedIncapacitated;
 
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.Look(ref startedIncapacitated, "startedIncapacitated", defaultValue: false);
-            Scribe_Values.Look(ref numAttacksMade, "numAttacksMade", 0);
+            Scribe_Values.Look(ref startedIncapacitated, "startedIncapacitated");
+            Scribe_Values.Look(ref numAttacksMade, "numAttacksMade");
         }
 
         public override bool TryMakePreToilReservations(bool errorOnFailed)
@@ -26,58 +25,57 @@ namespace PokeWorld
         protected override IEnumerable<Toil> MakeNewToils()
         {
             yield return Toils_Misc.ThrowColonistAttackingMote(TargetIndex.A);
-            Toil init = new Toil
+            var init = new Toil
             {
                 initAction = delegate
                 {
-                    if (base.TargetThingA is Pawn pawn2)
-                    {
-                        startedIncapacitated = pawn2.Downed;
-                    }
+                    if (TargetThingA is Pawn pawn2) startedIncapacitated = pawn2.Downed;
                     pawn.pather.StopDead();
                 },
                 tickAction = delegate
                 {
-                    if (!base.TargetA.IsValid)
-                    {
-                        EndJobWith(JobCondition.Succeeded);
-                    }
-                    if (pawn.Faction != null && pawn.Faction.IsPlayer && !PokemonMasterUtility.IsPokemonInMasterRange(pawn))
+                    if (!TargetA.IsValid) EndJobWith(JobCondition.Succeeded);
+                    if (pawn.Faction != null && pawn.Faction.IsPlayer &&
+                        !PokemonMasterUtility.IsPokemonInMasterRange(pawn))
                     {
                         EndJobWith(JobCondition.Succeeded);
                     }
                     else
                     {
-                        if (base.TargetA.HasThing)
+                        if (TargetA.HasThing)
                         {
-                            Pawn pawn3 = base.TargetA.Thing as Pawn;
-                            if (base.TargetA.Thing.Destroyed || (pawn3 != null && !startedIncapacitated && pawn3.Downed) || (pawn3 != null && pawn3.IsPsychologicallyInvisible()))
+                            var pawn3 = TargetA.Thing as Pawn;
+                            if (TargetA.Thing.Destroyed || (pawn3 != null && !startedIncapacitated && pawn3.Downed) ||
+                                (pawn3 != null && pawn3.IsPsychologicallyInvisible()))
                             {
                                 EndJobWith(JobCondition.Succeeded);
-                                if (pawn.Faction != null && pawn.Faction.IsPlayer && PokemonMasterUtility.IsPokemonInMasterRange(pawn))
-                                {
+                                if (pawn.Faction != null && pawn.Faction.IsPlayer &&
+                                    PokemonMasterUtility.IsPokemonInMasterRange(pawn))
                                     if (pawn.jobs.jobQueue.Count == 0)
                                     {
-                                        Job job = JobMaker.MakeJob(DefDatabase<JobDef>.GetNamed("PW_PokemonWaitCombat"));
+                                        var job = JobMaker.MakeJob(
+                                            DefDatabase<JobDef>.GetNamed("PW_PokemonWaitCombat"));
                                         job.expiryInterval = 0;
                                         pawn.jobs.TryTakeOrderedJob(job);
                                     }
-                                }
+
                                 return;
                             }
                         }
-                        if (numAttacksMade >= job.maxNumStaticAttacks && !base.pawn.stances.FullBodyBusy)
+
+                        if (numAttacksMade >= job.maxNumStaticAttacks && !pawn.stances.FullBodyBusy)
                         {
                             EndJobWith(JobCondition.Succeeded);
                         }
-                        else if (base.pawn.TryStartAttack(base.TargetA))
+                        else if (pawn.TryStartAttack(TargetA))
                         {
                             numAttacksMade++;
                         }
-                        else if (!base.pawn.stances.FullBodyBusy)
+                        else if (!pawn.stances.FullBodyBusy)
                         {
-                            Verb verb = base.pawn.TryGetAttackVerb(base.TargetA.Thing, !base.pawn.IsColonist);
-                            if (job.endIfCantShootTargetFromCurPos && (verb == null || !verb.CanHitTargetFrom(base.pawn.Position, base.TargetA)))
+                            var verb = pawn.TryGetAttackVerb(TargetA.Thing, !pawn.IsColonist);
+                            if (job.endIfCantShootTargetFromCurPos &&
+                                (verb == null || !verb.CanHitTargetFrom(pawn.Position, TargetA)))
                             {
                                 EndJobWith(JobCondition.Incompletable);
                             }
@@ -89,11 +87,10 @@ namespace PokeWorld
                                 }
                                 else
                                 {
-                                    float num = verb.verbProps.EffectiveMinRange(base.TargetA, base.pawn);
-                                    if ((float)base.pawn.Position.DistanceToSquared(base.TargetA.Cell) < num * num && base.pawn.Position.AdjacentTo8WayOrInside(base.TargetA.Cell))
-                                    {
+                                    var num = verb.verbProps.EffectiveMinRange(TargetA, pawn);
+                                    if (pawn.Position.DistanceToSquared(TargetA.Cell) < num * num &&
+                                        pawn.Position.AdjacentTo8WayOrInside(TargetA.Cell))
                                         EndJobWith(JobCondition.Incompletable);
-                                    }
                                 }
                             }
                         }

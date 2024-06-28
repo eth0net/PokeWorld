@@ -6,60 +6,41 @@ namespace PokeWorld
 {
     public class TypeDef : Def
     {
-        public List<TypeDef> resistances;
-        public List<TypeDef> weaknesses;
-        public List<TypeDef> immunities;
+        [Unsaved] public Texture2D gizmoIcon = BaseContent.BadTex;
+
         public string gizmoIconPath;
-        public float superEffectiveFactor = 2;
-        public float notVeryEffeciveFactor = 0.5f;
         public float immuneFactor = 0;
-        [NoTranslate]
-        public string uiIconPath;
-        [Unsaved(false)]
-        public Texture2D uiIcon = BaseContent.BadTex;
-        [Unsaved(false)]
-        public Texture2D gizmoIcon = BaseContent.BadTex;
+        public List<TypeDef> immunities;
+        public float notVeryEffeciveFactor = 0.5f;
+        public List<TypeDef> resistances;
+        public float superEffectiveFactor = 2;
+
+        [Unsaved()] public Texture2D uiIcon = BaseContent.BadTex;
+
+        [NoTranslate] public string uiIconPath;
+
+        public List<TypeDef> weaknesses;
+
         public override void PostLoad()
         {
             base.PostLoad();
-            LongEventHandler.ExecuteWhenFinished(delegate
-            {
-                uiIcon = ContentFinder<Texture2D>.Get(uiIconPath);
-            });
+            LongEventHandler.ExecuteWhenFinished(delegate { uiIcon = ContentFinder<Texture2D>.Get(uiIconPath); });
         }
 
         public float GetDamageMultiplier(TypeDef attackType)
         {
             if (resistances != null)
-            {
-                foreach (TypeDef def in resistances)
-                {
+                foreach (var def in resistances)
                     if (attackType == def)
-                    {
                         return notVeryEffeciveFactor;
-                    }
-                }
-            }
             if (weaknesses != null)
-            {
-                foreach (TypeDef def in weaknesses)
-                {
+                foreach (var def in weaknesses)
                     if (attackType == def)
-                    {
                         return superEffectiveFactor;
-                    }
-                }
-            }
             if (immunities != null)
-            {
-                foreach (TypeDef def in immunities)
-                {
+                foreach (var def in immunities)
                     if (attackType == def)
-                    {
                         return immuneFactor;
-                    }
-                }
-            }
             return 1;
         }
     }

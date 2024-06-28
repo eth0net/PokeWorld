@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using HarmonyLib;
 using Verse;
-using HarmonyLib;
 
 namespace PokeWorld
 {
@@ -17,21 +12,19 @@ namespace PokeWorld
             __result = PokemonNamePatchUtility.TryPatchName(__instance, __result);
         }
     }
+
     [HarmonyPatch(typeof(Pawn))]
     [HarmonyPatch("get_LabelShort")]
     public class Pawn_get_LabelShort_Patch
     {
         public static void Postfix(Pawn __instance, ref string __result)
         {
-            if(__instance.Name != null)
-            {
-                __result = PokemonNamePatchUtility.TryPatchName(__instance, __result);
-            }         
+            if (__instance.Name != null) __result = PokemonNamePatchUtility.TryPatchName(__instance, __result);
         }
     }
 
     [HarmonyPatch(typeof(Pawn))]
-    [HarmonyPatch("get_LabelNoCountColored")]    
+    [HarmonyPatch("get_LabelNoCountColored")]
     public class Pawn_get_LabelNoCountColored_Patch
     {
         public static void Postfix(Pawn __instance, ref TaggedString __result)
@@ -39,6 +32,7 @@ namespace PokeWorld
             __result = PokemonNamePatchUtility.TryPatchName(__instance, __result);
         }
     }
+
     [HarmonyPatch(typeof(Pawn))]
     [HarmonyPatch("get_NameShortColored")]
     public class Pawn_get_NameShortColored_Patch
@@ -48,6 +42,7 @@ namespace PokeWorld
             __result = PokemonNamePatchUtility.TryPatchName(__instance, __result);
         }
     }
+
     [HarmonyPatch(typeof(Pawn))]
     [HarmonyPatch("get_NameFullColored")]
     public class Pawn_get_NameFullColored_Patch
@@ -62,30 +57,28 @@ namespace PokeWorld
     {
         public static string TryPatchName(Pawn pawn, string name)
         {
-            CompPokemon comp = pawn.TryGetComp<CompPokemon>();
+            var comp = pawn.TryGetComp<CompPokemon>();
             if (comp != null)
             {
-                if (comp.shinyTracker != null && comp.shinyTracker.isShiny)
-                {
-                    name = GetShinyStar() + name;
-                }
-                if(comp.formTracker != null && comp.ShowFormLabel && (pawn.Faction == null || pawn.Faction != null && (!pawn.Faction.IsPlayer || pawn.Name.Numerical)))
-                {
+                if (comp.shinyTracker != null && comp.shinyTracker.isShiny) name = GetShinyStar() + name;
+                if (comp.formTracker != null && comp.ShowFormLabel && (pawn.Faction == null ||
+                                                                       (pawn.Faction != null &&
+                                                                        (!pawn.Faction.IsPlayer ||
+                                                                         pawn.Name.Numerical))))
                     name += " " + GetFormLabel(comp);
-                }          
             }
+
             return name;
         }
+
         private static string GetShinyStar()
         {
             return "★";
         }
+
         private static string GetFormLabel(CompPokemon comp)
         {
-            if(comp.formTracker.currentFormIndex != -1)
-            {
-                return comp.Forms[comp.formTracker.currentFormIndex].label;
-            }
+            if (comp.formTracker.currentFormIndex != -1) return comp.Forms[comp.formTracker.currentFormIndex].label;
             return "";
         }
     }

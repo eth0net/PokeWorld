@@ -3,7 +3,7 @@ using Verse;
 
 namespace PokeWorld
 {
-    class CompFishingRod : ThingComp
+    internal class CompFishingRod : ThingComp
     {
     }
 
@@ -11,7 +11,7 @@ namespace PokeWorld
     {
         public CompProperties_FishingRod()
         {
-            this.compClass = typeof(CompFishingRod);
+            compClass = typeof(CompFishingRod);
         }
 
         public CompProperties_FishingRod(Type compClass) : base(compClass)
