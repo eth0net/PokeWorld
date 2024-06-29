@@ -1,15 +1,14 @@
 ﻿using RimWorld;
 using Verse;
 
-namespace PokeWorld
+namespace PokeWorld;
+
+internal class StatWorker_PokeBallAimingDelayFactor : StatWorker
 {
-    internal class StatWorker_PokeBallAimingDelayFactor : StatWorker
+    public override bool ShouldShowFor(StatRequest req)
     {
-        public override bool ShouldShowFor(StatRequest req)
-        {
-            if (!base.ShouldShowFor(req)) return false;
-            if (req.Def is ThingDef thingDef && thingDef.category == ThingCategory.Pawn) return true;
-            return false;
-        }
+        if (!base.ShouldShowFor(req)) return false;
+        if (req.Def is ThingDef thingDef && thingDef.category == ThingCategory.Pawn) return true;
+        return false;
     }
 }

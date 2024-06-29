@@ -2,35 +2,34 @@
 using RimWorld;
 using Verse;
 
-namespace PokeWorld
+namespace PokeWorld;
+
+public enum FormChangerCondition
 {
-    public enum FormChangerCondition
-    {
-        Fixed,
-        Selectable,
-        Environment
-    }
+    Fixed,
+    Selectable,
+    Environment
+}
 
-    public class PokemonForm
-    {
-        public int baseAttack;
-        public int baseDefense;
-        public int baseHP;
-        public int baseSpAttack;
-        public int baseSpDefense;
-        public int baseSpeed;
-        public List<BiomeDef> excludeBiomes;
-        public List<WeatherDef> excludeWeathers;
-        public List<BiomeDef> includeBiomes;
-        public List<WeatherDef> includeWeathers;
-        public bool isDefault = false;
-        public string label;
+public class PokemonForm
+{
+    public int baseAttack;
+    public int baseDefense;
+    public int baseHP;
+    public int baseSpAttack;
+    public int baseSpDefense;
+    public int baseSpeed;
+    public List<BiomeDef> excludeBiomes;
+    public List<WeatherDef> excludeWeathers;
+    public List<BiomeDef> includeBiomes;
+    public List<WeatherDef> includeWeathers;
+    public bool isDefault = false;
+    public string label;
 
-        [NoTranslate] public string texPathKey;
+    [NoTranslate] public string texPathKey;
 
-        public TimeOfDay timeOfDay = TimeOfDay.Any;
-        public TypeDef type1;
-        public TypeDef type2;
-        public float weight = 1;
-    }
+    public TimeOfDay timeOfDay = TimeOfDay.Any;
+    public TypeDef type1;
+    public TypeDef type2;
+    public float weight = 1;
 }

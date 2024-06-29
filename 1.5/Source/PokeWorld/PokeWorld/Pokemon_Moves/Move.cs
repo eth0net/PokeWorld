@@ -1,8 +1,7 @@
-﻿namespace PokeWorld
+﻿namespace PokeWorld;
+
+public class Move
 {
-    public class Move
-    {
-        public MoveDef moveDef;
-        public int unlockLevel;
-    }
+    public MoveDef moveDef;
+    public int unlockLevel;
 }

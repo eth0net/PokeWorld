@@ -1,8 +1,7 @@
 ﻿using Verse;
 
-namespace PokeWorld
+namespace PokeWorld;
+
+public class Building_PortableComputer : Building
 {
-    public class Building_PortableComputer : Building
-    {
-    }
 }

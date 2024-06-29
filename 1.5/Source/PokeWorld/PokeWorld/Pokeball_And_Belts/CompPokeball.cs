@@ -1,26 +1,25 @@
 ﻿using System;
 using Verse;
 
-namespace PokeWorld
+namespace PokeWorld;
+
+internal class CompPokeball : ThingComp
 {
-    internal class CompPokeball : ThingComp
+    public CompProperties_Pokeball Props => (CompProperties_Pokeball)props;
+    public ThingDef ballDef => Props.ballDef;
+}
+
+public class CompProperties_Pokeball : CompProperties
+{
+    public ThingDef ballDef;
+
+    public CompProperties_Pokeball()
     {
-        public CompProperties_Pokeball Props => (CompProperties_Pokeball)props;
-        public ThingDef ballDef => Props.ballDef;
+        compClass = typeof(CompPokeball);
     }
 
-    public class CompProperties_Pokeball : CompProperties
+    public CompProperties_Pokeball(Type compClass) : base(compClass)
     {
-        public ThingDef ballDef;
-
-        public CompProperties_Pokeball()
-        {
-            compClass = typeof(CompPokeball);
-        }
-
-        public CompProperties_Pokeball(Type compClass) : base(compClass)
-        {
-            this.compClass = compClass;
-        }
+        this.compClass = compClass;
     }
 }

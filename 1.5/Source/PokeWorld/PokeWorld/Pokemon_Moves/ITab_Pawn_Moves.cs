@@ -2,35 +2,34 @@
 using UnityEngine;
 using Verse;
 
-namespace PokeWorld
+namespace PokeWorld;
+
+public class ITab_Pawn_Moves : ITab
 {
-    public class ITab_Pawn_Moves : ITab
+    public ITab_Pawn_Moves()
     {
-        public ITab_Pawn_Moves()
-        {
-            labelKey = "PW_Moves";
-        }
+        labelKey = "PW_Moves";
+    }
 
-        public override bool IsVisible
+    public override bool IsVisible
+    {
+        get
         {
-            get
-            {
-                if (base.SelPawn.TryGetComp<CompPokemon>() != null) return base.SelPawn.Faction == Faction.OfPlayer;
-                return false;
-            }
+            if (base.SelPawn.TryGetComp<CompPokemon>() != null) return base.SelPawn.Faction == Faction.OfPlayer;
+            return false;
         }
+    }
 
-        protected override void FillTab()
-        {
-            var rect = new Rect(0f, 0f, size.x, size.y).ContractedBy(17f);
-            rect.yMin += 10f;
-            MoveCardUtility.DrawMoveCard(rect, base.SelPawn);
-        }
+    protected override void FillTab()
+    {
+        var rect = new Rect(0f, 0f, size.x, size.y).ContractedBy(17f);
+        rect.yMin += 10f;
+        MoveCardUtility.DrawMoveCard(rect, base.SelPawn);
+    }
 
-        protected override void UpdateSize()
-        {
-            base.UpdateSize();
-            size = new Vector2(400f, MoveCardUtility.TotalHeightForPawn(base.SelPawn));
-        }
+    protected override void UpdateSize()
+    {
+        base.UpdateSize();
+        size = new Vector2(400f, MoveCardUtility.TotalHeightForPawn(base.SelPawn));
     }
 }

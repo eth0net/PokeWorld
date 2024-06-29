@@ -1,9 +1,8 @@
 ﻿using Verse;
 
-namespace PokeWorld
+namespace PokeWorld;
+
+[StaticConstructorOnStartup]
+public static class PW_DevConsoleMessage
 {
-    [StaticConstructorOnStartup]
-    public static class PW_DevConsoleMessage
-    {
-    }
 }

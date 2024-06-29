@@ -1,8 +1,7 @@
 ﻿using Verse;
 
-namespace PokeWorld
+namespace PokeWorld;
+
+public class EggGroupDef : Def
 {
-    public class EggGroupDef : Def
-    {
-    }
 }

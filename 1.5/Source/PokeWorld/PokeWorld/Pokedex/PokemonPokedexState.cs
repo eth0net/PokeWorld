@@ -1,9 +1,8 @@
-﻿namespace PokeWorld
+﻿namespace PokeWorld;
+
+public enum PokemonPokedexState
 {
-    public enum PokemonPokedexState
-    {
-        None,
-        Seen,
-        Caught
-    }
+    None,
+    Seen,
+    Caught
 }

@@ -1,26 +1,25 @@
 ﻿using System;
 using Verse;
 
-namespace PokeWorld
+namespace PokeWorld;
+
+internal class CompHealingItem : ThingComp
 {
-    internal class CompHealingItem : ThingComp
+    public CompProperties_HealingItem Props => (CompProperties_HealingItem)props;
+    public float healingAmount => Props.healingAmount;
+}
+
+internal class CompProperties_HealingItem : CompProperties
+{
+    public float healingAmount = 20;
+
+    public CompProperties_HealingItem()
     {
-        public CompProperties_HealingItem Props => (CompProperties_HealingItem)props;
-        public float healingAmount => Props.healingAmount;
+        compClass = typeof(CompHealingItem);
     }
 
-    internal class CompProperties_HealingItem : CompProperties
+    public CompProperties_HealingItem(Type compClass) : base(compClass)
     {
-        public float healingAmount = 20;
-
-        public CompProperties_HealingItem()
-        {
-            compClass = typeof(CompHealingItem);
-        }
-
-        public CompProperties_HealingItem(Type compClass) : base(compClass)
-        {
-            this.compClass = compClass;
-        }
+        this.compClass = compClass;
     }
 }

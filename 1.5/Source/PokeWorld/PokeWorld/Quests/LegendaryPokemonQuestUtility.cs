@@ -1,14 +1,13 @@
 ﻿using Verse;
 
-namespace PokeWorld
+namespace PokeWorld;
+
+public static class LegendaryPokemonQuestUtility
 {
-    public static class LegendaryPokemonQuestUtility
+    public static Pawn GenerateLegendaryPokemon(int tile, PawnKindDef pawnKind = null)
     {
-        public static Pawn GenerateLegendaryPokemon(int tile, PawnKindDef pawnKind = null)
-        {
-            var pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(pawnKind, tile: tile));
-            pawn.health.Reset();
-            return pawn;
-        }
+        var pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(pawnKind, tile: tile));
+        pawn.health.Reset();
+        return pawn;
     }
 }

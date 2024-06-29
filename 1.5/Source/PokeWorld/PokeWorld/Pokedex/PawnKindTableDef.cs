@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using Verse;
 
-namespace PokeWorld
+namespace PokeWorld;
+
+public class PawnKindTableDef : Def
 {
-    public class PawnKindTableDef : Def
-    {
-        public List<PawnKindColumnDef> columns;
+    public List<PawnKindColumnDef> columns;
 
-        public int minWidth = 500;
+    public int minWidth = 500;
 
-        public Type workerClass = typeof(PawnKindTable);
-    }
+    public Type workerClass = typeof(PawnKindTable);
 }

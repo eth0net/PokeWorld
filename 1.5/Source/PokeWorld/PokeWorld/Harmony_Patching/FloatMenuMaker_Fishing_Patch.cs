@@ -4,49 +4,48 @@ using HarmonyLib;
 using Verse;
 using Verse.AI;
 
-namespace PokeWorld
+namespace PokeWorld;
+
+[HarmonyPatch(typeof(Pawn))]
+[HarmonyPatch("GetExtraFloatMenuOptionsFor")]
+internal class Pawn_GetExtraFloatMenuOptionsFor_Patch
 {
-    [HarmonyPatch(typeof(Pawn))]
-    [HarmonyPatch("GetExtraFloatMenuOptionsFor")]
-    internal class Pawn_GetExtraFloatMenuOptionsFor_Patch
+    public static void Postfix(Pawn __instance, IntVec3 __0, ref IEnumerable<FloatMenuOption> __result)
     {
-        public static void Postfix(Pawn __instance, IntVec3 __0, ref IEnumerable<FloatMenuOption> __result)
-        {
-            if (__instance.Drafted) return;
-            Thing fishingRod = null;
-            foreach (var thing in __instance.EquippedWornOrInventoryThings)
-                if (thing.TryGetComp<CompFishingRod>() != null)
-                {
-                    fishingRod = thing;
-                    break;
-                }
-            /*if (!pawn.health.capacities.CapableOf(PawnCapacityDefOf.Manipulation))
+        if (__instance.Drafted) return;
+        Thing fishingRod = null;
+        foreach (var thing in __instance.EquippedWornOrInventoryThings)
+            if (thing.TryGetComp<CompFishingRod>() != null)
             {
-
-            }*/
-
-            if (fishingRod == null) return;
-            var targetTerrain = __0.GetTerrain(__instance.Map);
-            if (!FishingUtility.IsFishingTerrain(targetTerrain)) return;
-            if (!__instance.CanReach(__0, PathEndMode.Touch, Danger.Unspecified))
-            {
-                __result = __result.AddItem(new FloatMenuOption("Cannot reach fishing spot", null));
-                return;
+                fishingRod = thing;
+                break;
             }
-
-            var action = getFishingAction(__instance, __0, fishingRod);
-            __result = __result.AddItem(new FloatMenuOption($"Fish here ({targetTerrain.label})", action));
-        }
-
-        private static Action getFishingAction(Pawn pawn, IntVec3 targetTerrain, Thing fishingRod)
+        /*if (!pawn.health.capacities.CapableOf(PawnCapacityDefOf.Manipulation))
         {
-            Action action = delegate
-            {
-                var job = JobMaker.MakeJob(DefDatabase<JobDef>.GetNamed("PW_Fish"), targetTerrain);
-                job.targetB = fishingRod;
-                pawn.jobs.TryTakeOrderedJob(job, JobTag.MiscWork);
-            };
-            return action;
+
+        }*/
+
+        if (fishingRod == null) return;
+        var targetTerrain = __0.GetTerrain(__instance.Map);
+        if (!FishingUtility.IsFishingTerrain(targetTerrain)) return;
+        if (!__instance.CanReach(__0, PathEndMode.Touch, Danger.Unspecified))
+        {
+            __result = __result.AddItem(new FloatMenuOption("Cannot reach fishing spot", null));
+            return;
         }
+
+        var action = getFishingAction(__instance, __0, fishingRod);
+        __result = __result.AddItem(new FloatMenuOption($"Fish here ({targetTerrain.label})", action));
+    }
+
+    private static Action getFishingAction(Pawn pawn, IntVec3 targetTerrain, Thing fishingRod)
+    {
+        Action action = delegate
+        {
+            var job = JobMaker.MakeJob(DefDatabase<JobDef>.GetNamed("PW_Fish"), targetTerrain);
+            job.targetB = fishingRod;
+            pawn.jobs.TryTakeOrderedJob(job, JobTag.MiscWork);
+        };
+        return action;
     }
 }

@@ -2,40 +2,39 @@
 using UnityEngine;
 using Verse;
 
-namespace PokeWorld
+namespace PokeWorld;
+
+public class PawnColumnWorker_InPokeball : PawnColumnWorker_Icon
 {
-    public class PawnColumnWorker_InPokeball : PawnColumnWorker_Icon
+    protected override Texture2D GetIconFor(Pawn pawn)
     {
-        protected override Texture2D GetIconFor(Pawn pawn)
-        {
-            if (pawn.TryGetComp<CompPokemon>() != null && pawn.TryGetComp<CompPokemon>().inBall)
-                return ContentFinder<Texture2D>.Get("Things/Item/Utility/Balls/PokeBall");
-            return null;
-        }
+        if (pawn.TryGetComp<CompPokemon>() != null && pawn.TryGetComp<CompPokemon>().inBall)
+            return ContentFinder<Texture2D>.Get("Things/Item/Utility/Balls/PokeBall");
+        return null;
+    }
 
-        protected override string GetIconTip(Pawn pawn)
-        {
-            if (pawn.TryGetComp<CompPokemon>() != null && pawn.TryGetComp<CompPokemon>().inBall)
-                return "PW_TipInPokeball".Translate();
-            return null;
-        }
+    protected override string GetIconTip(Pawn pawn)
+    {
+        if (pawn.TryGetComp<CompPokemon>() != null && pawn.TryGetComp<CompPokemon>().inBall)
+            return "PW_TipInPokeball".Translate();
+        return null;
+    }
 
-        public override int Compare(Pawn a, Pawn b)
-        {
-            return GetValueToCompare(a).CompareTo(GetValueToCompare(b));
-        }
+    public override int Compare(Pawn a, Pawn b)
+    {
+        return GetValueToCompare(a).CompareTo(GetValueToCompare(b));
+    }
 
-        private int GetValueToCompare(Pawn pawn)
+    private int GetValueToCompare(Pawn pawn)
+    {
+        var comp = pawn.TryGetComp<CompPokemon>();
+        if (comp != null)
         {
-            var comp = pawn.TryGetComp<CompPokemon>();
-            if (comp != null)
-            {
-                if (comp.inBall)
-                    return 1;
-                return 0;
-            }
-
+            if (comp.inBall)
+                return 1;
             return 0;
         }
+
+        return 0;
     }
 }

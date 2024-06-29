@@ -1,9 +1,8 @@
-﻿namespace PokeWorld
+﻿namespace PokeWorld;
+
+public enum MoveCategory
 {
-    public enum MoveCategory
-    {
-        Physical = 0,
-        Special = 1,
-        Status = 2
-    }
+    Physical = 0,
+    Special = 1,
+    Status = 2
 }

@@ -3,28 +3,27 @@ using RimWorld;
 using Verse;
 using Verse.AI;
 
-namespace PokeWorld
+namespace PokeWorld;
+
+public class JobDriver_LayDittoEgg : JobDriver
 {
-    public class JobDriver_LayDittoEgg : JobDriver
+    private const int LayEgg = 500;
+
+    private const TargetIndex LaySpotInd = TargetIndex.A;
+
+    public override bool TryMakePreToilReservations(bool errorOnFailed)
     {
-        private const int LayEgg = 500;
+        return true;
+    }
 
-        private const TargetIndex LaySpotInd = TargetIndex.A;
-
-        public override bool TryMakePreToilReservations(bool errorOnFailed)
+    protected override IEnumerable<Toil> MakeNewToils()
+    {
+        yield return Toils_Goto.GotoCell(TargetIndex.A, PathEndMode.OnCell);
+        yield return Toils_General.Wait(500);
+        yield return Toils_General.Do(delegate
         {
-            return true;
-        }
-
-        protected override IEnumerable<Toil> MakeNewToils()
-        {
-            yield return Toils_Goto.GotoCell(TargetIndex.A, PathEndMode.OnCell);
-            yield return Toils_General.Wait(500);
-            yield return Toils_General.Do(delegate
-            {
-                var thing = pawn.GetComp<CompDittoEggLayer>().ProduceEgg();
-                if (thing != null) GenSpawn.Spawn(thing, pawn.Position, pawn.Map).SetForbiddenIfOutsideHomeArea();
-            });
-        }
+            var thing = pawn.GetComp<CompDittoEggLayer>().ProduceEgg();
+            if (thing != null) GenSpawn.Spawn(thing, pawn.Position, pawn.Map).SetForbiddenIfOutsideHomeArea();
+        });
     }
 }

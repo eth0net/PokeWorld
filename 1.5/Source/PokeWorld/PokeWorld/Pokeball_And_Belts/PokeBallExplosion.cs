@@ -1,9 +1,8 @@
 ﻿using Verse;
 
-namespace PokeWorld
+namespace PokeWorld;
+
+public class PokeBallExplosion : Explosion
 {
-    public class PokeBallExplosion : Explosion
-    {
-        public float bonusBall;
-    }
+    public float bonusBall;
 }
