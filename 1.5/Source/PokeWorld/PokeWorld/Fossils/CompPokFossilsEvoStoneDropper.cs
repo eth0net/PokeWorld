@@ -5,10 +5,8 @@ namespace PokeWorld
     public class CompPokFossilsEvoStoneDropper : ThingComp
     {
         public CompProperties_PokFossilsEvoStoneDropper Props => (CompProperties_PokFossilsEvoStoneDropper)props;
-
-        public float StoneDropRate => Props.stoneDropRate;
-
-        public float FossilDropRate => Props.fossilDropRate;
+        public float stoneDropRate => Props.stoneDropRate;
+        public float fossilDropRate => Props.fossilDropRate;
     }
 
     public class CompProperties_PokFossilsEvoStoneDropper : CompProperties

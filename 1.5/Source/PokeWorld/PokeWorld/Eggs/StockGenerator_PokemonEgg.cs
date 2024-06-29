@@ -7,11 +7,11 @@ namespace PokeWorld
 {
     public class StockGenerator_PokemonEgg : StockGenerator
     {
-        private readonly ThingCategoryDef categoryDef = null;
+        private ThingCategoryDef categoryDef;
 
-        private readonly List<ThingCategoryDef> excludedCategories = new List<ThingCategoryDef>();
+        private List<ThingCategoryDef> excludedCategories;
 
-        private readonly List<ThingDef> excludedThingDefs = new List<ThingDef>();
+        private List<ThingDef> excludedThingDefs;
 
         private IntRange thingDefCountRange = IntRange.one;
 

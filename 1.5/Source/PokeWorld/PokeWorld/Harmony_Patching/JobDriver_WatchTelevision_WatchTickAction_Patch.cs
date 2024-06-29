@@ -12,7 +12,7 @@ namespace PokeWorld
         {
             var thing = __instance.job.targetA.Thing;
             var comp = thing.TryGetComp<CompPokemonSpawner>();
-            comp?.TickAction(__instance);
+            if (comp != null) comp.TickAction(__instance);
         }
     }
 }

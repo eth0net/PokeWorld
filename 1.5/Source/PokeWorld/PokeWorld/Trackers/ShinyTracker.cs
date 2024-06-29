@@ -21,7 +21,7 @@ namespace PokeWorld
         {
             this.comp = comp;
             pokemonHolder = comp.Pokemon;
-            shinyChance = comp.ShinyChance;
+            shinyChance = comp.shinyChance;
             TryMakeShiny();
         }
 

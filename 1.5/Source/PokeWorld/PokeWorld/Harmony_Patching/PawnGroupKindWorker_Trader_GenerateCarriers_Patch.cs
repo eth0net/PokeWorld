@@ -36,7 +36,7 @@ namespace PokeWorld
                 Pawn pawn;
                 if (kind != null)
                     pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(kind, __0.faction,
-                        PawnGenerationContext.NonPlayer, __0.tile, false, false, false, true, false, 1f, false,
+                        PawnGenerationContext.NonPlayer, __0.tile, false, false, false,
                         allowFood: true, allowAddictions: true, inhabitant: __0.inhabitants));
                 else
                     pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(

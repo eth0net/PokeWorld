@@ -10,10 +10,8 @@ namespace PokeWorld
         public bool canSpawn = true;
         public int delay;
         public int timer;
-
         public CompProperties_PokemonSpawner Props => (CompProperties_PokemonSpawner)props;
-
-        public PawnKindDef PawnKind => Props.pawnKind;
+        public PawnKindDef pawnKind => Props.pawnKind;
 
         public override void Initialize(CompProperties props)
         {
@@ -24,10 +22,10 @@ namespace PokeWorld
         public override void PostExposeData()
         {
             base.PostExposeData();
-            Scribe_Values.Look(ref timer, "timer", 0);
-            Scribe_Values.Look(ref delay, "delay", 0);
-            Scribe_Values.Look(ref active, "active", false);
-            Scribe_Values.Look(ref canSpawn, "canSpawn", false);
+            Scribe_Values.Look(ref timer, "timer");
+            Scribe_Values.Look(ref delay, "delay");
+            Scribe_Values.Look(ref active, "active");
+            Scribe_Values.Look(ref canSpawn, "canSpawn");
         }
 
         public override void CompTick()
@@ -39,7 +37,7 @@ namespace PokeWorld
                 if (timer > delay && parent.Spawned)
                 {
                     var pokemon =
-                        PokemonGeneratorUtility.GenerateAndSpawnNewPokemon(PawnKind, null, parent.Position, parent.Map);
+                        PokemonGeneratorUtility.GenerateAndSpawnNewPokemon(pawnKind, null, parent.Position, parent.Map);
                     pokemon.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Manhunter);
                     Find.LetterStack.ReceiveLetter("PW_WildRotomLetterLabel".Translate(),
                         "PW_WildRotomLetterText".Translate(), LetterDefOf.ThreatBig, pokemon);

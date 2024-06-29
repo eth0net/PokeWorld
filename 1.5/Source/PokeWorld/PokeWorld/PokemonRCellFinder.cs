@@ -11,10 +11,10 @@ namespace PokeWorld
         {
             var map = searcher.Map;
 
-            bool predicate(IntVec3 c)
+            bool Predicate(IntVec3 c)
             {
                 if (cellValidator != null && !cellValidator(c)) return false;
-                if (!map.pawnDestinationReservationManager.CanReserve(c, searcher, false) || !c.Standable(map) ||
+                if (!map.pawnDestinationReservationManager.CanReserve(c, searcher) || !c.Standable(map) ||
                     !searcher.CanReach(c, PathEndMode.OnCell, Danger.Deadly)) return false;
                 var thingList = c.GetThingList(map);
                 for (var i = 0; i < thingList.Count; i++)
@@ -22,19 +22,20 @@ namespace PokeWorld
                         ((searcher.Faction.IsPlayer && pawn.Faction == searcher.Faction) ||
                          (!searcher.Faction.IsPlayer && !pawn.Faction.IsPlayer)))
                         return false;
+
                 return true;
             }
 
-            if (predicate(root)) return root;
+            if (Predicate(root)) return root;
             var num = 1;
-            IntVec3 result = default;
+            var result = default(IntVec3);
             var num2 = -1000f;
             var flag = false;
             var num3 = GenRadial.NumCellsInRadius(30f);
             while (true)
             {
                 var intVec = root + GenRadial.RadialPattern[num];
-                if (predicate(intVec))
+                if (Predicate(intVec))
                 {
                     var num4 = CoverUtility.TotalSurroundingCoverScore(intVec, map);
                     if (num4 > num2)

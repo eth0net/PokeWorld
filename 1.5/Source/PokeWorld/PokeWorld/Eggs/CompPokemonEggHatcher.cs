@@ -70,8 +70,7 @@ namespace PokeWorld
                             {
                                 if (pawn.playerSettings != null && hatcheeParent.playerSettings != null &&
                                     hatcheeParent.Faction == hatcheeFaction)
-                                    pawn.playerSettings.AreaRestrictionInPawnCurrentMap =
-                                        hatcheeParent.playerSettings.AreaRestrictionInPawnCurrentMap;
+                                    pawn.playerSettings.AreaRestriction = hatcheeParent.playerSettings.AreaRestriction;
                                 if (pawn.RaceProps.IsFlesh)
                                     pawn.relations.AddDirectRelation(PawnRelationDefOf.Parent, hatcheeParent);
                                 if (comp.formTracker != null)

@@ -54,7 +54,7 @@ namespace PokeWorld
                 if (portableComputer != null && storageSystem.ContainedThing != null)
                     listInt = storageSystem.ContainedThing;
                 if (flagSortDex)
-                    return listInt.OrderBy(x => x.TryGetComp<CompPokemon>().PokedexNumber).ToList();
+                    return listInt.OrderBy(x => x.TryGetComp<CompPokemon>().pokedexNumber).ToList();
                 if (flagSortName)
                     return listInt.OrderBy(x => x.def.label).ToList();
                 if (flagSortLevel)
@@ -183,7 +183,7 @@ namespace PokeWorld
                 Widgets.Label(rect6, str2.Truncate(rect6.width));
                 Text.WordWrap = true;
                 var x = 0;
-                foreach (var typeDef in comp.Types)
+                foreach (var typeDef in comp.types)
                 {
                     var rect7 = new Rect(240f + 40f * x, y + 7, 32, 14);
                     Widgets.DrawTextureFitted(rect7, typeDef.uiIcon, 1);

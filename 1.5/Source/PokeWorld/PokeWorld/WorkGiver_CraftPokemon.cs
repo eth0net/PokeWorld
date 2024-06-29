@@ -63,8 +63,7 @@ namespace PokeWorld
             if (!(thing is IBillGiver billGiver) || !ThingIsUsableBillGiver(thing) ||
                 !billGiver.BillStack.AnyShouldDoNow || !billGiver.UsableForBillsAfterFueling() ||
                 !pawn.CanReserve(thing, 1, -1, null, forced) || thing.IsBurning() || thing.IsForbidden(pawn) ||
-                (thing.def.hasInteractionCell && !pawn.CanReserveSittableOrSpot(thing.InteractionCell, forced)))
-                return null;
+                (thing.def.hasInteractionCell && !pawn.CanReserveSittableOrSpot(thing.InteractionCell, forced))) return null;
             var compRefuelable = thing.TryGetComp<CompRefuelable>();
             if (compRefuelable != null && !compRefuelable.HasFuel)
             {
@@ -78,7 +77,7 @@ namespace PokeWorld
 
         private static UnfinishedThing ClosestUnfinishedThingForBill(Pawn pawn, Bill_ProductionWithUft bill)
         {
-            bool validator(Thing t)
+            bool Validator(Thing t)
             {
                 return !t.IsForbidden(pawn) && ((UnfinishedThing)t).Recipe == bill.recipe &&
                        ((UnfinishedThing)t).Creator == pawn &&
@@ -88,7 +87,7 @@ namespace PokeWorld
 
             return (UnfinishedThing)GenClosest.ClosestThingReachable(pawn.Position, pawn.Map,
                 ThingRequest.ForDef(bill.recipe.unfinishedThingDef), PathEndMode.InteractionCell,
-                TraverseParms.For(pawn, pawn.NormalMaxDanger()), 9999f, validator);
+                TraverseParms.For(pawn, pawn.NormalMaxDanger()), 9999f, Validator);
         }
 
         private static Job FinishUftJob(Pawn pawn, UnfinishedThing uft, Bill_ProductionWithUft bill)
@@ -244,8 +243,7 @@ namespace PokeWorld
             processedThings.Clear();
             var foundAll = false;
             var radiusSq = searchRadius * searchRadius;
-
-            bool baseValidator(Thing t)
+            bool BaseValidator(Thing t)
             {
                 return t.Spawned && !t.IsForbidden(pawn) &&
                        (t.Position - billGiver.Position).LengthHorizontalSquared < radiusSq && thingValidator(t) &&
@@ -255,7 +253,7 @@ namespace PokeWorld
             var billGiverIsPawn = billGiver is Pawn;
             if (billGiverIsPawn)
             {
-                AddEveryMedicineToRelevantThings(pawn, billGiver, relevantThings, baseValidator, pawn.Map);
+                AddEveryMedicineToRelevantThings(pawn, billGiver, relevantThings, BaseValidator, pawn.Map);
                 if (foundAllIngredientsAndChoose(relevantThings))
                 {
                     relevantThings.Clear();
@@ -283,7 +281,7 @@ namespace PokeWorld
             var regionsProcessed = 0;
             processedThings.AddRange(relevantThings);
 
-            bool regionProcessor(Region r)
+            bool RegionProcessor(Region r)
             {
                 var list = r.ListerThings.ThingsMatching(ThingRequest.ForGroup(ThingRequestGroup.HaulableEver));
                 for (var i = 0; i < list.Count; i++)
@@ -291,7 +289,7 @@ namespace PokeWorld
                     var thing = list[i];
                     if (!processedThings.Contains(thing) &&
                         ReachabilityWithinRegion.ThingFromRegionListerReachable(thing, r, PathEndMode.ClosestTouch,
-                            pawn) && baseValidator(thing) && !(thing.def.IsMedicine && billGiverIsPawn))
+                            pawn) && BaseValidator(thing) && !(thing.def.IsMedicine && billGiverIsPawn))
                     {
                         newRelevantThings.Add(thing);
                         processedThings.Add(thing);
@@ -313,7 +311,7 @@ namespace PokeWorld
                 return false;
             }
 
-            RegionTraverser.BreadthFirstTraverse(rootReg, entryCondition, regionProcessor, 99999);
+            RegionTraverser.BreadthFirstTraverse(rootReg, entryCondition, RegionProcessor, 99999);
             relevantThings.Clear();
             newRelevantThings.Clear();
             processedThings.Clear();
@@ -379,14 +377,14 @@ namespace PokeWorld
         {
             if (!alreadySorted)
             {
-                int comparison(Thing t1, Thing t2)
+                int Comparison(Thing t1, Thing t2)
                 {
                     float num4 = (t1.Position - rootCell).LengthHorizontalSquared;
                     float value = (t2.Position - rootCell).LengthHorizontalSquared;
                     return num4.CompareTo(value);
                 }
 
-                availableThings.Sort(comparison);
+                availableThings.Sort((Comparison<Thing>)Comparison);
             }
 
             chosen.Clear();

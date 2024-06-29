@@ -40,14 +40,12 @@ namespace PokeWorld
         private bool TryFindRandomPawnKind(Map map, out PawnKindDef kind)
         {
             if (PokeWorldSettings.OkforPokemon())
-            {
                 return DefDatabase<PawnKindDef>.AllDefs.Where(x =>
                         x.RaceProps.Animal && x.race.HasComp(typeof(CompPokemon)) &&
                         x.race.GetCompProperties<CompProperties_Pokemon>().attributes.Contains(PokemonAttribute.Baby) &&
                         PokeWorldSettings.GenerationAllowed(x.race.GetCompProperties<CompProperties_Pokemon>()
                             .generation) && map.mapTemperature.SeasonAndOutdoorTemperatureAcceptableFor(x.race))
                     .TryRandomElement(out kind);
-            }
 
             kind = null;
             return false;

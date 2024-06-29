@@ -14,23 +14,23 @@ namespace PokeWorld
                 female.health.hediffSet.HasHediff(HediffDefOf.Sterilized)) return false;
             var undiscovered = DefDatabase<EggGroupDef>.GetNamed("Undiscovered");
             var ditto = DefDatabase<EggGroupDef>.GetNamed("Ditto");
-            if (compPokemonMale.EggGroups.Contains(undiscovered) ||
-                compPokemonFemale.EggGroups.Contains(undiscovered)) return false;
-            if (compPokemonMale.EggGroups.Contains(ditto) && !compPokemonFemale.EggGroups.Contains(ditto) &&
+            if (compPokemonMale.eggGroups.Contains(undiscovered) ||
+                compPokemonFemale.eggGroups.Contains(undiscovered)) return false;
+            if (compPokemonMale.eggGroups.Contains(ditto) && !compPokemonFemale.eggGroups.Contains(ditto) &&
                 female.gender != Gender.Male)
             {
                 var compEggLayer = female.TryGetComp<CompEggLayer>();
                 if (compEggLayer != null) return !compEggLayer.FullyFertilized;
             }
-            else if (compPokemonFemale.EggGroups.Contains(ditto) && !compPokemonMale.EggGroups.Contains(ditto))
+            else if (compPokemonFemale.eggGroups.Contains(ditto) && !compPokemonMale.eggGroups.Contains(ditto))
             {
                 var compDittoEggLayer = female.TryGetComp<CompDittoEggLayer>();
                 if (compDittoEggLayer != null) return !compDittoEggLayer.FullyFertilized;
             }
 
             if (female.gender != Gender.Female) return false;
-            foreach (var def in compPokemonMale.EggGroups)
-                if (compPokemonFemale.EggGroups.Contains(def))
+            foreach (var def in compPokemonMale.eggGroups)
+                if (compPokemonFemale.eggGroups.Contains(def))
                 {
                     var compEggLayer = female.TryGetComp<CompEggLayer>();
                     if (compEggLayer != null) return !compEggLayer.FullyFertilized;

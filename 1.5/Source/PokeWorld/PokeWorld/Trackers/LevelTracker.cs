@@ -29,11 +29,11 @@ namespace PokeWorld
         {
             this.comp = comp;
             pokemonHolder = comp.Pokemon;
-            canEvolve = comp.CanEvolve;
-            evolutions = comp.Evolutions;
-            expCategory = comp.ExpCategory;
-            wildLevelMin = comp.WildLevelMin;
-            wildLevelMax = comp.WildLevelMax;
+            canEvolve = comp.canEvolve;
+            evolutions = comp.evolutions;
+            expCategory = comp.expCategory;
+            wildLevelMin = comp.wildLevelMin;
+            wildLevelMax = comp.wildLevelMax;
 
             level = Rand.Range(wildLevelMin, wildLevelMax + 1);
             experience = 0;
@@ -55,7 +55,7 @@ namespace PokeWorld
         public IEnumerable<Gizmo> GetGizmos()
         {
             if (pokemonHolder.Faction == Faction.OfPlayer)
-                if (comp.CanEvolve)
+                if (comp.canEvolve)
                 {
                     if (!flagIsEvolving)
                     {

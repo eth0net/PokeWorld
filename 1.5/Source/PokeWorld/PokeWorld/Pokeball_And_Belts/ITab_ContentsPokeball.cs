@@ -25,17 +25,17 @@ namespace PokeWorld
 
         protected static readonly Color ThingHighlightColor = ITab_Pawn_Gear.HighlightColor;
 
+
+        private readonly List<Thing> listInt = new List<Thing>();
+
+        private readonly List<Thing> thingsToSelect = new List<Thing>();
+
         public bool canRemoveThings = true;
 
         public string containedItemsKey;
 
         private float lastDrawnHeight;
-
-
-        private readonly List<Thing> listInt = new List<Thing>();
         private Vector2 scrollPosition;
-
-        private readonly List<Thing> thingsToSelect = new List<Thing>();
 
         public ITab_ContentsPokeball()
         {
@@ -179,10 +179,10 @@ namespace PokeWorld
                 Text.WordWrap = false;
                 Widgets.Label(rect4, str2.Truncate(rect4.width));
                 Text.WordWrap = true;
-                if (comp.Types != null)
+                if (comp.types != null)
                 {
                     var x = 0;
-                    foreach (var typeDef in comp.Types)
+                    foreach (var typeDef in comp.types)
                     {
                         var rect5 = new Rect(240f + 40f * x, curY + 7, 32, 14);
                         Widgets.DrawTextureFitted(rect5, typeDef.uiIcon, 1);

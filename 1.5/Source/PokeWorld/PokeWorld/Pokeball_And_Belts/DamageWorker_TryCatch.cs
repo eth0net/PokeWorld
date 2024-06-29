@@ -14,9 +14,10 @@ namespace PokeWorld
         {
             if (thing.GetType() == typeof(Pawn))
             {
+                var pawn = thing as Pawn;
                 var instigator = dinfo.Instigator as Pawn;
                 Pawn targetPawn = null;
-                if (!(thing is Pawn pawn)) return base.Apply(dinfo, thing);
+                if (pawn == null) return base.Apply(dinfo, thing);
                 if (dinfo.IntendedTarget != null && dinfo.IntendedTarget.GetType() == typeof(Pawn))
                     targetPawn = dinfo.IntendedTarget as Pawn;
                 if (pawn == targetPawn)
@@ -40,7 +41,7 @@ namespace PokeWorld
                             if (bValue > rand)
                             {
                                 var compXpEvGiver = pawn.TryGetComp<CompXpEvGiver>();
-                                compXpEvGiver?.DistributeAfterCatch();
+                                if (compXpEvGiver != null) compXpEvGiver.DistributeAfterCatch();
                                 InteractionWorker_RecruitAttempt.DoRecruit(instigator, pawn);
                                 pawn.training.Train(DefDatabase<TrainableDef>.GetNamed("Obedience"), instigator, true);
                                 pawn.training.SetWantedRecursive(DefDatabase<TrainableDef>.GetNamed("Obedience"), true);
@@ -86,7 +87,7 @@ namespace PokeWorld
                                         if (Find.Storyteller.difficulty.allowBigThreats && Rand.Value < 0.5f)
                                         {
                                             var pawnRoom = pawn.GetRoom();
-                                            var raceMates = (List<Pawn>)pawn.Map.mapPawns.AllPawnsSpawned;
+                                            var raceMates = new List<Pawn>(pawn.Map.mapPawns.AllPawnsSpawned);
                                             for (var i = 0; i < raceMates.Count; i++)
                                                 if (pawn != raceMates[i] && raceMates[i].def == pawn.def &&
                                                     raceMates[i].Faction == pawn.Faction &&

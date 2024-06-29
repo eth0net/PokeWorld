@@ -19,18 +19,14 @@ namespace PokeWorld
         {
             if (!base.CanFireNowSub(parms)) return false;
             var map = (Map)parms.target;
-            if (Pokemon_ManhunterPackIncidentUtility.TryFindManhunterAnimalKind(parms.points, map.Tile, out _))
-                return RCellFinder.TryFindRandomPawnEntryCell(out var result, map, CellFinder.EdgeRoadChance_Animal);
-            return false;
+            return Pokemon_ManhunterPackIncidentUtility.TryFindManhunterAnimalKind(parms.points, map.Tile, out _) &&
+                   RCellFinder.TryFindRandomPawnEntryCell(out _, map, CellFinder.EdgeRoadChance_Animal);
         }
 
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
             var map = (Map)parms.target;
-            var animalKind = new List<PawnKindDef>
-            {
-                parms.pawnKind
-            };
+            var animalKind = new List<PawnKindDef> { parms.pawnKind };
             if ((animalKind[0] == null &&
                  !Pokemon_ManhunterPackIncidentUtility.TryFindManhunterAnimalKind(parms.points, map.Tile,
                      out animalKind)) ||

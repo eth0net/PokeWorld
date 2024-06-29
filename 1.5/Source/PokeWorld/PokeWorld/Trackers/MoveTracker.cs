@@ -20,7 +20,7 @@ namespace PokeWorld
             unlockableMoves = new Dictionary<MoveDef, int>();
             wantedMoves = new Dictionary<MoveDef, bool>();
             initializedVerbs = new List<Verb>();
-            foreach (var move in comp.Moves)
+            foreach (var move in comp.moves)
             {
                 unlockableMoves.Add(move.moveDef, move.unlockLevel);
                 wantedMoves.Add(move.moveDef, true);

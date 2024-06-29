@@ -8,24 +8,23 @@ namespace PokeWorld
 {
     internal class JobDriver_Fish : JobDriver
     {
-        protected IntVec3 TargetCell => job.GetTarget(TargetIndex.A).Cell;
-
-        protected Thing FishingRod => job.GetTarget(TargetIndex.B).Thing;
+        protected IntVec3 targetCell => job.GetTarget(TargetIndex.A).Cell;
+        protected Thing fishingRod => job.GetTarget(TargetIndex.B).Thing;
 
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
-            return pawn.Reserve(TargetCell, job, 1, 1, null, errorOnFailed);
+            return pawn.Reserve(targetCell, job, 1, 1, null, errorOnFailed);
         }
 
         protected override IEnumerable<Toil> MakeNewToils()
         {
             //this.FailOnDestroyedOrNull(TargetIndex.A);
-            this.FailOn(() => !FishingUtility.IsFishingTerrain(TargetCell.GetTerrain(pawn.Map)));
-            this.FailOn(() => !pawn.EquippedWornOrInventoryThings.Contains(FishingRod));
-            var gotoToil = Toils_Goto.GotoCell(TargetCell, PathEndMode.Touch)
-                .FailOn(() => !pawn.CanReach(TargetCell, PathEndMode.Touch, Danger.Deadly));
+            this.FailOn(() => !FishingUtility.IsFishingTerrain(targetCell.GetTerrain(pawn.Map)));
+            this.FailOn(() => !pawn.EquippedWornOrInventoryThings.Contains(fishingRod));
+            var gotoToil = Toils_Goto.GotoCell(targetCell, PathEndMode.Touch)
+                .FailOn(() => !pawn.CanReach(targetCell, PathEndMode.Touch, Danger.Deadly));
             yield return gotoToil;
-            var ticks = FishingUtility.ComputeFishingTicks(pawn, FishingRod);
+            var ticks = FishingUtility.ComputeFishingTicks(pawn, fishingRod);
             var toil = Toils_General.Wait(ticks, TargetIndex.A);
             toil.activeSkill = () => SkillDefOf.Animals;
             toil.WithProgressBarToilDelay(TargetIndex.A);
@@ -34,7 +33,7 @@ namespace PokeWorld
             {
                 initAction = delegate
                 {
-                    FishingUtility.TryFish(pawn, FishingRod, TargetCell);
+                    FishingUtility.TryFish(pawn, fishingRod, targetCell);
                     //fishingSpot.Fish(pawn,rod,targetTerrain);
                 },
                 defaultCompleteMode = ToilCompleteMode.Instant

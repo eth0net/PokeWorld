@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using HarmonyLib;
 using RimWorld;
 using Verse;
@@ -29,18 +28,10 @@ namespace PokeWorld
         }
     }
 
-    [HarmonyPatch]
-    internal class AggressiveAnimalIncidentUtility_TryFindAggressiveAnimalKind_Patch
+    [HarmonyPatch(typeof(ManhunterPackIncidentUtility))]
+    [HarmonyPatch("TryFindManhunterAnimalKind")]
+    internal class ManhunterPackIncidentUtility_TryFindManhunterAnimalKind_Patch
     {
-        public static MethodBase TargetMethod()
-        {
-            return AccessTools.Method(
-                typeof(AggressiveAnimalIncidentUtility),
-                nameof(AggressiveAnimalIncidentUtility.TryFindAggressiveAnimalKind),
-                new[] { typeof(float), typeof(int), typeof(PawnKindDef).MakeByRefType() }
-            );
-        }
-
         public static void Postfix(float __0, int __1, out PawnKindDef __2, ref bool __result)
         {
             if (PokeWorldSettings.OkforPokemon())
@@ -55,7 +46,7 @@ namespace PokeWorld
                         Find.World.tileTemperatures.SeasonAndOutdoorTemperatureAcceptableFor(__1, k.race)));
                 if (source.Any())
                 {
-                    if (source.TryRandomElementByWeight(a => AggressiveAnimalIncidentUtility.AnimalWeight(a, __0),
+                    if (source.TryRandomElementByWeight(a => ManhunterPackIncidentUtility.ManhunterAnimalWeight(a, __0),
                             out __2))
                     {
                         __result = true;

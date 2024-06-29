@@ -15,7 +15,7 @@ namespace PokeWorld
         public List<TypeDef> resistances;
         public float superEffectiveFactor = 2;
 
-        [Unsaved()] public Texture2D uiIcon = BaseContent.BadTex;
+        [Unsaved] public Texture2D uiIcon = BaseContent.BadTex;
 
         [NoTranslate] public string uiIconPath;
 

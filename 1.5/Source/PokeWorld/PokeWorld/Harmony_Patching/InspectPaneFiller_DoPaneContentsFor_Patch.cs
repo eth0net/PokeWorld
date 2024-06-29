@@ -8,7 +8,7 @@ namespace PokeWorld
 {
     [StaticConstructorOnStartup]
     [HarmonyPatch(typeof(InspectPaneFiller))]
-    [HarmonyPatch(nameof(InspectPaneFiller.DoPaneContentsFor))]
+    [HarmonyPatch("DoPaneContentsFor")]
     internal class InspectPaneFiller_DoPaneContentsFor_Patch
     {
         private static readonly Texture2D BarBGTex =
@@ -19,7 +19,8 @@ namespace PokeWorld
 
         public static void Postfix(ISelectable __0, Rect __1)
         {
-            if (__0 is Pawn pawn)
+            var pawn = __0 as Pawn;
+            if (pawn != null)
             {
                 var comp = pawn.TryGetComp<CompPokemon>();
                 if (comp != null)
@@ -67,7 +68,7 @@ namespace PokeWorld
         private static void DrawType(float num, CompPokemon comp)
         {
             var x = 0;
-            foreach (var typeDef in comp.Types)
+            foreach (var typeDef in comp.types)
             {
                 var texture = typeDef.uiIcon;
                 Widgets.DrawTextureFitted(new Rect(num + 37f * x, 4f, 32f, 14f), texture, 1);

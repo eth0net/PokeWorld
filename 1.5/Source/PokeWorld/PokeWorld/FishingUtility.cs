@@ -41,7 +41,7 @@ namespace PokeWorld
             }
 
             var kind = DefDatabase<FishingRateDef>.GetRandom()
-                .GetRandomFish(pawn.Map.Biome, cell.GetTerrain(pawn.Map), fishingRod.def);
+                .getRandomFish(pawn.Map.Biome, cell.GetTerrain(pawn.Map), fishingRod.def);
             var pokemon = PokemonGeneratorUtility.GenerateAndSpawnNewPokemon(kind, null, cell, pawn.Map);
             pokemon.caller.DoCall();
             return true;

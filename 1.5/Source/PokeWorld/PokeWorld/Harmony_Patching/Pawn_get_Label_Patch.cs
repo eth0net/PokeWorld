@@ -61,7 +61,7 @@ namespace PokeWorld
             if (comp != null)
             {
                 if (comp.shinyTracker != null && comp.shinyTracker.isShiny) name = GetShinyStar() + name;
-                if (comp.formTracker != null && comp.ShowFormLabel && (pawn.Faction == null ||
+                if (comp.formTracker != null && comp.showFormLabel && (pawn.Faction == null ||
                                                                        (pawn.Faction != null &&
                                                                         (!pawn.Faction.IsPlayer ||
                                                                          pawn.Name.Numerical))))
@@ -78,7 +78,7 @@ namespace PokeWorld
 
         private static string GetFormLabel(CompPokemon comp)
         {
-            if (comp.formTracker.currentFormIndex != -1) return comp.Forms[comp.formTracker.currentFormIndex].label;
+            if (comp.formTracker.currentFormIndex != -1) return comp.forms[comp.formTracker.currentFormIndex].label;
             return "";
         }
     }

@@ -13,7 +13,7 @@ namespace PokeWorld
         {
             if (billDoer != null)
             {
-                var hpLeftToHeal = ingredients[0].TryGetComp<CompHealingItem>().HealingAmount;
+                var hpLeftToHeal = ingredients[0].TryGetComp<CompHealingItem>().healingAmount;
                 for (var i = 0; i < pawn.health.hediffSet.hediffs.Count; i++)
                 {
                     var hediff = FindMostBleedingHediff(pawn);
@@ -73,12 +73,13 @@ namespace PokeWorld
         {
             Hediff_Injury hediff_Injury = null;
             var hediffs = pawn.health.hediffSet.hediffs;
-            for (var i = 0; i < hediffs.Count; i++)
-                if (hediffs[i] is Hediff_Injury hediff_Injury2 && hediff_Injury2.Visible &&
+            foreach (var t in hediffs)
+                if (t is Hediff_Injury hediff_Injury2 && hediff_Injury2.Visible &&
                     hediff_Injury2.def.tendable && !hediff_Injury2.IsPermanent() &&
                     (allowedBodyParts == null || allowedBodyParts.Contains(hediff_Injury2.Part)) &&
                     (hediff_Injury == null || hediff_Injury2.Severity > hediff_Injury.Severity))
                     hediff_Injury = hediff_Injury2;
+
             return hediff_Injury;
         }
     }

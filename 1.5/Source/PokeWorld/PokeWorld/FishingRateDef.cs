@@ -9,16 +9,14 @@ namespace PokeWorld
     public class FishingRateDef : Def
     {
         private List<FishingRateBiomeRecord> biomes = new List<FishingRateBiomeRecord>();
-
         private Dictionary<PawnKindDef, float> rateTable;
 
-        public PawnKindDef GetRandomFish(BiomeDef biome, TerrainDef terrain, ThingDef rod)
+        public PawnKindDef getRandomFish(BiomeDef biome, TerrainDef terrain, ThingDef rod)
         {
             var rates = biomes.Where(b => b.biome == biome).First().terrains.Where(t => t.terrain == terrain).First()
                 .rods.Where(r => r.rod == rod).First().pokemons;
 
             rateTable = new Dictionary<PawnKindDef, float>();
-
             for (var i = 0; i < rates.Count; i++)
                 if (rates[i].pokemon != null)
                     rateTable.Add(rates[i].pokemon, rates[i].rate);
@@ -35,7 +33,6 @@ namespace PokeWorld
         public class FishingRateBiomeRecord
         {
             public BiomeDef biome;
-
             public List<FishingRateTerrainRecord> terrains = new List<FishingRateTerrainRecord>();
 
             public void LoadDataFromXmlCustom(XmlNode xmlRoot)
@@ -72,7 +69,6 @@ namespace PokeWorld
         public class FishingRatePokemonRecord
         {
             public PawnKindDef pokemon;
-
             public float rate;
 
             public void LoadDataFromXmlCustom(XmlNode xmlRoot)

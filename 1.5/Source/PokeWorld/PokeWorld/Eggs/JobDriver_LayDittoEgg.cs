@@ -18,8 +18,8 @@ namespace PokeWorld
 
         protected override IEnumerable<Toil> MakeNewToils()
         {
-            yield return Toils_Goto.GotoCell(LaySpotInd, PathEndMode.OnCell);
-            yield return Toils_General.Wait(LayEgg);
+            yield return Toils_Goto.GotoCell(TargetIndex.A, PathEndMode.OnCell);
+            yield return Toils_General.Wait(500);
             yield return Toils_General.Do(delegate
             {
                 var thing = pawn.GetComp<CompDittoEggLayer>().ProduceEgg();

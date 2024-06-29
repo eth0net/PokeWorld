@@ -29,7 +29,7 @@ namespace PokeWorld
                         if (targetComp != null)
                         {
                             defense = targetComp.statTracker.defenseStat;
-                            foreach (var typeDef in targetComp.Types)
+                            foreach (var typeDef in targetComp.types)
                                 typeMultiplier *= typeDef.GetDamageMultiplier(casterComp.moveTracker.lastUsedMove.type);
                         }
                         else

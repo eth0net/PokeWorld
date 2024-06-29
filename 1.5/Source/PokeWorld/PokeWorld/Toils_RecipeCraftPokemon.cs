@@ -9,6 +9,8 @@ namespace PokeWorld
 {
     public static class Toils_RecipeCraftPokemon
     {
+        private const int LongCraftingProjectThreshold = 10000;
+
         public static Toil MakeUnfinishedThingIfNeeded()
         {
             var toil = new Toil();
@@ -88,6 +90,7 @@ namespace PokeWorld
                     if (curJob2.RecipeDef.workTableSpeedStat != null)
                         if (jobDriver_CraftPokemon.BillGiver is Building_WorkTable building_WorkTable)
                             num *= building_WorkTable.GetStatValue(curJob2.RecipeDef.workTableSpeedStat);
+
                     if (DebugSettings.fastCrafting) num *= 30f;
                     jobDriver_CraftPokemon.workLeft -= num;
                     if (unfinishedThing2 != null) unfinishedThing2.workLeft = jobDriver_CraftPokemon.workLeft;
@@ -156,7 +159,7 @@ namespace PokeWorld
             curJob.bill.Notify_IterationCompleted(actor, ingredients);
             RecordsUtility.Notify_BillDone(actor, list);
             var unfinishedThing = curJob.GetTarget(TargetIndex.B).Thing as UnfinishedThing;
-            if (curJob.bill.recipe.WorkAmountTotal(unfinishedThing) >= 10000f && list.Count > 0)
+            if (curJob.bill.recipe.WorkAmountTotal(unfinishedThing) >= LongCraftingProjectThreshold && list.Count > 0)
                 TaleRecorder.RecordTale(TaleDefOf.CompletedLongCraftingProject, actor,
                     list[0].GetInnerIfMinified().def);
             if (list.Any()) Find.QuestManager.Notify_ThingsProduced(actor, list);

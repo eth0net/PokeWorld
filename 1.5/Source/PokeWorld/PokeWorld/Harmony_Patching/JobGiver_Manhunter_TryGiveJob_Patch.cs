@@ -1,5 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using System.Reflection;
+﻿using System.Reflection;
 using HarmonyLib;
 using RimWorld;
 using Verse;
@@ -13,12 +12,10 @@ namespace PokeWorld
     internal class JobGiver_Manhunter_TryGiveJob_Patch
     {
         public static readonly IntRange ExpiryInterval_ShooterSucceeded = new IntRange(450, 550);
-
         private static readonly IntRange ExpiryInterval_Melee = new IntRange(360, 480);
-
         private static readonly float targetKeepRadius = 65f;
 
-        public static bool Prefix(Pawn __0, ref Job __result)
+        private static bool Prefix(Pawn __0, ref Job __result)
         {
             var comp = __0.TryGetComp<CompPokemon>();
             if (comp == null) return true;
@@ -30,7 +27,8 @@ namespace PokeWorld
                 return false;
             }
 
-            if (enemyTarget is Pawn pawn2 && pawn2.IsPsychologicallyInvisible())
+            var pawn2 = enemyTarget as Pawn;
+            if (pawn2 != null && pawn2.IsInvisible())
             {
                 __result = null;
                 return false;
@@ -91,7 +89,7 @@ namespace PokeWorld
                 return false;
             }
 
-            CastPositionRequest newReq = default;
+            var newReq = default(CastPositionRequest);
             newReq.caster = pawn;
             newReq.target = enemyTarget;
             newReq.verb = verb;
@@ -100,7 +98,6 @@ namespace PokeWorld
             return CastPositionFinder.TryFindCastPosition(newReq, out dest);
         }
 
-        [SuppressMessage("Style", "IDE0060:Remove unused parameter", Justification = "Need to match the target method")]
         private static bool ExtraTargetValidator(Pawn pawn, Thing target)
         {
             return true;

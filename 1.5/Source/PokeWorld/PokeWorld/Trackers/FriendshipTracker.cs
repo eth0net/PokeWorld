@@ -19,7 +19,7 @@ namespace PokeWorld
         {
             this.comp = comp;
             pokemonHolder = (Pawn)comp.parent;
-            baseFriendship = comp.BaseFriendship;
+            baseFriendship = comp.baseFriendship;
             friendship = baseFriendship;
         }
 

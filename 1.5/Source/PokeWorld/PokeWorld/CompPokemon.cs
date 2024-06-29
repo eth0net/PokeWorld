@@ -26,34 +26,34 @@ namespace PokeWorld
         public bool wantPutInBall;
 
         public CompProperties_Pokemon Props => (CompProperties_Pokemon)props;
-        public int PokedexNumber => Props.pokedexNumber;
-        public int Generation => Props.generation;
-        public List<TypeDef> Types => Props.types;
-        public bool Starter => Props.starter;
-        public int Rarity => Props.rarity;
-        public bool CanEvolve => Props.canEvolve;
-        public int EvolutionLine => Props.evolutionLine;
-        public List<Evolution> Evolutions => Props.evolutions;
-        public List<Move> Moves => Props.moves;
-        public List<PokemonAttribute> Attributes => Props.attributes;
-        public string ExpCategory => Props.expCategory;
-        public int WildLevelMin => Props.wildLevelMin;
-        public int WildLevelMax => Props.wildLevelMax;
-        public List<EggGroupDef> EggGroups => Props.eggGroups;
-        public int BaseHP => Props.baseHP;
-        public int BaseAttack => Props.baseAttack;
-        public int BaseDefense => Props.baseDefense;
-        public int BaseSpAttack => Props.baseSpAttack;
-        public int BaseSpDefense => Props.baseSpDefense;
-        public int BaseSpeed => Props.baseSpeed;
-        public int BaseFriendship => Props.baseFriendship;
+        public int pokedexNumber => Props.pokedexNumber;
+        public int generation => Props.generation;
+        public List<TypeDef> types => Props.types;
+        public bool starter => Props.starter;
+        public int rarity => Props.rarity;
+        public bool canEvolve => Props.canEvolve;
+        public int evolutionLine => Props.evolutionLine;
+        public List<Evolution> evolutions => Props.evolutions;
+        public List<Move> moves => Props.moves;
+        public List<PokemonAttribute> attributes => Props.attributes;
+        public string expCategory => Props.expCategory;
+        public int wildLevelMin => Props.wildLevelMin;
+        public int wildLevelMax => Props.wildLevelMax;
+        public List<EggGroupDef> eggGroups => Props.eggGroups;
+        public int baseHP => Props.baseHP;
+        public int baseAttack => Props.baseAttack;
+        public int baseDefense => Props.baseDefense;
+        public int baseSpAttack => Props.baseSpAttack;
+        public int baseSpDefense => Props.baseSpDefense;
+        public int baseSpeed => Props.baseSpeed;
+        public int baseFriendship => Props.baseFriendship;
         public List<EVYield> EVYields => Props.EVYields;
-        public int CatchRate => Props.catchRate;
-        public float FemaleRatio => Props.femaleRatio;
-        public float ShinyChance => Props.shinyChance;
-        public FormChangerCondition FormChangerCondition => Props.formChangerCondition;
-        public bool ShowFormLabel => Props.showFormLabel;
-        public List<PokemonForm> Forms => Props.forms;
+        public int catchRate => Props.catchRate;
+        public float femaleRatio => Props.femaleRatio;
+        public float shinyChance => Props.shinyChance;
+        public FormChangerCondition formChangerCondition => Props.formChangerCondition;
+        public bool showFormLabel => Props.showFormLabel;
+        public List<PokemonForm> forms => Props.forms;
 
         public Pawn Pokemon => (Pawn)parent;
 
@@ -135,7 +135,7 @@ namespace PokeWorld
             string evolutionDescription = "PW_StatEvolutionDesc".Translate() + "\n";
             if (Find.World.GetComponent<PokedexManager>().IsPokemonCaught(parent.def.race.AnyPawnKind))
             {
-                foreach (var eggGroupDef in EggGroups)
+                foreach (var eggGroupDef in eggGroups)
                 {
                     if (eggGroupValue.Length > 0) eggGroupValue += ", ";
                     eggGroupValue += eggGroupDef.LabelCap;
@@ -143,7 +143,7 @@ namespace PokeWorld
                         "\n" + "PW_EggGroupLabelAndDesc".Translate(eggGroupDef.LabelCap, eggGroupDef.description);
                 }
 
-                for (var x = 0; x < Types.Count(); x++)
+                for (var x = 0; x < types.Count(); x++)
                 {
                     if (typeValue.Length > 0) typeValue += ", ";
                     string text;
@@ -153,13 +153,13 @@ namespace PokeWorld
                         text = "PW_TypeSecondary".Translate();
                     else
                         text = "PW_Type".Translate();
-                    typeValue += Types[x].LabelCap;
-                    typeDescription += "\n" + "PW_TypeName".Translate(text, Types[x].LabelCap);
+                    typeValue += types[x].LabelCap;
+                    typeDescription += "\n" + "PW_TypeName".Translate(text, types[x].LabelCap);
                 }
 
-                if (CanEvolve)
+                if (canEvolve)
                 {
-                    foreach (var evolution in Evolutions)
+                    foreach (var evolution in evolutions)
                     {
                         if (evolutionValue.Length > 0) evolutionValue += ", ";
                         string evolutionLabel;
@@ -304,13 +304,13 @@ namespace PokeWorld
         {
             base.PostExposeData();
             PokemonComponentsUtility.ExposeData(this);
-            Scribe_Values.Look(ref wantPutInBall, "wantPutInBall", false);
-            Scribe_Values.Look(ref inBall, "inBall", false);
+            Scribe_Values.Look(ref wantPutInBall, "wantPutInBall");
+            Scribe_Values.Look(ref inBall, "inBall");
             Scribe_Defs.Look(ref ballDef, "ballDef");
-            Scribe_Values.Look(ref tryCatchCooldown, "tryCatchCooldown", 0);
+            Scribe_Values.Look(ref tryCatchCooldown, "tryCatchCooldown");
             Scribe_Values.Look(ref flagIsPokedexSeen, "flagIsPokedexSeen", false);
             Scribe_Values.Look(ref flagIsPokedexCaught, "flagIsPokedexCaught", false);
-            Scribe_Values.Look(ref tryCatchKillChanceIfDown, "tryCatchKillChanceIfDown", 0);
+            Scribe_Values.Look(ref tryCatchKillChanceIfDown, "tryCatchKillChanceIfDown");
         }
 
         public override void PostDrawExtraSelectionOverlays()

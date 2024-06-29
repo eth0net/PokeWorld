@@ -6,7 +6,7 @@ namespace PokeWorld
     internal class CompHealingItem : ThingComp
     {
         public CompProperties_HealingItem Props => (CompProperties_HealingItem)props;
-        public float HealingAmount => Props.healingAmount;
+        public float healingAmount => Props.healingAmount;
     }
 
     internal class CompProperties_HealingItem : CompProperties

@@ -14,10 +14,7 @@ namespace PokeWorld
             if (comp == null || comp.moveTracker == null) return null;
             if (!PokemonAttackGizmoUtility.CanUseAnyRangedVerb(pawn)) return null;
             var longestRangeVerb = PokemonAttackGizmoUtility.GetLongestRangeVerb(pawn);
-            if (longestRangeVerb == null)
-            {
-                return null;
-            }
+            if (longestRangeVerb == null) return null;
 
             if (target.IsValid && !longestRangeVerb.CanHitTarget(target))
             {
@@ -67,10 +64,7 @@ namespace PokeWorld
         {
             var comp = pawn.TryGetComp<CompPokemon>();
             failStr = "";
-            if (comp == null || comp.moveTracker == null)
-            {
-                return null;
-            }
+            if (comp?.moveTracker == null) return null;
 
             if (target.IsValid && !pawn.CanReach(target, PathEndMode.Touch, Danger.Deadly))
             {

@@ -33,7 +33,7 @@ namespace PokeWorld
                 }
                 else if (__1 == StatDefOf.ArmorRating_Heat)
                 {
-                    if (comp.Types.Contains(DefDatabase<TypeDef>.GetNamed("Fire")))
+                    if (comp.types.Contains(DefDatabase<TypeDef>.GetNamed("Fire")))
                     {
                         __result += 1.0f;
                         __result = Mathf.Clamp(__result, 0, 2.0f);

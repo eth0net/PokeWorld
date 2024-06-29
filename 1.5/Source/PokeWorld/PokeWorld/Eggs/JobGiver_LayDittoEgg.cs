@@ -12,7 +12,7 @@ namespace PokeWorld
         {
             var compDittoEggLayer = pawn.TryGetComp<CompDittoEggLayer>();
             if (compDittoEggLayer == null || !compDittoEggLayer.CanLayNow) return null;
-            var intVec = RCellFinder.RandomWanderDestFor(pawn, pawn.Position, LayRadius, null, Danger.Some);
+            var intVec = RCellFinder.RandomWanderDestFor(pawn, pawn.Position, 5f, null, Danger.Some);
             return JobMaker.MakeJob(DefDatabase<JobDef>.GetNamed("PW_LayDittoEgg"), intVec);
         }
     }

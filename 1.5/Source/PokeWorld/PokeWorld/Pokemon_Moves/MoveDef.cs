@@ -14,7 +14,7 @@ namespace PokeWorld
         {
             var comp = pawn.TryGetComp<CompPokemon>();
             if (comp != null)
-                if (comp.Types.Contains(type))
+                if (comp.types.Contains(type))
                     return true;
             return false;
         }

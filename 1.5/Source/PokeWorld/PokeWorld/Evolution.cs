@@ -4,20 +4,16 @@ namespace PokeWorld
 {
     public class Evolution
     {
-        public int friendship;
-
-        public Gender gender;
+        public int friendship = 0;
+        public Gender gender = Gender.None;
 
         public ThingDef item;
 
-        public int level;
-
-        public OtherEvolutionRequirement otherRequirement;
+        public int level = 1;
+        public OtherEvolutionRequirement otherRequirement = OtherEvolutionRequirement.none;
         public PawnKindDef pawnKind;
-
         public EvolutionRequirement requirement;
-
-        public TimeOfDay timeOfDay;
+        public TimeOfDay timeOfDay = TimeOfDay.Any;
     }
 
     public enum EvolutionRequirement

@@ -58,7 +58,8 @@ namespace PokeWorld
             if (Active)
             {
                 var num = 1f / (eggLayIntervalDays * 60000f);
-                if (parent is Pawn pawn) num *= PawnUtility.BodyResourceGrowthSpeed(pawn);
+                var pawn = parent as Pawn;
+                if (pawn != null) num *= PawnUtility.BodyResourceGrowthSpeed(pawn);
                 eggProgress += num;
                 if (eggProgress > 1f) eggProgress = 1f;
                 if (ProgressStoppedBecauseUnfertilized) eggProgress = Props.eggProgressUnfertilizedMax;
@@ -90,7 +91,8 @@ namespace PokeWorld
             if (compHatcher != null)
             {
                 compHatcher.hatcheeFaction = parent.Faction;
-                if (parent is Pawn pawn) compHatcher.hatcheeParent = pawn;
+                var pawn = parent as Pawn;
+                if (pawn != null) compHatcher.hatcheeParent = pawn;
                 if (fertilizedBy != null) compHatcher.otherParent = fertilizedBy;
             }
 

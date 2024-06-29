@@ -23,6 +23,7 @@ namespace PokeWorld
                     .GetField("spawnedHives", BindingFlags.NonPublic | BindingFlags.Instance);
                 var spawnedHives = (List<Hive>)field2.GetValue(__instance);
 
+
                 var method = __instance.GetType()
                     .GetMethod("TryFindHiveSpawnCell", BindingFlags.NonPublic | BindingFlags.Instance);
                 object[] parameters = { __0, null };

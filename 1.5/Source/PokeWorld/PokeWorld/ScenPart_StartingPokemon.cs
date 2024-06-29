@@ -50,10 +50,8 @@ namespace PokeWorld
             listing_Standard.TextFieldNumeric(ref count, ref countBuf, 1f);
             listing_Standard.End();
             if (!Widgets.ButtonText(scenPartRect.BottomHalf(), CurrentAnimalLabel().CapitalizeFirst())) return;
-            var list = new List<FloatMenuOption>
-            {
-                new FloatMenuOption("RandomPet".Translate().CapitalizeFirst(), delegate { animalKind = null; })
-            };
+            var list = new List<FloatMenuOption>();
+            list.Add(new FloatMenuOption("RandomPet".Translate().CapitalizeFirst(), delegate { animalKind = null; }));
             foreach (var item in PossibleAnimals(false))
             {
                 var localKind = item;
@@ -119,8 +117,8 @@ namespace PokeWorld
 
         public override bool TryMerge(ScenPart other)
         {
-            if (other is ScenPart_StartingPokemon scenPart_StartingPokemon &&
-                scenPart_StartingPokemon.animalKind == animalKind)
+            var scenPart_StartingPokemon = other as ScenPart_StartingPokemon;
+            if (scenPart_StartingPokemon != null && scenPart_StartingPokemon.animalKind == animalKind)
             {
                 count += scenPart_StartingPokemon.count;
                 return true;
@@ -133,7 +131,9 @@ namespace PokeWorld
         {
             for (var i = 0; i < count; i++)
             {
-                var kindDef = animalKind ?? RandomPets().RandomElementByWeight(td => td.RaceProps.petness);
+                var kindDef = animalKind == null
+                    ? RandomPets().RandomElementByWeight(td => td.RaceProps.petness)
+                    : animalKind;
                 var animal = PawnGenerator.GeneratePawn(kindDef, Faction.OfPlayer);
                 Find.World.GetComponent<PokedexManager>().AddPokemonKindCaught(animal.kindDef);
                 if (animal.Name == null || animal.Name.Numerical)

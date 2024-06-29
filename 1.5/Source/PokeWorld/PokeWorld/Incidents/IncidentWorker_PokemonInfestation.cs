@@ -156,7 +156,7 @@ namespace PokeWorld
             Scribe_Values.Look(ref secondarySpawnTick, "PW_secondarySpawnTick");
             Scribe_Values.Look(ref spawnHive, "PW_spawnHive", true);
             Scribe_Values.Look(ref insectsPoints, "PW_insectsPoints");
-            Scribe_Values.Look(ref spawnedByInfestationThingComp, "PW_spawnedByInfestationThingComp", false);
+            Scribe_Values.Look(ref spawnedByInfestationThingComp, "PW_spawnedByInfestationThingComp");
         }
 
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
@@ -174,9 +174,9 @@ namespace PokeWorld
             sustainer.Maintain();
             var vector = Position.ToVector3Shifted();
             if (Rand.MTBEventOccurs(FilthSpawnMTB, 1f, 1.TicksToSeconds()) &&
-                CellFinder.TryFindRandomReachableNearbyCell(Position, Map, FilthSpawnRadius,
-                    TraverseParms.For(TraverseMode.NoPassClosedDoors), null, null, out var result))
-                FilthMaker.TryMakeFilth(result, Map, filthTypes.RandomElement());
+                CellFinder.TryFindRandomReachableNearbyCell(
+                    Position, Map, FilthSpawnRadius, TraverseParms.For(TraverseMode.NoPassClosedDoors), null, null,
+                    out var result)) FilthMaker.TryMakeFilth(result, Map, filthTypes.RandomElement());
             if (Rand.MTBEventOccurs(DustMoteSpawnMTB, 1f, 1.TicksToSeconds()))
             {
                 var loc = new Vector3(vector.x, 0f, vector.z)
@@ -244,15 +244,14 @@ namespace PokeWorld
             Rand.PushState();
             Rand.Seed = thingIDNumber;
             for (var i = 0; i < 6; i++)
-                DrawDustPart(drawLoc, Rand.Range(0f, 360f), Rand.Range(0.9f, 1.1f) * Rand.Sign * 4f,
-                    Rand.Range(1f, 1.5f));
+                DrawDustPart(Rand.Range(0f, 360f), Rand.Range(0.9f, 1.1f) * Rand.Sign * 4f, Rand.Range(1f, 1.5f));
             Rand.PopState();
         }
 
-        private void DrawDustPart(Vector3 drawLoc, float initialAngle, float speedMultiplier, float scale)
+        private void DrawDustPart(float initialAngle, float speedMultiplier, float scale)
         {
             var num = (Find.TickManager.TicksGame - secondarySpawnTick).TicksToSeconds();
-            var pos = drawLoc.ToIntVec3().ToVector3ShiftedWithAltitude(AltitudeLayer.Filth);
+            var pos = Position.ToVector3ShiftedWithAltitude(AltitudeLayer.Filth);
             pos.y += 3f / 70f * Rand.Range(0f, 1f);
             var value = new Color(0.470588237f, 98f / 255f, 83f / 255f, 0.7f);
             matPropertyBlock.SetColor(ShaderPropertyIDs.Color, value);

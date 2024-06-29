@@ -38,7 +38,7 @@ namespace PokeWorld
         public int widthPriority;
         public Type workerClass = typeof(PawnKindColumnWorker);
 
-        [Unsaved()] private PawnKindColumnWorker workerInt;
+        [Unsaved] private PawnKindColumnWorker workerInt;
 
         public WorkTypeDef workType;
 

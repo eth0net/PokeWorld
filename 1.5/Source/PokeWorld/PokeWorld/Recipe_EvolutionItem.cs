@@ -18,8 +18,8 @@ namespace PokeWorld
             if (thing is Pawn pawn)
             {
                 var comp = pawn.TryGetComp<CompPokemon>();
-                if (comp != null && comp.Evolutions != null)
-                    foreach (var evo in comp.Evolutions)
+                if (comp?.evolutions != null)
+                    foreach (var evo in comp.evolutions)
                         if (PokeWorldSettings.GenerationAllowed(evo.pawnKind.race
                                 .GetCompProperties<CompProperties_Pokemon>().generation))
                             return true;

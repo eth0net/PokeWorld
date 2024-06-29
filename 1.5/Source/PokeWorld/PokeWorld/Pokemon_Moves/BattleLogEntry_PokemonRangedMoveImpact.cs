@@ -213,7 +213,7 @@ namespace PokeWorld
             Scribe_Defs.Look(ref recipientThing, "recipientThing");
             Scribe_References.Look(ref originalTargetPawn, "originalTargetPawn", true);
             Scribe_Defs.Look(ref originalTargetThing, "originalTargetThing");
-            Scribe_Values.Look(ref originalTargetMobile, "originalTargetMobile", false);
+            Scribe_Values.Look(ref originalTargetMobile, "originalTargetMobile");
             Scribe_Defs.Look(ref moveDef, "moveDef");
             Scribe_Defs.Look(ref projectileDef, "projectileDef");
             Scribe_Defs.Look(ref coverDef, "coverDef");

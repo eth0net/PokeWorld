@@ -71,6 +71,7 @@
         <Compile Include="CompXpEvGiver.cs"/>
         <Compile Include="DebugToolsPokemon.cs"/>
         <Compile Include="DevConsoleMessage.cs"/>
+        <Compile Include="EVYield.cs"/>
         <Compile Include="Eggs\CompDittoEggLayer.cs"/>
         <Compile Include="Eggs\CompPokemonEggHatcher.cs"/>
         <Compile Include="Eggs\EggGroupDef.cs"/>
@@ -79,14 +80,13 @@
         <Compile Include="Eggs\PokemonUtility.cs"/>
         <Compile Include="Eggs\StockGenerator_PokemonEgg.cs"/>
         <Compile Include="Evolution.cs"/>
-        <Compile Include="EVYield.cs"/>
         <Compile Include="ExpTable.cs"/>
         <Compile Include="FishingRateDef.cs"/>
         <Compile Include="FishingUtility.cs"/>
         <Compile Include="Fossils\CompPokFossilsEvoStoneDropper.cs"/>
-        <Compile Include="Harmony_Patching\FloatMenuMaker_Fishing_Patch.cs"/>
         <Compile Include="Harmony_Patching\FloatMenuMakerMap_CanTakeOrder_Patch.cs"/>
         <Compile Include="Harmony_Patching\FloatMenuMakerMap_ChoicesAtFor_Patch.cs"/>
+        <Compile Include="Harmony_Patching\FloatMenuMaker_Fishing_Patch.cs"/>
         <Compile Include="Harmony_Patching\FossilsEvoStoneDropper_Patch.cs"/>
         <Compile Include="Harmony_Patching\GenPlace_TryPlaceThing_Patch.cs"/>
         <Compile Include="Harmony_Patching\GenStep_CaveHives_TrySpawnHive_Patch.cs"/>
@@ -97,16 +97,16 @@
         <Compile Include="Harmony_Patching\Main_Harmony_Patch.cs"/>
         <Compile Include="Harmony_Patching\ManhunterPackGenStepUtility_TryGetAnimalsKind_Patch.cs"/>
         <Compile Include="Harmony_Patching\Patches_Incidents.cs"/>
-        <Compile Include="Harmony_Patching\Pawn_get_HealthScale_Patch.cs"/>
-        <Compile Include="Harmony_Patching\Pawn_get_Label_Patch.cs"/>
-        <Compile Include="Harmony_Patching\Pawn_TrainingTracker_Train_Patch.cs"/>
-        <Compile Include="Harmony_Patching\Pawn_TryGetAttackVerb_Patch.cs"/>
         <Compile Include="Harmony_Patching\PawnGenerator_TryGenerateNewPawnInternal_Patch.cs"/>
         <Compile Include="Harmony_Patching\PawnGraphicSet_ResolveAllGraphics_Patch.cs"/>
         <Compile Include="Harmony_Patching\PawnGroupKindWorker_Normal_GeneratePawns_Patch.cs"/>
         <Compile Include="Harmony_Patching\PawnGroupKindWorker_Trader_GenerateCarriers_Patch.cs"/>
         <Compile Include="Harmony_Patching\PawnUtility_GetManhunterOnDamageChance_Patch.cs"/>
         <Compile Include="Harmony_Patching\PawnUtility_Mated_Patch.cs"/>
+        <Compile Include="Harmony_Patching\Pawn_TrainingTracker_Train_Patch.cs"/>
+        <Compile Include="Harmony_Patching\Pawn_TryGetAttackVerb_Patch.cs"/>
+        <Compile Include="Harmony_Patching\Pawn_get_HealthScale_Patch.cs"/>
+        <Compile Include="Harmony_Patching\Pawn_get_Label_Patch.cs"/>
         <Compile Include="Harmony_Patching\PriceUtility_PawnQualityPriceFactor_Patch.cs"/>
         <Compile Include="Harmony_Patching\ResearchManager_FinishProject_Patch.cs"/>
         <Compile Include="Harmony_Patching\StatExtension_GetStatValue_Patch.cs"/>
@@ -146,6 +146,7 @@
         <Compile Include="Pokedex\MainTabWindow_PawnKindTable.cs"/>
         <Compile Include="Pokedex\MainTabWindow_Pokedex.cs"/>
         <Compile Include="Pokedex\PawnKindColumnDef.cs"/>
+        <Compile Include="Pokedex\PawnKindColumnWorker.cs"/>
         <Compile Include="Pokedex\PawnKindColumnWorker_Gap.cs"/>
         <Compile Include="Pokedex\PawnKindColumnWorker_Icon.cs"/>
         <Compile Include="Pokedex\PawnKindColumnWorker_Info.cs"/>
@@ -155,12 +156,19 @@
         <Compile Include="Pokedex\PawnKindColumnWorker_PokedexStatus.cs"/>
         <Compile Include="Pokedex\PawnKindColumnWorker_RemainingSpace.cs"/>
         <Compile Include="Pokedex\PawnKindColumnWorker_Type.cs"/>
-        <Compile Include="Pokedex\PawnKindColumnWorker.cs"/>
-        <Compile Include="Pokedex\PawnKindTable_Pokedex.cs"/>
         <Compile Include="Pokedex\PawnKindTable.cs"/>
         <Compile Include="Pokedex\PawnKindTableDef.cs"/>
+        <Compile Include="Pokedex\PawnKindTable_Pokedex.cs"/>
         <Compile Include="Pokedex\PokedexManager.cs"/>
         <Compile Include="Pokedex\PokemonPokedexState.cs"/>
+        <Compile Include="PokemonAttribute.cs"/>
+        <Compile Include="PokemonComponentsUtility.cs"/>
+        <Compile Include="PokemonDamageUtility.cs"/>
+        <Compile Include="PokemonFloatMenuUtility.cs"/>
+        <Compile Include="PokemonForm.cs"/>
+        <Compile Include="PokemonMasterUtility.cs"/>
+        <Compile Include="PokemonRCellFinder.cs"/>
+        <Compile Include="PokemonSpawnerUtility.cs"/>
         <Compile Include="Pokemon_Moves\BattleLogEntry_PokemonRangedMoveImpact.cs"/>
         <Compile Include="Pokemon_Moves\CustomPlayLogEntryUtility.cs"/>
         <Compile Include="Pokemon_Moves\DamageWorker_PokemonBite.cs"/>
@@ -183,24 +191,16 @@
         <Compile Include="Pokemon_Moves\Projectile_MeteoriteBullet.cs"/>
         <Compile Include="Pokemon_Moves\Verb_PokemonMeleeMove.cs"/>
         <Compile Include="Pokemon_Moves\Verb_PokemonRangedMove.cs"/>
-        <Compile Include="PokemonAttribute.cs"/>
-        <Compile Include="PokemonComponentsUtility.cs"/>
-        <Compile Include="PokemonDamageUtility.cs"/>
-        <Compile Include="PokemonFloatMenuUtility.cs"/>
-        <Compile Include="PokemonForm.cs"/>
-        <Compile Include="PokemonMasterUtility.cs"/>
-        <Compile Include="PokemonRCellFinder.cs"/>
-        <Compile Include="PokemonSpawnerUtility.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
-        <Compile Include="Quests\GenerationRequirement.cs"/>
         <Compile Include="Quests\GenStep_LegendaryPokemon.cs"/>
+        <Compile Include="Quests\GenerationRequirement.cs"/>
         <Compile Include="Quests\LegendaryPokemonQuestUtility.cs"/>
         <Compile Include="Quests\LegendaryQuestsTracker.cs"/>
         <Compile Include="Quests\QuestConditionDef.cs"/>
         <Compile Include="Quests\SitePartWorker_LegendaryPokemon.cs"/>
         <Compile Include="Recipe_EvolutionItem.cs"/>
-        <Compile Include="Recipe_HealingItem.cs"/>
         <Compile Include="Recipe_HealPowder.cs"/>
+        <Compile Include="Recipe_HealingItem.cs"/>
         <Compile Include="Recipe_RareCandy.cs"/>
         <Compile Include="ScenPart_StartingPokemon.cs"/>
         <Compile Include="Stats\StatWorker_CatchRate.cs"/>
@@ -234,7 +234,7 @@
         <Compile Include="WorkGiver_CraftPokemon.cs"/>
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Lib.Harmony" ExcludeAssets="runtime" Version="2.3.3"/>
+        <PackageReference Include="Lib.Harmony" Version="2.1.1"/>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
 </Project>

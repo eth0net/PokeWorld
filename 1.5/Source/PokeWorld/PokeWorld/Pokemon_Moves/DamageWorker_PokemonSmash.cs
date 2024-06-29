@@ -87,7 +87,8 @@ namespace PokeWorld
             var list = new List<TableDataGetter<ThingDef>>();
             list.Add(new TableDataGetter<ThingDef>("defName", d => d.defName));
             list.Add(new TableDataGetter<ThingDef>("body size", d => d.race.baseBodySize.ToString("F2")));
-            list.Add(new TableDataGetter<ThingDef>("health scale", d => d.race.baseHealthScale.ToString("F2")));
+            list.Add(new TableDataGetter<ThingDef>("health scale",
+                d => d.race.baseHealthScale.ToString("F2")));
             list.Add(new TableDataGetter<ThingDef>("body size\n* health scale",
                 d => (d.race.baseHealthScale * d.race.baseBodySize).ToString("F2")));
             list.Add(new TableDataGetter<ThingDef>("core part\nhealth", delegate(ThingDef d)
@@ -99,14 +100,22 @@ namespace PokeWorld
                 Find.WorldPawns.PassToWorld(pawn, PawnDiscardDecideMode.Discard);
                 return maxHealth;
             }));
-            list.Add(new TableDataGetter<ThingDef>("stun\nchance\nbody\n5", d => bluntBodyStunChance(d, 5f, false)));
-            list.Add(new TableDataGetter<ThingDef>("stun\nchance\nbody\n10", d => bluntBodyStunChance(d, 10f, false)));
-            list.Add(new TableDataGetter<ThingDef>("stun\nchance\nbody\n15", d => bluntBodyStunChance(d, 15f, false)));
-            list.Add(new TableDataGetter<ThingDef>("stun\nchance\nbody\n20", d => bluntBodyStunChance(d, 20f, false)));
-            list.Add(new TableDataGetter<ThingDef>("stun\nchance\nhead\n5", d => bluntBodyStunChance(d, 5f, true)));
-            list.Add(new TableDataGetter<ThingDef>("stun\nchance\nhead\n10", d => bluntBodyStunChance(d, 10f, true)));
-            list.Add(new TableDataGetter<ThingDef>("stun\nchance\nhead\n15", d => bluntBodyStunChance(d, 15f, true)));
-            list.Add(new TableDataGetter<ThingDef>("stun\nchance\nhead\n20", d => bluntBodyStunChance(d, 20f, true)));
+            list.Add(new TableDataGetter<ThingDef>("stun\nchance\nbody\n5",
+                d => bluntBodyStunChance(d, 5f, false)));
+            list.Add(new TableDataGetter<ThingDef>("stun\nchance\nbody\n10",
+                d => bluntBodyStunChance(d, 10f, false)));
+            list.Add(new TableDataGetter<ThingDef>("stun\nchance\nbody\n15",
+                d => bluntBodyStunChance(d, 15f, false)));
+            list.Add(new TableDataGetter<ThingDef>("stun\nchance\nbody\n20",
+                d => bluntBodyStunChance(d, 20f, false)));
+            list.Add(new TableDataGetter<ThingDef>("stun\nchance\nhead\n5",
+                d => bluntBodyStunChance(d, 5f, true)));
+            list.Add(new TableDataGetter<ThingDef>("stun\nchance\nhead\n10",
+                d => bluntBodyStunChance(d, 10f, true)));
+            list.Add(new TableDataGetter<ThingDef>("stun\nchance\nhead\n15",
+                d => bluntBodyStunChance(d, 15f, true)));
+            list.Add(new TableDataGetter<ThingDef>("stun\nchance\nhead\n20",
+                d => bluntBodyStunChance(d, 20f, true)));
             DebugTables.MakeTablesDialog(DefDatabase<ThingDef>.AllDefs.Where(d => d.category == ThingCategory.Pawn),
                 list.ToArray());
         }

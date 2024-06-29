@@ -21,22 +21,22 @@ namespace PokeWorld
                 switch (stat.defName)
                 {
                     case "PW_HP":
-                        value = req.Thing.TryGetComp<CompPokemon>().BaseHP;
+                        value = req.Thing.TryGetComp<CompPokemon>().baseHP;
                         break;
                     case "PW_Attack":
-                        value = req.Thing.TryGetComp<CompPokemon>().BaseAttack;
+                        value = req.Thing.TryGetComp<CompPokemon>().baseAttack;
                         break;
                     case "PW_Defense":
-                        value = req.Thing.TryGetComp<CompPokemon>().BaseDefense;
+                        value = req.Thing.TryGetComp<CompPokemon>().baseDefense;
                         break;
                     case "PW_SpecialAttack":
-                        value = req.Thing.TryGetComp<CompPokemon>().BaseSpAttack;
+                        value = req.Thing.TryGetComp<CompPokemon>().baseSpAttack;
                         break;
                     case "PW_SpecialDefense":
-                        value = req.Thing.TryGetComp<CompPokemon>().BaseSpDefense;
+                        value = req.Thing.TryGetComp<CompPokemon>().baseSpDefense;
                         break;
                     case "PW_Speed":
-                        value = req.Thing.TryGetComp<CompPokemon>().BaseSpeed;
+                        value = req.Thing.TryGetComp<CompPokemon>().baseSpeed;
                         break;
                     default:
                         value = 0;

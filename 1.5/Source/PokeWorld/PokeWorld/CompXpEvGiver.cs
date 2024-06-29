@@ -10,7 +10,6 @@ namespace PokeWorld
         private readonly int maxCount = 8;
         private int expToGive;
         private List<Pawn> giveTo;
-
         private int lastHitTime = -1;
 
         public override void Initialize(CompProperties props)

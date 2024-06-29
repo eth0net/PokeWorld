@@ -6,7 +6,7 @@ using Verse;
 namespace PokeWorld
 {
     [HarmonyPatch(typeof(ManhunterPackGenStepUtility))]
-    [HarmonyPatch(nameof(ManhunterPackGenStepUtility.TryGetAnimalsKind))]
+    [HarmonyPatch("TryGetAnimalsKind")]
     internal class ManhunterPackGenStepUtility_TryGetAnimalsKind_Patch
     {
         public static bool Prefix(float __0, int __1, out PawnKindDef __2, ref bool __result)
@@ -44,14 +44,14 @@ namespace PokeWorld
                 PawnKindDef kind = null;
                 for (var i = 0; i < 50; i++)
                 {
-                    if (!AggressiveAnimalIncidentUtility.TryFindAggressiveAnimalKind(__0, __1, out kind)) continue;
+                    if (!ManhunterPackIncidentUtility.TryFindManhunterAnimalKind(__0, __1, out kind)) continue;
                     break;
                 }
 
                 if (kind == null)
                     for (var j = 0; j < 50; j++)
                     {
-                        if (!AggressiveAnimalIncidentUtility.TryFindAggressiveAnimalKind(__0, -1, out kind)) continue;
+                        if (!ManhunterPackIncidentUtility.TryFindManhunterAnimalKind(__0, -1, out kind)) continue;
                         break;
                     }
 

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using HarmonyLib;
 using RimWorld;
 using RimWorld.Planet;
@@ -9,10 +10,10 @@ using Verse.AI;
 namespace PokeWorld
 {
     [HarmonyPatch(typeof(FloatMenuMakerMap))]
-    [HarmonyPatch(nameof(FloatMenuMakerMap.ChoicesAtFor))]
+    [HarmonyPatch("ChoicesAtFor")]
     internal class FloatMenuMakerMap_ChoicesAtFor_Patch
     {
-        //private static readonly FloatMenuOption[] equivalenceGroupTempStorage = null;
+        private static FloatMenuOption[] equivalenceGroupTempStorage = null;
 
         public static bool Prefix(Vector3 __0, Pawn __1, ref List<FloatMenuOption> __result)
         {
@@ -76,8 +77,7 @@ namespace PokeWorld
                     if (clickCell.DistanceTo(pawn.playerSettings.Master.Position) >
                         PokemonMasterUtility.GetMasterObedienceRadius(pawn))
                         return new FloatMenuOption("PW_CannotGoTooFarFromMaster".Translate(), null);
-
-                    void action()
+                    Action action = delegate
                     {
                         var intVec = PokemonRCellFinder.BestOrderedGotoDestNear(curLoc, pawn);
                         var job = JobMaker.MakeJob(DefDatabase<JobDef>.GetNamed("PW_PokemonGotoForced"), intVec);
@@ -102,8 +102,7 @@ namespace PokeWorld
 
                         if (pawn.jobs.TryTakeOrderedJob(job))
                             FleckMaker.Static(intVec, pawn.Map, FleckDefOf.FeedbackGoto);
-                    }
-
+                    };
                     return new FloatMenuOption("GoHere".Translate(), action, MenuOptionPriority.GoHere)
                     {
                         autoTakeable = true,
@@ -126,7 +125,8 @@ namespace PokeWorld
                 var comp = pawn.TryGetComp<CompPokemon>();
                 if (comp != null && comp.moveTracker != null && PokemonAttackGizmoUtility.CanUseAnyRangedVerb(pawn))
                 {
-                    var rangedAct = PokemonFloatMenuUtility.GetRangedAttackAction(pawn, attackTarg, out var failStr);
+                    string failStr;
+                    var rangedAct = PokemonFloatMenuUtility.GetRangedAttackAction(pawn, attackTarg, out failStr);
                     string text = "FireAt".Translate(attackTarg.Thing.Label, attackTarg.Thing);
                     var floatMenuOption = new FloatMenuOption("", null, MenuOptionPriority.High, null, item.Thing);
                     if (rangedAct == null)
@@ -158,8 +158,10 @@ namespace PokeWorld
                     opts.Add(floatMenuOption);
                 }
 
-                var meleeAct = PokemonFloatMenuUtility.GetMeleeAttackAction(pawn, attackTarg, out var failStr2);
-                var text2 = !(attackTarg.Thing is Pawn pawn2) || !pawn2.Downed
+                string failStr2;
+                var meleeAct = PokemonFloatMenuUtility.GetMeleeAttackAction(pawn, attackTarg, out failStr2);
+                var pawn2 = attackTarg.Thing as Pawn;
+                var text2 = pawn2 == null || !pawn2.Downed
                     ? (string)"MeleeAttack".Translate(attackTarg.Thing.Label, attackTarg.Thing)
                     : (string)"MeleeAttackToDeath".Translate(attackTarg.Thing.Label, attackTarg.Thing);
                 var priority = !attackTarg.HasThing || !pawn.HostileTo(attackTarg.Thing)

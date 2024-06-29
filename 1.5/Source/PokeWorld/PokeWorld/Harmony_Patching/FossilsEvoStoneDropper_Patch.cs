@@ -9,7 +9,7 @@ namespace PokeWorld
     internal class FossilsEvoStoneDropper_Patch
     {
         [HarmonyPatch(typeof(Thing))]
-        [HarmonyPatch(nameof(Thing.ButcherProducts))]
+        [HarmonyPatch("ButcherProducts")]
         public class Thing_ButcherProducts_Patch
         {
             public static void Postfix(Thing __instance, Pawn __0, ref IEnumerable<Thing> __result)
@@ -17,7 +17,7 @@ namespace PokeWorld
                 var comp = __instance.TryGetComp<CompPokFossilsEvoStoneDropper>();
                 if (comp != null)
                 {
-                    var def = FossilEvoStoneDropperUtility.TryGetItem(comp.StoneDropRate, comp.FossilDropRate);
+                    var def = FossilEvoStoneDropperUtility.TryGetItem(comp.stoneDropRate, comp.fossilDropRate);
                     if (def != null)
                     {
                         var thing = ThingMaker.MakeThing(def);
@@ -36,29 +36,28 @@ namespace PokeWorld
 
     [HarmonyPatch(typeof(Mineable))]
     [HarmonyPatch("TrySpawnYield")]
-    [HarmonyPatch(new[] { typeof(Map), typeof(bool), typeof(Pawn) })]
     public class Mineable_TrySpawnYield_Patch
     {
-        public static void Postfix(Mineable __instance, Map __0, Pawn __2)
+        public static void Postfix(Mineable __instance, Map __0, Pawn __3)
         {
             var comp = __instance.TryGetComp<CompPokFossilsEvoStoneDropper>();
             if (comp != null)
             {
-                var def = FossilEvoStoneDropperUtility.TryGetItem(comp.StoneDropRate, comp.FossilDropRate);
+                var def = FossilEvoStoneDropperUtility.TryGetItem(comp.stoneDropRate, comp.fossilDropRate);
                 if (def != null)
                 {
                     var thing = ThingMaker.MakeThing(def);
                     thing.stackCount = 1;
                     GenPlace.TryPlaceThing(thing, __instance.Position, __0, ThingPlaceMode.Near, ForbidIfNecessary);
-                    if (__2 != null && __2.Faction == Faction.OfPlayer)
-                        Messages.Message("PW_FoundFossilOrEvoStone".Translate(__2.LabelShortCap, thing.Label), thing,
+                    if (__3 != null && __3.Faction == Faction.OfPlayer)
+                        Messages.Message("PW_FoundFossilOrEvoStone".Translate(__3.LabelShortCap, thing.Label), thing,
                             MessageTypeDefOf.PositiveEvent);
                 }
             }
 
             void ForbidIfNecessary(Thing thing, int count)
             {
-                if ((__2 == null || !__2.IsColonist) && thing.def.EverHaulable && !thing.def.designateHaulable)
+                if ((__3 == null || !__3.IsColonist) && thing.def.EverHaulable && !thing.def.designateHaulable)
                     thing.SetForbidden(true, false);
             }
         }
@@ -73,7 +72,7 @@ namespace PokeWorld
             var comp = __instance.parent.TryGetComp<CompPokFossilsEvoStoneDropper>();
             if (comp != null)
             {
-                var def = FossilEvoStoneDropperUtility.TryGetItem(comp.StoneDropRate, comp.FossilDropRate);
+                var def = FossilEvoStoneDropperUtility.TryGetItem(comp.stoneDropRate, comp.fossilDropRate);
                 if (def != null)
                 {
                     var thing = ThingMaker.MakeThing(def);

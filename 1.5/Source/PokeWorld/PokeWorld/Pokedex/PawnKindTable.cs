@@ -10,22 +10,24 @@ namespace PokeWorld
     {
         private readonly List<float> cachedColumnWidths = new List<float>();
 
-        private float cachedHeaderHeight;
-
-        private float cachedHeightNoScrollbar;
-
         private readonly List<LookTargets> cachedLookTargets = new List<LookTargets>();
 
-        private List<PawnKindDef> cachedPawnKinds = new List<PawnKindDef>();
-
         private readonly List<float> cachedRowHeights = new List<float>();
-
-        private Vector2 cachedSize;
 
         private readonly List<bool> columnAtMaxWidth = new List<bool>();
 
         private readonly List<bool> columnAtOptimalWidth = new List<bool>();
         private readonly PawnKindTableDef def;
+
+        private readonly Func<IEnumerable<PawnKindDef>> pawnKindsGetter;
+
+        private float cachedHeaderHeight;
+
+        private float cachedHeightNoScrollbar;
+
+        private List<PawnKindDef> cachedPawnKinds = new List<PawnKindDef>();
+
+        private Vector2 cachedSize;
 
         private bool dirty;
 
@@ -40,8 +42,6 @@ namespace PokeWorld
         private int minTableHeight;
 
         private int minTableWidth;
-
-        private readonly Func<IEnumerable<PawnKindDef>> pawnKindsGetter;
 
         private Vector2 scrollPosition;
 

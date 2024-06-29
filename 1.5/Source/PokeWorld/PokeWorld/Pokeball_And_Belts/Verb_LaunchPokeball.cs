@@ -24,8 +24,8 @@ namespace PokeWorld
         {
             base.WarmupComplete();
             Find.BattleLog.Add(new BattleLogEntry_RangedFire(caster,
-                currentTarget.HasThing ? currentTarget.Thing : null, EquipmentSource?.def, Projectile,
-                ShotsPerBurst > 1));
+                currentTarget.HasThing ? currentTarget.Thing : null,
+                EquipmentSource?.def, Projectile, ShotsPerBurst > 1));
         }
 
         public override bool TryStartCastOn(LocalTargetInfo castTarg, LocalTargetInfo destTarg,
