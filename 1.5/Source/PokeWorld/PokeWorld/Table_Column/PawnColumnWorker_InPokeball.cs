@@ -2,18 +2,18 @@
 using UnityEngine;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Table_Column;
 
 public class PawnColumnWorker_InPokeball : PawnColumnWorker_Icon
 {
-    protected override Texture2D GetIconFor(Pawn pawn)
+    public override Texture2D GetIconFor(Pawn pawn)
     {
         if (pawn.TryGetComp<CompPokemon>() != null && pawn.TryGetComp<CompPokemon>().inBall)
             return ContentFinder<Texture2D>.Get("Things/Item/Utility/Balls/PokeBall");
         return null;
     }
 
-    protected override string GetIconTip(Pawn pawn)
+    public override string GetIconTip(Pawn pawn)
     {
         if (pawn.TryGetComp<CompPokemon>() != null && pawn.TryGetComp<CompPokemon>().inBall)
             return "PW_TipInPokeball".Translate();
@@ -28,13 +28,7 @@ public class PawnColumnWorker_InPokeball : PawnColumnWorker_Icon
     private int GetValueToCompare(Pawn pawn)
     {
         var comp = pawn.TryGetComp<CompPokemon>();
-        if (comp != null)
-        {
-            if (comp.inBall)
-                return 1;
-            return 0;
-        }
-
-        return 0;
+        if (comp == null) return 0;
+        return comp.inBall ? 1 : 0;
     }
 }

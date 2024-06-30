@@ -3,7 +3,7 @@ using RimWorld;
 using UnityEngine;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(StatExtension))]
 [HarmonyPatch("GetStatValue")]

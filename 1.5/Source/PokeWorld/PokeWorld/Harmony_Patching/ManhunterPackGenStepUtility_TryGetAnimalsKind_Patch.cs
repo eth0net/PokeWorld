@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
 using HarmonyLib;
+using PokeWorld.Incidents;
+using PokeWorld.ModSetting;
 using RimWorld;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(ManhunterPackGenStepUtility))]
 [HarmonyPatch("TryGetAnimalsKind")]
@@ -44,14 +46,14 @@ internal class ManhunterPackGenStepUtility_TryGetAnimalsKind_Patch
             PawnKindDef kind = null;
             for (var i = 0; i < 50; i++)
             {
-                if (!ManhunterPackIncidentUtility.TryFindManhunterAnimalKind(__0, __1, out kind)) continue;
+                if (!AggressiveAnimalIncidentUtility.TryFindAggressiveAnimalKind(__0, __1, out kind)) continue;
                 break;
             }
 
             if (kind == null)
                 for (var j = 0; j < 50; j++)
                 {
-                    if (!ManhunterPackIncidentUtility.TryFindManhunterAnimalKind(__0, -1, out kind)) continue;
+                    if (!AggressiveAnimalIncidentUtility.TryFindAggressiveAnimalKind(__0, -1, out kind)) continue;
                     break;
                 }
 

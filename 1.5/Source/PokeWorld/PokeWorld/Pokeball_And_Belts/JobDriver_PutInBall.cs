@@ -2,7 +2,7 @@
 using Verse;
 using Verse.AI;
 
-namespace PokeWorld;
+namespace PokeWorld.Pokeball_And_Belts;
 
 internal class JobDriver_PutInBall : JobDriver
 {
@@ -13,7 +13,7 @@ internal class JobDriver_PutInBall : JobDriver
         return pawn.Reserve(pokemon, job, 1, -1, null, errorOnFailed);
     }
 
-    protected override IEnumerable<Toil> MakeNewToils()
+    public override IEnumerable<Toil> MakeNewToils()
     {
         this.FailOnDespawnedOrNull(TargetIndex.A);
         this.FailOnAggroMentalState(TargetIndex.A);

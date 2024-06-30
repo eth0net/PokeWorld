@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using RimWorld;
 using RimWorld.Planet;
 using RimWorld.QuestGen;
 using Verse;
 using Verse.Grammar;
 
-namespace PokeWorld;
+namespace PokeWorld.Quests;
 
 public class SitePartWorker_LegendaryPokemon : SitePartWorker
 {
@@ -44,7 +45,7 @@ public class SitePartWorker_LegendaryPokemon : SitePartWorker
     public override string GetPostProcessedThreatLabel(Site site, SitePart sitePart)
     {
         var text = base.GetPostProcessedThreatLabel(site, sitePart);
-        if (sitePart.things != null && sitePart.things.Any) text = text + ": " + sitePart.things[0].LabelShortCap;
+        if (sitePart.things != null && sitePart.things.Any) text = text + ": " + sitePart.things.First().LabelShortCap;
         if (site.HasWorldObjectTimeout)
             text += " (" + "DurationLeft".Translate(site.WorldObjectTimeoutTicksLeft.ToStringTicksToPeriod()) + ")";
         return text;
@@ -53,12 +54,10 @@ public class SitePartWorker_LegendaryPokemon : SitePartWorker
     public override void PostDestroy(SitePart sitePart)
     {
         base.PostDestroy(sitePart);
-        if (sitePart.things == null || !sitePart.things.Any) return;
-        var pawn = (Pawn)sitePart.things[0];
-        if (!pawn.Dead)
-        {
-            if (pawn.relations != null) pawn.relations.Notify_FailedRescueQuest();
-            HealthUtility.HealNonPermanentInjuriesAndRestoreLegs(pawn);
-        }
+        if (sitePart.things is not { Any: true }) return;
+        var pawn = (Pawn)sitePart.things.First();
+        if (pawn.Dead) return;
+        pawn.relations?.Notify_FailedRescueQuest();
+        HealthUtility.HealNonPermanentInjuriesAndRestoreLegs(pawn);
     }
 }

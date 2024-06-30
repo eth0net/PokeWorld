@@ -1,10 +1,11 @@
 ﻿using System;
 using HarmonyLib;
+using PokeWorld.Pokedex;
 using RimWorld;
 using UnityEngine;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Harmony_Patching;
 
 [StaticConstructorOnStartup]
 [HarmonyPatch(typeof(InspectPaneFiller))]

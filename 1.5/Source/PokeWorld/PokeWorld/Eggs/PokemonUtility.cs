@@ -1,7 +1,7 @@
 ﻿using RimWorld;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Eggs;
 
 public static class PokemonUtility
 {

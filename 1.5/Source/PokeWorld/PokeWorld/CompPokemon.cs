@@ -1,6 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using PokeWorld.Eggs;
+using PokeWorld.Pokeball_And_Belts;
+using PokeWorld.Pokedex;
+using PokeWorld.Pokemon_Moves;
+using PokeWorld.Trackers;
 using RimWorld;
 using UnityEngine;
 using Verse;

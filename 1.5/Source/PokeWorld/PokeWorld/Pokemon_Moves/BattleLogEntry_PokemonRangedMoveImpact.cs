@@ -6,7 +6,7 @@ using UnityEngine;
 using Verse;
 using Verse.Grammar;
 
-namespace PokeWorld;
+namespace PokeWorld.Pokemon_Moves;
 
 public class BattleLogEntry_PokemonRangedMoveImpact : LogEntry_DamageResult
 {
@@ -136,13 +136,13 @@ public class BattleLogEntry_PokemonRangedMoveImpact : LogEntry_DamageResult
         return null;
     }
 
-    protected override BodyDef DamagedBody()
+    public override BodyDef DamagedBody()
     {
         if (recipientPawn == null) return null;
         return recipientPawn.RaceProps.body;
     }
 
-    protected override GrammarRequest GenerateGrammarRequest()
+    public override GrammarRequest GenerateGrammarRequest()
     {
         var result = base.GenerateGrammarRequest();
         if (recipientPawn != null || recipientThing != null)

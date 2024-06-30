@@ -5,7 +5,7 @@ using RimWorld.Planet;
 using UnityEngine;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Pokedex;
 
 public class MainTabWindow_Pokedex : MainTabWindow_PawnKindTable
 {

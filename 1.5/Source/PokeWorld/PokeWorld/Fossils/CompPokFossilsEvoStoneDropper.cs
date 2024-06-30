@@ -1,11 +1,13 @@
 ﻿using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Fossils;
 
 public class CompPokFossilsEvoStoneDropper : ThingComp
 {
     public CompProperties_PokFossilsEvoStoneDropper Props => (CompProperties_PokFossilsEvoStoneDropper)props;
+
     public float stoneDropRate => Props.stoneDropRate;
+
     public float fossilDropRate => Props.fossilDropRate;
 }
 

@@ -1,8 +1,9 @@
 ﻿using HarmonyLib;
+using PokeWorld.Eggs;
 using RimWorld;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(PawnUtility))]
 [HarmonyPatch("Mated")]

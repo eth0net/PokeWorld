@@ -3,7 +3,7 @@ using System.Linq;
 using RimWorld;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Pokemon_Moves;
 
 public static class PokemonAttackGizmoUtility
 {

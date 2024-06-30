@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using PokeWorld.Storage_System;
 using RimWorld;
 using UnityEngine;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Pokeball_And_Belts;
 
 public class CryptosleepBall : ThingWithComps, ISuspendableThingHolder, IOpenable
 {
@@ -18,14 +20,7 @@ public class CryptosleepBall : ThingWithComps, ISuspendableThingHolder, IOpenabl
 
     public bool HasAnyContents => innerContainer.Count > 0;
 
-    public Thing ContainedThing
-    {
-        get
-        {
-            if (innerContainer.Count != 0) return innerContainer[0];
-            return null;
-        }
-    }
+    public Thing ContainedThing => innerContainer.Any() ? innerContainer.First() : null;
 
     public override string Label
     {
@@ -158,9 +153,7 @@ public class CryptosleepBall : ThingWithComps, ISuspendableThingHolder, IOpenabl
         else
             str = "UnknownLower".Translate();
         if (contentsKnown && innerContainer.Count > 0)
-        {
-            var pokemon = innerContainer[0] as Pawn;
-            if (pokemon != null)
+            if (innerContainer.First() is Pawn pokemon)
             {
                 var comp = pokemon.TryGetComp<CompPokemon>();
                 if (comp != null)
@@ -175,7 +168,6 @@ public class CryptosleepBall : ThingWithComps, ISuspendableThingHolder, IOpenabl
                            "PW_PokeballContainsLongNoGender".Translate(str.CapitalizeFirst(), level, species);
                 }
             }
-        }
 
         if (!text.NullOrEmpty()) text += "\n";
         return text + "PW_PokeballContainsShort".Translate(str.CapitalizeFirst());

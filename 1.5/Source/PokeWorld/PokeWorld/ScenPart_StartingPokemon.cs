@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using PokeWorld.ModSetting;
+using PokeWorld.Pokedex;
 using RimWorld;
 using Verse;
 
@@ -9,20 +11,20 @@ public class ScenPart_StartingPokemon : ScenPart
 {
     private static readonly List<Pair<int, float>> PetCountChances = new()
     {
-        new(1, 20f),
-        new(2, 10f),
-        new(3, 5f),
-        new(4, 3f),
-        new(5, 1f),
-        new(6, 1f),
-        new(7, 1f),
-        new(8, 1f),
-        new(9, 1f),
-        new(10, 0.1f),
-        new(11, 0.1f),
-        new(12, 0.1f),
-        new(13, 0.1f),
-        new(14, 0.1f)
+        new Pair<int, float>(1, 20f),
+        new Pair<int, float>(2, 10f),
+        new Pair<int, float>(3, 5f),
+        new Pair<int, float>(4, 3f),
+        new Pair<int, float>(5, 1f),
+        new Pair<int, float>(6, 1f),
+        new Pair<int, float>(7, 1f),
+        new Pair<int, float>(8, 1f),
+        new Pair<int, float>(9, 1f),
+        new Pair<int, float>(10, 0.1f),
+        new Pair<int, float>(11, 0.1f),
+        new Pair<int, float>(12, 0.1f),
+        new Pair<int, float>(13, 0.1f),
+        new Pair<int, float>(14, 0.1f)
     };
 
     private PawnKindDef animalKind;

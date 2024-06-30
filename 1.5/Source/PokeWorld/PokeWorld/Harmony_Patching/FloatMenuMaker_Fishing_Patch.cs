@@ -4,10 +4,10 @@ using HarmonyLib;
 using Verse;
 using Verse.AI;
 
-namespace PokeWorld;
+namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(Pawn))]
-[HarmonyPatch("GetExtraFloatMenuOptionsFor")]
+[HarmonyPatch(nameof(Pawn.GetExtraFloatMenuOptionsFor))]
 internal class Pawn_GetExtraFloatMenuOptionsFor_Patch
 {
     public static void Postfix(Pawn __instance, IntVec3 __0, ref IEnumerable<FloatMenuOption> __result)
@@ -40,12 +40,13 @@ internal class Pawn_GetExtraFloatMenuOptionsFor_Patch
 
     private static Action getFishingAction(Pawn pawn, IntVec3 targetTerrain, Thing fishingRod)
     {
-        Action action = delegate
+        return Action;
+
+        void Action()
         {
             var job = JobMaker.MakeJob(DefDatabase<JobDef>.GetNamed("PW_Fish"), targetTerrain);
             job.targetB = fishingRod;
             pawn.jobs.TryTakeOrderedJob(job, JobTag.MiscWork);
-        };
-        return action;
+        }
     }
 }

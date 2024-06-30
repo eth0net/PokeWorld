@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
+using PokeWorld.Pokeball_And_Belts;
 using RimWorld;
 using Verse;
 using Verse.AI;
 
-namespace PokeWorld;
+namespace PokeWorld.Storage_System;
 
 public class JobDriver_CarryToPortableComputer : JobDriver
 {
@@ -24,7 +25,7 @@ public class JobDriver_CarryToPortableComputer : JobDriver
         return false;
     }
 
-    protected override IEnumerable<Toil> MakeNewToils()
+    public override IEnumerable<Toil> MakeNewToils()
     {
         this.FailOnDestroyedOrNull(TargetIndex.A);
         this.FailOnDestroyedOrNull(TargetIndex.B);

@@ -1,11 +1,12 @@
 ﻿using System.Linq;
 using System.Reflection;
 using HarmonyLib;
+using PokeWorld.ModSetting;
 using RimWorld;
 using UnityEngine;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(WildAnimalSpawner))]
 [HarmonyPatch("SpawnRandomWildAnimalAt")]

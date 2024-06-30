@@ -1,7 +1,7 @@
 ﻿using System;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Pokeball_And_Belts;
 
 internal class CompPokeball : ThingComp
 {

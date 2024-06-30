@@ -1,6 +1,6 @@
 ﻿using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Quests;
 
 public static class LegendaryPokemonQuestUtility
 {

@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using PokeWorld.Pokeball_And_Belts;
 using RimWorld;
 using RimWorld.Planet;
 using Verse;
 using Verse.AI;
 
-namespace PokeWorld;
+namespace PokeWorld.Storage_System;
 
 public class StorageSystem : WorldComponent, ISuspendableThingHolder
 {

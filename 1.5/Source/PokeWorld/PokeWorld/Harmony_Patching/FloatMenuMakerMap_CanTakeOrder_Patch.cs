@@ -1,13 +1,17 @@
-﻿using HarmonyLib;
+﻿using System.Diagnostics.CodeAnalysis;
+using HarmonyLib;
 using RimWorld;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(FloatMenuMakerMap))]
-[HarmonyPatch("CanTakeOrder")]
+[HarmonyPatch(nameof(FloatMenuMakerMap.CanTakeOrder))]
+[SuppressMessage("ReSharper", "InconsistentNaming")]
+[SuppressMessage("ReSharper", "UnusedType.Global")]
 internal class FloatMenuMakerMap_CanTakeOrder_Patch
 {
+    [SuppressMessage("ReSharper", "UnusedMember.Global")]
     public static void Postfix(Pawn __0, ref bool __result)
     {
         if (__result == false && __0.Spawned && __0.Faction == Faction.OfPlayer &&

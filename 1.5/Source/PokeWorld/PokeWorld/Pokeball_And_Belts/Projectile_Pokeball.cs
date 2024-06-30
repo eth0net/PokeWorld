@@ -3,7 +3,7 @@ using UnityEngine;
 using Verse;
 using Verse.Sound;
 
-namespace PokeWorld;
+namespace PokeWorld.Pokeball_And_Belts;
 
 public class Projectile_Pokeball : Projectile
 {
@@ -30,7 +30,7 @@ public class Projectile_Pokeball : Projectile
         }
     }
 
-    protected override void Impact(Thing hitThing, bool blockedByShield = false)
+    public override void Impact(Thing hitThing, bool blockedByShield = false)
     {
         if (def.projectile.explosionDelay == 0)
         {

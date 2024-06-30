@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Pokedex;
 
 public class PawnKindTableDef : Def
 {

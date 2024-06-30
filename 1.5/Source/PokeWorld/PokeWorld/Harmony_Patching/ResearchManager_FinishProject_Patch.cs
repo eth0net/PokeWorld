@@ -1,8 +1,9 @@
 ﻿using HarmonyLib;
+using PokeWorld.Pokedex;
 using RimWorld;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(ResearchManager))]
 [HarmonyPatch("FinishProject")]

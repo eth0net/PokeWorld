@@ -5,7 +5,7 @@ using RimWorld.Planet;
 using UnityEngine;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Pokeball_And_Belts;
 
 internal class ITab_ContentsPokeball : ITab
 {
@@ -67,7 +67,7 @@ internal class ITab_ContentsPokeball : ITab
         }
     }
 
-    protected override void FillTab()
+    public override void FillTab()
     {
         thingsToSelect.Clear();
         var outRect = new Rect(default, size).ContractedBy(10f);

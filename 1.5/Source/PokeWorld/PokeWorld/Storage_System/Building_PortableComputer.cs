@@ -1,6 +1,6 @@
 ﻿using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Storage_System;
 
 public class Building_PortableComputer : Building
 {

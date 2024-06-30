@@ -1,63 +1,52 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using HarmonyLib;
+using PokeWorld.Pokemon_Moves;
 using RimWorld;
 using RimWorld.Planet;
 using UnityEngine;
 using Verse;
 using Verse.AI;
 
-namespace PokeWorld;
+namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(FloatMenuMakerMap))]
-[HarmonyPatch("ChoicesAtFor")]
+[HarmonyPatch(nameof(FloatMenuMakerMap.ChoicesAtFor))]
+[SuppressMessage("ReSharper", "InconsistentNaming")]
+[SuppressMessage("ReSharper", "UnusedType.Global")]
 internal class FloatMenuMakerMap_ChoicesAtFor_Patch
 {
-    private static FloatMenuOption[] equivalenceGroupTempStorage = null;
+    // private static FloatMenuOption[] equivalenceGroupTempStorage = null;
 
+    [SuppressMessage("ReSharper", "UnusedMember.Global")]
     public static bool Prefix(Vector3 __0, Pawn __1, ref List<FloatMenuOption> __result)
     {
         var comp = __1.TryGetComp<CompPokemon>();
-        if (comp != null)
+        if (comp == null) return true;
+
+        var list = new List<FloatMenuOption>();
+        if (__1.MentalStateDef == null && __1.playerSettings is { Master.Drafted: true })
         {
-            var list = new List<FloatMenuOption>();
-            if (__1.MentalStateDef == null && __1.playerSettings != null && __1.playerSettings.Master != null &&
-                __1.playerSettings.Master.Drafted)
+            var intVec = IntVec3.FromVector3(__0);
+            if (!intVec.InBounds(__1.Map)) return false;
+            if (__1.Map != Find.CurrentMap) return false;
+            if (intVec.Fogged(__1.Map))
             {
-                var intVec = IntVec3.FromVector3(__0);
-                if (!intVec.InBounds(__1.Map)) return false;
-                if (__1.Map != Find.CurrentMap) return false;
-                if (intVec.Fogged(__1.Map))
-                {
-                    var floatMenuOption = GotoLocationOption(intVec, __1);
-                    if (floatMenuOption != null)
-                    {
-                        if (!floatMenuOption.Disabled)
-                        {
-                            list.Add(floatMenuOption);
-                            __result = list;
-                            return false;
-                        }
-
-                        __result = list;
-                        return false;
-                    }
-
-                    __result = list;
-                    return false;
-                }
-
-                AddDraftedOrders(__0, __1, list);
-                foreach (var item in __1.GetExtraFloatMenuOptionsFor(intVec)) list.Add(item);
+                var floatMenuOption = GotoLocationOption(intVec, __1);
+                if (floatMenuOption is { Disabled: false }) list.Add(floatMenuOption);
                 __result = list;
                 return false;
             }
+
+            AddDraftedOrders(__0, __1, list);
+            list.AddRange(__1.GetExtraFloatMenuOptionsFor(intVec));
 
             __result = list;
             return false;
         }
 
-        return true;
+        __result = list;
+        return false;
     }
 
     private static FloatMenuOption GotoLocationOption(IntVec3 clickCell, Pawn pawn)
@@ -77,37 +66,33 @@ internal class FloatMenuMakerMap_ChoicesAtFor_Patch
                 if (clickCell.DistanceTo(pawn.playerSettings.Master.Position) >
                     PokemonMasterUtility.GetMasterObedienceRadius(pawn))
                     return new FloatMenuOption("PW_CannotGoTooFarFromMaster".Translate(), null);
-                Action action = delegate
+
+                return new FloatMenuOption("GoHere".Translate(), Action, MenuOptionPriority.GoHere)
+                {
+                    autoTakeable = true,
+                    autoTakeablePriority = 10f
+                };
+
+                void Action()
                 {
                     var intVec = PokemonRCellFinder.BestOrderedGotoDestNear(curLoc, pawn);
                     var job = JobMaker.MakeJob(DefDatabase<JobDef>.GetNamed("PW_PokemonGotoForced"), intVec);
                     job.playerForced = true;
                     if (pawn.Map.exitMapGrid.IsExitCell(UI.MouseCell()))
-                    {
                         job.exitMapOnArrival = true;
-                    }
                     else if (!pawn.Map.IsPlayerHome && !pawn.Map.exitMapGrid.MapUsesExitGrid &&
                              CellRect.WholeMap(pawn.Map).IsOnEdge(UI.MouseCell(), 3) &&
                              pawn.Map.Parent.GetComponent<FormCaravanComp>() != null &&
                              MessagesRepeatAvoider.MessageShowAllowed(
                                  "MessagePlayerTriedToLeaveMapViaExitGrid-" + pawn.Map.uniqueID, 60f))
-                    {
-                        if (pawn.Map.Parent.GetComponent<FormCaravanComp>().CanFormOrReformCaravanNow)
-                            Messages.Message("MessagePlayerTriedToLeaveMapViaExitGrid_CanReform".Translate(),
-                                pawn.Map.Parent, MessageTypeDefOf.RejectInput, false);
-                        else
-                            Messages.Message("MessagePlayerTriedToLeaveMapViaExitGrid_CantReform".Translate(),
-                                pawn.Map.Parent, MessageTypeDefOf.RejectInput, false);
-                    }
+                        Messages.Message(
+                            pawn.Map.Parent.GetComponent<FormCaravanComp>().CanFormOrReformCaravanNow
+                                ? "MessagePlayerTriedToLeaveMapViaExitGrid_CanReform".Translate()
+                                : "MessagePlayerTriedToLeaveMapViaExitGrid_CantReform".Translate(),
+                            pawn.Map.Parent, MessageTypeDefOf.RejectInput, false);
 
-                    if (pawn.jobs.TryTakeOrderedJob(job))
-                        FleckMaker.Static(intVec, pawn.Map, FleckDefOf.FeedbackGoto);
-                };
-                return new FloatMenuOption("GoHere".Translate(), action, MenuOptionPriority.GoHere)
-                {
-                    autoTakeable = true,
-                    autoTakeablePriority = 10f
-                };
+                    if (pawn.jobs.TryTakeOrderedJob(job)) FleckMaker.Static(intVec, pawn.Map, FleckDefOf.FeedbackGoto);
+                }
             }
 
             return null;
@@ -123,10 +108,9 @@ internal class FloatMenuMakerMap_ChoicesAtFor_Patch
         {
             var attackTarg = item;
             var comp = pawn.TryGetComp<CompPokemon>();
-            if (comp != null && comp.moveTracker != null && PokemonAttackGizmoUtility.CanUseAnyRangedVerb(pawn))
+            if (comp is { moveTracker: not null } && PokemonAttackGizmoUtility.CanUseAnyRangedVerb(pawn))
             {
-                string failStr;
-                var rangedAct = PokemonFloatMenuUtility.GetRangedAttackAction(pawn, attackTarg, out failStr);
+                var rangedAct = PokemonFloatMenuUtility.GetRangedAttackAction(pawn, attackTarg, out var failStr);
                 string text = "FireAt".Translate(attackTarg.Thing.Label, attackTarg.Thing);
                 var floatMenuOption = new FloatMenuOption("", null, MenuOptionPriority.High, null, item.Thing);
                 if (rangedAct == null)
@@ -137,7 +121,8 @@ internal class FloatMenuMakerMap_ChoicesAtFor_Patch
                 {
                     text = "PW_CannotGoNoMaster".Translate();
                 }
-                else if (clickCell.DistanceTo(pawn.playerSettings.Master.Position) >
+                else if (pawn.playerSettings is { Master: not null } &&
+                         clickCell.DistanceTo(pawn.playerSettings.Master.Position) >
                          PokemonMasterUtility.GetMasterObedienceRadius(pawn))
                 {
                     text = "PW_CannotGoTooFarFromMaster".Translate();
@@ -158,10 +143,8 @@ internal class FloatMenuMakerMap_ChoicesAtFor_Patch
                 opts.Add(floatMenuOption);
             }
 
-            string failStr2;
-            var meleeAct = PokemonFloatMenuUtility.GetMeleeAttackAction(pawn, attackTarg, out failStr2);
-            var pawn2 = attackTarg.Thing as Pawn;
-            var text2 = pawn2 == null || !pawn2.Downed
+            var meleeAct = PokemonFloatMenuUtility.GetMeleeAttackAction(pawn, attackTarg, out var failStr2);
+            var text2 = attackTarg.Thing is not Pawn { Downed: true }
                 ? (string)"MeleeAttack".Translate(attackTarg.Thing.Label, attackTarg.Thing)
                 : (string)"MeleeAttackToDeath".Translate(attackTarg.Thing.Label, attackTarg.Thing);
             var priority = !attackTarg.HasThing || !pawn.HostileTo(attackTarg.Thing)

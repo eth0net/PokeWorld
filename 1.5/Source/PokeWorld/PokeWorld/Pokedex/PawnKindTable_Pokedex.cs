@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Pokedex;
 
 public class PawnKindTable_Pokedex : PawnKindTable
 {

@@ -1,13 +1,13 @@
 ﻿using RimWorld;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Pokemon_Moves;
 
 internal class Projectile_MeteoriteBullet : Bullet
 {
     #region Overrides
 
-    protected override void Impact(Thing hitThing, bool blockedByShield = false)
+    public override void Impact(Thing hitThing, bool blockedByShield = false)
     {
         var map = Map;
         var position = Position;

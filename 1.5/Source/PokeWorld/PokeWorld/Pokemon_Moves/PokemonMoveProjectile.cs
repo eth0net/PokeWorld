@@ -3,13 +3,13 @@ using UnityEngine;
 using Verse;
 using Verse.Sound;
 
-namespace PokeWorld;
+namespace PokeWorld.Pokemon_Moves;
 
 public class PokemonMoveProjectile : Projectile
 {
     protected MoveDef moveDef;
 
-    protected override void Impact(Thing hitThing, bool blockedByShield = false)
+    public override void Impact(Thing hitThing, bool blockedByShield = false)
     {
         var map = Map;
         var position = Position;

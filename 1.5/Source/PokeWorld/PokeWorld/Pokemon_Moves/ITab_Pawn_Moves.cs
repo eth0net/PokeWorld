@@ -2,7 +2,7 @@
 using UnityEngine;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Pokemon_Moves;
 
 public class ITab_Pawn_Moves : ITab
 {
@@ -20,14 +20,14 @@ public class ITab_Pawn_Moves : ITab
         }
     }
 
-    protected override void FillTab()
+    public override void FillTab()
     {
         var rect = new Rect(0f, 0f, size.x, size.y).ContractedBy(17f);
         rect.yMin += 10f;
         MoveCardUtility.DrawMoveCard(rect, base.SelPawn);
     }
 
-    protected override void UpdateSize()
+    public override void UpdateSize()
     {
         base.UpdateSize();
         size = new Vector2(400f, MoveCardUtility.TotalHeightForPawn(base.SelPawn));

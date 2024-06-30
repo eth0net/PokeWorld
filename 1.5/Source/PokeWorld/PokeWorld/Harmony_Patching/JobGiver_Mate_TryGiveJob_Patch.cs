@@ -1,10 +1,11 @@
 ﻿using System;
 using HarmonyLib;
+using PokeWorld.Eggs;
 using RimWorld;
 using Verse;
 using Verse.AI;
 
-namespace PokeWorld;
+namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(JobGiver_Mate))]
 [HarmonyPatch("TryGiveJob")]

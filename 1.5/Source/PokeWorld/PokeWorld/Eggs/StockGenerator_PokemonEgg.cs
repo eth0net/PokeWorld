@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using PokeWorld.ModSetting;
 using RimWorld;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Eggs;
 
 public class StockGenerator_PokemonEgg : StockGenerator
 {

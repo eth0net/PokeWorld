@@ -5,7 +5,7 @@ using RimWorld;
 using UnityEngine;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Pokedex;
 
 public abstract class MainTabWindow_PawnKindTable : MainTabWindow
 {
@@ -17,7 +17,7 @@ public abstract class MainTabWindow_PawnKindTable : MainTabWindow
 
     protected abstract PawnKindTableDef PawnKindTableDef { get; }
 
-    protected override float Margin => 6f;
+    public override float Margin => 6f;
 
     public override Vector2 RequestedTabSize
     {

@@ -1,8 +1,9 @@
 ﻿using System.Text;
+using PokeWorld.Pokeball_And_Belts;
 using RimWorld;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Stats;
 
 public class StatWorker_PokeBallAccuracy : StatWorker
 {

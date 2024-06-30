@@ -1,6 +1,6 @@
 ﻿using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Pokeball_And_Belts;
 
 public static class PutInBallUtility
 {

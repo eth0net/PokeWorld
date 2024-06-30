@@ -3,7 +3,7 @@ using LudeonTK;
 using UnityEngine;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Pokemon_Moves;
 
 [StaticConstructorOnStartup]
 public static class MoveCardUtility

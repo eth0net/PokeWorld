@@ -2,7 +2,7 @@
 using RimWorld;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(PawnUtility), "GetManhunterOnDamageChance", typeof(Pawn), typeof(float), typeof(Thing))]
 internal class PawnUtility_GetManhunterOnDamageChance_Patch

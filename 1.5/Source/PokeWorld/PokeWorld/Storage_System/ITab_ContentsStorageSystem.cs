@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using PokeWorld.Pokeball_And_Belts;
 using RimWorld;
 using UnityEngine;
 using Verse;
 using Verse.Sound;
 
-namespace PokeWorld;
+namespace PokeWorld.Storage_System;
 
 internal class ITab_ContentsStorageSystem : ITab
 {
@@ -63,7 +64,7 @@ internal class ITab_ContentsStorageSystem : ITab
         }
     }
 
-    protected override void FillTab()
+    public override void FillTab()
     {
         Text.Font = GameFont.Small;
         var rect = new Rect(0f, 20f, size.x, size.y - 20f).ContractedBy(10f);

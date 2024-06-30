@@ -2,7 +2,7 @@
 using RimWorld;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Stats;
 
 public class StatWorker_PokemonExperience : StatWorker
 {

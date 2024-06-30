@@ -1,4 +1,4 @@
-﻿namespace PokeWorld;
+﻿namespace PokeWorld.Harmony_Patching;
 /*
 [HarmonyPatch(typeof(SymbolResolver_Interior_AncientTemple))]
 [HarmonyPatch("Resolve")]

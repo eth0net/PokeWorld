@@ -5,7 +5,7 @@ using Verse;
 using Verse.AI;
 using Verse.AI.Group;
 
-namespace PokeWorld;
+namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(JobGiver_Manhunter))]
 [HarmonyPatch("TryGiveJob")]
@@ -28,7 +28,7 @@ internal class JobGiver_Manhunter_TryGiveJob_Patch
         }
 
         var pawn2 = enemyTarget as Pawn;
-        if (pawn2 != null && pawn2.IsInvisible())
+        if (pawn2 != null && pawn2.IsPsychologicallyInvisible())
         {
             __result = null;
             return false;

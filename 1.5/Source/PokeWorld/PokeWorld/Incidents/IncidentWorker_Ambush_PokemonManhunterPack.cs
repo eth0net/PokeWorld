@@ -3,13 +3,13 @@ using RimWorld;
 using RimWorld.Planet;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Incidents;
 
 internal class IncidentWorker_Ambush_PokemonManhunterPack : IncidentWorker_Ambush
 {
     private const float ManhunterAmbushPointsFactor = 0.75f;
 
-    protected override bool CanFireNowSub(IncidentParms parms)
+    public override bool CanFireNowSub(IncidentParms parms)
     {
         if (!base.CanFireNowSub(parms)) return false;
         List<PawnKindDef> animalKind;
@@ -17,27 +17,27 @@ internal class IncidentWorker_Ambush_PokemonManhunterPack : IncidentWorker_Ambus
             out animalKind);
     }
 
-    protected override List<Pawn> GeneratePawns(IncidentParms parms)
+    public override List<Pawn> GeneratePawns(IncidentParms parms)
     {
-        if (!Pokemon_ManhunterPackIncidentUtility.TryFindManhunterAnimalKind(AdjustedPoints(parms.points),
-                parms.target.Tile, out var animalKind) &&
-            !Pokemon_ManhunterPackIncidentUtility.TryFindManhunterAnimalKind(AdjustedPoints(parms.points), -1,
+        if (Pokemon_ManhunterPackIncidentUtility.TryFindManhunterAnimalKind(AdjustedPoints(parms.points),
+                parms.target.Tile, out var animalKind) ||
+            Pokemon_ManhunterPackIncidentUtility.TryFindManhunterAnimalKind(AdjustedPoints(parms.points), -1,
                 out animalKind))
+            return Pokemon_ManhunterPackIncidentUtility.GeneratePokemonFamily_NewTmp(animalKind, parms.target.Tile,
+                AdjustedPoints(parms.points));
+        Log.Error(string.Concat("Could not find any valid animal kind for ", def, " incident."));
+        return new List<Pawn>
         {
-            Log.Error(string.Concat("Could not find any valid animal kind for ", def, " incident."));
-            return new List<Pawn>();
-        }
-
-        return Pokemon_ManhunterPackIncidentUtility.GeneratePokemonFamily_NewTmp(animalKind, parms.target.Tile,
-            AdjustedPoints(parms.points));
+            Capacity = 0
+        };
     }
 
-    protected override void PostProcessGeneratedPawnsAfterSpawning(List<Pawn> generatedPawns)
+    public override void PostProcessGeneratedPawnsAfterSpawning(List<Pawn> generatedPawns)
     {
-        for (var i = 0; i < generatedPawns.Count; i++)
+        foreach (var t in generatedPawns)
         {
-            generatedPawns[i].health.AddHediff(HediffDefOf.Scaria);
-            generatedPawns[i].mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.ManhunterPermanent);
+            t.health.AddHediff(HediffDefOf.Scaria);
+            t.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.ManhunterPermanent);
         }
     }
 
@@ -46,7 +46,7 @@ internal class IncidentWorker_Ambush_PokemonManhunterPack : IncidentWorker_Ambus
         return basePoints * 0.75f;
     }
 
-    protected override string GetLetterText(Pawn anyPawn, IncidentParms parms)
+    public override string GetLetterText(Pawn anyPawn, IncidentParms parms)
     {
         var caravan = parms.target as Caravan;
         return string.Format(def.letterText, caravan != null ? caravan.Name : "yourCaravan".TranslateSimple(),

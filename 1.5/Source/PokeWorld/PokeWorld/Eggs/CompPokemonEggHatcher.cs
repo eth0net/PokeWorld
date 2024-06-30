@@ -1,8 +1,9 @@
-﻿using RimWorld;
+﻿using PokeWorld.Pokedex;
+using RimWorld;
 using RimWorld.Planet;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Eggs;
 
 public class CompPokemonEggHatcher : CompHatcher
 {
@@ -50,7 +51,7 @@ public class CompPokemonEggHatcher : CompHatcher
         try
         {
             var request = new PawnGenerationRequest(Props.hatcherPawn, hatcheeFaction,
-                PawnGenerationContext.NonPlayer, false, developmentalStages: DevelopmentalStage.Newborn);
+                developmentalStages: DevelopmentalStage.Newborn);
             for (var i = 0; i < parent.stackCount; i++)
             {
                 var pawn = PawnGenerator.GeneratePawn(request);
@@ -70,7 +71,8 @@ public class CompPokemonEggHatcher : CompHatcher
                         {
                             if (pawn.playerSettings != null && hatcheeParent.playerSettings != null &&
                                 hatcheeParent.Faction == hatcheeFaction)
-                                pawn.playerSettings.AreaRestriction = hatcheeParent.playerSettings.AreaRestriction;
+                                pawn.playerSettings.AreaRestrictionInPawnCurrentMap =
+                                    hatcheeParent.playerSettings.AreaRestrictionInPawnCurrentMap;
                             if (pawn.RaceProps.IsFlesh)
                                 pawn.relations.AddDirectRelation(PawnRelationDefOf.Parent, hatcheeParent);
                             if (comp.formTracker != null)
@@ -78,13 +80,13 @@ public class CompPokemonEggHatcher : CompHatcher
                                 if (hatcheeParent.TryGetComp<CompDittoEggLayer>() != null && otherParent != null)
                                 {
                                     var comp2 = otherParent.TryGetComp<CompPokemon>();
-                                    if (comp2 != null && comp2.formTracker != null)
+                                    if (comp2 is { formTracker: not null })
                                         comp.formTracker.TryInheritFormFromParent(comp2.formTracker);
                                 }
                                 else
                                 {
                                     var comp3 = hatcheeParent.TryGetComp<CompPokemon>();
-                                    if (comp3 != null && comp3.formTracker != null)
+                                    if (comp3 is { formTracker: not null })
                                         comp.formTracker.TryInheritFormFromParent(comp3.formTracker);
                                 }
                             }

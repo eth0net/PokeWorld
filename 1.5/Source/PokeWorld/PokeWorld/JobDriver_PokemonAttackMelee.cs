@@ -24,7 +24,7 @@ public class JobDriver_PokemonAttackMelee : JobDriver
         return true;
     }
 
-    protected override IEnumerable<Toil> MakeNewToils()
+    public override IEnumerable<Toil> MakeNewToils()
     {
         yield return Toils_General.DoAtomic(delegate
         {

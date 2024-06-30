@@ -49,32 +49,28 @@ internal class JobDriver_CraftPokemon : JobDriver
         return true;
     }
 
-    protected override IEnumerable<Toil> MakeNewToils()
+    public override IEnumerable<Toil> MakeNewToils()
     {
         AddEndCondition(delegate
         {
             var thing = GetActor().jobs.curJob.GetTarget(TargetIndex.A).Thing;
-            return !(thing is Building) || thing.Spawned ? JobCondition.Ongoing : JobCondition.Incompletable;
+            return thing is not Building || thing.Spawned ? JobCondition.Ongoing : JobCondition.Incompletable;
         });
         this.FailOnBurningImmobile(TargetIndex.A);
         this.FailOn(delegate
         {
-            if (job.GetTarget(TargetIndex.A).Thing is IBillGiver billGiver)
-            {
-                if (job.bill.DeletedOrDereferenced) return true;
-                if (!billGiver.CurrentlyUsableForBills()) return true;
-            }
-
-            return false;
+            if (job.GetTarget(TargetIndex.A).Thing is not IBillGiver billGiver) return false;
+            if (job.bill.DeletedOrDereferenced) return true;
+            return !billGiver.CurrentlyUsableForBills();
         });
         var gotoBillGiver = Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.InteractionCell);
         var toil = new Toil
         {
             initAction = delegate
             {
-                if (job.targetQueueB != null && job.targetQueueB.Count == 1)
-                    if (job.targetQueueB[0].Thing is UnfinishedThing unfinishedThing)
-                        unfinishedThing.BoundBill = (Bill_ProductionWithUft)job.bill;
+                if (job.targetQueueB is not { Count: 1 }) return;
+                if (job.targetQueueB[0].Thing is UnfinishedThing unfinishedThing)
+                    unfinishedThing.BoundBill = (Bill_ProductionWithUft)job.bill;
             }
         };
         yield return toil;

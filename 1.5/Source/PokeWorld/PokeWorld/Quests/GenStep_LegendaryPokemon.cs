@@ -1,24 +1,23 @@
-﻿using RimWorld;
+﻿using System.Linq;
+using RimWorld;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Quests;
 
 public class GenStep_LegendaryPokemon : GenStep_Scatterer
 {
     public override int SeedPart => 860042045;
 
-    protected override bool CanScatterAt(IntVec3 c, Map map)
+    public override bool CanScatterAt(IntVec3 c, Map map)
     {
         if (!base.CanScatterAt(c, map)) return false;
         if (!c.Standable(map)) return false;
-        if (c.Roofed(map)) return false;
-        if (!map.reachability.CanReachMapEdge(c, TraverseParms.For(TraverseMode.PassDoors))) return false;
-        return true;
+        return !c.Roofed(map) && map.reachability.CanReachMapEdge(c, TraverseParms.For(TraverseMode.PassDoors));
     }
 
-    protected override void ScatterAt(IntVec3 loc, Map map, GenStepParams parms, int count = 1)
+    public override void ScatterAt(IntVec3 loc, Map map, GenStepParams parms, int count = 1)
     {
-        var pawn = (Pawn)parms.sitePart.things.Take(parms.sitePart.things[0]);
+        var pawn = (Pawn)parms.sitePart.things.Take(parms.sitePart.things.First());
         GenSpawn.Spawn(pawn, loc, map);
         pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.ManhunterPermanent);
         MapGenerator.rootsToUnfog.Add(loc);

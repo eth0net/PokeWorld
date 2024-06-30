@@ -1,6 +1,6 @@
 ﻿using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Pokemon_Moves;
 
 public class MoveDef : Def
 {

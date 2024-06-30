@@ -1,6 +1,6 @@
 ﻿using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Eggs;
 
 public class EggGroupDef : Def
 {

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Pokedex;
 
 public abstract class PawnKindColumnWorker_Icon : PawnKindColumnWorker
 {

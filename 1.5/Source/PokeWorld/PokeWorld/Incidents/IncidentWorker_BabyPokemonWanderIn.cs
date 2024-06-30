@@ -1,22 +1,23 @@
 ﻿using System.Linq;
+using PokeWorld.ModSetting;
+using PokeWorld.Pokedex;
 using RimWorld;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Incidents;
 
 internal class IncidentWorker_BabyPokemonWanderIn : IncidentWorker
 {
-    protected override bool CanFireNowSub(IncidentParms parms)
+    public override bool CanFireNowSub(IncidentParms parms)
     {
         if (!base.CanFireNowSub(parms)) return false;
         var map = (Map)parms.target;
         PawnKindDef kind;
-        if (RCellFinder.TryFindRandomPawnEntryCell(out var _, map, CellFinder.EdgeRoadChance_Animal))
-            return TryFindRandomPawnKind(map, out kind);
-        return false;
+        return RCellFinder.TryFindRandomPawnEntryCell(out var _, map, CellFinder.EdgeRoadChance_Animal) &&
+               TryFindRandomPawnKind(map, out kind);
     }
 
-    protected override bool TryExecuteWorker(IncidentParms parms)
+    public override bool TryExecuteWorker(IncidentParms parms)
     {
         var map = (Map)parms.target;
         if (!RCellFinder.TryFindRandomPawnEntryCell(out var result, map, CellFinder.EdgeRoadChance_Animal))

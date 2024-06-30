@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using LudeonTK;
+using PokeWorld.ModSetting;
 using RimWorld;
 using UnityEngine;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Incidents;
 
 internal class IncidentWorker_PokemonManhunterPack : IncidentWorker
 {
@@ -15,7 +16,7 @@ internal class IncidentWorker_PokemonManhunterPack : IncidentWorker
 
     private const int AnimalsStayDurationMax = 120000;
 
-    protected override bool CanFireNowSub(IncidentParms parms)
+    public override bool CanFireNowSub(IncidentParms parms)
     {
         if (!base.CanFireNowSub(parms)) return false;
         var map = (Map)parms.target;
@@ -23,7 +24,7 @@ internal class IncidentWorker_PokemonManhunterPack : IncidentWorker
                RCellFinder.TryFindRandomPawnEntryCell(out _, map, CellFinder.EdgeRoadChance_Animal);
     }
 
-    protected override bool TryExecuteWorker(IncidentParms parms)
+    public override bool TryExecuteWorker(IncidentParms parms)
     {
         var map = (Map)parms.target;
         var animalKind = new List<PawnKindDef> { parms.pawnKind };

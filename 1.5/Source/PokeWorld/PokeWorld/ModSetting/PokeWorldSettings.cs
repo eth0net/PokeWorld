@@ -2,7 +2,7 @@
 using UnityEngine;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.ModSetting;
 
 public class PokeWorldSettings : ModSettings
 {

@@ -3,7 +3,7 @@ using RimWorld.Planet;
 using RimWorld.QuestGen;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Quests;
 
 public class LegendaryQuestsTracker : WorldComponent
 {

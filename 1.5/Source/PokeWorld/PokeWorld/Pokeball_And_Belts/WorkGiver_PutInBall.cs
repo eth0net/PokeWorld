@@ -3,7 +3,7 @@ using RimWorld;
 using Verse;
 using Verse.AI;
 
-namespace PokeWorld;
+namespace PokeWorld.Pokeball_And_Belts;
 
 internal class WorkGiver_PutInBall : WorkGiver_Scanner
 {

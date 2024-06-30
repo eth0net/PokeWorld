@@ -2,7 +2,7 @@
 using Verse;
 using Verse.AI;
 
-namespace PokeWorld;
+namespace PokeWorld.Pokeball_And_Belts;
 
 internal class Verb_LaunchPokeball : Verb_CastBase
 {
@@ -60,7 +60,7 @@ internal class Verb_LaunchPokeball : Verb_CastBase
         return true;
     }
 
-    protected override bool TryCastShot()
+    public override bool TryCastShot()
     {
         if (currentTarget.HasThing && currentTarget.Thing.Map != caster.Map) return false;
         var projectile = Projectile;

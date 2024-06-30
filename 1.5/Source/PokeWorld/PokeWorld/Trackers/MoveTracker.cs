@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using PokeWorld.Pokemon_Moves;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Trackers;
 
 public class MoveTracker : IExposable
 {

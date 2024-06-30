@@ -1,12 +1,13 @@
-﻿using RimWorld;
+﻿using PokeWorld.Pokedex;
+using RimWorld;
 using UnityEngine;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Table_Column;
 
 internal class PawnColumnWorker_Caught : PawnColumnWorker_Icon
 {
-    protected override Texture2D GetIconFor(Pawn pawn)
+    public override Texture2D GetIconFor(Pawn pawn)
     {
         if (pawn.TryGetComp<CompPokemon>() != null &&
             Find.World.GetComponent<PokedexManager>().IsPokemonCaught(pawn.kindDef))
@@ -14,7 +15,7 @@ internal class PawnColumnWorker_Caught : PawnColumnWorker_Icon
         return null;
     }
 
-    protected override string GetIconTip(Pawn pawn)
+    public override string GetIconTip(Pawn pawn)
     {
         if (pawn.TryGetComp<CompPokemon>() != null &&
             Find.World.GetComponent<PokedexManager>().IsPokemonCaught(pawn.kindDef))

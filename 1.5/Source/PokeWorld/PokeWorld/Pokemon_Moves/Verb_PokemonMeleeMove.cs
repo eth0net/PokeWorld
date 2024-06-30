@@ -3,7 +3,7 @@ using System.Linq;
 using RimWorld;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Pokemon_Moves;
 
 public class Verb_PokemonMeleeMove : Verb_MeleeAttack
 {
@@ -86,7 +86,7 @@ public class Verb_PokemonMeleeMove : Verb_MeleeAttack
         }
     }
 
-    protected override DamageWorker.DamageResult ApplyMeleeDamageToTarget(LocalTargetInfo target)
+    public override DamageWorker.DamageResult ApplyMeleeDamageToTarget(LocalTargetInfo target)
     {
         var result = new DamageWorker.DamageResult();
         foreach (var item in DamageInfosToApply(target))

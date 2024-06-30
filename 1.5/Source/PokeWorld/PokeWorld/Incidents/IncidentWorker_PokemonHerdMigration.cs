@@ -1,51 +1,44 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using PokeWorld.ModSetting;
 using RimWorld;
 using UnityEngine;
 using Verse;
 using Verse.AI;
 using Verse.AI.Group;
 
-namespace PokeWorld;
+namespace PokeWorld.Incidents;
 
 internal class IncidentWorker_PokemonHerdMigration : IncidentWorker
 {
     private const float MinTotalBodySize = 4f;
     private static readonly IntRange AnimalsCount = new(3, 5);
 
-    protected override bool CanFireNowSub(IncidentParms parms)
+    public override bool CanFireNowSub(IncidentParms parms)
     {
         var map = (Map)parms.target;
-        IntVec3 start;
-        IntVec3 end;
-        if (TryFindAnimalKind(map.Tile, out var _)) return TryFindStartAndEndCells(map, out start, out end);
-        return false;
+        return TryFindAnimalKind(map.Tile, out var _) && TryFindStartAndEndCells(map, out _, out _);
     }
 
-    protected override bool TryExecuteWorker(IncidentParms parms)
+    public override bool TryExecuteWorker(IncidentParms parms)
     {
-        if (PokeWorldSettings.OkforPokemon())
+        if (!PokeWorldSettings.OkforPokemon()) return false;
+        var map = (Map)parms.target;
+        if (!TryFindAnimalKind(map.Tile, out var animalKind)) return false;
+        if (!TryFindStartAndEndCells(map, out var start, out var end)) return false;
+        var rot = Rot4.FromAngleFlat((map.Center - start).AngleFlat);
+        var list = GenerateAnimals(animalKind, map.Tile);
+        foreach (var newThing in list)
         {
-            var map = (Map)parms.target;
-            if (!TryFindAnimalKind(map.Tile, out var animalKind)) return false;
-            if (!TryFindStartAndEndCells(map, out var start, out var end)) return false;
-            var rot = Rot4.FromAngleFlat((map.Center - start).AngleFlat);
-            var list = GenerateAnimals(animalKind, map.Tile);
-            for (var i = 0; i < list.Count; i++)
-            {
-                var newThing = list[i];
-                var loc = CellFinder.RandomClosewalkCellNear(start, map, 10);
-                GenSpawn.Spawn(newThing, loc, map, rot);
-            }
-
-            LordMaker.MakeNewLord(null, new LordJob_ExitMapNear(end, LocomotionUrgency.Walk), map, list);
-            var str = string.Format(def.letterText, animalKind[0].GetLabelPlural()).CapitalizeFirst();
-            var str2 = string.Format(def.letterLabel, animalKind[0].GetLabelPlural().CapitalizeFirst());
-            SendStandardLetter(str2, str, def.letterDef, parms, list[0]);
-            return true;
+            var loc = CellFinder.RandomClosewalkCellNear(start, map, 10);
+            GenSpawn.Spawn(newThing, loc, map, rot);
         }
 
-        return false;
+        LordMaker.MakeNewLord(null, new LordJob_ExitMapNear(end, LocomotionUrgency.Walk), map, list);
+        var str = string.Format(def.letterText, animalKind[0].GetLabelPlural()).CapitalizeFirst();
+        var str2 = string.Format(def.letterLabel, animalKind[0].GetLabelPlural().CapitalizeFirst());
+        SendStandardLetter(str2, str, def.letterDef, parms, list[0]);
+        return true;
     }
 
     private bool TryFindAnimalKind(int tile, out List<PawnKindDef> allPokemonKind)

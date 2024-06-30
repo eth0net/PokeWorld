@@ -1,22 +1,21 @@
 ﻿using RimWorld;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Table_Column;
 
 public class PawnColumnWorker_Level : PawnColumnWorker_Text
 {
-    protected override string GetTextFor(Pawn pawn)
+    public override string GetTextFor(Pawn pawn)
     {
         var comp = pawn.TryGetComp<CompPokemon>();
         if (comp != null) return "PW_LevelShort".Translate(comp.levelTracker.level);
         return "";
     }
 
-    protected override string GetTip(Pawn pawn)
+    public override string GetTip(Pawn pawn)
     {
         var comp = pawn.TryGetComp<CompPokemon>();
-        if (comp != null) return "PW_LevelLong".Translate(comp.levelTracker.level);
-        return null;
+        return comp != null ? "PW_LevelLong".Translate(comp.levelTracker.level) : null;
     }
 
     public override int Compare(Pawn a, Pawn b)
@@ -27,7 +26,6 @@ public class PawnColumnWorker_Level : PawnColumnWorker_Text
     private int GetValueToCompare(Pawn pawn)
     {
         var comp = pawn.TryGetComp<CompPokemon>();
-        if (comp != null) return comp.levelTracker.level;
-        return 0;
+        return comp != null ? comp.levelTracker.level : 0;
     }
 }

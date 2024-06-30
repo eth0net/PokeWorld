@@ -1,19 +1,20 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using LudeonTK;
+using PokeWorld.ModSetting;
 using RimWorld;
 using UnityEngine;
 using Verse;
 using Verse.AI.Group;
 using Verse.Sound;
 
-namespace PokeWorld;
+namespace PokeWorld.Incidents;
 
 public class IncidentWorker_PokemonInfestation : IncidentWorker
 {
     public const float HivePoints = 220f;
 
-    protected override bool CanFireNowSub(IncidentParms parms)
+    public override bool CanFireNowSub(IncidentParms parms)
     {
         var map = (Map)parms.target;
         if (base.CanFireNowSub(parms) && HiveUtility.TotalSpawnedHivesCount(map) < 30)
@@ -21,7 +22,7 @@ public class IncidentWorker_PokemonInfestation : IncidentWorker
         return false;
     }
 
-    protected override bool TryExecuteWorker(IncidentParms parms)
+    public override bool TryExecuteWorker(IncidentParms parms)
     {
         if (PokeWorldSettings.OkforPokemon() && PokeWorldSettings.allowPokemonInfestation)
         {
@@ -239,7 +240,7 @@ public class TunnelPokemonHiveSpawner : ThingWithComps
                     false), map, list);
     }
 
-    protected override void DrawAt(Vector3 drawLoc, bool flip = false)
+    public override void DrawAt(Vector3 drawLoc, bool flip = false)
     {
         Rand.PushState();
         Rand.Seed = thingIDNumber;

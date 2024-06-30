@@ -1,4 +1,4 @@
-﻿namespace PokeWorld;
+﻿namespace PokeWorld.Quests;
 
 public class GenerationRequirement
 {

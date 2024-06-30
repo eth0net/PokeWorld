@@ -2,9 +2,9 @@
 using UnityEngine;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Eggs;
 
-public class CompDittoEggLayer : ThingComp
+public sealed class CompDittoEggLayer : ThingComp
 {
     private ThingDef eggFertilizedDef;
     private float eggLayIntervalDays;
@@ -12,7 +12,7 @@ public class CompDittoEggLayer : ThingComp
     private int fertilizationCount;
     private Pawn fertilizedBy;
 
-    private bool Active => true;
+    private static bool Active => true;
 
     public bool CanLayNow
     {
@@ -35,11 +35,11 @@ public class CompDittoEggLayer : ThingComp
         }
     }
 
-    public CompProperties_DittoEggLayer Props => (CompProperties_DittoEggLayer)props;
+    private CompProperties_DittoEggLayer Props => (CompProperties_DittoEggLayer)props;
 
-    public override void Initialize(CompProperties props)
+    public override void Initialize(CompProperties compProperties)
     {
-        base.Initialize(props);
+        base.Initialize(compProperties);
         eggLayIntervalDays = Props.eggLayIntervalDays;
     }
 
@@ -55,15 +55,12 @@ public class CompDittoEggLayer : ThingComp
 
     public override void CompTick()
     {
-        if (Active)
-        {
-            var num = 1f / (eggLayIntervalDays * 60000f);
-            var pawn = parent as Pawn;
-            if (pawn != null) num *= PawnUtility.BodyResourceGrowthSpeed(pawn);
-            eggProgress += num;
-            if (eggProgress > 1f) eggProgress = 1f;
-            if (ProgressStoppedBecauseUnfertilized) eggProgress = Props.eggProgressUnfertilizedMax;
-        }
+        if (!Active) return;
+        var num = 1f / (eggLayIntervalDays * 60000f);
+        if (parent is Pawn pawn) num *= PawnUtility.BodyResourceGrowthSpeed(pawn);
+        eggProgress += num;
+        if (eggProgress > 1f) eggProgress = 1f;
+        if (ProgressStoppedBecauseUnfertilized) eggProgress = Props.eggProgressUnfertilizedMax;
     }
 
     public void Fertilize(Pawn male)
@@ -74,7 +71,7 @@ public class CompDittoEggLayer : ThingComp
         eggLayIntervalDays = male.TryGetComp<CompEggLayer>().Props.eggLayIntervalDays;
     }
 
-    public virtual Thing ProduceEgg()
+    public Thing ProduceEgg()
     {
         if (!Active) Log.Error("LayEgg while not Active: " + parent);
         eggProgress = 0f;
@@ -85,14 +82,13 @@ public class CompDittoEggLayer : ThingComp
             thing = ThingMaker.MakeThing(eggFertilizedDef);
         else if (Props.eggUnfertilizedDef != null) thing = ThingMaker.MakeThing(Props.eggUnfertilizedDef);
         fertilizationCount = Mathf.Max(0, fertilizationCount - randomInRange);
-        if (thing == null) return thing;
+        if (thing == null) return null;
         thing.stackCount = randomInRange;
         var compHatcher = thing.TryGetComp<CompHatcher>();
         if (compHatcher != null)
         {
             compHatcher.hatcheeFaction = parent.Faction;
-            var pawn = parent as Pawn;
-            if (pawn != null) compHatcher.hatcheeParent = pawn;
+            if (parent is Pawn pawn) compHatcher.hatcheeParent = pawn;
             if (fertilizedBy != null) compHatcher.otherParent = fertilizedBy;
         }
 
@@ -116,6 +112,7 @@ public class CompProperties_DittoEggLayer : CompProperties
     public IntRange eggCountRange = IntRange.one;
 
     public int eggFertilizationCountMax = 1;
+
     public float eggLayIntervalDays = 1f;
 
     public float eggProgressUnfertilizedMax = 1f;

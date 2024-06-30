@@ -3,7 +3,7 @@ using System.Linq;
 using RimWorld.Planet;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Pokedex;
 
 public sealed class PokedexManager : WorldComponent
 {

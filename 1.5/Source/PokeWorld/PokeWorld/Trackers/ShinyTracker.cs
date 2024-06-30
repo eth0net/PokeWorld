@@ -1,9 +1,10 @@
 ﻿using System.Linq;
+using PokeWorld.ModSetting;
 using RimWorld;
 using UnityEngine;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Trackers;
 
 public class ShinyTracker : IExposable
 {

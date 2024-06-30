@@ -1,7 +1,7 @@
 ﻿using RimWorld;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Stats;
 
 internal class StatWorker_LineBreak : StatWorker
 {

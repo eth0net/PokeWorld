@@ -2,7 +2,7 @@
 using Verse;
 using Verse.Grammar;
 
-namespace PokeWorld;
+namespace PokeWorld.Pokemon_Moves;
 
 public static class CustomPlayLogEntryUtility
 {

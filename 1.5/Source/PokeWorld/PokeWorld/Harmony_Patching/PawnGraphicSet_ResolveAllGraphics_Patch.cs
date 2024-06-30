@@ -1,38 +1,48 @@
-﻿using HarmonyLib;
+﻿using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using System.Linq;
+using System.Reflection.Emit;
+using HarmonyLib;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Harmony_Patching;
 
-[HarmonyPatch(typeof(PawnGraphicSet))]
-[HarmonyPatch("ResolveAllGraphics")]
-internal class PawnGraphicSet_ResolveAllGraphics_Patch
+[HarmonyPatch(typeof(PawnRenderNode_AnimalPart))]
+[HarmonyPatch(nameof(PawnRenderNode_AnimalPart.GraphicFor))]
+[SuppressMessage("ReSharper", "InconsistentNaming")]
+[SuppressMessage("ReSharper", "UnusedType.Global")]
+internal class PawnRenderNode_AnimalPart_GraphicFor_Patch
 {
-    private static void Postfix(ref PawnGraphicSet __instance)
+    [SuppressMessage("ReSharper", "UnusedMember.Local")]
+    private static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
     {
-        CompPokemon compPokemon = __instance.pawn.TryGetComp<CompPokemon>();
-        if (compPokemon != null)
+        var codes = new List<CodeInstruction>(instructions);
+
+        var index = codes.FindIndex(code => code.Calls(AccessTools.PropertyGetter(typeof(Pawn), nameof(Pawn.Dead))));
+
+        codes.InsertRange(index, new List<CodeInstruction>
         {
-            var flag = false;
-            var texPath = "";
-            if (compPokemon.formTracker != null)
-            {
-                texPath += compPokemon.formTracker.GetCurrentFormKey();
-                flag = true;
-            }
+            new(OpCodes.Ldloca_S, 1),
+            CodeInstruction.Call(typeof(PawnRenderNode_AnimalPart_GraphicFor_Patch), nameof(TryApplyShinyForPawn)),
+            new(OpCodes.Ldarg_1)
+        });
 
-            if (compPokemon.shinyTracker != null && compPokemon.shinyTracker.isShiny)
-            {
-                texPath += "Shiny";
-                flag = true;
-            }
+        return codes.AsEnumerable();
+    }
 
-            if (flag)
-            {
-                var graphicData = new GraphicData();
-                graphicData.CopyFrom(__instance.nakedGraphic.data);
-                graphicData.texPath += texPath;
-                __instance.nakedGraphic = graphicData.Graphic;
-            }
-        }
+    private static void TryApplyShinyForPawn(Pawn pawn, ref Graphic graphic)
+    {
+        var texPath = "";
+        var compPokemon = pawn.TryGetComp<CompPokemon>();
+
+        if (compPokemon.formTracker != null) texPath += compPokemon.formTracker.GetCurrentFormKey();
+        if (compPokemon.shinyTracker is { isShiny: true }) texPath += "Shiny";
+
+        if (texPath == "") return;
+
+        var graphicData = new GraphicData();
+        graphicData.CopyFrom(graphic.data);
+        graphicData.texPath += "Shiny";
+        graphic = graphicData.Graphic;
     }
 }

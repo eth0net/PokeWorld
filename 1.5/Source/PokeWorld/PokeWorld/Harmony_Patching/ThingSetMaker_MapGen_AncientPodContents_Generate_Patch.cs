@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
 using HarmonyLib;
+using PokeWorld.ModSetting;
 using RimWorld;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(ThingSetMaker_MapGen_AncientPodContents))]
 [HarmonyPatch("GenerateScarabs")]

@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using HarmonyLib;
+using PokeWorld.ModSetting;
 using RimWorld;
 using UnityEngine;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(PawnGroupKindWorker_Trader))]
 [HarmonyPatch("GenerateCarriers")]
@@ -36,12 +37,12 @@ internal class PawnGroupKindWorker_Trader_GenerateCarriers_Patch
             Pawn pawn;
             if (kind != null)
                 pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(kind, __0.faction,
-                    PawnGenerationContext.NonPlayer, __0.tile, false, false,
+                    PawnGenerationContext.NonPlayer, __0.tile,
                     allowFood: true, allowAddictions: true, inhabitant: __0.inhabitants));
             else
                 pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(
                     kinds.RandomElementByWeight(x => x.selectionWeight).kind, __0.faction,
-                    PawnGenerationContext.NonPlayer, __0.tile, false, false, false, true, false, false, true,
+                    PawnGenerationContext.NonPlayer, __0.tile, false, false, false, true, false, 1f, true,
                     allowFood: true, allowAddictions: true, inhabitant: __0.inhabitants));
             if (i < list.Count)
             {

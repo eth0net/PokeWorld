@@ -13,7 +13,7 @@ public class JobDriver_PokemonWaitCombat : JobDriver
         return true;
     }
 
-    protected override IEnumerable<Toil> MakeNewToils()
+    public override IEnumerable<Toil> MakeNewToils()
     {
         var toil = new Toil
         {

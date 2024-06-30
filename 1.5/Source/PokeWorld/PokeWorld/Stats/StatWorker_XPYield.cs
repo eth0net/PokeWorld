@@ -3,7 +3,7 @@ using RimWorld;
 using UnityEngine;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Stats;
 
 internal class StatWorker_XPYield : StatWorker
 {

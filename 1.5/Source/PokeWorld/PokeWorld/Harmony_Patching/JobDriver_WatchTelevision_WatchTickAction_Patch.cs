@@ -2,7 +2,7 @@
 using RimWorld;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(JobDriver_WatchTelevision))]
 [HarmonyPatch("WatchTickAction")]

@@ -1,5 +1,7 @@
 ﻿using System.Linq;
 using LudeonTK;
+using PokeWorld.Eggs;
+using PokeWorld.Pokedex;
 using RimWorld;
 using Verse;
 

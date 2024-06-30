@@ -6,16 +6,16 @@ using RimWorld.Planet;
 using UnityEngine;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Pokemon_Moves;
 
 internal class DamageWorker_PokemonSmash : DamageWorker_PokemonMeleeMove
 {
-    protected override BodyPartRecord ChooseHitPart(DamageInfo dinfo, Pawn pawn)
+    public override BodyPartRecord ChooseHitPart(DamageInfo dinfo, Pawn pawn)
     {
         return pawn.health.hediffSet.GetRandomNotMissingPart(dinfo.Def, dinfo.Height, BodyPartDepth.Outside);
     }
 
-    protected override void ApplySpecialEffectsToPart(Pawn pawn, float totalDamage, DamageInfo dinfo,
+    public override void ApplySpecialEffectsToPart(Pawn pawn, float totalDamage, DamageInfo dinfo,
         DamageResult result)
     {
         var flag = Rand.Chance(def.bluntInnerHitChance);
@@ -78,7 +78,7 @@ internal class DamageWorker_PokemonSmash : DamageWorker_PokemonMeleeMove
                 : DamageDefOf.Blunt.bluntStunChancePerDamagePctOfCorePartToBodyCurve;
             var pawn2 = PawnGenerator.GeneratePawn(new PawnGenerationRequest(d.race.AnyPawnKind,
                 Find.FactionManager.FirstFactionOfDef(d.race.AnyPawnKind.defaultFactionType),
-                PawnGenerationContext.NonPlayer, true));
+                forceGenerateNewPawn: true));
             var x = dam / d.race.body.corePart.def.GetMaxHealth(pawn2);
             Find.WorldPawns.PassToWorld(pawn2, PawnDiscardDecideMode.Discard);
             return Mathf.Clamp01(obj.Evaluate(x)).ToStringPercent();
@@ -94,7 +94,7 @@ internal class DamageWorker_PokemonSmash : DamageWorker_PokemonMeleeMove
         {
             var pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(d.race.AnyPawnKind,
                 Find.FactionManager.FirstFactionOfDef(d.race.AnyPawnKind.defaultFactionType),
-                PawnGenerationContext.NonPlayer, true));
+                forceGenerateNewPawn: true));
             var maxHealth = d.race.body.corePart.def.GetMaxHealth(pawn);
             Find.WorldPawns.PassToWorld(pawn, PawnDiscardDecideMode.Discard);
             return maxHealth;
@@ -121,8 +121,8 @@ internal class DamageWorker_PokemonSmash : DamageWorker_PokemonMeleeMove
 
     private bool InSameBranch(BodyPartRecord lhs, BodyPartRecord rhs)
     {
-        while (lhs.parent != null && lhs.parent.parent != null) lhs = lhs.parent;
-        while (rhs.parent != null && rhs.parent.parent != null) rhs = rhs.parent;
+        while (lhs.parent is { parent: not null }) lhs = lhs.parent;
+        while (rhs.parent is { parent: not null }) rhs = rhs.parent;
         return lhs == rhs;
     }
 }

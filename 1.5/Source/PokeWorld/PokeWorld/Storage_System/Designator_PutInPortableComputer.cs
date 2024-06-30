@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using PokeWorld.Pokeball_And_Belts;
 using RimWorld;
 using UnityEngine;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Storage_System;
 
 internal class Designator_PutInPortableComputer : Designator
 {
@@ -24,7 +25,7 @@ internal class Designator_PutInPortableComputer : Designator
 
     public override int DraggableDimensions => 2;
 
-    protected override DesignationDef Designation =>
+    public override DesignationDef Designation =>
         DefDatabase<DesignationDef>.GetNamed("PW_PutInPortableComputer");
 
     public override bool Visible => DefDatabase<ResearchProjectDef>.GetNamed("PW_StorageSystem").IsFinished;
@@ -55,7 +56,7 @@ internal class Designator_PutInPortableComputer : Designator
         justDesignated.Add((CryptosleepBall)t);
     }
 
-    protected override void FinalizeDesignationSucceeded()
+    public override void FinalizeDesignationSucceeded()
     {
         base.FinalizeDesignationSucceeded();
         justDesignated.Clear();

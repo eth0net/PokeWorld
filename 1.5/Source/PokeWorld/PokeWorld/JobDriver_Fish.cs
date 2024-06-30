@@ -9,6 +9,7 @@ namespace PokeWorld;
 internal class JobDriver_Fish : JobDriver
 {
     protected IntVec3 targetCell => job.GetTarget(TargetIndex.A).Cell;
+
     protected Thing fishingRod => job.GetTarget(TargetIndex.B).Thing;
 
     public override bool TryMakePreToilReservations(bool errorOnFailed)
@@ -16,7 +17,7 @@ internal class JobDriver_Fish : JobDriver
         return pawn.Reserve(targetCell, job, 1, 1, null, errorOnFailed);
     }
 
-    protected override IEnumerable<Toil> MakeNewToils()
+    public override IEnumerable<Toil> MakeNewToils()
     {
         //this.FailOnDestroyedOrNull(TargetIndex.A);
         this.FailOn(() => !FishingUtility.IsFishingTerrain(targetCell.GetTerrain(pawn.Map)));

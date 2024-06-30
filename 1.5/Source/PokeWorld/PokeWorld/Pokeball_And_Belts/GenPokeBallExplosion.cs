@@ -3,7 +3,7 @@ using System.Linq;
 using RimWorld;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Pokeball_And_Belts;
 
 public static class GenPokeBallExplosion
 {

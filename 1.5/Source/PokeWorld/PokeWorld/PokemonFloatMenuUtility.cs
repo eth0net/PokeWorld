@@ -1,4 +1,5 @@
 ﻿using System;
+using PokeWorld.Pokemon_Moves;
 using RimWorld;
 using Verse;
 using Verse.AI;
@@ -118,7 +119,7 @@ public static class PokemonFloatMenuUtility
         string reservedText = "ReservedBy")
     {
         if (option.action == null) return option;
-        if (pawn != null && !pawn.CanReserve(target) && pawn.CanReserve(target, 1, -1, true))
+        if (pawn != null && !pawn.CanReserve(target) && pawn.CanReserve(target, ignoreOtherReservations: true))
         {
             var pawn2 = pawn.Map.reservationManager.FirstRespectedReserver(target, pawn) ??
                         pawn.Map.physicalInteractionReservationManager.FirstReserverOf(target);

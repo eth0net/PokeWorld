@@ -4,7 +4,7 @@ using RimWorld;
 using UnityEngine;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Pokeball_And_Belts;
 
 internal class Designator_PutInBall : Designator
 {
@@ -24,7 +24,7 @@ internal class Designator_PutInBall : Designator
 
     public override int DraggableDimensions => 2;
 
-    protected override DesignationDef Designation => DefDatabase<DesignationDef>.GetNamed("PW_PutInBall");
+    public override DesignationDef Designation => DefDatabase<DesignationDef>.GetNamed("PW_PutInBall");
 
     public override AcceptanceReport CanDesignateCell(IntVec3 c)
     {
@@ -53,7 +53,7 @@ internal class Designator_PutInBall : Designator
         justDesignated.Add((Pawn)t);
     }
 
-    protected override void FinalizeDesignationSucceeded()
+    public override void FinalizeDesignationSucceeded()
     {
         base.FinalizeDesignationSucceeded();
         justDesignated.Clear();

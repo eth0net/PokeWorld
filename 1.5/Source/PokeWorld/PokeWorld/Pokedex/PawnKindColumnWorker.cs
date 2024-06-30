@@ -4,7 +4,7 @@ using UnityEngine;
 using Verse;
 using Verse.Sound;
 
-namespace PokeWorld;
+namespace PokeWorld.Pokedex;
 
 [StaticConstructorOnStartup]
 public abstract class PawnKindColumnWorker

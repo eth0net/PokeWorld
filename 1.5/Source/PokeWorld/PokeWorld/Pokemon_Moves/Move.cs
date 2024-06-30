@@ -1,4 +1,4 @@
-﻿namespace PokeWorld;
+﻿namespace PokeWorld.Pokemon_Moves;
 
 public class Move
 {

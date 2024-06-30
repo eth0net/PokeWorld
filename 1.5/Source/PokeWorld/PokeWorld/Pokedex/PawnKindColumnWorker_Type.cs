@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Pokedex;
 
 [StaticConstructorOnStartup]
 public class PawnKindColumnWorker_Type : PawnKindColumnWorker_Icon

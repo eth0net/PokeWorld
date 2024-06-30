@@ -3,7 +3,7 @@ using RimWorld;
 using Verse;
 using Verse.AI;
 
-namespace PokeWorld;
+namespace PokeWorld.Eggs;
 
 public class JobDriver_LayDittoEgg : JobDriver
 {
@@ -16,10 +16,10 @@ public class JobDriver_LayDittoEgg : JobDriver
         return true;
     }
 
-    protected override IEnumerable<Toil> MakeNewToils()
+    public override IEnumerable<Toil> MakeNewToils()
     {
-        yield return Toils_Goto.GotoCell(TargetIndex.A, PathEndMode.OnCell);
-        yield return Toils_General.Wait(500);
+        yield return Toils_Goto.GotoCell(LaySpotInd, PathEndMode.OnCell);
+        yield return Toils_General.Wait(LayEgg);
         yield return Toils_General.Do(delegate
         {
             var thing = pawn.GetComp<CompDittoEggLayer>().ProduceEgg();

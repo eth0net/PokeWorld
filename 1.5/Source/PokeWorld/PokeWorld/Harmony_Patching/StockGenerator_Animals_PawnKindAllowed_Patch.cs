@@ -1,8 +1,9 @@
 ﻿using HarmonyLib;
+using PokeWorld.ModSetting;
 using RimWorld;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(StockGenerator_Animals))]
 [HarmonyPatch("PawnKindAllowed")]

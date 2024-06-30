@@ -2,16 +2,16 @@
 using System.Linq;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Pokemon_Moves;
 
 internal class DamageWorker_PokemonSlash : DamageWorker_PokemonMeleeMove
 {
-    protected override BodyPartRecord ChooseHitPart(DamageInfo dinfo, Pawn pawn)
+    public override BodyPartRecord ChooseHitPart(DamageInfo dinfo, Pawn pawn)
     {
         return pawn.health.hediffSet.GetRandomNotMissingPart(dinfo.Def, dinfo.Height, BodyPartDepth.Outside);
     }
 
-    protected override void ApplySpecialEffectsToPart(Pawn pawn, float totalDamage, DamageInfo dinfo,
+    public override void ApplySpecialEffectsToPart(Pawn pawn, float totalDamage, DamageInfo dinfo,
         DamageResult result)
     {
         if (dinfo.HitPart.depth == BodyPartDepth.Inside)

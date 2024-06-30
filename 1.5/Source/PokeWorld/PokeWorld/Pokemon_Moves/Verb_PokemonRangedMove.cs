@@ -1,11 +1,11 @@
 ﻿using System.Linq;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Pokemon_Moves;
 
 public class Verb_PokemonRangedMove : Verb_LaunchProjectile
 {
-    protected override int ShotsPerBurst => verbProps.burstShotCount;
+    public override int ShotsPerBurst => verbProps.burstShotCount;
 
     public override ThingDef Projectile => verbProps.defaultProjectile;
 

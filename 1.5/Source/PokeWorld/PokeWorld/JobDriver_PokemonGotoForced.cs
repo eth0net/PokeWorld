@@ -13,7 +13,7 @@ internal class JobDriver_PokemonGotoForced : JobDriver
         return true;
     }
 
-    protected override IEnumerable<Toil> MakeNewToils()
+    public override IEnumerable<Toil> MakeNewToils()
     {
         var toil = Toils_Goto.GotoCell(TargetIndex.A, PathEndMode.OnCell);
         toil.AddPreTickAction(delegate

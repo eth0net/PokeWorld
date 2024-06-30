@@ -1,6 +1,6 @@
 ﻿using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Pokemon_Moves;
 
 internal class DamageWorker_PokemonMeleeMove : DamageWorker_AddInjury
 {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Pokemon_Moves;
 
 internal class DamageWorker_PokemonStab : DamageWorker_PokemonMeleeMove
 {
@@ -9,7 +9,7 @@ internal class DamageWorker_PokemonStab : DamageWorker_PokemonMeleeMove
 
     private const float DamageFractionOnInnerParts = 0.4f;
 
-    protected override BodyPartRecord ChooseHitPart(DamageInfo dinfo, Pawn pawn)
+    public override BodyPartRecord ChooseHitPart(DamageInfo dinfo, Pawn pawn)
     {
         var randomNotMissingPart =
             pawn.health.hediffSet.GetRandomNotMissingPart(dinfo.Def, dinfo.Height, dinfo.Depth);
@@ -23,7 +23,7 @@ internal class DamageWorker_PokemonStab : DamageWorker_PokemonMeleeMove
         return randomNotMissingPart;
     }
 
-    protected override void ApplySpecialEffectsToPart(Pawn pawn, float totalDamage, DamageInfo dinfo,
+    public override void ApplySpecialEffectsToPart(Pawn pawn, float totalDamage, DamageInfo dinfo,
         DamageResult result)
     {
         totalDamage = ReduceDamageToPreserveOutsideParts(totalDamage, dinfo, pawn);

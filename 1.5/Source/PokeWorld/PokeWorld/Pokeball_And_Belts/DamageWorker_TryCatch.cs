@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using PokeWorld.Pokedex;
 using RimWorld;
 using RimWorld.Planet;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Pokeball_And_Belts;
 
 internal class DamageWorker_TryCatch : DamageWorker
 {

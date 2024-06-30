@@ -1,13 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using HarmonyLib;
+using PokeWorld.ModSetting;
 using RimWorld;
 using Verse;
 
-namespace PokeWorld;
+namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(IncidentWorker_FarmAnimalsWanderIn))]
-[HarmonyPatch("TryFindRandomPawnKind")]
+[HarmonyPatch(nameof(IncidentWorker_FarmAnimalsWanderIn.TryFindRandomPawnKind))]
 internal class IncidentWorker_FarmAnimalsWanderIn_TryFindRandomPawnKind_Patch
 {
     public static void Postfix(Map __0, out PawnKindDef __1, ref bool __result)
@@ -28,9 +29,9 @@ internal class IncidentWorker_FarmAnimalsWanderIn_TryFindRandomPawnKind_Patch
     }
 }
 
-[HarmonyPatch(typeof(ManhunterPackIncidentUtility))]
-[HarmonyPatch("TryFindManhunterAnimalKind")]
-internal class ManhunterPackIncidentUtility_TryFindManhunterAnimalKind_Patch
+[HarmonyPatch(typeof(AggressiveAnimalIncidentUtility))]
+[HarmonyPatch(nameof(AggressiveAnimalIncidentUtility.TryFindAggressiveAnimalKind))]
+internal class AggressiveAnimalIncidentUtility_TryFindAggressiveAnimalKind_Patch
 {
     public static void Postfix(float __0, int __1, out PawnKindDef __2, ref bool __result)
     {
@@ -46,7 +47,7 @@ internal class ManhunterPackIncidentUtility_TryFindManhunterAnimalKind_Patch
                     Find.World.tileTemperatures.SeasonAndOutdoorTemperatureAcceptableFor(__1, k.race)));
             if (source.Any())
             {
-                if (source.TryRandomElementByWeight(a => ManhunterPackIncidentUtility.ManhunterAnimalWeight(a, __0),
+                if (source.TryRandomElementByWeight(a => AggressiveAnimalIncidentUtility.AnimalWeight(a, __0),
                         out __2))
                 {
                     __result = true;
@@ -72,7 +73,7 @@ internal class ManhunterPackIncidentUtility_TryFindManhunterAnimalKind_Patch
 }
 
 [HarmonyPatch(typeof(IncidentWorker_Infestation))]
-[HarmonyPatch("TryExecuteWorker")]
+[HarmonyPatch(nameof(IncidentWorker_Infestation.TryExecuteWorker))]
 internal class IncidentWorker_Infestation_TryExecuteWorker_Patch
 {
     public static bool Prefix(ref bool __result)
@@ -88,7 +89,7 @@ internal class IncidentWorker_Infestation_TryExecuteWorker_Patch
 }
 
 [HarmonyPatch(typeof(IncidentWorker_DeepDrillInfestation))]
-[HarmonyPatch("TryExecuteWorker")]
+[HarmonyPatch(nameof(IncidentWorker_DeepDrillInfestation.TryExecuteWorker))]
 internal class IncidentWorker_DeepDrillInfestation_TryExecuteWorker_Patch
 {
     public static bool Prefix(ref bool __result)
@@ -104,7 +105,7 @@ internal class IncidentWorker_DeepDrillInfestation_TryExecuteWorker_Patch
 }
 
 [HarmonyPatch(typeof(IncidentWorker_ThrumboPasses))]
-[HarmonyPatch("TryExecuteWorker")]
+[HarmonyPatch(nameof(IncidentWorker_ThrumboPasses.TryExecuteWorker))]
 internal class IncidentWorker_ThrumboPasses_TryExecuteWorker_Patch
 {
     public static bool Prefix(ref bool __result)
@@ -121,7 +122,7 @@ internal class IncidentWorker_ThrumboPasses_TryExecuteWorker_Patch
 
 //For alphabeaver event (work with debug command)
 [HarmonyPatch(typeof(Storyteller))]
-[HarmonyPatch("TryFire")]
+[HarmonyPatch(nameof(Storyteller.TryFire))]
 internal class IncidentWorker_HerdMigration_TryFindAnimalKind_Patch
 {
     public static bool Prefix(FiringIncident __0, ref bool __result)
@@ -142,7 +143,7 @@ internal class IncidentWorker_HerdMigration_TryFindAnimalKind_Patch
 }
 
 [HarmonyPatch(typeof(IncidentWorker_SelfTame))]
-[HarmonyPatch("Candidates")]
+[HarmonyPatch(nameof(IncidentWorker_SelfTame.Candidates))]
 internal class IncidentWorker_SelfTame_Candidates_Patch
 {
     public static void Postfix(Map __0, ref IEnumerable<Pawn> __result)

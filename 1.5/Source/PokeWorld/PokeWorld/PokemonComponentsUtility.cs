@@ -1,4 +1,6 @@
-﻿namespace PokeWorld;
+﻿using PokeWorld.Trackers;
+
+namespace PokeWorld;
 
 public static class PokemonComponentsUtility
 {
