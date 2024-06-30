@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 using HarmonyLib;
 using PokeWorld.Pokedex;
 using RimWorld;
@@ -10,6 +12,8 @@ namespace PokeWorld.Harmony_Patching;
 [StaticConstructorOnStartup]
 [HarmonyPatch(typeof(InspectPaneFiller))]
 [HarmonyPatch("DoPaneContentsFor")]
+[SuppressMessage("ReSharper", "InconsistentNaming")]
+[SuppressMessage("ReSharper", "UnusedType.Global")]
 internal class InspectPaneFiller_DoPaneContentsFor_Patch
 {
     private static readonly Texture2D BarBGTex =
@@ -18,60 +22,51 @@ internal class InspectPaneFiller_DoPaneContentsFor_Patch
     private static readonly Texture2D ExperienceTex =
         SolidColorMaterials.NewSolidColorTexture(new ColorInt(35, 35, 35).ToColor);
 
+    [SuppressMessage("ReSharper", "UnusedMember.Global")]
     public static void Postfix(ISelectable __0, Rect __1)
     {
-        var pawn = __0 as Pawn;
-        if (pawn != null)
+        if (__0 is not Pawn pawn) return;
+        var comp = pawn.TryGetComp<CompPokemon>();
+        if (comp == null) return;
+        try
         {
-            var comp = pawn.TryGetComp<CompPokemon>();
-            if (comp != null)
-                try
-                {
-                    GUI.BeginGroup(__1);
-                    float num;
-                    bool flagFaction;
-                    if (pawn.Faction == Faction.OfPlayer)
-                    {
-                        num = 198f;
-                        flagFaction = true;
-                    }
-                    else
-                    {
-                        num = 99f;
-                        flagFaction = false;
-                    }
+            GUI.BeginGroup(__1);
+            float num;
+            bool flagFaction;
+            if (pawn.Faction == Faction.OfPlayer)
+            {
+                num = 198f;
+                flagFaction = true;
+            }
+            else
+            {
+                num = 99f;
+                flagFaction = false;
+            }
 
-                    var row = new WidgetRow(num, 3f);
-                    DrawExperience(row, comp, flagFaction);
-                    if (Find.World.GetComponent<PokedexManager>().IsPokemonCaught(pawn.kindDef))
-                    {
-                        float num2;
-                        if (flagFaction)
-                            num2 = 297f;
-                        else
-                            num2 = 198f;
-                        DrawType(num2, comp);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Log.ErrorOnce(
-                        string.Concat("Error in DoPaneContentsFor ", Find.Selector.FirstSelectedObject, ": ",
-                            ex.ToString()), 754672);
-                }
-                finally
-                {
-                    GUI.EndGroup();
-                }
+            var row = new WidgetRow(num, 3f);
+            DrawExperience(row, comp, flagFaction);
+            if (!Find.World.GetComponent<PokedexManager>().IsPokemonCaught(pawn.kindDef)) return;
+            var num2 = flagFaction ? 297f : 198f;
+            DrawType(num2, comp);
+        }
+        catch (Exception ex)
+        {
+            Log.ErrorOnce(
+                string.Concat("Error in DoPaneContentsFor ", Find.Selector.FirstSelectedObject, ": ",
+                    ex.ToString()), 754672);
+        }
+        finally
+        {
+            GUI.EndGroup();
         }
     }
 
     private static void DrawType(float num, CompPokemon comp)
     {
         var x = 0;
-        foreach (var typeDef in comp.types)
+        foreach (var texture in comp.types.Select(typeDef => typeDef.uiIcon))
         {
-            var texture = typeDef.uiIcon;
             Widgets.DrawTextureFitted(new Rect(num + 37f * x, 4f, 32f, 14f), texture, 1);
             x++;
         }

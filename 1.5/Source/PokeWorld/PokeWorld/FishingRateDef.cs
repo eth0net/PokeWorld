@@ -13,13 +13,12 @@ public class FishingRateDef : Def
 
     public PawnKindDef getRandomFish(BiomeDef biome, TerrainDef terrain, ThingDef rod)
     {
-        var rates = biomes.Where(b => b.biome == biome).First().terrains.Where(t => t.terrain == terrain).First()
-            .rods.Where(r => r.rod == rod).First().pokemons;
+        var rates = biomes.First(b => b.biome == biome).terrains.First(t => t.terrain == terrain)
+            .rods.First(r => r.rod == rod).pokemons;
 
         rateTable = new Dictionary<PawnKindDef, float>();
-        for (var i = 0; i < rates.Count; i++)
-            if (rates[i].pokemon != null)
-                rateTable.Add(rates[i].pokemon, rates[i].rate);
+        foreach (var t in rates.Where(t => t.pokemon != null))
+            rateTable.Add(t.pokemon, t.rate);
 
         return rateTable.Keys.RandomElementByWeight(def => rateTable[def]);
     }
@@ -44,7 +43,7 @@ public class FishingRateDef : Def
 
     public class FishingRateTerrainRecord
     {
-        public List<FishingRateRodRecord> rods = new();
+        public List<FishingRateRodRecord> rods = [];
         public TerrainDef terrain;
 
         public void LoadDataFromXmlCustom(XmlNode xmlRoot)
@@ -56,7 +55,7 @@ public class FishingRateDef : Def
 
     public class FishingRateRodRecord
     {
-        public List<FishingRatePokemonRecord> pokemons = new();
+        public List<FishingRatePokemonRecord> pokemons = [];
         public ThingDef rod;
 
         public void LoadDataFromXmlCustom(XmlNode xmlRoot)

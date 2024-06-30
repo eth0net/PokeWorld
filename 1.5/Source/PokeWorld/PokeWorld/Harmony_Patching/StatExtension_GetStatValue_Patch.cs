@@ -6,7 +6,7 @@ using Verse;
 namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(StatExtension))]
-[HarmonyPatch("GetStatValue")]
+[HarmonyPatch(nameof(StatExtension.GetStatValue))]
 internal class StatExtension_GetStatValue_Patch
 {
     public static void Postfix(Thing __0, StatDef __1, ref float __result)

@@ -42,7 +42,6 @@ public class PawnKindColumnWorker_Type : PawnKindColumnWorker_Icon
 
     protected override Vector2 GetIconSize(PawnKindDef pawnKind)
     {
-        if (GetIconFor(pawnKind) == null) return Vector2.zero;
-        return new Vector2(Width, 14);
+        return GetIconFor(pawnKind) == null ? Vector2.zero : new Vector2(Width, 14);
     }
 }

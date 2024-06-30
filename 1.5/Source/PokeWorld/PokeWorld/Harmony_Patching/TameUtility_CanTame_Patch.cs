@@ -5,7 +5,7 @@ using Verse;
 namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(TameUtility))]
-[HarmonyPatch("CanTame")]
+[HarmonyPatch(nameof(TameUtility.CanTame))]
 internal class TameUtility_CanTame_Patch
 {
     public static void Postfix(Pawn __0, ref bool __result)

@@ -38,15 +38,11 @@ public class FormTracker : IExposable
         if (comp.formChangerCondition == FormChangerCondition.Fixed)
         {
             var key = preEvoFormTracker.GetCurrentFormKey();
-            if (key != "")
-            {
-                var forms = comp.forms.Where(form => form.texPathKey == key);
-                if (forms.Any())
-                {
-                    ChangeIntoFixed(forms.First());
-                    return true;
-                }
-            }
+            if (key == "") return false;
+            var forms = comp.forms.Where(form => form.texPathKey == key).ToList();
+            if (!forms.Any()) return false;
+            ChangeIntoFixed(forms.First());
+            return true;
         }
 
         return false;
@@ -54,50 +50,37 @@ public class FormTracker : IExposable
 
     public bool TryInheritFormFromParent(FormTracker parentFormTracker)
     {
-        if (comp.formChangerCondition == FormChangerCondition.Fixed)
-        {
-            var key = parentFormTracker.GetCurrentFormKey();
-            if (key != "")
-            {
-                var forms = comp.forms.Where(form => form.texPathKey == key);
-                if (forms.Any())
-                {
-                    ChangeIntoFixed(forms.First());
-                    return true;
-                }
-            }
-        }
-
-        return false;
+        if (comp.formChangerCondition != FormChangerCondition.Fixed) return false;
+        var key = parentFormTracker.GetCurrentFormKey();
+        if (key == "") return false;
+        var forms = comp.forms.Where(form => form.texPathKey == key).ToList();
+        if (!forms.Any()) return false;
+        ChangeIntoFixed(forms.First());
+        return true;
     }
 
     public IEnumerable<Gizmo> GetGizmos()
     {
-        if (pokemonHolder.Faction != null && pokemonHolder.Faction.IsPlayer)
-            if (comp.formChangerCondition == FormChangerCondition.Selectable)
-            {
-                var command_Action = new Command_Action
-                {
-                    action = ProcessInput
-                };
-                if (currentFormIndex != -1)
-                    command_Action.defaultLabel = "PW_FormName".Translate(comp.forms[currentFormIndex].label);
-                else
-                    command_Action.defaultLabel = "PW_BaseForm".Translate();
-                command_Action.defaultDesc = "PW_ChangeForm".Translate();
-                command_Action.hotKey = KeyBindingDefOf.Misc3;
-                command_Action.icon =
-                    ContentFinder<Texture2D>.Get(pokemonHolder.Drawer.renderer.BodyGraphic.path +
-                                                 "_east");
-                yield return command_Action;
-            }
+        if (pokemonHolder.Faction is not { IsPlayer: true }) yield break;
+        if (comp.formChangerCondition != FormChangerCondition.Selectable) yield break;
+        var command_Action = new Command_Action
+        {
+            action = ProcessInput
+        };
+        command_Action.defaultLabel = currentFormIndex != -1
+            ? "PW_FormName".Translate(comp.forms[currentFormIndex].label)
+            : "PW_BaseForm".Translate();
+        command_Action.defaultDesc = "PW_ChangeForm".Translate();
+        command_Action.hotKey = KeyBindingDefOf.Misc3;
+        command_Action.icon =
+            ContentFinder<Texture2D>.Get(pokemonHolder.Drawer.renderer.BodyGraphic.path +
+                                         "_east");
+        yield return command_Action;
     }
 
     private bool CanUseForm(PokemonForm form)
     {
-        if (comp.forms.Contains(form) && CheckTimeOfDay(form) && CheckWeather(form) && CheckBiome(form))
-            return true;
-        return false;
+        return comp.forms.Contains(form) && CheckTimeOfDay(form) && CheckWeather(form) && CheckBiome(form);
     }
 
     private bool CheckWeather(PokemonForm form)
@@ -156,48 +139,38 @@ public class FormTracker : IExposable
 
     public void FormTick()
     {
-        if (comp.formChangerCondition == FormChangerCondition.Environment && pokemonHolder.Spawned)
-            if (currentFormIndex == -1 || comp.forms[currentFormIndex].isDefault ||
-                !CanUseForm(comp.forms[currentFormIndex]))
-            {
-                foreach (var form in comp.forms)
-                    if (!form.isDefault && CanUseForm(form))
-                    {
-                        ChangeInto(form);
-                        return;
-                    }
+        if (comp.formChangerCondition != FormChangerCondition.Environment || !pokemonHolder.Spawned) return;
+        if (currentFormIndex != -1 && !comp.forms[currentFormIndex].isDefault &&
+            CanUseForm(comp.forms[currentFormIndex])) return;
+        foreach (var form in comp.forms.Where(form => !form.isDefault && CanUseForm(form)))
+        {
+            ChangeInto(form);
+            return;
+        }
 
-                if (currentFormIndex == -1 || !comp.forms[currentFormIndex].isDefault)
-                {
-                    var forms = comp.forms.Where(x => x.isDefault);
-                    if (forms.Any())
-                    {
-                        ChangeInto(forms.First());
-                        return;
-                    }
+        if (currentFormIndex != -1 && comp.forms[currentFormIndex].isDefault) return;
+        var forms = comp.forms.Where(x => x.isDefault).ToList();
+        if (forms.Any())
+        {
+            ChangeInto(forms.First());
+            return;
+        }
 
-                    if (currentFormIndex != -1) ReturnToBaseForm();
-                }
-            }
+        if (currentFormIndex != -1) ReturnToBaseForm();
     }
 
     private bool CanKeepCurrentForm(PokemonForm form)
     {
-        if (CheckTimeOfDay(form) && CheckWeather(form) && CheckBiome(form)) return true;
-        return false;
+        return CheckTimeOfDay(form) && CheckWeather(form) && CheckBiome(form);
     }
 
     private void ProcessInput()
     {
-        var list = new List<FloatMenuOption>();
-        foreach (var form in comp.forms)
-        {
-            var floatMenuOption = new FloatMenuOption(form.label.CapitalizeFirst(), delegate
+        var list = comp.forms.Select(form => new FloatMenuOption(form.label.CapitalizeFirst(), delegate
             {
                 if (comp.forms[currentFormIndex] != form) ChangeInto(form);
-            });
-            list.Add(floatMenuOption);
-        }
+            }))
+            .ToList();
 
         if (list.Count == 0)
         {

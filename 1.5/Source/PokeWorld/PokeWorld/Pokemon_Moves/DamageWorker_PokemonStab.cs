@@ -13,14 +13,11 @@ internal class DamageWorker_PokemonStab : DamageWorker_PokemonMeleeMove
     {
         var randomNotMissingPart =
             pawn.health.hediffSet.GetRandomNotMissingPart(dinfo.Def, dinfo.Height, dinfo.Depth);
-        if (randomNotMissingPart.depth != BodyPartDepth.Inside && Rand.Chance(def.stabChanceOfForcedInternal))
-        {
-            var randomNotMissingPart2 = pawn.health.hediffSet.GetRandomNotMissingPart(dinfo.Def,
-                BodyPartHeight.Undefined, BodyPartDepth.Inside, randomNotMissingPart);
-            if (randomNotMissingPart2 != null) return randomNotMissingPart2;
-        }
-
-        return randomNotMissingPart;
+        if (randomNotMissingPart.depth == BodyPartDepth.Inside || !Rand.Chance(def.stabChanceOfForcedInternal))
+            return randomNotMissingPart;
+        var randomNotMissingPart2 = pawn.health.hediffSet.GetRandomNotMissingPart(dinfo.Def,
+            BodyPartHeight.Undefined, BodyPartDepth.Inside, randomNotMissingPart);
+        return randomNotMissingPart2 ?? randomNotMissingPart;
     }
 
     public override void ApplySpecialEffectsToPart(Pawn pawn, float totalDamage, DamageInfo dinfo,

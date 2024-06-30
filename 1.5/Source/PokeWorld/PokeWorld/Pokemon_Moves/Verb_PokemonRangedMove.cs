@@ -30,6 +30,6 @@ public class Verb_PokemonRangedMove : Verb_LaunchProjectile
         base.WarmupComplete();
         Find.BattleLog.Add(new BattleLogEntry_RangedFire(caster,
             currentTarget.HasThing ? currentTarget.Thing : null,
-            EquipmentSource != null ? EquipmentSource.def : null, Projectile, ShotsPerBurst > 1));
+            EquipmentSource?.def, Projectile, ShotsPerBurst > 1));
     }
 }

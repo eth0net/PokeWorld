@@ -41,7 +41,7 @@ internal class IncidentWorker_Ambush_PokemonManhunterPack : IncidentWorker_Ambus
         }
     }
 
-    private float AdjustedPoints(float basePoints)
+    private static float AdjustedPoints(float basePoints)
     {
         return basePoints * 0.75f;
     }

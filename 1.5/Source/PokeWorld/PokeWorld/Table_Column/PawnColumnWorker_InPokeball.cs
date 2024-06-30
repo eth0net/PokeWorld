@@ -25,7 +25,7 @@ public class PawnColumnWorker_InPokeball : PawnColumnWorker_Icon
         return GetValueToCompare(a).CompareTo(GetValueToCompare(b));
     }
 
-    private int GetValueToCompare(Pawn pawn)
+    private new static int GetValueToCompare(Pawn pawn)
     {
         var comp = pawn.TryGetComp<CompPokemon>();
         if (comp == null) return 0;

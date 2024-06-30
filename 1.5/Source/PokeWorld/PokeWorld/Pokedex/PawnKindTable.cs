@@ -8,15 +8,15 @@ namespace PokeWorld.Pokedex;
 
 public class PawnKindTable
 {
-    private readonly List<float> cachedColumnWidths = new();
+    private readonly List<float> cachedColumnWidths = [];
 
-    private readonly List<LookTargets> cachedLookTargets = new();
+    private readonly List<LookTargets> cachedLookTargets = [];
 
-    private readonly List<float> cachedRowHeights = new();
+    private readonly List<float> cachedRowHeights = [];
 
-    private readonly List<bool> columnAtMaxWidth = new();
+    private readonly List<bool> columnAtMaxWidth = [];
 
-    private readonly List<bool> columnAtOptimalWidth = new();
+    private readonly List<bool> columnAtOptimalWidth = [];
     private readonly PawnKindTableDef def;
 
     private readonly Func<IEnumerable<PawnKindDef>> pawnKindsGetter;
@@ -25,7 +25,7 @@ public class PawnKindTable
 
     private float cachedHeightNoScrollbar;
 
-    private List<PawnKindDef> cachedPawnKinds = new();
+    private List<PawnKindDef> cachedPawnKinds = [];
 
     private Vector2 cachedSize;
 
@@ -462,7 +462,7 @@ public class PawnKindTable
     private float CalculateTotalRequiredHeight()
     {
         var num = CalculateHeaderHeight();
-        for (var i = 0; i < cachedPawnKinds.Count; i++) num += CalculateRowHeight(cachedPawnKinds[i]);
+        for (var i = cachedPawnKinds.Count - 1; i >= 0; i--) num += CalculateRowHeight(cachedPawnKinds[i]);
         return num;
     }
 }

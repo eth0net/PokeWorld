@@ -11,42 +11,40 @@ public class Recipe_HealingItem : Recipe_Surgery
     public override void ApplyOnPawn(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients,
         Bill bill)
     {
-        if (billDoer != null)
+        if (billDoer == null) return;
+        var hpLeftToHeal = ingredients[0].TryGetComp<CompHealingItem>().healingAmount;
+        for (var i = 0; i < pawn.health.hediffSet.hediffs.Count; i++)
         {
-            var hpLeftToHeal = ingredients[0].TryGetComp<CompHealingItem>().healingAmount;
-            for (var i = 0; i < pawn.health.hediffSet.hediffs.Count; i++)
+            var hediff = FindMostBleedingHediff(pawn);
+            if (hediff != null)
             {
-                var hediff = FindMostBleedingHediff(pawn);
-                if (hediff != null)
+                var heddifSev = hediff.Severity;
+                if (hediff.Severity <= hpLeftToHeal)
                 {
-                    var heddifSev = hediff.Severity;
-                    if (hediff.Severity <= hpLeftToHeal)
-                    {
-                        hediff.Heal(heddifSev);
-                        hpLeftToHeal -= heddifSev;
-                        continue;
-                    }
-
-                    hediff.Heal(hpLeftToHeal);
-                    break;
+                    hediff.Heal(heddifSev);
+                    hpLeftToHeal -= heddifSev;
+                    continue;
                 }
 
-                var hediff_Injury = FindInjury(pawn);
-                if (hediff_Injury != null)
-                {
-                    var heddifSev = hediff_Injury.Severity;
-                    if (hediff_Injury.Severity <= hpLeftToHeal)
-                    {
-                        hediff_Injury.Heal(heddifSev);
-                        hpLeftToHeal -= heddifSev;
-                        continue;
-                    }
-
-                    hediff_Injury.Heal(hpLeftToHeal);
-                }
-
+                hediff.Heal(hpLeftToHeal);
                 break;
             }
+
+            var hediff_Injury = FindInjury(pawn);
+            if (hediff_Injury != null)
+            {
+                var heddifSev = hediff_Injury.Severity;
+                if (hediff_Injury.Severity <= hpLeftToHeal)
+                {
+                    hediff_Injury.Heal(heddifSev);
+                    hpLeftToHeal -= heddifSev;
+                    continue;
+                }
+
+                hediff_Injury.Heal(hpLeftToHeal);
+            }
+
+            break;
         }
     }
 
@@ -69,12 +67,12 @@ public class Recipe_HealingItem : Recipe_Surgery
         return hediff;
     }
 
-    private Hediff_Injury FindInjury(Pawn pawn, IEnumerable<BodyPartRecord> allowedBodyParts = null)
+    private static Hediff_Injury FindInjury(Pawn pawn, IEnumerable<BodyPartRecord> allowedBodyParts = null)
     {
         Hediff_Injury hediff_Injury = null;
         var hediffs = pawn.health.hediffSet.hediffs;
         foreach (var t in hediffs)
-            if (t is Hediff_Injury hediff_Injury2 && hediff_Injury2.Visible &&
+            if (t is Hediff_Injury { Visible: true } hediff_Injury2 &&
                 hediff_Injury2.def.tendable && !hediff_Injury2.IsPermanent() &&
                 (allowedBodyParts == null || allowedBodyParts.Contains(hediff_Injury2.Part)) &&
                 (hediff_Injury == null || hediff_Injury2.Severity > hediff_Injury.Severity))

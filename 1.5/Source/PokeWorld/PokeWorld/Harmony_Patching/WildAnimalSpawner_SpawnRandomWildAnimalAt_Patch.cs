@@ -9,7 +9,7 @@ using Verse;
 namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(WildAnimalSpawner))]
-[HarmonyPatch("SpawnRandomWildAnimalAt")]
+[HarmonyPatch(nameof(WildAnimalSpawner.SpawnRandomWildAnimalAt))]
 internal class WildAnimalSpawner_SpawnRandomWildAnimalAt_Patch
 {
     public static bool Prefix(WildAnimalSpawner __instance, IntVec3 __0, ref bool __result)

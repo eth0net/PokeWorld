@@ -7,7 +7,6 @@ namespace PokeWorld.Pokeball_And_Belts;
 
 public class Projectile_Pokeball : Projectile
 {
-    private Sustainer ambientSustainer;
     public float bonusBall;
     public Thing equipment;
     private int ticksToDetonation;

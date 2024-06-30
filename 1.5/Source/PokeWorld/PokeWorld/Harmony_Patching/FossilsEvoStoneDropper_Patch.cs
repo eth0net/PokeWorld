@@ -112,7 +112,7 @@ public static class FossilEvoStoneDropperUtility
             return evoStones.RandomElement();
         }
 
-        if (!(Rand.Value <= fossilDropRate)) return null;
+        if (Rand.Value > fossilDropRate) return null;
 
         var fossils = DefDatabase<ThingDef>.AllDefs.Where(x =>
             x.thingCategories != null &&

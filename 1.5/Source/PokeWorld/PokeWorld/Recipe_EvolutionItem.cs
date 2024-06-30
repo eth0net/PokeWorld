@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using PokeWorld.ModSetting;
 using RimWorld;
 using Verse;
@@ -16,16 +17,11 @@ public class Recipe_EvolutionItem : Recipe_Surgery
 
     public override bool AvailableOnNow(Thing thing, BodyPartRecord part = null)
     {
-        if (thing is Pawn pawn)
-        {
-            var comp = pawn.TryGetComp<CompPokemon>();
-            if (comp?.evolutions != null)
-                foreach (var evo in comp.evolutions)
-                    if (PokeWorldSettings.GenerationAllowed(evo.pawnKind.race
-                            .GetCompProperties<CompProperties_Pokemon>().generation))
-                        return true;
-        }
-
-        return false;
+        if (thing is not Pawn pawn) return false;
+        var comp = pawn.TryGetComp<CompPokemon>();
+        if (comp?.evolutions == null) return false;
+        return Enumerable.Any(comp.evolutions,
+            evo => PokeWorldSettings.GenerationAllowed(evo.pawnKind.race.GetCompProperties<CompProperties_Pokemon>()
+                .generation));
     }
 }

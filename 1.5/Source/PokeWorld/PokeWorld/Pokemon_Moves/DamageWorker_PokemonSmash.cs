@@ -71,18 +71,6 @@ internal class DamageWorker_PokemonSmash : DamageWorker_PokemonMeleeMove
     [DebugOutput]
     public static void StunChances()
     {
-        var bluntBodyStunChance = delegate(ThingDef d, float dam, bool onHead)
-        {
-            var obj = onHead
-                ? DamageDefOf.Blunt.bluntStunChancePerDamagePctOfCorePartToHeadCurve
-                : DamageDefOf.Blunt.bluntStunChancePerDamagePctOfCorePartToBodyCurve;
-            var pawn2 = PawnGenerator.GeneratePawn(new PawnGenerationRequest(d.race.AnyPawnKind,
-                Find.FactionManager.FirstFactionOfDef(d.race.AnyPawnKind.defaultFactionType),
-                forceGenerateNewPawn: true));
-            var x = dam / d.race.body.corePart.def.GetMaxHealth(pawn2);
-            Find.WorldPawns.PassToWorld(pawn2, PawnDiscardDecideMode.Discard);
-            return Mathf.Clamp01(obj.Evaluate(x)).ToStringPercent();
-        };
         var list = new List<TableDataGetter<ThingDef>>();
         list.Add(new TableDataGetter<ThingDef>("defName", d => d.defName));
         list.Add(new TableDataGetter<ThingDef>("body size", d => d.race.baseBodySize.ToString("F2")));
@@ -100,23 +88,37 @@ internal class DamageWorker_PokemonSmash : DamageWorker_PokemonMeleeMove
             return maxHealth;
         }));
         list.Add(new TableDataGetter<ThingDef>("stun\nchance\nbody\n5",
-            d => bluntBodyStunChance(d, 5f, false)));
+            d => BluntBodyStunChance(d, 5f, false)));
         list.Add(new TableDataGetter<ThingDef>("stun\nchance\nbody\n10",
-            d => bluntBodyStunChance(d, 10f, false)));
+            d => BluntBodyStunChance(d, 10f, false)));
         list.Add(new TableDataGetter<ThingDef>("stun\nchance\nbody\n15",
-            d => bluntBodyStunChance(d, 15f, false)));
+            d => BluntBodyStunChance(d, 15f, false)));
         list.Add(new TableDataGetter<ThingDef>("stun\nchance\nbody\n20",
-            d => bluntBodyStunChance(d, 20f, false)));
+            d => BluntBodyStunChance(d, 20f, false)));
         list.Add(new TableDataGetter<ThingDef>("stun\nchance\nhead\n5",
-            d => bluntBodyStunChance(d, 5f, true)));
+            d => BluntBodyStunChance(d, 5f, true)));
         list.Add(new TableDataGetter<ThingDef>("stun\nchance\nhead\n10",
-            d => bluntBodyStunChance(d, 10f, true)));
+            d => BluntBodyStunChance(d, 10f, true)));
         list.Add(new TableDataGetter<ThingDef>("stun\nchance\nhead\n15",
-            d => bluntBodyStunChance(d, 15f, true)));
+            d => BluntBodyStunChance(d, 15f, true)));
         list.Add(new TableDataGetter<ThingDef>("stun\nchance\nhead\n20",
-            d => bluntBodyStunChance(d, 20f, true)));
+            d => BluntBodyStunChance(d, 20f, true)));
         DebugTables.MakeTablesDialog(DefDatabase<ThingDef>.AllDefs.Where(d => d.category == ThingCategory.Pawn),
             list.ToArray());
+        return;
+
+        string BluntBodyStunChance(ThingDef d, float dam, bool onHead)
+        {
+            var obj = onHead
+                ? DamageDefOf.Blunt.bluntStunChancePerDamagePctOfCorePartToHeadCurve
+                : DamageDefOf.Blunt.bluntStunChancePerDamagePctOfCorePartToBodyCurve;
+            var pawn2 = PawnGenerator.GeneratePawn(new PawnGenerationRequest(d.race.AnyPawnKind,
+                Find.FactionManager.FirstFactionOfDef(d.race.AnyPawnKind.defaultFactionType),
+                forceGenerateNewPawn: true));
+            var x = dam / d.race.body.corePart.def.GetMaxHealth(pawn2);
+            Find.WorldPawns.PassToWorld(pawn2, PawnDiscardDecideMode.Discard);
+            return Mathf.Clamp01(obj.Evaluate(x)).ToStringPercent();
+        }
     }
 
     private bool InSameBranch(BodyPartRecord lhs, BodyPartRecord rhs)

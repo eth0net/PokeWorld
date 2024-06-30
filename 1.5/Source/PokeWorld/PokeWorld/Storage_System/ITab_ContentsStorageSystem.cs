@@ -26,13 +26,13 @@ internal class ITab_ContentsStorageSystem : ITab
 
     public static readonly Color HighlightColor = new(0.5f, 0.5f, 0.5f, 1f);
 
-    private static List<Thing> workingInvList = new();
+    private static List<Thing> workingInvList = [];
 
     private bool flagSortDex;
     private bool flagSortLevel;
     private bool flagSortName;
 
-    private List<Thing> listInt = new();
+    private List<Thing> listInt = [];
     private Vector2 scrollPosition = Vector2.zero;
 
     private float scrollViewHeight;

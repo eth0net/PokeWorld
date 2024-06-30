@@ -7,7 +7,7 @@ using Verse;
 namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(VerbTracker))]
-[HarmonyPatch("InitVerbs")]
+[HarmonyPatch(nameof(VerbTracker.InitVerbs))]
 internal class VerbTracker_InitVerbs_Patch
 {
     public static void Postfix(Func<Type, string, Verb> __0, VerbTracker __instance)

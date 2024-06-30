@@ -5,7 +5,7 @@ using Verse;
 namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(Pawn))]
-[HarmonyPatch("TryGetAttackVerb")]
+[HarmonyPatch(nameof(Pawn.TryGetAttackVerb))]
 internal class Pawn_TryGetAttackVerb_Patch
 {
     public static bool Prefix(Pawn __instance, ref Verb __result)

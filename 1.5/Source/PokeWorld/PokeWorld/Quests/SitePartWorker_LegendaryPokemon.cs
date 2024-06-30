@@ -45,7 +45,7 @@ public class SitePartWorker_LegendaryPokemon : SitePartWorker
     public override string GetPostProcessedThreatLabel(Site site, SitePart sitePart)
     {
         var text = base.GetPostProcessedThreatLabel(site, sitePart);
-        if (sitePart.things != null && sitePart.things.Any) text = text + ": " + sitePart.things.First().LabelShortCap;
+        if (sitePart.things is { Any: true }) text = text + ": " + sitePart.things.First().LabelShortCap;
         if (site.HasWorldObjectTimeout)
             text += " (" + "DurationLeft".Translate(site.WorldObjectTimeoutTicksLeft.ToStringTicksToPeriod()) + ")";
         return text;

@@ -4,7 +4,9 @@ using Verse;
 
 namespace PokeWorld.Harmony_Patching;
 
-[HarmonyPatch(typeof(PawnUtility), "GetManhunterOnDamageChance", typeof(Pawn), typeof(float), typeof(Thing))]
+[HarmonyPatch(typeof(PawnUtility))]
+[HarmonyPatch(nameof(PawnUtility.GetManhunterOnDamageChance))]
+[HarmonyPatch([typeof(Pawn), typeof(float), typeof(Thing)])]
 internal class PawnUtility_GetManhunterOnDamageChance_Patch
 {
     public static void Postfix(Pawn __0, float __1, Thing __2, ref float __result)

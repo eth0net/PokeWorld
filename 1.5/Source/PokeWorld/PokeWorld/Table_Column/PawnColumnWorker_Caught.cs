@@ -28,16 +28,10 @@ internal class PawnColumnWorker_Caught : PawnColumnWorker_Icon
         return GetValueToCompare(a).CompareTo(GetValueToCompare(b));
     }
 
-    private int GetValueToCompare(Pawn pawn)
+    private new int GetValueToCompare(Pawn pawn)
     {
         var comp = pawn.TryGetComp<CompPokemon>();
-        if (comp != null)
-        {
-            if (Find.World.GetComponent<PokedexManager>().IsPokemonCaught(pawn.kindDef))
-                return 1;
-            return 0;
-        }
-
-        return 0;
+        if (comp == null) return 0;
+        return Find.World.GetComponent<PokedexManager>().IsPokemonCaught(pawn.kindDef) ? 1 : 0;
     }
 }

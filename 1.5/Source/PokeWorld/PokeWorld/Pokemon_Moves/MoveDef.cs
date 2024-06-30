@@ -13,9 +13,6 @@ public class MoveDef : Def
     public bool IsStab(Pawn pawn)
     {
         var comp = pawn.TryGetComp<CompPokemon>();
-        if (comp != null)
-            if (comp.types.Contains(type))
-                return true;
-        return false;
+        return comp != null && comp.types.Contains(type);
     }
 }

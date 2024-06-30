@@ -6,7 +6,7 @@ using Verse;
 namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(PriceUtility))]
-[HarmonyPatch("PawnQualityPriceFactor")]
+[HarmonyPatch(nameof(PriceUtility.PawnQualityPriceFactor))]
 internal class PriceUtility_PawnQualityPriceFactor_Patch
 {
     public static void Postfix(Pawn __0, StringBuilder __1, ref float __result)

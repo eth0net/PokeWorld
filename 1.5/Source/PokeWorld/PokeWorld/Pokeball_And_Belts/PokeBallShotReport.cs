@@ -215,7 +215,6 @@ public struct PokeBallShotReport
 
     public Thing GetRandomCoverToMissInto()
     {
-        if (covers.TryRandomElementByWeight(c => c.BlockChance, out var result)) return result.Thing;
-        return null;
+        return covers.TryRandomElementByWeight(c => c.BlockChance, out var result) ? result.Thing : null;
     }
 }

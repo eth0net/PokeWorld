@@ -127,7 +127,7 @@ public class TunnelPokemonHiveSpawner : ThingWithComps
     private static readonly Material TunnelMaterial =
         MaterialPool.MatFrom("Things/Filth/Grainy/GrainyA", ShaderDatabase.Transparent);
 
-    private static readonly List<ThingDef> filthTypes = new();
+    private static readonly List<ThingDef> filthTypes = [];
 
     private readonly FloatRange ResultSpawnDelay = new(26f, 30f);
 

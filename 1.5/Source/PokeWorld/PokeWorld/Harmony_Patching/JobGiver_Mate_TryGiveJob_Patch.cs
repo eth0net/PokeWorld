@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Diagnostics.CodeAnalysis;
 using HarmonyLib;
 using PokeWorld.Eggs;
 using RimWorld;
@@ -8,9 +8,12 @@ using Verse.AI;
 namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(JobGiver_Mate))]
-[HarmonyPatch("TryGiveJob")]
+[HarmonyPatch(nameof(JobGiver_Mate.TryGiveJob))]
+[SuppressMessage("ReSharper", "InconsistentNaming")]
+[SuppressMessage("ReSharper", "UnusedType.Global")]
 internal class JobGiver_Mate_TryGiveJob_Patch
 {
+    [SuppressMessage("ReSharper", "UnusedMember.Global")]
     public static bool Prefix(Pawn __0, ref Job __result)
     {
         var comp = __0.TryGetComp<CompPokemon>();
@@ -23,19 +26,9 @@ internal class JobGiver_Mate_TryGiveJob_Patch
             return false;
         }
 
-        Predicate<Thing> validator = delegate(Thing t)
-        {
-            var pawn3 = t as Pawn;
-            if (pawn3.Downed) return false;
-            if (!pawn3.CanCasuallyInteractNow() || pawn3.IsForbidden(__0)) return false;
-            if (pawn3.Faction != __0.Faction) return false;
-            var comp2 = pawn3.TryGetComp<CompPokemon>();
-            if (comp2 == null) return false;
-            return PokemonUtility.FertileMateTarget(__0, pawn3);
-        };
         var pawn2 = (Pawn)GenClosest.ClosestThingReachable(__0.Position, __0.Map,
             ThingRequest.ForGroup(ThingRequestGroup.Pawn), PathEndMode.Touch, TraverseParms.For(__0), 30f,
-            validator);
+            Validator);
         if (pawn2 == null)
         {
             __result = null;
@@ -44,5 +37,15 @@ internal class JobGiver_Mate_TryGiveJob_Patch
 
         __result = JobMaker.MakeJob(JobDefOf.Mate, pawn2);
         return false;
+
+        bool Validator(Thing t)
+        {
+            if (t is not Pawn pawn3) return false;
+            if (pawn3.Downed) return false;
+            if (!pawn3.CanCasuallyInteractNow() || pawn3.IsForbidden(__0)) return false;
+            if (pawn3.Faction != __0.Faction) return false;
+            var comp2 = pawn3.TryGetComp<CompPokemon>();
+            return comp2 != null && PokemonUtility.FertileMateTarget(__0, pawn3);
+        }
     }
 }

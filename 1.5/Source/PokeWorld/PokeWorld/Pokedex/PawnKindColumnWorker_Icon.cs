@@ -78,7 +78,6 @@ public abstract class PawnKindColumnWorker_Icon : PawnKindColumnWorker
 
     protected virtual Vector2 GetIconSize(PawnKindDef pawnKind)
     {
-        if (GetIconFor(pawnKind) == null) return Vector2.zero;
-        return new Vector2(Width, Width);
+        return GetIconFor(pawnKind) == null ? Vector2.zero : new Vector2(Width, Width);
     }
 }

@@ -138,8 +138,7 @@ public class BattleLogEntry_PokemonRangedMoveImpact : LogEntry_DamageResult
 
     public override BodyDef DamagedBody()
     {
-        if (recipientPawn == null) return null;
-        return recipientPawn.RaceProps.body;
+        return recipientPawn?.RaceProps.body;
     }
 
     public override GrammarRequest GenerateGrammarRequest()

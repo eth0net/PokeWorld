@@ -19,7 +19,6 @@ public class PawnKindColumnWorker_PokedexIcon : PawnKindColumnWorker_Icon
 
     protected override string GetIconTip(PawnKindDef pawnKind)
     {
-        if (Find.World.GetComponent<PokedexManager>().IsPokemonSeen(pawnKind)) return pawnKind.label;
-        return null;
+        return Find.World.GetComponent<PokedexManager>().IsPokemonSeen(pawnKind) ? pawnKind.label : null;
     }
 }

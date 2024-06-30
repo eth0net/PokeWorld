@@ -4,7 +4,8 @@ using Verse;
 namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(Pawn))]
-[HarmonyPatch("get_LabelNoCount")]
+[HarmonyPatch(nameof(Pawn.LabelNoCount))]
+[HarmonyPatch(MethodType.Getter)]
 public class Pawn_get_LabelNoCount_Patch
 {
     public static void Postfix(Pawn __instance, ref string __result)
@@ -58,15 +59,13 @@ public static class PokemonNamePatchUtility
     public static string TryPatchName(Pawn pawn, string name)
     {
         var comp = pawn.TryGetComp<CompPokemon>();
-        if (comp != null)
-        {
-            if (comp.shinyTracker != null && comp.shinyTracker.isShiny) name = GetShinyStar() + name;
-            if (comp.formTracker != null && comp.showFormLabel && (pawn.Faction == null ||
-                                                                   (pawn.Faction != null &&
-                                                                    (!pawn.Faction.IsPlayer ||
-                                                                     pawn.Name.Numerical))))
-                name += " " + GetFormLabel(comp);
-        }
+        if (comp == null) return name;
+        if (comp.shinyTracker is { isShiny: true }) name = GetShinyStar() + name;
+        if (comp.formTracker != null && comp.showFormLabel && (pawn.Faction == null ||
+                                                               (pawn.Faction != null &&
+                                                                (!pawn.Faction.IsPlayer ||
+                                                                 pawn.Name.Numerical))))
+            name += " " + GetFormLabel(comp);
 
         return name;
     }
@@ -78,7 +77,6 @@ public static class PokemonNamePatchUtility
 
     private static string GetFormLabel(CompPokemon comp)
     {
-        if (comp.formTracker.currentFormIndex != -1) return comp.forms[comp.formTracker.currentFormIndex].label;
-        return "";
+        return comp.formTracker.currentFormIndex != -1 ? comp.forms[comp.formTracker.currentFormIndex].label : "";
     }
 }

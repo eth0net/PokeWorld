@@ -5,13 +5,9 @@ using Verse;
 
 namespace PokeWorld.Quests;
 
-public class LegendaryQuestsTracker : WorldComponent
+public class LegendaryQuestsTracker(World world) : WorldComponent(world)
 {
     private DefMap<QuestConditionDef, bool> questConditionDefMap = new();
-
-    public LegendaryQuestsTracker(World world) : base(world)
-    {
-    }
 
     public override void ExposeData()
     {

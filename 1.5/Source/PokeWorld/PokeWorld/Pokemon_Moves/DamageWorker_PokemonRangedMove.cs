@@ -1,4 +1,5 @@
-﻿using Verse;
+﻿using System.Linq;
+using Verse;
 
 namespace PokeWorld.Pokemon_Moves;
 
@@ -29,8 +30,9 @@ internal class DamageWorker_PokemonRangedMove : DamageWorker_AddInjury
                     if (targetComp != null)
                     {
                         spDefense = targetComp.statTracker.defenseSpStat;
-                        foreach (var typeDef in targetComp.types)
-                            typeMultiplier *= typeDef.GetDamageMultiplier(casterComp.moveTracker.lastUsedMove.type);
+                        typeMultiplier = targetComp.types.Aggregate(typeMultiplier,
+                            (current, typeDef) =>
+                                current * typeDef.GetDamageMultiplier(casterComp.moveTracker.lastUsedMove.type));
                     }
                     else
                     {

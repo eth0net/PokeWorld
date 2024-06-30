@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Diagnostics.CodeAnalysis;
+using System.Reflection;
 using HarmonyLib;
 using RimWorld;
 using Verse;
@@ -9,13 +10,18 @@ namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(JobGiver_Manhunter))]
 [HarmonyPatch("TryGiveJob")]
+[SuppressMessage("ReSharper", "InconsistentNaming")]
+[SuppressMessage("ReSharper", "UnusedType.Global")]
 internal class JobGiver_Manhunter_TryGiveJob_Patch
 {
     public static readonly IntRange ExpiryInterval_ShooterSucceeded = new(450, 550);
+
     private static readonly IntRange ExpiryInterval_Melee = new(360, 480);
+
     private static readonly float targetKeepRadius = 65f;
 
-    private static bool Prefix(Pawn __0, ref Job __result)
+    [SuppressMessage("ReSharper", "UnusedMember.Global")]
+    public static bool Prefix(Pawn __0, ref Job __result)
     {
         var comp = __0.TryGetComp<CompPokemon>();
         if (comp == null) return true;
@@ -27,8 +33,7 @@ internal class JobGiver_Manhunter_TryGiveJob_Patch
             return false;
         }
 
-        var pawn2 = enemyTarget as Pawn;
-        if (pawn2 != null && pawn2.IsPsychologicallyInvisible())
+        if (enemyTarget is Pawn pawn2 && pawn2.IsPsychologicallyInvisible())
         {
             __result = null;
             return false;
@@ -98,6 +103,7 @@ internal class JobGiver_Manhunter_TryGiveJob_Patch
         return CastPositionFinder.TryFindCastPosition(newReq, out dest);
     }
 
+    [SuppressMessage("Style", "IDE0060:Remove unused parameter", Justification = "Need to match the target method")]
     private static bool ExtraTargetValidator(Pawn pawn, Thing target)
     {
         return true;
@@ -139,7 +145,7 @@ internal class JobGiver_Manhunter_TryGiveJob_Patch
             {
                 thing = null;
             }
-            else if (thing2 != null && thing2 != thing)
+            else if (thing2 != thing)
             {
                 var methodNotify_EngagedTarget = pawn.mindState.GetType().GetMethod("Notify_EngagedTarget",
                     BindingFlags.NonPublic | BindingFlags.Instance);
@@ -155,14 +161,14 @@ internal class JobGiver_Manhunter_TryGiveJob_Patch
 
     private static Thing FindAttackTargetIfPossible(Pawn pawn)
     {
-        if (pawn.TryGetAttackVerb(null) == null) return null;
-        return FindAttackTarget(pawn);
+        return pawn.TryGetAttackVerb(null) == null ? null : FindAttackTarget(pawn);
     }
 
     private static Thing FindAttackTarget(Pawn pawn)
     {
-        var targetScanFlags = TargetScanFlags.NeedReachableIfCantHitFromMyPos | TargetScanFlags.NeedThreat |
-                              TargetScanFlags.NeedAutoTargetable;
+        const TargetScanFlags targetScanFlags = TargetScanFlags.NeedReachableIfCantHitFromMyPos |
+                                                TargetScanFlags.NeedThreat |
+                                                TargetScanFlags.NeedAutoTargetable;
         return (Thing)AttackTargetFinder.BestAttackTarget(pawn, targetScanFlags,
             x => ExtraTargetValidator(pawn, x));
     }

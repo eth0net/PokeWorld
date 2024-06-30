@@ -7,7 +7,7 @@ using Verse;
 namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(ThingSetMaker_MapGen_AncientPodContents))]
-[HarmonyPatch("GenerateScarabs")]
+[HarmonyPatch(nameof(ThingSetMaker_MapGen_AncientPodContents.GenerateScarabs))]
 public class ThingSetMaker_MapGen_AncientPodContents_GenerateScarabs_Patch
 {
     public static bool Prefix(ref List<Thing> __result)

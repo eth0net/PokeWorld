@@ -12,7 +12,7 @@ public static class PokemonFloatMenuUtility
     {
         var comp = pawn.TryGetComp<CompPokemon>();
         failStr = "";
-        if (comp == null || comp.moveTracker == null) return null;
+        if (comp?.moveTracker == null) return null;
         if (!PokemonAttackGizmoUtility.CanUseAnyRangedVerb(pawn)) return null;
         var longestRangeVerb = PokemonAttackGizmoUtility.GetLongestRangeVerb(pawn);
         if (longestRangeVerb == null) return null;

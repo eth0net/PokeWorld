@@ -6,7 +6,7 @@ using Verse;
 namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(StockGenerator_Animals))]
-[HarmonyPatch("PawnKindAllowed")]
+[HarmonyPatch(nameof(StockGenerator_Animals.PawnKindAllowed))]
 internal class StockGenerator_Animals_PawnKindAllowed_Patch
 {
     public static bool Prefix(PawnKindDef __0, ref bool __result)

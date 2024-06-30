@@ -4,7 +4,7 @@ using Verse;
 
 namespace PokeWorld.Eggs;
 
-public sealed class CompDittoEggLayer : ThingComp
+public class CompDittoEggLayer : ThingComp
 {
     private ThingDef eggFertilizedDef;
     private float eggLayIntervalDays;
@@ -35,11 +35,11 @@ public sealed class CompDittoEggLayer : ThingComp
         }
     }
 
-    private CompProperties_DittoEggLayer Props => (CompProperties_DittoEggLayer)props;
+        public CompProperties_DittoEggLayer Props => (CompProperties_DittoEggLayer)props;
 
-    public override void Initialize(CompProperties compProperties)
+        public override void Initialize(CompProperties props)
     {
-        base.Initialize(compProperties);
+            base.Initialize(props);
         eggLayIntervalDays = Props.eggLayIntervalDays;
     }
 
@@ -71,7 +71,7 @@ public sealed class CompDittoEggLayer : ThingComp
         eggLayIntervalDays = male.TryGetComp<CompEggLayer>().Props.eggLayIntervalDays;
     }
 
-    public Thing ProduceEgg()
+        public Thing ProduceEgg()
     {
         if (!Active) Log.Error("LayEgg while not Active: " + parent);
         eggProgress = 0f;

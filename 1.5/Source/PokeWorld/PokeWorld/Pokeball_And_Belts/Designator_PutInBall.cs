@@ -8,7 +8,7 @@ namespace PokeWorld.Pokeball_And_Belts;
 
 internal class Designator_PutInBall : Designator
 {
-    private readonly List<Pawn> justDesignated = new();
+    private readonly List<Pawn> justDesignated = [];
 
     public Designator_PutInBall()
     {

@@ -6,7 +6,7 @@ using Verse;
 namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(Pawn_TrainingTracker))]
-[HarmonyPatch("Train")]
+[HarmonyPatch(nameof(Pawn_TrainingTracker.Train))]
 public class Pawn_TrainingTracker_Train_Patch
 {
     public static bool Prefix(TrainableDef __0, Pawn __1, Pawn_TrainingTracker __instance)

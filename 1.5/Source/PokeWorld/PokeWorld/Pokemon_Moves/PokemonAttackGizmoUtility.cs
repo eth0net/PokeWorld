@@ -262,8 +262,8 @@ public static class PokemonAttackGizmoUtility
     private static Verb GetVerbFromMove(Pawn pokemon, MoveDef moveDef)
     {
         var verbs = pokemon.verbTracker.AllVerbs.Where(x =>
-            (x.verbProps != null && x.verbProps == moveDef.verb) || (x.tool != null && x.tool == moveDef.tool));
-        if (verbs.Any()) return verbs.First();
-        return null;
+                (x.verbProps != null && x.verbProps == moveDef.verb) || (x.tool != null && x.tool == moveDef.tool))
+            .ToList();
+        return verbs.Any() ? verbs.First() : null;
     }
 }

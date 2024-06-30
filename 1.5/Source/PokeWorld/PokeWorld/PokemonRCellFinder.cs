@@ -17,8 +17,8 @@ public static class PokemonRCellFinder
             if (!map.pawnDestinationReservationManager.CanReserve(c, searcher) || !c.Standable(map) ||
                 !searcher.CanReach(c, PathEndMode.OnCell, Danger.Deadly)) return false;
             var thingList = c.GetThingList(map);
-            for (var i = 0; i < thingList.Count; i++)
-                if (thingList[i] is Pawn pawn && pawn != searcher && pawn.RaceProps.Humanlike &&
+            foreach (var t in thingList)
+                if (t is Pawn pawn && pawn != searcher && pawn.RaceProps.Humanlike &&
                     ((searcher.Faction.IsPlayer && pawn.Faction == searcher.Faction) ||
                      (!searcher.Faction.IsPlayer && !pawn.Faction.IsPlayer)))
                     return false;

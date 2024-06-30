@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using HarmonyLib;
 using PokeWorld.Incidents;
 using PokeWorld.ModSetting;
@@ -8,7 +9,9 @@ using Verse;
 namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(ManhunterPackGenStepUtility))]
-[HarmonyPatch("TryGetAnimalsKind")]
+[HarmonyPatch(nameof(ManhunterPackGenStepUtility.TryGetAnimalsKind))]
+[SuppressMessage("ReSharper", "InconsistentNaming")]
+[SuppressMessage("ReSharper", "UnusedType.Global")]
 internal class ManhunterPackGenStepUtility_TryGetAnimalsKind_Patch
 {
     public static bool Prefix(float __0, int __1, out PawnKindDef __2, ref bool __result)

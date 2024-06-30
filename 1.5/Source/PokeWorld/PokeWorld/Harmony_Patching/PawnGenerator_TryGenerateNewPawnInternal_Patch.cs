@@ -4,7 +4,7 @@ using Verse;
 namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(PawnGenerator))]
-[HarmonyPatch("TryGenerateNewPawnInternal")]
+[HarmonyPatch(nameof(PawnGenerator.TryGenerateNewPawnInternal))]
 public class PawnGenerator_TryGenerateNewPawnInternal_Patch
 {
     public static void Prefix(ref PawnGenerationRequest __0)

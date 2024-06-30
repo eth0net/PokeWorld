@@ -6,7 +6,7 @@ using Verse;
 namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(ResearchManager))]
-[HarmonyPatch("FinishProject")]
+[HarmonyPatch(nameof(ResearchManager.FinishProject))]
 internal class ResearchManager_FinishProject_Patch
 {
     private static void Postfix(ResearchProjectDef __0, Pawn __2)

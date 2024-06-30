@@ -4,15 +4,13 @@ using Verse;
 namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(Pawn))]
-[HarmonyPatch("get_HealthScale")]
+[HarmonyPatch(nameof(Pawn.HealthScale))]
+[HarmonyPatch(MethodType.Getter)]
 public class Pawn_get_HealthScale_Patch
 {
     public static void Postfix(Pawn __instance, ref float __result)
     {
-        if (__instance != null)
-        {
-            var comp = __instance.TryGetComp<CompPokemon>();
-            if (comp != null && comp.statTracker != null) __result *= comp.statTracker.HealthScaleMult;
-        }
+        var comp = __instance?.TryGetComp<CompPokemon>();
+        if (comp is { statTracker: not null }) __result *= comp.statTracker.HealthScaleMult;
     }
 }
