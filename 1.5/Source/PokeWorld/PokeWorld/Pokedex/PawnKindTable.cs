@@ -461,8 +461,6 @@ public class PawnKindTable
 
     private float CalculateTotalRequiredHeight()
     {
-        var num = CalculateHeaderHeight();
-        for (var i = cachedPawnKinds.Count - 1; i >= 0; i--) num += CalculateRowHeight(cachedPawnKinds[i]);
-        return num;
+        return CalculateHeaderHeight() + cachedPawnKinds.Sum(CalculateRowHeight);
     }
 }

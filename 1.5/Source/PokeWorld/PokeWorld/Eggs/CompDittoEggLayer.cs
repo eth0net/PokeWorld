@@ -35,11 +35,11 @@ public class CompDittoEggLayer : ThingComp
         }
     }
 
-        public CompProperties_DittoEggLayer Props => (CompProperties_DittoEggLayer)props;
+    public CompProperties_DittoEggLayer Props => (CompProperties_DittoEggLayer)props;
 
-        public override void Initialize(CompProperties props)
+    public override void Initialize(CompProperties props)
     {
-            base.Initialize(props);
+        base.Initialize(props);
         eggLayIntervalDays = Props.eggLayIntervalDays;
     }
 
@@ -71,7 +71,7 @@ public class CompDittoEggLayer : ThingComp
         eggLayIntervalDays = male.TryGetComp<CompEggLayer>().Props.eggLayIntervalDays;
     }
 
-        public Thing ProduceEgg()
+    public Thing ProduceEgg()
     {
         if (!Active) Log.Error("LayEgg while not Active: " + parent);
         eggProgress = 0f;

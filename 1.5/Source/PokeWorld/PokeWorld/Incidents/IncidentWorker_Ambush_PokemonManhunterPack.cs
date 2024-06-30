@@ -26,10 +26,7 @@ internal class IncidentWorker_Ambush_PokemonManhunterPack : IncidentWorker_Ambus
             return Pokemon_ManhunterPackIncidentUtility.GeneratePokemonFamily_NewTmp(animalKind, parms.target.Tile,
                 AdjustedPoints(parms.points));
         Log.Error(string.Concat("Could not find any valid animal kind for ", def, " incident."));
-        return new List<Pawn>
-        {
-            Capacity = 0
-        };
+        return [];
     }
 
     public override void PostProcessGeneratedPawnsAfterSpawning(List<Pawn> generatedPawns)

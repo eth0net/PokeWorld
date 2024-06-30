@@ -29,6 +29,7 @@ public class GenStep_CaveHives_TrySpawnHive_Patch
         var field2 = __instance.GetType()
             .GetField("spawnedHives", BindingFlags.NonPublic | BindingFlags.Instance);
         if (field2 == null) return false;
+
         var spawnedHives = (List<Hive>)field2.GetValue(__instance);
 
         var method = __instance.GetType()

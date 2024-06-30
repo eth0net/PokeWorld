@@ -42,7 +42,7 @@ public class JobDriver_PokemonAttackMelee : JobDriver
             var thing = job.GetTarget(TargetIndex.A).Thing;
             if (job.reactingToMeleeThreat && thing is Pawn p && !p.Awake())
                 EndJobWith(JobCondition.InterruptForced);
-            if (pawn.Faction != null && pawn.Faction.IsPlayer && !PokemonMasterUtility.IsPokemonInMasterRange(pawn))
+            if (pawn.Faction is { IsPlayer: true } && !PokemonMasterUtility.IsPokemonInMasterRange(pawn))
             {
                 EndJobWith(JobCondition.Succeeded);
             }

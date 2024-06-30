@@ -20,8 +20,8 @@ internal class JobGiver_Manhunter_TryGiveJob_Patch
 
     private static readonly float targetKeepRadius = 65f;
 
-    [SuppressMessage("ReSharper", "UnusedMember.Global")]
-    public static bool Prefix(Pawn __0, ref Job __result)
+    [SuppressMessage("ReSharper", "UnusedMember.Local")]
+    private static bool Prefix(Pawn __0, ref Job __result)
     {
         var comp = __0.TryGetComp<CompPokemon>();
         if (comp == null) return true;
@@ -103,7 +103,7 @@ internal class JobGiver_Manhunter_TryGiveJob_Patch
         return CastPositionFinder.TryFindCastPosition(newReq, out dest);
     }
 
-    [SuppressMessage("Style", "IDE0060:Remove unused parameter", Justification = "Need to match the target method")]
+    [SuppressMessage("ReSharper", "UnusedParameter.Local")]
     private static bool ExtraTargetValidator(Pawn pawn, Thing target)
     {
         return true;
@@ -134,7 +134,7 @@ internal class JobGiver_Manhunter_TryGiveJob_Patch
             {
                 var methodNotify_EngagedTarget = pawn.mindState.GetType().GetMethod("Notify_EngagedTarget",
                     BindingFlags.NonPublic | BindingFlags.Instance);
-                methodNotify_EngagedTarget.Invoke(pawn.mindState, new object[] { });
+                methodNotify_EngagedTarget?.Invoke(pawn.mindState, []);
                 pawn.GetLord()?.Notify_PawnAcquiredTarget(pawn, thing);
             }
         }
@@ -149,7 +149,7 @@ internal class JobGiver_Manhunter_TryGiveJob_Patch
             {
                 var methodNotify_EngagedTarget = pawn.mindState.GetType().GetMethod("Notify_EngagedTarget",
                     BindingFlags.NonPublic | BindingFlags.Instance);
-                methodNotify_EngagedTarget.Invoke(pawn.mindState, new object[] { });
+                methodNotify_EngagedTarget?.Invoke(pawn.mindState, []);
                 thing = thing2;
             }
         }

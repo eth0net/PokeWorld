@@ -32,17 +32,17 @@ internal class PawnRenderNode_AnimalPart_GraphicFor_Patch
 
     private static void TryApplyShinyForPawn(Pawn pawn, ref Graphic graphic)
     {
-        var texPath = "";
         var compPokemon = pawn.TryGetComp<CompPokemon>();
+        if (compPokemon == null) return;
 
+        var texPath = "";
         if (compPokemon.formTracker != null) texPath += compPokemon.formTracker.GetCurrentFormKey();
         if (compPokemon.shinyTracker is { isShiny: true }) texPath += "Shiny";
-
         if (texPath == "") return;
 
         var graphicData = new GraphicData();
         graphicData.CopyFrom(graphic.data);
-        graphicData.texPath += "Shiny";
+        graphicData.texPath += texPath;
         graphic = graphicData.Graphic;
     }
 }

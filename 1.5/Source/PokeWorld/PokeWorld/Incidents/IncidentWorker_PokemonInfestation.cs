@@ -55,15 +55,11 @@ public static class PokemonInfestationUtility
                     for (var j = 0; j < num; j++)
                     {
                         var c = x + GenRadial.RadialPattern[j];
-                        if (c.InBounds(map))
-                        {
-                            var roof = c.GetRoof(map);
-                            if (roof != null && roof.isThickRoof)
-                            {
-                                flag = true;
-                                break;
-                            }
-                        }
+                        if (!c.InBounds(map)) continue;
+                        var roof = c.GetRoof(map);
+                        if (roof is not { isThickRoof: true }) continue;
+                        flag = true;
+                        break;
                     }
 
                     return flag;
@@ -80,14 +76,12 @@ public static class PokemonInfestationUtility
         {
             cell = CompSpawnerHives.FindChildHiveLocation(thing.Position, map, hiveDef,
                 hiveDef.GetCompProperties<CompProperties_SpawnerHives>(), ignoreRoofedRequirement, true);
-            if (cell.IsValid)
-            {
-                thing = (TunnelPokemonHiveSpawner)ThingMaker.MakeThing(
-                    DefDatabase<ThingDef>.GetNamed("PW_TunnelPokemonHiveSpawner"));
-                thing.pokemonHiveDef = hiveDef;
-                GenSpawn.Spawn(thing, cell, map, WipeMode.FullRefund);
-                QuestUtility.AddQuestTag(thing, questTag);
-            }
+            if (!cell.IsValid) continue;
+            thing = (TunnelPokemonHiveSpawner)ThingMaker.MakeThing(
+                DefDatabase<ThingDef>.GetNamed("PW_TunnelPokemonHiveSpawner"));
+            thing.pokemonHiveDef = hiveDef;
+            GenSpawn.Spawn(thing, cell, map, WipeMode.FullRefund);
+            QuestUtility.AddQuestTag(thing, questTag);
         }
 
         return thing;
@@ -195,8 +189,8 @@ public class TunnelPokemonHiveSpawner : ThingWithComps
         if (spawnHive)
         {
             var obj = (Hive)GenSpawn.Spawn(ThingMaker.MakeThing(pokemonHiveDef), position, map);
-            obj.SetFaction(Find.FactionManager.AllFactions.Where(f => f.def.defName == "PW_HostilePokemon")
-                .First());
+            obj.SetFaction(Find.FactionManager.AllFactions
+                .First(f => f.def.defName == "PW_HostilePokemon"));
             obj.questTags = questTags;
             foreach (var comp in obj.GetComps<CompSpawner>())
                 if (comp.PropsSpawner.thingToSpawn == ThingDefOf.InsectJelly)

@@ -31,8 +31,7 @@ public class JobDriver_PokemonWaitCombat : JobDriver
                     ReadyForNextToil();
                 }
 
-                if (pawn.Faction != null && pawn.Faction.IsPlayer &&
-                    !PokemonMasterUtility.IsPokemonInMasterRange(pawn))
+                if (pawn.Faction is { IsPlayer: true } && !PokemonMasterUtility.IsPokemonInMasterRange(pawn))
                     ReadyForNextToil();
                 else if ((Find.TickManager.TicksGame + pawn.thingIDNumber) % 4 == 0) CheckForAutoAttack();
             }

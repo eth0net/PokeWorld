@@ -40,9 +40,6 @@ internal class FloatMenuMakerMap_ChoicesAtFor_Patch
 
             AddDraftedOrders(__0, __1, list);
             list.AddRange(__1.GetExtraFloatMenuOptionsFor(intVec));
-
-            __result = list;
-            return false;
         }
 
         __result = list;

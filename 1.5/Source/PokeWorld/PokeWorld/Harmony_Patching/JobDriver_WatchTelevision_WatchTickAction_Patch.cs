@@ -6,7 +6,7 @@ using Verse;
 namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(JobDriver_WatchTelevision))]
-[HarmonyPatch("WatchTickAction")]
+[HarmonyPatch(nameof(JobDriver_WatchTelevision.WatchTickAction))]
 [SuppressMessage("ReSharper", "InconsistentNaming")]
 [SuppressMessage("ReSharper", "UnusedType.Global")]
 internal class JobDriver_WatchTelevision_WatchTickAction_Patch

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using HarmonyLib;
 using PokeWorld.ModSetting;
@@ -9,9 +10,12 @@ using Verse;
 namespace PokeWorld.Harmony_Patching;
 
 [HarmonyPatch(typeof(PawnGroupKindWorker_Trader))]
-[HarmonyPatch("GenerateCarriers")]
+[HarmonyPatch(nameof(PawnGroupKindWorker_Trader.GenerateCarriers))]
+[SuppressMessage("ReSharper", "InconsistentNaming")]
+[SuppressMessage("ReSharper", "UnusedType.Global")]
 internal class PawnGroupKindWorker_Trader_GenerateCarriers_Patch
 {
+    [SuppressMessage("ReSharper", "UnusedMember.Global")]
     public static bool Prefix(PawnGroupMakerParms __0, PawnGroupMaker __1, Pawn __2, List<Thing> __3,
         List<Pawn> __4)
     {
@@ -28,7 +32,7 @@ internal class PawnGroupKindWorker_Trader_GenerateCarriers_Patch
                                    x.kind.race.HasComp(typeof(CompPokemon)) &&
                                    PokeWorldSettings.GenerationAllowed(x.kind.race
                                        .GetCompProperties<CompProperties_Pokemon>().generation)));
-        var list = __3.Where(x => !(x is Pawn)).ToList();
+        var list = __3.Where(x => x is not Pawn).ToList();
         var i = 0;
         var num = Mathf.CeilToInt(list.Count / 8f);
         var list2 = new List<Pawn>();

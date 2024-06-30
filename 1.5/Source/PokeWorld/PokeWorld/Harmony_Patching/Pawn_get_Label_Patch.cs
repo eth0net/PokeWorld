@@ -1,4 +1,5 @@
-﻿using HarmonyLib;
+﻿using System.Diagnostics.CodeAnalysis;
+using HarmonyLib;
 using Verse;
 
 namespace PokeWorld.Harmony_Patching;
@@ -6,8 +7,11 @@ namespace PokeWorld.Harmony_Patching;
 [HarmonyPatch(typeof(Pawn))]
 [HarmonyPatch(nameof(Pawn.LabelNoCount))]
 [HarmonyPatch(MethodType.Getter)]
+[SuppressMessage("ReSharper", "InconsistentNaming")]
+[SuppressMessage("ReSharper", "UnusedType.Global")]
 public class Pawn_get_LabelNoCount_Patch
 {
+    [SuppressMessage("ReSharper", "UnusedMember.Global")]
     public static void Postfix(Pawn __instance, ref string __result)
     {
         __result = PokemonNamePatchUtility.TryPatchName(__instance, __result);
@@ -16,8 +20,11 @@ public class Pawn_get_LabelNoCount_Patch
 
 [HarmonyPatch(typeof(Pawn))]
 [HarmonyPatch("get_LabelShort")]
+[SuppressMessage("ReSharper", "InconsistentNaming")]
+[SuppressMessage("ReSharper", "UnusedType.Global")]
 public class Pawn_get_LabelShort_Patch
 {
+    [SuppressMessage("ReSharper", "UnusedMember.Global")]
     public static void Postfix(Pawn __instance, ref string __result)
     {
         if (__instance.Name != null) __result = PokemonNamePatchUtility.TryPatchName(__instance, __result);
@@ -26,8 +33,11 @@ public class Pawn_get_LabelShort_Patch
 
 [HarmonyPatch(typeof(Pawn))]
 [HarmonyPatch("get_LabelNoCountColored")]
+[SuppressMessage("ReSharper", "InconsistentNaming")]
+[SuppressMessage("ReSharper", "UnusedType.Global")]
 public class Pawn_get_LabelNoCountColored_Patch
 {
+    [SuppressMessage("ReSharper", "UnusedMember.Global")]
     public static void Postfix(Pawn __instance, ref TaggedString __result)
     {
         __result = PokemonNamePatchUtility.TryPatchName(__instance, __result);
@@ -36,8 +46,11 @@ public class Pawn_get_LabelNoCountColored_Patch
 
 [HarmonyPatch(typeof(Pawn))]
 [HarmonyPatch("get_NameShortColored")]
+[SuppressMessage("ReSharper", "InconsistentNaming")]
+[SuppressMessage("ReSharper", "UnusedType.Global")]
 public class Pawn_get_NameShortColored_Patch
 {
+    [SuppressMessage("ReSharper", "UnusedMember.Global")]
     public static void Postfix(Pawn __instance, ref TaggedString __result)
     {
         __result = PokemonNamePatchUtility.TryPatchName(__instance, __result);
@@ -46,8 +59,11 @@ public class Pawn_get_NameShortColored_Patch
 
 [HarmonyPatch(typeof(Pawn))]
 [HarmonyPatch("get_NameFullColored")]
+[SuppressMessage("ReSharper", "InconsistentNaming")]
+[SuppressMessage("ReSharper", "UnusedType.Global")]
 public class Pawn_get_NameFullColored_Patch
 {
+    [SuppressMessage("ReSharper", "UnusedMember.Global")]
     public static void Postfix(Pawn __instance, ref TaggedString __result)
     {
         __result = PokemonNamePatchUtility.TryPatchName(__instance, __result);
