@@ -4016,10 +4016,10 @@
         <eggProgressUnfertilizedMax>0</eggProgressUnfertilizedMax>
         <eggCountRange>1</eggCountRange>
       </li>
-      <li Class="CompProperties_Power">
+      <!--  <li Class="CompProperties_Power">
         <compClass>PokeWorld.CompPokemonPower</compClass>
         <basePowerConsumption>-40.00</basePowerConsumption>
-      </li>
+      </li> -->
     </comps>
     <statBases>
       <MoveSpeed>4.9</MoveSpeed>
@@ -4176,10 +4176,10 @@
         <eggProgressUnfertilizedMax>0</eggProgressUnfertilizedMax>
         <eggCountRange>1</eggCountRange>
       </li>
-      <li Class="CompProperties_Power">
+      <!--  <li Class="CompProperties_Power">
         <compClass>PokeWorld.CompPokemonPower</compClass>
         <basePowerConsumption>-60.62</basePowerConsumption>
-      </li>
+      </li> -->
     </comps>
     <statBases>
       <MoveSpeed>5.2</MoveSpeed>
@@ -13186,10 +13186,10 @@
         <eggCountRange>1</eggCountRange>
         <eggLayFemaleOnly>false</eggLayFemaleOnly>
       </li>
-      <li Class="CompProperties_Power">
+      <!--  <li Class="CompProperties_Power">
         <compClass>PokeWorld.CompPokemonPower</compClass>
         <basePowerConsumption>-40.62</basePowerConsumption>
-      </li>
+      </li> -->
     </comps>
     <statBases>
       <MoveSpeed>3.8</MoveSpeed>
@@ -13367,10 +13367,10 @@
         <eggCountRange>1</eggCountRange>
         <eggLayFemaleOnly>false</eggLayFemaleOnly>
       </li>
-      <li Class="CompProperties_Power">
+      <!--  <li Class="CompProperties_Power">
         <compClass>PokeWorld.CompPokemonPower</compClass>
         <basePowerConsumption>-58.12</basePowerConsumption>
-      </li>
+      </li> -->
     </comps>
     <statBases>
       <MoveSpeed>4.6</MoveSpeed>
@@ -16296,10 +16296,10 @@
         <eggCountRange>1</eggCountRange>
         <eggLayFemaleOnly>false</eggLayFemaleOnly>
       </li>
-      <li Class="CompProperties_Power">
+      <!--  <li Class="CompProperties_Power">
         <compClass>PokeWorld.CompPokemonPower</compClass>
         <basePowerConsumption>-41.25</basePowerConsumption>
-      </li>
+      </li> -->
     </comps>
     <statBases>
       <MoveSpeed>5.0</MoveSpeed>
@@ -16460,10 +16460,10 @@
         <eggCountRange>1</eggCountRange>
         <eggLayFemaleOnly>false</eggLayFemaleOnly>
       </li>
-      <li Class="CompProperties_Power">
+      <!--  <li Class="CompProperties_Power">
         <compClass>PokeWorld.CompPokemonPower</compClass>
         <basePowerConsumption>-61.25</basePowerConsumption>
-      </li>
+      </li> -->
     </comps>
     <statBases>
       <MoveSpeed>7.0</MoveSpeed>
@@ -20263,10 +20263,10 @@
         <eggProgressUnfertilizedMax>0</eggProgressUnfertilizedMax>
         <eggCountRange>1</eggCountRange>
       </li>
-      <li Class="CompProperties_Power">
+      <!--  <li Class="CompProperties_Power">
         <compClass>PokeWorld.CompPokemonPower</compClass>
         <basePowerConsumption>-61.25</basePowerConsumption>
-      </li>
+      </li> -->
     </comps>
     <statBases>
       <MoveSpeed>5.1</MoveSpeed>
@@ -21877,10 +21877,10 @@
         <eggProgressUnfertilizedMax>0</eggProgressUnfertilizedMax>
         <eggCountRange>1</eggCountRange>
       </li>
-      <li Class="CompProperties_Power">
+      <!--  <li Class="CompProperties_Power">
         <compClass>PokeWorld.CompPokemonPower</compClass>
         <basePowerConsumption>-65.62</basePowerConsumption>
-      </li>
+      </li> -->
     </comps>
     <statBases>
       <MoveSpeed>5.8</MoveSpeed>
@@ -23565,10 +23565,10 @@
         <catchRate>3</catchRate>
         <shinyChance>0.00125</shinyChance>
       </li>
-      <li Class="CompProperties_Power">
+      <!--  <li Class="CompProperties_Power">
         <compClass>PokeWorld.CompPokemonPower</compClass>
         <basePowerConsumption>-217.50</basePowerConsumption>
-      </li>
+      </li> -->
     </comps>
     <statBases>
       <MoveSpeed>5.0</MoveSpeed>
@@ -27771,10 +27771,10 @@
         <eggProgressUnfertilizedMax>0</eggProgressUnfertilizedMax>
         <eggCountRange>1</eggCountRange>
       </li>
-      <li Class="CompProperties_Power">
+      <!--  <li Class="CompProperties_Power">
         <compClass>PokeWorld.CompPokemonPower</compClass>
         <basePowerConsumption>-41.25</basePowerConsumption>
-      </li>
+      </li> -->
     </comps>
     <statBases>
       <MoveSpeed>4.5</MoveSpeed>
@@ -27947,10 +27947,10 @@
         <eggProgressUnfertilizedMax>0</eggProgressUnfertilizedMax>
         <eggCountRange>1</eggCountRange>
       </li>
-      <li Class="CompProperties_Power">
+      <!--  <li Class="CompProperties_Power">
         <compClass>PokeWorld.CompPokemonPower</compClass>
         <basePowerConsumption>-57.50</basePowerConsumption>
-      </li>
+      </li> -->
     </comps>
     <statBases>
       <MoveSpeed>4.5</MoveSpeed>
@@ -28109,10 +28109,10 @@
           </li>
         </forms>
       </li>
-      <li Class="CompProperties_Power">
+      <!--  <li Class="CompProperties_Power">
         <compClass>PokeWorld.CompPokemonPower</compClass>
         <basePowerConsumption>-25.62</basePowerConsumption>
-      </li>
+      </li> -->
     </comps>
     <statBases>
       <MoveSpeed>4.3</MoveSpeed>
@@ -29202,10 +29202,10 @@
         <eggProgressUnfertilizedMax>0</eggProgressUnfertilizedMax>
         <eggCountRange>1</eggCountRange>
       </li>
-      <li Class="CompProperties_Power">
+      <!--  <li Class="CompProperties_Power">
         <compClass>PokeWorld.CompPokemonPower</compClass>
         <basePowerConsumption>-35.00</basePowerConsumption>
-      </li>
+      </li> -->
     </comps>
     <statBases>
       <MoveSpeed>3.3</MoveSpeed>
@@ -29385,10 +29385,10 @@
         <eggProgressUnfertilizedMax>0</eggProgressUnfertilizedMax>
         <eggCountRange>1</eggCountRange>
       </li>
-      <li Class="CompProperties_Power">
+      <!--  <li Class="CompProperties_Power">
         <compClass>PokeWorld.CompPokemonPower</compClass>
         <basePowerConsumption>-45.62</basePowerConsumption>
-      </li>
+      </li> -->
     </comps>
     <statBases>
       <MoveSpeed>3.8</MoveSpeed>
@@ -29572,10 +29572,10 @@
         <eggProgressUnfertilizedMax>0</eggProgressUnfertilizedMax>
         <eggCountRange>1</eggCountRange>
       </li>
-      <li Class="CompProperties_Power">
+      <!--  <li Class="CompProperties_Power">
         <compClass>PokeWorld.CompPokemonPower</compClass>
         <basePowerConsumption>-63.75</basePowerConsumption>
-      </li>
+      </li> -->
     </comps>
     <statBases>
       <MoveSpeed>4.2</MoveSpeed>
@@ -39311,10 +39311,10 @@
         <catchRate>45</catchRate>
         <shinyChance>0.00125</shinyChance>
       </li>
-      <li Class="CompProperties_Power">
+      <!--  <li Class="CompProperties_Power">
         <compClass>PokeWorld.CompPokemonPower</compClass>
         <basePowerConsumption>-45.00</basePowerConsumption>
-      </li>
+      </li> -->
     </comps>
     <statBases>
       <MoveSpeed>5.0</MoveSpeed>
@@ -39959,10 +39959,10 @@
         <catchRate>3</catchRate>
         <shinyChance>0.00125</shinyChance>
       </li>
-      <li Class="CompProperties_Power">
+      <!--  <li Class="CompProperties_Power">
         <compClass>PokeWorld.CompPokemonPower</compClass>
         <basePowerConsumption>-217.50</basePowerConsumption>
-      </li>
+      </li> -->
     </comps>
     <statBases>
       <MoveSpeed>5.3</MoveSpeed>
@@ -50623,10 +50623,10 @@
         <eggProgressUnfertilizedMax>0</eggProgressUnfertilizedMax>
         <eggCountRange>1</eggCountRange>
       </li>
-      <li Class="CompProperties_Power">
+      <!--  <li Class="CompProperties_Power">
         <compClass>PokeWorld.CompPokemonPower</compClass>
         <basePowerConsumption>-36.88</basePowerConsumption>
-      </li>
+      </li> -->
     </comps>
     <statBases>
       <MoveSpeed>4.5</MoveSpeed>
@@ -50794,10 +50794,10 @@
         <eggProgressUnfertilizedMax>0</eggProgressUnfertilizedMax>
         <eggCountRange>1</eggCountRange>
       </li>
-      <li Class="CompProperties_Power">
+      <!--  <li Class="CompProperties_Power">
         <compClass>PokeWorld.CompPokemonPower</compClass>
         <basePowerConsumption>-59.38</basePowerConsumption>
-      </li>
+      </li> -->
     </comps>
     <statBases>
       <MoveSpeed>5.1</MoveSpeed>
@@ -50952,10 +50952,10 @@
         <eggProgressUnfertilizedMax>0</eggProgressUnfertilizedMax>
         <eggCountRange>1</eggCountRange>
       </li>
-      <li Class="CompProperties_Power">
+      <!--  <li Class="CompProperties_Power">
         <compClass>PokeWorld.CompPokemonPower</compClass>
         <basePowerConsumption>-50.62</basePowerConsumption>
-      </li>
+      </li> -->
     </comps>
     <statBases>
       <MoveSpeed>5.0</MoveSpeed>
@@ -51111,10 +51111,10 @@
         <eggProgressUnfertilizedMax>0</eggProgressUnfertilizedMax>
         <eggCountRange>1</eggCountRange>
       </li>
-      <li Class="CompProperties_Power">
+      <!--  <li Class="CompProperties_Power">
         <compClass>PokeWorld.CompPokemonPower</compClass>
         <basePowerConsumption>-50.62</basePowerConsumption>
-      </li>
+      </li> -->
     </comps>
     <statBases>
       <MoveSpeed>5.0</MoveSpeed>
@@ -66107,10 +66107,10 @@
         <eggProgressUnfertilizedMax>0</eggProgressUnfertilizedMax>
         <eggCountRange>1</eggCountRange>
       </li>
-      <li Class="CompProperties_Power">
+      <!--  <li Class="CompProperties_Power">
         <compClass>PokeWorld.CompPokemonPower</compClass>
         <basePowerConsumption>-32.88</basePowerConsumption>
-      </li>
+      </li> -->
     </comps>
     <statBases>
       <MoveSpeed>3.8</MoveSpeed>
@@ -66280,10 +66280,10 @@
         <eggProgressUnfertilizedMax>0</eggProgressUnfertilizedMax>
         <eggCountRange>1</eggCountRange>
       </li>
-      <li Class="CompProperties_Power">
+      <!--  <li Class="CompProperties_Power">
         <compClass>PokeWorld.CompPokemonPower</compClass>
         <basePowerConsumption>-45.38</basePowerConsumption>
-      </li>
+      </li> -->
     </comps>
     <statBases>
       <MoveSpeed>4.3</MoveSpeed>
@@ -66442,10 +66442,10 @@
         <eggProgressUnfertilizedMax>0</eggProgressUnfertilizedMax>
         <eggCountRange>1</eggCountRange>
       </li>
-      <li Class="CompProperties_Power">
+      <!--  <li Class="CompProperties_Power">
         <compClass>PokeWorld.CompPokemonPower</compClass>
         <basePowerConsumption>-65.38</basePowerConsumption>
-      </li>
+      </li> -->
     </comps>
     <statBases>
       <MoveSpeed>4.6</MoveSpeed>
@@ -68435,10 +68435,10 @@
         <eggProgressUnfertilizedMax>0</eggProgressUnfertilizedMax>
         <eggCountRange>1</eggCountRange>
       </li>
-      <li Class="CompProperties_Power">
+      <!--  <li Class="CompProperties_Power">
         <compClass>PokeWorld.CompPokemonPower</compClass>
         <basePowerConsumption>-50.62</basePowerConsumption>
-      </li>
+      </li> -->
     </comps>
     <statBases>
       <MoveSpeed>5.0</MoveSpeed>
@@ -75814,10 +75814,10 @@
         <eggCountRange>1</eggCountRange>
         <eggLayFemaleOnly>false</eggLayFemaleOnly>
       </li>
-      <li Class="CompProperties_Power">
+      <!--  <li Class="CompProperties_Power">
         <compClass>PokeWorld.CompPokemonPower</compClass>
         <basePowerConsumption>-66.88</basePowerConsumption>
-      </li>
+      </li> -->
     </comps>
     <statBases>
       <MoveSpeed>4.3</MoveSpeed>
@@ -76459,10 +76459,10 @@
         <eggProgressUnfertilizedMax>0</eggProgressUnfertilizedMax>
         <eggCountRange>1</eggCountRange>
       </li>
-      <li Class="CompProperties_Power">
+      <!--  <li Class="CompProperties_Power">
         <compClass>PokeWorld.CompPokemonPower</compClass>
         <basePowerConsumption>-67.50</basePowerConsumption>
-      </li>
+      </li> -->
     </comps>
     <statBases>
       <MoveSpeed>5.0</MoveSpeed>
@@ -78630,10 +78630,10 @@
         <eggCountRange>1</eggCountRange>
         <eggLayFemaleOnly>false</eggLayFemaleOnly>
       </li>
-      <li Class="CompProperties_Power">
+      <!--  <li Class="CompProperties_Power">
         <compClass>PokeWorld.CompPokemonPower</compClass>
         <basePowerConsumption>-55.00</basePowerConsumption>
-      </li>
+      </li> -->
     </comps>
     <statBases>
       <MoveSpeed>4.9</MoveSpeed>
