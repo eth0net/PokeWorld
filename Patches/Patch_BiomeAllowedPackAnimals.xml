@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Patch>
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/BiomeDef[defName="BorealForest"]/allowedPackAnimals</xpath>
@@ -16,31 +16,31 @@
       <li>PW_Sceptile</li>
       <li>PW_Swampert</li>
       <li>PW_Shiftry</li>
-      <li>PW_Torterra</li>      
+      <li>PW_Torterra</li>
     </value>
-  </Operation>  
+  </Operation>
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/BiomeDef[defName="Tundra"]/allowedPackAnimals</xpath>
     <value>
       <li>PW_Piloswine</li>
-      <li>PW_Blastoise</li>  
+      <li>PW_Blastoise</li>
       <li>PW_Poliwrath</li>
-      <li>PW_Feraligatr</li> 
-      <li>PW_Ursaring</li> 
+      <li>PW_Feraligatr</li>
+      <li>PW_Ursaring</li>
     </value>
   </Operation>
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/BiomeDef[defName="ColdBog"]/allowedPackAnimals</xpath>
     <value>
-      <li>PW_Piloswine</li> 
-      <li>PW_Blastoise</li>  
+      <li>PW_Piloswine</li>
+      <li>PW_Blastoise</li>
       <li>PW_Poliwrath</li>
-      <li>PW_Feraligatr</li> 
+      <li>PW_Feraligatr</li>
       <li>PW_Ursaring</li>
       <li>PW_Sceptile</li>
-      <li>PW_Swampert</li>	
+      <li>PW_Swampert</li>
     </value>
-  </Operation>  
+  </Operation>
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/BiomeDef[defName="IceSheet"]/allowedPackAnimals</xpath>
     <value>
@@ -49,7 +49,7 @@
       <li>PW_Walrein</li>
       <li>PW_Empoleon</li>
     </value>
-  </Operation>  
+  </Operation>
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/BiomeDef[defName="SeaIce"]/allowedPackAnimals</xpath>
     <value>
@@ -58,7 +58,7 @@
       <li>PW_Walrein</li>
       <li>PW_Empoleon</li>
     </value>
-  </Operation> 
+  </Operation>
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/BiomeDef[defName="TemperateForest"]/allowedPackAnimals</xpath>
     <value>
@@ -79,14 +79,14 @@
       <li>PW_Tauros</li>
       <li>PW_Meganium</li>
       <li>PW_Typhlosion</li>
-      <li>PW_Ursaring</li>  
+      <li>PW_Ursaring</li>
       <li>PW_Donphan</li>
       <li>PW_Sceptile</li>
       <li>PW_Blaziken</li>
       <li>PW_Manectric</li>
-      <li>PW_Torterra</li> 
+      <li>PW_Torterra</li>
     </value>
-  </Operation>  
+  </Operation>
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/BiomeDef[defName="TemperateSwamp"]/allowedPackAnimals</xpath>
     <value>
@@ -100,14 +100,14 @@
       <li>PW_Machamp</li>
       <li>PW_Meganium</li>
       <li>PW_Feraligatr</li>
-      <li>PW_Ursaring</li> 
+      <li>PW_Ursaring</li>
       <li>PW_Sceptile</li>
-      <li>PW_Swampert</li> 
-      <li>PW_Ludicolo</li> 
+      <li>PW_Swampert</li>
+      <li>PW_Ludicolo</li>
       <li>PW_Shiftry</li>
-      <li>PW_Torterra</li> 
+      <li>PW_Torterra</li>
     </value>
-  </Operation>  
+  </Operation>
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/BiomeDef[defName="TropicalRainforest"]/allowedPackAnimals</xpath>
     <value>
@@ -118,15 +118,15 @@
       <li>PW_Poliwrath</li>
       <li>PW_Meganium</li>
       <li>PW_Feraligatr</li>
-      <li>PW_Ursaring</li> 
+      <li>PW_Ursaring</li>
       <li>PW_Sceptile</li>
-      <li>PW_Swampert</li>  
+      <li>PW_Swampert</li>
       <li>PW_Ludicolo</li>
       <li>PW_Shiftry</li>
       <li>PW_Slaking</li>
-      <li>PW_Torterra</li> 
+      <li>PW_Torterra</li>
     </value>
-  </Operation> 
+  </Operation>
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/BiomeDef[defName="TropicalSwamp"]/allowedPackAnimals</xpath>
     <value>
@@ -137,15 +137,15 @@
       <li>PW_Poliwrath</li>
       <li>PW_Meganium</li>
       <li>PW_Feraligatr</li>
-      <li>PW_Ursaring</li> 
+      <li>PW_Ursaring</li>
       <li>PW_Sceptile</li>
-      <li>PW_Swampert</li> 
-      <li>PW_Ludicolo</li> 
+      <li>PW_Swampert</li>
+      <li>PW_Ludicolo</li>
       <li>PW_Shiftry</li>
       <li>PW_Slaking</li>
-      <li>PW_Torterra</li> 
+      <li>PW_Torterra</li>
     </value>
-  </Operation>  
+  </Operation>
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/BiomeDef[defName="AridShrubland"]/allowedPackAnimals</xpath>
     <value>
@@ -165,7 +165,7 @@
       <li>PW_Blaziken</li>
       <li>PW_Manectric</li>
     </value>
-  </Operation>  
+  </Operation>
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/BiomeDef[defName="Desert"]/allowedPackAnimals</xpath>
     <value>
@@ -182,7 +182,7 @@
       <li>PW_Camerupt</li>
       <li>PW_Infernape</li>
     </value>
-  </Operation>  
+  </Operation>
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/BiomeDef[defName="ExtremeDesert"]/allowedPackAnimals</xpath>
     <value>
@@ -198,5 +198,5 @@
       <li>PW_Camerupt</li>
       <li>PW_Infernape</li>
     </value>
-  </Operation>  
+  </Operation>
 </Patch>
