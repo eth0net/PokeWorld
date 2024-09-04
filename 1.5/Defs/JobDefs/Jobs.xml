@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
   <JobDef>
@@ -22,7 +22,7 @@
     <reportString>carrying TargetA to PC.</reportString>
     <casualInterruptible>false</casualInterruptible>
   </JobDef>
-  
+
   <JobDef>
     <defName>PW_PokemonGotoForced</defName>
     <driverClass>Pokeworld.JobDriver_PokemonGotoForced</driverClass>

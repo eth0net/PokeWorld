@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
   <StatDef>
@@ -9,7 +9,7 @@
     <workerClass>PokeWorld.StatWorker_PokemonLevel</workerClass>
     <displayPriorityInCategory>4053</displayPriorityInCategory>
     <toStringStyle>Integer</toStringStyle>
-  </StatDef>  
+  </StatDef>
 
   <StatDef>
     <defName>PW_Experience</defName>
@@ -19,7 +19,7 @@
     <workerClass>PokeWorld.StatWorker_PokemonExperience</workerClass>
     <displayPriorityInCategory>4052</displayPriorityInCategory>
     <toStringStyle>Integer</toStringStyle>
-  </StatDef>  
+  </StatDef>
 
   <StatDef>
     <defName>PW_Friendship</defName>
@@ -28,7 +28,7 @@
     <category>PW_PokeWorldStat</category>
     <workerClass>PokeWorld.StatWorker_PokemonFriendship</workerClass>
     <displayPriorityInCategory>4051</displayPriorityInCategory>
-  </StatDef>  
+  </StatDef>
 
   <StatDef>
     <defName>PW_HP</defName>

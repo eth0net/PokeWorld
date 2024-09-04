@@ -1,23 +1,23 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
   <PokeWorld.QuestConditionDef>
     <defName>QuestCondition_Articuno</defName>
-  	<questScriptDef>PW_Script_Articuno</questScriptDef>
-  	<generationsRequirements>
-  	  <li>
-  		  <generation>1</generation>
-  		  <minNoLegCaught>73</minNoLegCaught>
-  	  </li>
-  	</generationsRequirements>
-  	<requiredKindCaught>
-  	  <li>PW_Blastoise</li>
+    <questScriptDef>PW_Script_Articuno</questScriptDef>
+    <generationsRequirements>
+      <li>
+        <generation>1</generation>
+        <minNoLegCaught>73</minNoLegCaught>
+      </li>
+    </generationsRequirements>
+    <requiredKindCaught>
+      <li>PW_Blastoise</li>
       <li>PW_Dewgong</li>
       <li>PW_Cloyster</li>
       <li>PW_Lapras</li>
       <li>PW_Jynx</li>
-      <li>PW_Vaporeon</li>   	 	  
-  	</requiredKindCaught>
+      <li>PW_Vaporeon</li>
+    </requiredKindCaught>
     <requiredCaughtMinCount>3</requiredCaughtMinCount>
   </PokeWorld.QuestConditionDef>
 
@@ -35,7 +35,7 @@
       <li>PW_Magneton</li>
       <li>PW_Electrode</li>
       <li>PW_Electabuzz</li>
-      <li>PW_Jolteon</li>        
+      <li>PW_Jolteon</li>
     </requiredKindCaught>
     <requiredCaughtMinCount>3</requiredCaughtMinCount>
   </PokeWorld.QuestConditionDef>
@@ -55,7 +55,7 @@
       <li>PW_Arcanine</li>
       <li>PW_Rapidash</li>
       <li>PW_Magmar</li>
-      <li>PW_Flareon</li>        
+      <li>PW_Flareon</li>
     </requiredKindCaught>
     <requiredCaughtMinCount>3</requiredCaughtMinCount>
   </PokeWorld.QuestConditionDef>
@@ -105,10 +105,10 @@
       </li>
     </generationsRequirements>
     <requiredKindCaught>
-      <li>PW_Lanturn</li> 
-      <li>PW_Pichu</li> 
-      <li>PW_Ampharos</li> 
-      <li>PW_Elekid</li>      
+      <li>PW_Lanturn</li>
+      <li>PW_Pichu</li>
+      <li>PW_Ampharos</li>
+      <li>PW_Elekid</li>
     </requiredKindCaught>
     <requiredCaughtMinCount>3</requiredCaughtMinCount>
   </PokeWorld.QuestConditionDef>
@@ -124,9 +124,9 @@
     </generationsRequirements>
     <requiredKindCaught>
       <li>PW_Typhlosion</li>
-      <li>PW_Magby</li>   
+      <li>PW_Magby</li>
       <li>PW_Houndoom</li>
-      <li>PW_Magcargo</li>   
+      <li>PW_Magcargo</li>
     </requiredKindCaught>
     <requiredCaughtMinCount>3</requiredCaughtMinCount>
   </PokeWorld.QuestConditionDef>
@@ -142,9 +142,9 @@
     </generationsRequirements>
     <requiredKindCaught>
       <li>PW_Feraligatr</li>
-      <li>PW_Azumarill</li> 
-      <li>PW_Quagsire</li>    
-      <li>PW_Mantine</li>    
+      <li>PW_Azumarill</li>
+      <li>PW_Quagsire</li>
+      <li>PW_Mantine</li>
     </requiredKindCaught>
     <requiredCaughtMinCount>3</requiredCaughtMinCount>
   </PokeWorld.QuestConditionDef>
@@ -210,7 +210,7 @@
         <minNoLegCaught>63</minNoLegCaught>
       </li>
     </generationsRequirements>
-    <requiredKindCaught>     
+    <requiredKindCaught>
     </requiredKindCaught>
     <requiredCaughtMinCount></requiredCaughtMinCount>
   </PokeWorld.QuestConditionDef>
@@ -225,7 +225,7 @@
       </li>
     </generationsRequirements>
     <requiredSeenMinCount></requiredSeenMinCount>
-    <requiredKindCaught> 
+    <requiredKindCaught>
     </requiredKindCaught>
     <requiredCaughtMinCount></requiredCaughtMinCount>
   </PokeWorld.QuestConditionDef>
@@ -239,7 +239,7 @@
         <minNoLegCaught>63</minNoLegCaught>
       </li>
     </generationsRequirements>
-    <requiredKindCaught>   
+    <requiredKindCaught>
     </requiredKindCaught>
     <requiredCaughtMinCount></requiredCaughtMinCount>
   </PokeWorld.QuestConditionDef>
@@ -370,7 +370,7 @@
         <minNoLegCaught>47</minNoLegCaught>
       </li>
     </generationsRequirements>
-    <requiredKindCaught>     
+    <requiredKindCaught>
     </requiredKindCaught>
     <requiredCaughtMinCount></requiredCaughtMinCount>
   </PokeWorld.QuestConditionDef>
@@ -385,7 +385,7 @@
       </li>
     </generationsRequirements>
     <requiredSeenMinCount></requiredSeenMinCount>
-    <requiredKindCaught> 
+    <requiredKindCaught>
     </requiredKindCaught>
     <requiredCaughtMinCount></requiredCaughtMinCount>
   </PokeWorld.QuestConditionDef>
@@ -399,7 +399,7 @@
         <minNoLegCaught>47</minNoLegCaught>
       </li>
     </generationsRequirements>
-    <requiredKindCaught>   
+    <requiredKindCaught>
     </requiredKindCaught>
     <requiredCaughtMinCount></requiredCaughtMinCount>
   </PokeWorld.QuestConditionDef>

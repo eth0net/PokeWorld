@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  
-<!--======== Ranged ============-->
-<!-- Normal Moves -->
-  
+
+  <!--======== Ranged ============-->
+  <!-- Normal Moves -->
+
   <SoundDef>
     <defName>PW_HyperBeam</defName>
     <context>MapOnly</context>
@@ -42,11 +42,10 @@
     </subSounds>
   </SoundDef>
 
-<!-- Fighting Moves -->
+  <!-- Fighting Moves -->
 
 
-
-<!-- Flying Moves -->
+  <!-- Flying Moves -->
 
   <SoundDef>
     <defName>PW_AirSlash</defName>
@@ -86,7 +85,7 @@
     </subSounds>
   </SoundDef>
 
-<!-- Poison Moves -->
+  <!-- Poison Moves -->
 
   <SoundDef>
     <defName>PW_Smog</defName>
@@ -126,7 +125,7 @@
     </subSounds>
   </SoundDef>
 
-<!-- Ground Moves -->
+  <!-- Ground Moves -->
 
   <SoundDef>
     <defName>PW_EarthPower</defName>
@@ -185,7 +184,7 @@
     </subSounds>
   </SoundDef>
 
-<!-- Rock Moves -->
+  <!-- Rock Moves -->
 
   <SoundDef>
     <defName>PW_AncientPower</defName>
@@ -225,7 +224,7 @@
     </subSounds>
   </SoundDef>
 
-<!-- Bug Moves -->
+  <!-- Bug Moves -->
 
   <SoundDef>
     <defName>PW_BugBuzz</defName>
@@ -265,7 +264,7 @@
     </subSounds>
   </SoundDef>
 
-<!-- Ghost Moves -->
+  <!-- Ghost Moves -->
 
   <SoundDef>
     <defName>PW_Hex</defName>
@@ -305,7 +304,7 @@
     </subSounds>
   </SoundDef>
 
-<!-- Steel Moves -->
+  <!-- Steel Moves -->
 
   <SoundDef>
     <defName>PW_FlashCannon</defName>
@@ -326,7 +325,7 @@
     </subSounds>
   </SoundDef>
 
-<!-- Fire Moves -->
+  <!-- Fire Moves -->
 
   <SoundDef>
     <defName>PW_Ember</defName>
@@ -423,7 +422,7 @@
     </subSounds>
   </SoundDef>
 
-<!-- Water Moves -->
+  <!-- Water Moves -->
 
   <SoundDef>
     <defName>PW_WaterGun</defName>
@@ -520,7 +519,7 @@
     </subSounds>
   </SoundDef>
 
-<!-- Grass Moves -->
+  <!-- Grass Moves -->
 
   <SoundDef>
     <defName>PW_Absorb</defName>
@@ -636,7 +635,7 @@
     </subSounds>
   </SoundDef>
 
-<!-- Electric Moves -->
+  <!-- Electric Moves -->
 
   <SoundDef>
     <defName>PW_Discharge</defName>
@@ -752,7 +751,7 @@
     </subSounds>
   </SoundDef>
 
-<!-- Psychic Moves -->
+  <!-- Psychic Moves -->
 
   <SoundDef>
     <defName>PW_Confusion</defName>
@@ -849,7 +848,7 @@
     </subSounds>
   </SoundDef>
 
-<!-- Ice Moves -->
+  <!-- Ice Moves -->
 
   <SoundDef>
     <defName>PW_PowderSnow</defName>
@@ -946,7 +945,7 @@
     </subSounds>
   </SoundDef>
 
-<!-- Dragon Moves -->
+  <!-- Dragon Moves -->
 
   <SoundDef>
     <defName>PW_Twister</defName>
@@ -1024,7 +1023,7 @@
     </subSounds>
   </SoundDef>
 
-<!-- Dark Moves -->
+  <!-- Dark Moves -->
 
   <SoundDef>
     <defName>PW_DarkPulse</defName>
@@ -1045,7 +1044,7 @@
     </subSounds>
   </SoundDef>
 
-<!-- Fairy Moves -->
+  <!-- Fairy Moves -->
 
   <SoundDef>
     <defName>PW_Moonblast</defName>
@@ -1084,6 +1083,6 @@
       </li>
     </subSounds>
   </SoundDef>
-      
+
 
 </Defs>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
   <ThingDef ParentName="ResourceBase" Name="PW_FossilBase" Abstract="True">
@@ -26,7 +26,7 @@
     </thingCategories>
   </ThingDef>
 
-<!-- ========================= -->
+  <!-- ========================= -->
 
   <ThingDef ParentName="PW_FossilBase">
     <defName>PW_HelixFossil</defName>
@@ -35,7 +35,7 @@
     <graphicData>
       <texPath>Things/Item/Fossils/Helix_Fossil</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>    
+    </graphicData>
   </ThingDef>
 
   <ThingDef ParentName="PW_FossilBase">
@@ -45,7 +45,7 @@
     <graphicData>
       <texPath>Things/Item/Fossils/Dome_Fossil</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>  
+    </graphicData>
   </ThingDef>
 
   <ThingDef ParentName="PW_FossilBase">
@@ -56,7 +56,7 @@
       <texPath>Things/Item/Fossils/Old_Amber</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>0.5</drawSize>
-    </graphicData>  
+    </graphicData>
   </ThingDef>
 
   <ThingDef ParentName="PW_FossilBase">
@@ -66,7 +66,7 @@
     <graphicData>
       <texPath>Things/Item/Fossils/Root_Fossil</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>   
+    </graphicData>
   </ThingDef>
 
   <ThingDef ParentName="PW_FossilBase">
@@ -76,7 +76,7 @@
     <graphicData>
       <texPath>Things/Item/Fossils/Claw_Fossil</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>  
+    </graphicData>
   </ThingDef>
 
   <ThingDef ParentName="PW_FossilBase">
@@ -86,7 +86,7 @@
     <graphicData>
       <texPath>Things/Item/Fossils/Skull_Fossil</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>  
+    </graphicData>
   </ThingDef>
 
   <ThingDef ParentName="PW_FossilBase">
@@ -96,7 +96,7 @@
     <graphicData>
       <texPath>Things/Item/Fossils/Armor_Fossil</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>   
+    </graphicData>
   </ThingDef>
 
   <ThingDef ParentName="PW_FossilBase">
@@ -137,27 +137,27 @@
   </ThingDef>
 
   <ThingDef ParentName="PW_UnfinishedFossilBase">
-  	<defName>PW_UnfinishedHelixFossil</defName>
+    <defName>PW_UnfinishedHelixFossil</defName>
     <label>unfinished Helix Fossil</label>
-    <description>A Helix Fossil being revived.</description>  
+    <description>A Helix Fossil being revived.</description>
     <graphicData>
       <texPath>Things/Item/Fossils/Helix_Fossil</texPath>
     </graphicData>
   </ThingDef>
 
   <ThingDef ParentName="PW_UnfinishedFossilBase">
-  	<defName>PW_UnfinishedDomeFossil</defName>
+    <defName>PW_UnfinishedDomeFossil</defName>
     <label>unfinished Dome Fossil</label>
-    <description>A Dome Fossil being revived.</description>  
+    <description>A Dome Fossil being revived.</description>
     <graphicData>
       <texPath>Things/Item/Fossils/Dome_Fossil</texPath>
     </graphicData>
   </ThingDef>
 
   <ThingDef ParentName="PW_UnfinishedFossilBase">
-  	<defName>PW_UnfinishedOldAmber</defName>
+    <defName>PW_UnfinishedOldAmber</defName>
     <label>unfinished Old Amber</label>
-    <description>An Old Amber being revived.</description>  
+    <description>An Old Amber being revived.</description>
     <graphicData>
       <texPath>Things/Item/Fossils/Old_Amber</texPath>
       <drawSize>0.5</drawSize>
@@ -165,36 +165,36 @@
   </ThingDef>
 
   <ThingDef ParentName="PW_UnfinishedFossilBase">
-  	<defName>PW_UnfinishedRootFossil</defName>
+    <defName>PW_UnfinishedRootFossil</defName>
     <label>unfinished Root Fossil</label>
-    <description>A Root Fossil being revived.</description>  
+    <description>A Root Fossil being revived.</description>
     <graphicData>
       <texPath>Things/Item/Fossils/Root_Fossil</texPath>
     </graphicData>
   </ThingDef>
 
   <ThingDef ParentName="PW_UnfinishedFossilBase">
-  	<defName>PW_UnfinishedClawFossil</defName>
+    <defName>PW_UnfinishedClawFossil</defName>
     <label>unfinished Claw Fossil</label>
-    <description>A Claw Fossil being revived.</description>  
+    <description>A Claw Fossil being revived.</description>
     <graphicData>
       <texPath>Things/Item/Fossils/Claw_Fossil</texPath>
     </graphicData>
   </ThingDef>
 
   <ThingDef ParentName="PW_UnfinishedFossilBase">
-  	<defName>PW_UnfinishedSkullFossil</defName>
+    <defName>PW_UnfinishedSkullFossil</defName>
     <label>unfinished Skull Fossil</label>
-    <description>A Skull Fossil being revived.</description>  
+    <description>A Skull Fossil being revived.</description>
     <graphicData>
       <texPath>Things/Item/Fossils/Skull_Fossil</texPath>
     </graphicData>
   </ThingDef>
 
   <ThingDef ParentName="PW_UnfinishedFossilBase">
-  	<defName>PW_UnfinishedArmorFossil</defName>
+    <defName>PW_UnfinishedArmorFossil</defName>
     <label>unfinished Armor Fossil</label>
-    <description>An Armor Fossil being revived.</description>  
+    <description>An Armor Fossil being revived.</description>
     <graphicData>
       <texPath>Things/Item/Fossils/Armor_Fossil</texPath>
     </graphicData>
@@ -203,7 +203,7 @@
   <ThingDef ParentName="PW_UnfinishedFossilBase">
     <defName>PW_UnfinishedOddKeystone</defName>
     <label>unfinished Odd Keystone</label>
-    <description>An Odd Keystone being opened.</description>  
+    <description>An Odd Keystone being opened.</description>
     <graphicData>
       <texPath>Things/Item/Fossils/Odd_Keystone</texPath>
     </graphicData>

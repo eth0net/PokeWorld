@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 
 <!--
   Each coverage value is relative to its parent.
@@ -61,7 +61,7 @@
           <def>Liver</def>
           <coverage>0.05</coverage>
           <depth>Inside</depth>
-        </li>  
+        </li>
         <li>
           <def>Head</def>
           <coverage>0.15</coverage>
@@ -99,7 +99,7 @@
               </groups>
             </li>
           </parts>
-        </li>        
+        </li>
         <li>
           <def>PW_Fin</def>
           <customLabel>left pectoral fin</customLabel>

@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-<!--======== Regular Moves ============-->
+  <!--======== Regular Moves ============-->
 
   <ManeuverDef>
     <defName>PW_Slash</defName>
@@ -17,7 +17,7 @@
     <combatLogRulesDodge>Maneuver_Slash_MeleeDodge</combatLogRulesDodge>
   </ManeuverDef>
 
-  <ManeuverDef Name = 'PW_Stab'>
+  <ManeuverDef Name='PW_Stab'>
     <defName>PW_Stab</defName>
     <requiredCapacity>PW_Stab</requiredCapacity>
     <verb>
@@ -31,7 +31,7 @@
     <combatLogRulesDodge>Maneuver_Stab_MeleeDodge</combatLogRulesDodge>
   </ManeuverDef>
 
-  <ManeuverDef Name = 'PW_Smash'>
+  <ManeuverDef Name='PW_Smash'>
     <defName>PW_Smash</defName>
     <requiredCapacity>PW_Smash</requiredCapacity>
     <verb>
@@ -45,7 +45,7 @@
     <combatLogRulesDodge>Maneuver_Smash_MeleeDodge</combatLogRulesDodge>
   </ManeuverDef>
 
-  <ManeuverDef Name = 'PW_Scratch'>
+  <ManeuverDef Name='PW_Scratch'>
     <defName>PW_Scratch</defName>
     <requiredCapacity>PW_Scratch</requiredCapacity>
     <verb>

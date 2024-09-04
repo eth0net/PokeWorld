@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
   <DamageDef>
@@ -16,7 +16,7 @@
     <explosionSnowMeltAmount>0</explosionSnowMeltAmount>
     <explosionCellFleck>BlastEMP</explosionCellFleck>
     <explosionColorEdge>(0.8, 0.8, 0.8, 0.8)</explosionColorEdge>
-    <explosionInteriorFleck>ElectricalSpark</explosionInteriorFleck>   
+    <explosionInteriorFleck>ElectricalSpark</explosionInteriorFleck>
     <soundExplosion>Explosion_EMP</soundExplosion>
   </DamageDef>
 

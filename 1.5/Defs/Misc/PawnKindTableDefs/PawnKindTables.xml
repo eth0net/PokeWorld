@@ -4,7 +4,7 @@
   <Pokeworld.PawnKindTableDef>
     <defName>Pokedex</defName>
     <workerClass>Pokeworld.PawnKindTable_Pokedex</workerClass>
-    <columns>     
+    <columns>
       <li>PokedexIcon</li>
       <li>PokedexStatus</li>
       <li>PokedexNumber</li>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 
 <!--
   Each coverage value is relative to its parent.
@@ -276,7 +276,7 @@
       <height>Middle</height>
       <depth>Outside</depth>
       <parts>
-      	<li>
+        <li>
           <def>Tail</def>
           <coverage>0.02</coverage>
           <height>Bottom</height>
@@ -530,7 +530,6 @@
       </parts>
     </corePart>
   </BodyDef>
-
 
 
 </Defs>

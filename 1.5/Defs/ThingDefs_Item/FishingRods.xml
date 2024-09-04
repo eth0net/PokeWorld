@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
   <ThingDef ParentName="ResourceBase" Name="PW_FishingRodBase" Abstract="True">
@@ -17,7 +17,7 @@
       <Beauty>-3</Beauty>
       <Flammability>1</Flammability>
       <DeteriorationRate>2</DeteriorationRate>
-    </statBases> 
+    </statBases>
     <soundInteract>Standard_Pickup</soundInteract>
     <tickerType>Normal</tickerType>
     <tradeTags>
@@ -25,7 +25,7 @@
     </tradeTags>
     <orderedTakeGroup>Medicine</orderedTakeGroup>
     <comps>
-      <li Class="PokeWorld.CompProperties_FishingRod"/>
+      <li Class="PokeWorld.CompProperties_FishingRod" />
     </comps>
   </ThingDef>
 
@@ -57,10 +57,10 @@
       <WorkToMake>1800</WorkToMake>
       <PW_FishingSpeedMultipler>0.8</PW_FishingSpeedMultipler>
       <PW_FishingLineStrenghtMultiplier>0.8</PW_FishingLineStrenghtMultiplier>
-    </statBases> 
+    </statBases>
     <costList>
       <WoodLog>40</WoodLog>
-    </costList>      
+    </costList>
     <recipeMaker>
       <recipeUsers>
         <li>CraftingSpot</li>
@@ -70,8 +70,8 @@
         <Crafting>2</Crafting>
       </skillRequirements>
       <effectWorking>Smelt</effectWorking>
-      <soundWorking>Recipe_MakeBow</soundWorking>  
-      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>   
+      <soundWorking>Recipe_MakeBow</soundWorking>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
   </ThingDef>
 
@@ -87,14 +87,14 @@
       <WorkToMake>7500</WorkToMake>
       <PW_FishingSpeedMultipler>1</PW_FishingSpeedMultipler>
       <PW_FishingLineStrenghtMultiplier>1</PW_FishingLineStrenghtMultiplier>
-    </statBases> 
+    </statBases>
     <thingSetMakerTags>
       <li>RewardStandardQualitySuper</li>
     </thingSetMakerTags>
     <costList>
       <Steel>50</Steel>
       <ComponentIndustrial>3</ComponentIndustrial>
-    </costList>      
+    </costList>
     <recipeMaker>
       <recipeUsers>
         <li>TableMachining</li>
@@ -118,14 +118,14 @@
       <WorkToMake>22500</WorkToMake>
       <PW_FishingSpeedMultipler>1.5</PW_FishingSpeedMultipler>
       <PW_FishingLineStrenghtMultiplier>1.5</PW_FishingLineStrenghtMultiplier>
-    </statBases> 
+    </statBases>
     <thingSetMakerTags>
       <li>RewardStandardLowFreq</li>
     </thingSetMakerTags>
     <costList>
       <Plasteel>55</Plasteel>
-      <ComponentSpacer>3</ComponentSpacer> 
-    </costList>      
+      <ComponentSpacer>3</ComponentSpacer>
+    </costList>
     <recipeMaker>
       <recipeUsers>
         <li>FabricationBench</li>
@@ -133,7 +133,7 @@
       <researchPrerequisite>PW_FishingSuper</researchPrerequisite>
       <skillRequirements>
         <Crafting>8</Crafting>
-      </skillRequirements> 
+      </skillRequirements>
     </recipeMaker>
   </ThingDef>
 

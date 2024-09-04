@@ -1,22 +1,22 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
   <PokeWorld.TypeDef>
     <defName>Normal</defName>
-    <label>Normal</label>   
+    <label>Normal</label>
     <weaknesses>
       <li>Fighting</li>
     </weaknesses>
     <immunities>
       <li>Ghost</li>
-    </immunities> 
+    </immunities>
     <uiIconPath>UI/Types/Normal</uiIconPath>
     <gizmoIconPath>UI/Gizmos/Types/Normal_icon</gizmoIconPath>
   </PokeWorld.TypeDef>
 
   <PokeWorld.TypeDef>
     <defName>Fighting</defName>
-    <label>Fighting</label>  
+    <label>Fighting</label>
     <resistances>
       <li>Rock</li>
       <li>Bug</li>
@@ -33,7 +33,7 @@
 
   <PokeWorld.TypeDef>
     <defName>Flying</defName>
-    <label>Flying</label>  
+    <label>Flying</label>
     <resistances>
       <li>Fighting</li>
       <li>Bug</li>
@@ -53,7 +53,7 @@
 
   <PokeWorld.TypeDef>
     <defName>Poison</defName>
-    <label>Poison</label>  
+    <label>Poison</label>
     <resistances>
       <li>Fighting</li>
       <li>Poison</li>
@@ -71,7 +71,7 @@
 
   <PokeWorld.TypeDef>
     <defName>Ground</defName>
-    <label>Ground</label>  
+    <label>Ground</label>
     <resistances>
       <li>Poison</li>
       <li>Rock</li>
@@ -90,7 +90,7 @@
 
   <PokeWorld.TypeDef>
     <defName>Rock</defName>
-    <label>Rock</label>  
+    <label>Rock</label>
     <resistances>
       <li>Normal</li>
       <li>Flying</li>
@@ -110,7 +110,7 @@
 
   <PokeWorld.TypeDef>
     <defName>Bug</defName>
-    <label>Bug</label>  
+    <label>Bug</label>
     <resistances>
       <li>Fighting</li>
       <li>Ground</li>
@@ -127,7 +127,7 @@
 
   <PokeWorld.TypeDef>
     <defName>Ghost</defName>
-    <label>Ghost</label>  
+    <label>Ghost</label>
     <resistances>
       <li>Poison</li>
       <li>Bug</li>
@@ -145,7 +145,7 @@
 
   <PokeWorld.TypeDef>
     <defName>Steel</defName>
-    <label>Steel</label>  
+    <label>Steel</label>
     <resistances>
       <li>Normal</li>
       <li>Flying</li>
@@ -172,7 +172,7 @@
 
   <PokeWorld.TypeDef>
     <defName>Fire</defName>
-    <label>Fire</label>  
+    <label>Fire</label>
     <resistances>
       <li>Bug</li>
       <li>Steel</li>
@@ -192,7 +192,7 @@
 
   <PokeWorld.TypeDef>
     <defName>Water</defName>
-    <label>Water</label>  
+    <label>Water</label>
     <resistances>
       <li>Steel</li>
       <li>Fire</li>
@@ -209,7 +209,7 @@
 
   <PokeWorld.TypeDef>
     <defName>Grass</defName>
-    <label>Grass</label>  
+    <label>Grass</label>
     <resistances>
       <li>Ground</li>
       <li>Water</li>
@@ -229,7 +229,7 @@
 
   <PokeWorld.TypeDef>
     <defName>Electric</defName>
-    <label>Electric</label>  
+    <label>Electric</label>
     <resistances>
       <li>Flying</li>
       <li>Steel</li>
@@ -244,7 +244,7 @@
 
   <PokeWorld.TypeDef>
     <defName>Psychic</defName>
-    <label>Psychic</label>  
+    <label>Psychic</label>
     <resistances>
       <li>Fighting</li>
       <li>Psychic</li>
@@ -260,7 +260,7 @@
 
   <PokeWorld.TypeDef>
     <defName>Ice</defName>
-    <label>Ice</label>  
+    <label>Ice</label>
     <resistances>
       <li>Ice</li>
     </resistances>
@@ -276,7 +276,7 @@
 
   <PokeWorld.TypeDef>
     <defName>Dragon</defName>
-    <label>Dragon</label>  
+    <label>Dragon</label>
     <resistances>
       <li>Fire</li>
       <li>Water</li>
@@ -294,7 +294,7 @@
 
   <PokeWorld.TypeDef>
     <defName>Dark</defName>
-    <label>Dark</label>  
+    <label>Dark</label>
     <resistances>
       <li>Ghost</li>
       <li>Dark</li>
@@ -313,7 +313,7 @@
 
   <PokeWorld.TypeDef>
     <defName>Fairy</defName>
-    <label>Fairy</label>  
+    <label>Fairy</label>
     <resistances>
       <li>Fighting</li>
       <li>Bug</li>

@@ -2,7 +2,7 @@
 <Defs>
 
   <ThingDef Name="PW_PokemonLeatherBase" ParentName="ResourceBase" Abstract="True">
-  	<description>The skin of a dead Pokémon. A good traditional material for making clothes and bags.</description>
+    <description>The skin of a dead Pokémon. A good traditional material for making clothes and bags.</description>
     <graphicData>
       <texPath>Things/Item/Resource/Leather</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>

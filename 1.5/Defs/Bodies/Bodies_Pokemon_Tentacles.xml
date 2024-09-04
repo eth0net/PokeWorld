@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 
 <!--
   Each coverage value is relative to its parent.
@@ -56,7 +56,7 @@
           <def>Liver</def>
           <coverage>0.05</coverage>
           <depth>Inside</depth>
-        </li>  
+        </li>
         <li>
           <def>Head</def>
           <coverage>0.15</coverage>
@@ -90,11 +90,11 @@
               <def>Beak</def>
               <coverage>0.25</coverage>
               <groups>
-            	<li>Beak</li>
+                <li>Beak</li>
               </groups>
             </li>
           </parts>
-        </li>        
+        </li>
         <li>
           <def>PW_Tentacle</def>
           <customLabel>first tentacle</customLabel>
@@ -193,7 +193,7 @@
           <def>Liver</def>
           <coverage>0.05</coverage>
           <depth>Inside</depth>
-        </li>  
+        </li>
         <li>
           <def>Head</def>
           <coverage>0.15</coverage>
@@ -227,11 +227,11 @@
               <def>Beak</def>
               <coverage>0.25</coverage>
               <groups>
-            	<li>Beak</li>
+                <li>Beak</li>
               </groups>
             </li>
           </parts>
-        </li>        
+        </li>
         <li>
           <def>PW_Tentacle</def>
           <customLabel>first tentacle</customLabel>

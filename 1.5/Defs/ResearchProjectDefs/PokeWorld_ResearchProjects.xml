@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
   <ResearchProjectDef>
@@ -67,7 +67,7 @@
   </ResearchProjectDef>
 
 
-    <!--==============================================-->
+  <!--==============================================-->
 
   <ResearchProjectDef>
     <defName>PW_FossilResurrectorResearch</defName>
@@ -87,7 +87,7 @@
     <researchViewY>1.5</researchViewY>
   </ResearchProjectDef>
 
-    <!--==============================================-->
+  <!--==============================================-->
 
   <ResearchProjectDef>
     <defName>PW_PotionResearch</defName>
@@ -138,8 +138,8 @@
     <researchViewY>0.75</researchViewY>
   </ResearchProjectDef>
 
-    <!--==============================================-->
-  
+  <!--==============================================-->
+
   <ResearchProjectDef>
     <defName>PW_StorageSystem</defName>
     <label>Pokémon storage system</label>
@@ -212,7 +212,7 @@
     <researchViewY>2.25</researchViewY>
   </ResearchProjectDef>
 
-      <!--==============================================-->
+  <!--==============================================-->
 
   <ResearchProjectDef>
     <defName>PW_Fishing</defName>

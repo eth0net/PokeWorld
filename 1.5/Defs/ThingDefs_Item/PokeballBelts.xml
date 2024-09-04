@@ -15,9 +15,9 @@
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>Transparent</shaderType>
     </graphicData>
-    <projectile>      
+    <projectile>
       <arcHeightFactor>2</arcHeightFactor>
-      <shadowSize>0.4</shadowSize>     
+      <shadowSize>0.4</shadowSize>
       <damageDef>PW_Pokeball</damageDef>
       <damageAmountBase>1</damageAmountBase>
       <explosionDelay>5</explosionDelay>
@@ -28,60 +28,60 @@
     <defName>PW_Proj_ApricornBall</defName>
     <label>Apricorn Ball</label>
     <graphicData>
-      <texPath>Things/Item/Utility/Balls/ApricornBall</texPath>      
-    </graphicData> 
+      <texPath>Things/Item/Utility/Balls/ApricornBall</texPath>
+    </graphicData>
     <projectile>
       <speed>10</speed>
       <explosionRadius>1.5</explosionRadius>
-    </projectile> 
+    </projectile>
   </ThingDef>
 
   <ThingDef ParentName="PW_BasePokeballProjectile">
     <defName>PW_Proj_PokeBall</defName>
     <label>Poké Ball</label>
     <graphicData>
-      <texPath>Things/Item/Utility/Balls/PokeBall</texPath>      
-    </graphicData> 
+      <texPath>Things/Item/Utility/Balls/PokeBall</texPath>
+    </graphicData>
     <projectile>
       <speed>12</speed>
       <explosionRadius>1.9</explosionRadius>
-    </projectile> 
+    </projectile>
   </ThingDef>
 
   <ThingDef ParentName="PW_BasePokeballProjectile">
     <defName>PW_Proj_GreatBall</defName>
     <label>Great Ball</label>
     <graphicData>
-      <texPath>Things/Item/Utility/Balls/GreatBall</texPath>      
+      <texPath>Things/Item/Utility/Balls/GreatBall</texPath>
     </graphicData>
     <projectile>
       <speed>14</speed>
       <explosionRadius>2.4</explosionRadius>
-    </projectile> 
+    </projectile>
   </ThingDef>
 
   <ThingDef ParentName="PW_BasePokeballProjectile">
     <defName>PW_Proj_UltraBall</defName>
     <label>Ultra Ball</label>
     <graphicData>
-      <texPath>Things/Item/Utility/Balls/UltraBall</texPath>      
-    </graphicData> 
+      <texPath>Things/Item/Utility/Balls/UltraBall</texPath>
+    </graphicData>
     <projectile>
       <speed>16</speed>
       <explosionRadius>2.9</explosionRadius>
-    </projectile>  
+    </projectile>
   </ThingDef>
 
   <ThingDef ParentName="PW_BasePokeballProjectile">
     <defName>PW_Proj_MasterBall</defName>
     <label>Master Ball</label>
     <graphicData>
-      <texPath>Things/Item/Utility/Balls/MasterBall</texPath>      
+      <texPath>Things/Item/Utility/Balls/MasterBall</texPath>
     </graphicData>
     <projectile>
       <speed>20</speed>
       <explosionRadius>3.9</explosionRadius>
-    </projectile>   
+    </projectile>
   </ThingDef>
 
   <!-- ========================= -->
@@ -99,34 +99,64 @@
       <Mass>0.7</Mass>
       <Beauty>-3</Beauty>
       <Flammability>0.5</Flammability>
-    </statBases> 
+    </statBases>
     <soundInteract>Standard_Pickup</soundInteract>
     <tickerType>Normal</tickerType>
     <apparel>
       <wornGraphicData>
-  	    <renderUtilityAsPack>true</renderUtilityAsPack>
-  	    <north>
-  	      <male>  <offset>(0.25, -0.25)</offset> </male>
-  	      <female><offset>(0.25,-0.25)</offset> </female>
-  	      <thin>  <offset>(0.15,-0.25)</offset> </thin>
-  	      <hulk>  <offset>(0.25,-0.3)</offset> </hulk>
-  	      <fat>   <offset>(0.45,-0.25)</offset> </fat>
-  	    </north>
-  	    <south>
-  	      <male>  <offset>(-0.3, -0.25)</offset> </male>
-  	      <female><offset>(-0.3,-0.25)</offset> </female>
-  	      <thin>  <offset>(-0.2,-0.25)</offset> </thin>
-  	      <hulk>  <offset>(-0.3,-0.3)</offset> </hulk>
-  	      <fat>   <offset>(-0.5,-0.25)</offset> </fat>
-  	    </south>
-  	    <east>
-  	      <offset>(-0.05,-0.3)</offset>
-  	    </east>
-  	    <male>  <scale>(0.2,0.2)</scale> </male>
-  	    <female><scale>(0.2,0.2)</scale> </female>
-  	    <thin>  <scale>(0.2,0.2)</scale> </thin>
-  	    <hulk>  <scale>(0.2,0.2)</scale> </hulk>
-  	    <fat>   <scale>(0.2,0.2)</scale> </fat>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+        <north>
+          <male>
+            <offset>(0.25, -0.25)</offset>
+          </male>
+          <female>
+            <offset>(0.25,-0.25)</offset>
+          </female>
+          <thin>
+            <offset>(0.15,-0.25)</offset>
+          </thin>
+          <hulk>
+            <offset>(0.25,-0.3)</offset>
+          </hulk>
+          <fat>
+            <offset>(0.45,-0.25)</offset>
+          </fat>
+        </north>
+        <south>
+          <male>
+            <offset>(-0.3, -0.25)</offset>
+          </male>
+          <female>
+            <offset>(-0.3,-0.25)</offset>
+          </female>
+          <thin>
+            <offset>(-0.2,-0.25)</offset>
+          </thin>
+          <hulk>
+            <offset>(-0.3,-0.3)</offset>
+          </hulk>
+          <fat>
+            <offset>(-0.5,-0.25)</offset>
+          </fat>
+        </south>
+        <east>
+          <offset>(-0.05,-0.3)</offset>
+        </east>
+        <male>
+          <scale>(0.2,0.2)</scale>
+        </male>
+        <female>
+          <scale>(0.2,0.2)</scale>
+        </female>
+        <thin>
+          <scale>(0.2,0.2)</scale>
+        </thin>
+        <hulk>
+          <scale>(0.2,0.2)</scale>
+        </hulk>
+        <fat>
+          <scale>(0.2,0.2)</scale>
+        </fat>
       </wornGraphicData>
       <tags Inherit="false">
         <li>PW_BallBelt</li>
@@ -168,14 +198,14 @@
     <apparel>
       <wornGraphicPath>Things/Item/Utility/Worn/ApricornBall/ApricornBall</wornGraphicPath>
     </apparel>
-    <techLevel>Neolithic</techLevel>  
+    <techLevel>Neolithic</techLevel>
     <statBases>
       <WorkToMake>1800</WorkToMake>
       <PW_BonusBall>0.6</PW_BonusBall>
-    </statBases> 
+    </statBases>
     <costList>
       <WoodLog>45</WoodLog>
-    </costList>        
+    </costList>
     <recipeMaker>
       <recipeUsers>
         <li>CraftingSpot</li>
@@ -185,8 +215,8 @@
         <Crafting>2</Crafting>
       </skillRequirements>
       <effectWorking>Smelt</effectWorking>
-      <soundWorking>Recipe_MakeBow</soundWorking>  
-      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>   
+      <soundWorking>Recipe_MakeBow</soundWorking>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
     <verbs>
       <li>
@@ -240,7 +270,7 @@
     <apparel>
       <wornGraphicPath>Things/Item/Utility/Worn/PokeBall/PokeBall</wornGraphicPath>
     </apparel>
-    <techLevel>Industrial</techLevel> 
+    <techLevel>Industrial</techLevel>
     <statBases>
       <WorkToMake>3200</WorkToMake>
       <PW_BonusBall>1</PW_BonusBall>
@@ -256,8 +286,8 @@
       <researchPrerequisite>PW_PokeBallResearch</researchPrerequisite>
       <skillRequirements>
         <Crafting>4</Crafting>
-      </skillRequirements>  
-    </recipeMaker>      
+      </skillRequirements>
+    </recipeMaker>
     <thingSetMakerTags>
       <li>RewardStandardQualitySuper</li>
     </thingSetMakerTags>
@@ -313,7 +343,7 @@
     <apparel>
       <wornGraphicPath>Things/Item/Utility/Worn/GreatBall/GreatBall</wornGraphicPath>
     </apparel>
-    <techLevel>Industrial</techLevel> 
+    <techLevel>Industrial</techLevel>
     <statBases>
       <WorkToMake>10000</WorkToMake>
       <PW_BonusBall>2</PW_BonusBall>
@@ -329,8 +359,8 @@
       <researchPrerequisite>PW_GreatBallResearch</researchPrerequisite>
       <skillRequirements>
         <Crafting>6</Crafting>
-      </skillRequirements>  
-    </recipeMaker>     
+      </skillRequirements>
+    </recipeMaker>
     <thingSetMakerTags>
       <li>RewardStandardQualitySuper</li>
     </thingSetMakerTags>
@@ -393,7 +423,7 @@
     </statBases>
     <costList>
       <Plasteel>40</Plasteel>
-      <ComponentSpacer>2</ComponentSpacer>      
+      <ComponentSpacer>2</ComponentSpacer>
     </costList>
     <recipeMaker>
       <recipeUsers>
@@ -402,8 +432,8 @@
       <researchPrerequisite>PW_UltraBallResearch</researchPrerequisite>
       <skillRequirements>
         <Crafting>8</Crafting>
-      </skillRequirements>  
-    </recipeMaker>   
+      </skillRequirements>
+    </recipeMaker>
     <thingSetMakerTags>
       <li>RewardStandardQualitySuper</li>
     </thingSetMakerTags>
@@ -459,17 +489,17 @@
     <apparel>
       <wornGraphicPath>Things/Item/Utility/Worn/MasterBall/MasterBall</wornGraphicPath>
     </apparel>
-    <techLevel>Ultra</techLevel>  
+    <techLevel>Ultra</techLevel>
     <statBases>
       <MarketValue>1800</MarketValue>
       <PW_BonusBall>255</PW_BonusBall>
-    </statBases>      
+    </statBases>
     <thingSetMakerTags>
       <li>RewardStandardLowFreq</li>
     </thingSetMakerTags>
     <smeltProducts>
       <Plasteel>40</Plasteel>
-      <ComponentSpacer>2</ComponentSpacer>  
+      <ComponentSpacer>2</ComponentSpacer>
     </smeltProducts>
     <verbs>
       <li>

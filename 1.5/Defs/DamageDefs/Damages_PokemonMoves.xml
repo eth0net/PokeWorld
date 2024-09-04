@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-<!--======== Moves ============-->
+  <!--======== Moves ============-->
   <DamageDef ParentName="CutBase">
     <defName>PW_Slash</defName>
     <workerClass>PokeWorld.DamageWorker_PokemonSlash</workerClass>

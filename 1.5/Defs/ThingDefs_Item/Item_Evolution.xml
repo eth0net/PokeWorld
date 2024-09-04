@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
   <ThingDef ParentName="ResourceBase" Name="PW_EvolutionRockBase" Abstract="True">
@@ -14,7 +14,7 @@
     <tradeability>All</tradeability>
     <stackLimit>10</stackLimit>
     <soundDrop>Stone_Drop</soundDrop>
-    <techLevel>Neolithic</techLevel>  
+    <techLevel>Neolithic</techLevel>
     <thingSetMakerTags>
       <li>PW_RewardEvolutionStone</li>
     </thingSetMakerTags>
@@ -62,7 +62,7 @@
       <drawSize>0.5</drawSize>
     </graphicData>
   </ThingDef>
-  
+
   <RecipeDef ParentName="PW_EvolutionItemRecipeBase">
     <defName>PW_ExposeFireStone</defName>
     <label>expose to Fire Stone</label>
@@ -98,7 +98,7 @@
       <drawSize>0.5</drawSize>
     </graphicData>
   </ThingDef>
-  
+
   <RecipeDef ParentName="PW_EvolutionItemRecipeBase">
     <defName>PW_ExposeIceStone</defName>
     <label>expose to Ice Stone</label>
@@ -133,7 +133,7 @@
       <drawSize>0.5</drawSize>
     </graphicData>
   </ThingDef>
-  
+
   <RecipeDef ParentName="PW_EvolutionItemRecipeBase">
     <defName>PW_ExposeLeafStone</defName>
     <label>expose to Leaf Stone</label>
@@ -168,7 +168,7 @@
       <drawSize>0.5</drawSize>
     </graphicData>
   </ThingDef>
-  
+
   <RecipeDef ParentName="PW_EvolutionItemRecipeBase">
     <defName>PW_ExposeMoonStone</defName>
     <label>expose to Moon Stone</label>
@@ -203,7 +203,7 @@
       <drawSize>0.5</drawSize>
     </graphicData>
   </ThingDef>
-  
+
   <RecipeDef ParentName="PW_EvolutionItemRecipeBase">
     <defName>PW_ExposeShinyStone</defName>
     <label>expose to Shiny Stone</label>
@@ -238,7 +238,7 @@
       <drawSize>0.5</drawSize>
     </graphicData>
   </ThingDef>
-  
+
   <RecipeDef ParentName="PW_EvolutionItemRecipeBase">
     <defName>PW_ExposeThunderStone</defName>
     <label>expose to Thunder Stone</label>
@@ -273,7 +273,7 @@
       <drawSize>0.5</drawSize>
     </graphicData>
   </ThingDef>
-  
+
   <RecipeDef ParentName="PW_EvolutionItemRecipeBase">
     <defName>PW_ExposeWaterStone</defName>
     <label>expose to Water Stone</label>
@@ -308,7 +308,7 @@
       <drawSize>0.6</drawSize>
     </graphicData>
   </ThingDef>
-  
+
   <RecipeDef ParentName="PW_EvolutionItemRecipeBase">
     <defName>PW_ExposeKingsRock</defName>
     <label>expose to Kings Rock</label>
@@ -359,10 +359,10 @@
       <skillRequirements>
         <Crafting>7</Crafting>
         <Intellectual>5</Intellectual>
-      </skillRequirements> 
+      </skillRequirements>
     </recipeMaker>
   </ThingDef>
-  
+
   <RecipeDef ParentName="PW_EvolutionItemRecipeBase">
     <defName>PW_ExposeUpgrade</defName>
     <label>download Upgrade</label>
@@ -413,10 +413,10 @@
       <skillRequirements>
         <Crafting>8</Crafting>
         <Intellectual>6</Intellectual>
-      </skillRequirements> 
+      </skillRequirements>
     </recipeMaker>
   </ThingDef>
-  
+
   <RecipeDef ParentName="PW_EvolutionItemRecipeBase">
     <defName>PW_ExposeDubiousDisc</defName>
     <label>download Dubious Disc</label>

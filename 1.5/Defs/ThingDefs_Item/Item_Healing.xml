@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <ThingDef ParentName="MedicineBase" Name="PokeMedicineBase" Abstract="True">  
-    <thingClass>ThingWithComps</thingClass>  
+  <ThingDef ParentName="MedicineBase" Name="PokeMedicineBase" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
     <graphicData>
       <drawSize>0.7</drawSize>
     </graphicData>
@@ -11,7 +11,7 @@
     </thingCategories>
   </ThingDef>
 
-  <ThingDef ParentName="PokeMedicineBase" Name="MakeablePokeMedicineBase" Abstract="True">  
+  <ThingDef ParentName="PokeMedicineBase" Name="MakeablePokeMedicineBase" Abstract="True">
     <recipeMaker>
       <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
@@ -116,7 +116,9 @@
     <tradeTags>
       <li>ExoticMisc</li>
     </tradeTags>
-    <thingSetMakerTags><li>RewardStandardHighFreq</li></thingSetMakerTags>
+    <thingSetMakerTags>
+      <li>RewardStandardHighFreq</li>
+    </thingSetMakerTags>
   </ThingDef>
 
   <ThingDef ParentName="PokeMedicineBase" Name="PW_PokemonSerumBase" Abstract="True">
@@ -170,7 +172,7 @@
     </thingSetMakerTags>
   </ThingDef>
 
-<!--
+  <!--
 
   <ThingDef ParentName="PW_PokemonSerumBase">
     <defName>PW_SacredAsh</defName>

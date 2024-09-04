@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-<!--======== Melee ============-->
-<!-- Normal Moves -->
+  <!--======== Melee ============-->
+  <!-- Normal Moves -->
 
   <PokeWorld.MoveDef>
     <defName>Struggle</defName>
@@ -191,7 +191,7 @@
     </tool>
   </PokeWorld.MoveDef>
 
-<!-- Fighting Moves -->
+  <!-- Fighting Moves -->
 
   <PokeWorld.MoveDef>
     <defName>CloseCombat</defName>
@@ -312,7 +312,7 @@
     </tool>
   </PokeWorld.MoveDef>
 
-<!-- Flying Moves -->
+  <!-- Flying Moves -->
 
   <PokeWorld.MoveDef>
     <defName>Peck</defName>
@@ -365,7 +365,7 @@
     </tool>
   </PokeWorld.MoveDef>
 
-<!-- Poison Moves -->
+  <!-- Poison Moves -->
 
   <PokeWorld.MoveDef>
     <defName>PoisonSting</defName>
@@ -401,7 +401,7 @@
     </tool>
   </PokeWorld.MoveDef>
 
-<!-- Ground Moves -->
+  <!-- Ground Moves -->
 
   <PokeWorld.MoveDef>
     <defName>MudSlap</defName>
@@ -454,7 +454,7 @@
     </tool>
   </PokeWorld.MoveDef>
 
-<!-- Rock Moves -->
+  <!-- Rock Moves -->
 
   <PokeWorld.MoveDef>
     <defName>Rollout</defName>
@@ -541,7 +541,7 @@
     </tool>
   </PokeWorld.MoveDef>
 
-<!-- Bug Moves -->
+  <!-- Bug Moves -->
 
   <PokeWorld.MoveDef>
     <defName>FuryCutter</defName>
@@ -611,7 +611,7 @@
     </tool>
   </PokeWorld.MoveDef>
 
-<!-- Ghost Moves -->
+  <!-- Ghost Moves -->
 
   <PokeWorld.MoveDef>
     <defName>Astonish</defName>
@@ -663,8 +663,8 @@
       <cooldownTime>1.7</cooldownTime>
     </tool>
   </PokeWorld.MoveDef>
-  
-<!-- Steel Moves -->
+
+  <!-- Steel Moves -->
 
   <PokeWorld.MoveDef>
     <defName>MetalClaw</defName>
@@ -734,7 +734,7 @@
     </tool>
   </PokeWorld.MoveDef>
 
-<!-- Fire Moves -->
+  <!-- Fire Moves -->
 
   <PokeWorld.MoveDef>
     <defName>FireFang</defName>
@@ -770,7 +770,7 @@
     </tool>
   </PokeWorld.MoveDef>
 
-<!-- Water Moves -->
+  <!-- Water Moves -->
 
   <PokeWorld.MoveDef>
     <defName>AquaTail</defName>
@@ -789,7 +789,7 @@
     </tool>
   </PokeWorld.MoveDef>
 
-<!-- Grass Moves -->
+  <!-- Grass Moves -->
 
   <PokeWorld.MoveDef>
     <defName>RazorLeaf</defName>
@@ -825,7 +825,7 @@
     </tool>
   </PokeWorld.MoveDef>
 
-<!-- Electric Moves -->
+  <!-- Electric Moves -->
 
   <PokeWorld.MoveDef>
     <defName>ThunderFang</defName>
@@ -878,7 +878,7 @@
     </tool>
   </PokeWorld.MoveDef>
 
-<!-- Psychic Moves -->
+  <!-- Psychic Moves -->
 
   <PokeWorld.MoveDef>
     <defName>ZenHeadbutt</defName>
@@ -897,7 +897,7 @@
     </tool>
   </PokeWorld.MoveDef>
 
-<!-- Ice Moves -->
+  <!-- Ice Moves -->
 
   <PokeWorld.MoveDef>
     <defName>IceFang</defName>
@@ -950,7 +950,7 @@
     </tool>
   </PokeWorld.MoveDef>
 
-<!-- Dragon Moves -->
+  <!-- Dragon Moves -->
 
   <PokeWorld.MoveDef>
     <defName>DragonClaw</defName>
@@ -1020,7 +1020,7 @@
     </tool>
   </PokeWorld.MoveDef>
 
-<!-- Dark Moves -->
+  <!-- Dark Moves -->
 
   <PokeWorld.MoveDef>
     <defName>Bite</defName>
@@ -1038,7 +1038,7 @@
       <cooldownTime>2</cooldownTime>
     </tool>
   </PokeWorld.MoveDef>
-  
+
   <PokeWorld.MoveDef>
     <defName>Crunch</defName>
     <label>Crunch</label>
@@ -1124,7 +1124,7 @@
     </tool>
   </PokeWorld.MoveDef>
 
-<!-- Fairy Moves -->
+  <!-- Fairy Moves -->
 
   <PokeWorld.MoveDef>
     <defName>PlayRough</defName>

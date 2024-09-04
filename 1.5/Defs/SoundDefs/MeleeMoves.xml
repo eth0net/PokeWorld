@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-<!-- Normal Moves -->
+  <!-- Normal Moves -->
 
   <SoundDef>
     <defName>PW_Struggle</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -24,8 +24,8 @@
 
   <SoundDef>
     <defName>PW_Pound</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -43,8 +43,8 @@
 
   <SoundDef>
     <defName>PW_Scratch</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -62,8 +62,8 @@
 
   <SoundDef>
     <defName>PW_Headbutt</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -81,8 +81,8 @@
 
   <SoundDef>
     <defName>PW_FuryAttack</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -100,8 +100,8 @@
 
   <SoundDef>
     <defName>PW_Tackle</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -119,8 +119,8 @@
 
   <SoundDef>
     <defName>PW_TakeDown</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -138,8 +138,8 @@
 
   <SoundDef>
     <defName>PW_DoubleEdge</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -157,8 +157,8 @@
 
   <SoundDef>
     <defName>PW_QuickAttack</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -176,8 +176,8 @@
 
   <SoundDef>
     <defName>PW_FurySwipes</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -195,8 +195,8 @@
 
   <SoundDef>
     <defName>PW_Slash</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -212,12 +212,12 @@
     </subSounds>
   </SoundDef>
 
-<!-- Fighting Moves -->
+  <!-- Fighting Moves -->
 
   <SoundDef>
     <defName>PW_CloseCombat</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -235,8 +235,8 @@
 
   <SoundDef>
     <defName>PW_HammerArm</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -254,8 +254,8 @@
 
   <SoundDef>
     <defName>PW_Superpower</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -273,8 +273,8 @@
 
   <SoundDef>
     <defName>PW_Revenge</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -292,8 +292,8 @@
 
   <SoundDef>
     <defName>PW_WakeUpSlap</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -311,8 +311,8 @@
 
   <SoundDef>
     <defName>PW_LowKick</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -330,8 +330,8 @@
 
   <SoundDef>
     <defName>PW_DoubleKick</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -347,12 +347,12 @@
     </subSounds>
   </SoundDef>
 
-<!-- Flying Moves -->
+  <!-- Flying Moves -->
 
   <SoundDef>
     <defName>PW_Peck</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -370,8 +370,8 @@
 
   <SoundDef>
     <defName>PW_WingAttack</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -389,8 +389,8 @@
 
   <SoundDef>
     <defName>PW_Acrobatics</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -406,12 +406,12 @@
     </subSounds>
   </SoundDef>
 
-<!-- Poison Moves -->
+  <!-- Poison Moves -->
 
   <SoundDef>
     <defName>PW_PoisonSting</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -429,8 +429,8 @@
 
   <SoundDef>
     <defName>PW_PoisonJab</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -446,12 +446,12 @@
     </subSounds>
   </SoundDef>
 
-<!-- Ground Moves -->
+  <!-- Ground Moves -->
 
   <SoundDef>
     <defName>PW_MudSlap</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -469,8 +469,8 @@
 
   <SoundDef>
     <defName>PW_Earthquake</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -488,8 +488,8 @@
 
   <SoundDef>
     <defName>PW_SandTomb</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -505,12 +505,12 @@
     </subSounds>
   </SoundDef>
 
-<!-- Rock Moves -->
+  <!-- Rock Moves -->
 
   <SoundDef>
     <defName>PW_Rollout</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -528,8 +528,8 @@
 
   <SoundDef>
     <defName>PW_RockSlide</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -547,8 +547,8 @@
 
   <SoundDef>
     <defName>PW_StoneEdge</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -566,8 +566,8 @@
 
   <SoundDef>
     <defName>PW_RockThrow</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -585,8 +585,8 @@
 
   <SoundDef>
     <defName>PW_RockBlast</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -602,12 +602,12 @@
     </subSounds>
   </SoundDef>
 
-<!-- Bug Moves -->
+  <!-- Bug Moves -->
 
   <SoundDef>
     <defName>PW_FuryCutter</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -625,8 +625,8 @@
 
   <SoundDef>
     <defName>PW_BugBite</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -644,8 +644,8 @@
 
   <SoundDef>
     <defName>PW_LeechLife</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -663,8 +663,8 @@
 
   <SoundDef>
     <defName>PW_XScissor</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -680,12 +680,12 @@
     </subSounds>
   </SoundDef>
 
-<!-- Ghost Moves -->
+  <!-- Ghost Moves -->
 
   <SoundDef>
     <defName>PW_Astonish</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -703,8 +703,8 @@
 
   <SoundDef>
     <defName>PW_Lick</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -722,8 +722,8 @@
 
   <SoundDef>
     <defName>PW_ShadowSneak</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -738,13 +738,13 @@
       </li>
     </subSounds>
   </SoundDef>
-  
-<!-- Steel Moves -->
+
+  <!-- Steel Moves -->
 
   <SoundDef>
     <defName>PW_MetalClaw</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -762,8 +762,8 @@
 
   <SoundDef>
     <defName>PW_GyroBall</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -781,8 +781,8 @@
 
   <SoundDef>
     <defName>PW_HeavySlam</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -800,8 +800,8 @@
 
   <SoundDef>
     <defName>PW_IronHead</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -817,12 +817,12 @@
     </subSounds>
   </SoundDef>
 
-<!-- Fire Moves -->
+  <!-- Fire Moves -->
 
   <SoundDef>
     <defName>PW_FireFang</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -840,8 +840,8 @@
 
   <SoundDef>
     <defName>PW_FirePunch</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -857,12 +857,12 @@
     </subSounds>
   </SoundDef>
 
-<!-- Water Moves -->
+  <!-- Water Moves -->
 
   <SoundDef>
     <defName>PW_AquaTail</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -878,12 +878,12 @@
     </subSounds>
   </SoundDef>
 
-<!-- Grass Moves -->
+  <!-- Grass Moves -->
 
   <SoundDef>
     <defName>PW_RazorLeaf</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -901,8 +901,8 @@
 
   <SoundDef>
     <defName>PW_VineWhip</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -918,12 +918,12 @@
     </subSounds>
   </SoundDef>
 
-<!-- Electric Moves -->
+  <!-- Electric Moves -->
 
   <SoundDef>
     <defName>PW_ThunderFang</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -941,8 +941,8 @@
 
   <SoundDef>
     <defName>PW_Spark</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -960,8 +960,8 @@
 
   <SoundDef>
     <defName>PW_ThunderPunch</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -977,12 +977,12 @@
     </subSounds>
   </SoundDef>
 
-<!-- Psychic Moves -->
+  <!-- Psychic Moves -->
 
   <SoundDef>
     <defName>PW_ZenHeadbutt</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -998,12 +998,12 @@
     </subSounds>
   </SoundDef>
 
-<!-- Ice Moves -->
+  <!-- Ice Moves -->
 
   <SoundDef>
     <defName>PW_IceFang</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -1021,8 +1021,8 @@
 
   <SoundDef>
     <defName>PW_IceShard</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -1040,8 +1040,8 @@
 
   <SoundDef>
     <defName>PW_IcePunch</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -1057,12 +1057,12 @@
     </subSounds>
   </SoundDef>
 
-<!-- Dragon Moves -->
+  <!-- Dragon Moves -->
 
   <SoundDef>
     <defName>PW_DragonClaw</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -1080,8 +1080,8 @@
 
   <SoundDef>
     <defName>PW_Outrage</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -1099,8 +1099,8 @@
 
   <SoundDef>
     <defName>PW_DragonRush</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -1118,8 +1118,8 @@
 
   <SoundDef>
     <defName>PW_DragonTail</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -1135,12 +1135,12 @@
     </subSounds>
   </SoundDef>
 
-<!-- Dark Moves -->
+  <!-- Dark Moves -->
 
   <SoundDef>
     <defName>PW_Bite</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -1155,11 +1155,11 @@
       </li>
     </subSounds>
   </SoundDef>
-  
+
   <SoundDef>
     <defName>PW_Crunch</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -1177,8 +1177,8 @@
 
   <SoundDef>
     <defName>PW_FeintAttack</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -1196,8 +1196,8 @@
 
   <SoundDef>
     <defName>PW_Pursuit</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -1215,8 +1215,8 @@
 
   <SoundDef>
     <defName>PW_SuckerPunch</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -1234,8 +1234,8 @@
 
   <SoundDef>
     <defName>PW_NightSlash</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
@@ -1251,12 +1251,12 @@
     </subSounds>
   </SoundDef>
 
-<!-- Fairy Moves -->
+  <!-- Fairy Moves -->
 
   <SoundDef>
     <defName>PW_PlayRough</defName>
-    <context>MapOnly</context>  
-    <maxSimultaneous>3</maxSimultaneous> 
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
     <subSounds>
       <li>
         <grains>

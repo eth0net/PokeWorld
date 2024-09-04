@@ -1,114 +1,114 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <ThingCategoryDef>
-    <defName>PW_PokeWorld</defName>
-    <label>PokéWorld</label>   
-    <parent>Root</parent>
-    <resourceReadoutRoot>true</resourceReadoutRoot>
-    <iconPath>Things/Item/Utility/Balls/PokeBall</iconPath>
-  </ThingCategoryDef>
+	<ThingCategoryDef>
+		<defName>PW_PokeWorld</defName>
+		<label>PokéWorld</label>
+		<parent>Root</parent>
+		<resourceReadoutRoot>true</resourceReadoutRoot>
+		<iconPath>Things/Item/Utility/Balls/PokeBall</iconPath>
+	</ThingCategoryDef>
 
-	  <ThingCategoryDef>
-		  <defName>PW_Leathers</defName>
-		  <label>Pokémon leathers</label>
-		  <parent>PW_PokeWorld</parent> 
-		  <iconPath>UI/Icons/ThingCategories/Leathers</iconPath>  
-	  </ThingCategoryDef>
+	<ThingCategoryDef>
+		<defName>PW_Leathers</defName>
+		<label>Pokémon leathers</label>
+		<parent>PW_PokeWorld</parent>
+		<iconPath>UI/Icons/ThingCategories/Leathers</iconPath>
+	</ThingCategoryDef>
 
-    <ThingCategoryDef>
-	    <defName>PW_Belts</defName>
-	    <label>Poké Ball belts</label>
-	    <parent>PW_PokeWorld</parent>   
-	    <iconPath>Things/Item/Utility/Belts/PokeBallBelt</iconPath>
-	  </ThingCategoryDef>	
+	<ThingCategoryDef>
+		<defName>PW_Belts</defName>
+		<label>Poké Ball belts</label>
+		<parent>PW_PokeWorld</parent>
+		<iconPath>Things/Item/Utility/Belts/PokeBallBelt</iconPath>
+	</ThingCategoryDef>
 
-	  <ThingCategoryDef>
-		  <defName>PW_FishingRods</defName>
-		  <label>Fishing Rods</label>
-		  <parent>PW_PokeWorld</parent> 
-		  <iconPath>Things/Item/Fishing_Rods/GoodRod</iconPath>  
-	  </ThingCategoryDef>
+	<ThingCategoryDef>
+		<defName>PW_FishingRods</defName>
+		<label>Fishing Rods</label>
+		<parent>PW_PokeWorld</parent>
+		<iconPath>Things/Item/Fishing_Rods/GoodRod</iconPath>
+	</ThingCategoryDef>
 
-	  <ThingCategoryDef>
-		  <defName>PW_Item</defName>
-		  <label>items</label>
-		  <parent>PW_PokeWorld</parent>
-		  <iconPath>Things/Item/Resource/RareCandy/RareCandy_a</iconPath>   
-		</ThingCategoryDef>
-      
-		  <ThingCategoryDef>
-		    <defName>PW_PokeBall</defName>
-		    <label>Poké Balls</label>
-		    <parent>PW_Item</parent>   
-		    <iconPath>Things/Item/Utility/Balls/PokeBall</iconPath>   
-		  </ThingCategoryDef>
+	<ThingCategoryDef>
+		<defName>PW_Item</defName>
+		<label>items</label>
+		<parent>PW_PokeWorld</parent>
+		<iconPath>Things/Item/Resource/RareCandy/RareCandy_a</iconPath>
+	</ThingCategoryDef>
 
-		  <ThingCategoryDef>
-		    <defName>PW_HealingItem</defName>
-		    <label>healing</label>
-		    <parent>PW_Item</parent> 
-		    <iconPath>Things/Item/Healing/Potion</iconPath>     
-		  </ThingCategoryDef>
+	<ThingCategoryDef>
+		<defName>PW_PokeBall</defName>
+		<label>Poké Balls</label>
+		<parent>PW_Item</parent>
+		<iconPath>Things/Item/Utility/Balls/PokeBall</iconPath>
+	</ThingCategoryDef>
 
-		  <ThingCategoryDef>
-			  <defName>PW_EvolutionItem</defName>
-			  <label>evolution</label>
-			  <parent>PW_Item</parent>   
-			  <iconPath>Things/Item/Evolution_Item/FireStone/FireStone</iconPath> 
-		  </ThingCategoryDef>
+	<ThingCategoryDef>
+		<defName>PW_HealingItem</defName>
+		<label>healing</label>
+		<parent>PW_Item</parent>
+		<iconPath>Things/Item/Healing/Potion</iconPath>
+	</ThingCategoryDef>
 
-				<ThingCategoryDef>
-				  <defName>PW_EvolutionStone</defName>
-				  <label>stones</label>
-				  <parent>PW_EvolutionItem</parent>   
-				  <iconPath>Things/Item/Evolution_Item/FireStone/FireStone</iconPath> 
-				</ThingCategoryDef>
+	<ThingCategoryDef>
+		<defName>PW_EvolutionItem</defName>
+		<label>evolution</label>
+		<parent>PW_Item</parent>
+		<iconPath>Things/Item/Evolution_Item/FireStone/FireStone</iconPath>
+	</ThingCategoryDef>
 
-				<ThingCategoryDef>
-				  <defName>PW_EvolutionOther</defName>
-				  <label>other</label>
-				  <parent>PW_EvolutionItem</parent>   
-				  <iconPath>Things/Item/Evolution_Item/DubiousDisc/DubiousDisc</iconPath> 
-			  </ThingCategoryDef>
+	<ThingCategoryDef>
+		<defName>PW_EvolutionStone</defName>
+		<label>stones</label>
+		<parent>PW_EvolutionItem</parent>
+		<iconPath>Things/Item/Evolution_Item/FireStone/FireStone</iconPath>
+	</ThingCategoryDef>
 
-		  <ThingCategoryDef>
-			  <defName>PW_Fossils</defName>
-			  <label>fossils</label>
-			  <parent>PW_Item</parent>  
-			  <iconPath>Things/Item/Fossils/Helix_Fossil</iconPath>  
-		  </ThingCategoryDef>
-		  
-		<ThingCategoryDef>
-		  <defName>PW_Eggs</defName>
-		  <label>Pokémon eggs</label>
-		  <parent>PW_PokeWorld</parent> 
-		  <iconPath>Things/Item/Eggs/PokemonEgg/PokemonEgg</iconPath>  
-		</ThingCategoryDef>	
+	<ThingCategoryDef>
+		<defName>PW_EvolutionOther</defName>
+		<label>other</label>
+		<parent>PW_EvolutionItem</parent>
+		<iconPath>Things/Item/Evolution_Item/DubiousDisc/DubiousDisc</iconPath>
+	</ThingCategoryDef>
 
-		<ThingCategoryDef>
-		  <defName>PW_Buildings</defName>
-		  <label>buildings</label>
-		  <parent>PW_PokeWorld</parent> 
-		  <iconPath>Things/Building/PortableComputer_south</iconPath>   
-		</ThingCategoryDef>
+	<ThingCategoryDef>
+		<defName>PW_Fossils</defName>
+		<label>fossils</label>
+		<parent>PW_Item</parent>
+		<iconPath>Things/Item/Fossils/Helix_Fossil</iconPath>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>PW_Eggs</defName>
+		<label>Pokémon eggs</label>
+		<parent>PW_PokeWorld</parent>
+		<iconPath>Things/Item/Eggs/PokemonEgg/PokemonEgg</iconPath>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>PW_Buildings</defName>
+		<label>buildings</label>
+		<parent>PW_PokeWorld</parent>
+		<iconPath>Things/Building/PortableComputer_south</iconPath>
+	</ThingCategoryDef>
 
 
-		<!-- Used for outfits -->
-		<ThingCategoryDef>
-	    <defName>PW_BeltsApparel</defName>
-	    <label>Poké Ball belts</label>
-	    <parent>Apparel</parent>   
-	    <iconPath>Things/Item/Utility/Belts/PokeBallBelt</iconPath>
-	  </ThingCategoryDef>	
+	<!-- Used for outfits -->
+	<ThingCategoryDef>
+		<defName>PW_BeltsApparel</defName>
+		<label>Poké Ball belts</label>
+		<parent>Apparel</parent>
+		<iconPath>Things/Item/Utility/Belts/PokeBallBelt</iconPath>
+	</ThingCategoryDef>
 
-		<!-- Used for cooking -->
+	<!-- Used for cooking -->
 
-		<ThingCategoryDef>
-		  <defName>PW_PokemonEggsFertilized</defName>
-		  <label>Pokémon eggs (fert.)</label>
-		  <parent>EggsFertilized</parent> 
-		  <iconPath>Things/Item/Eggs/PokemonEgg/PokemonEgg</iconPath>  
-		</ThingCategoryDef>
+	<ThingCategoryDef>
+		<defName>PW_PokemonEggsFertilized</defName>
+		<label>Pokémon eggs (fert.)</label>
+		<parent>EggsFertilized</parent>
+		<iconPath>Things/Item/Eggs/PokemonEgg/PokemonEgg</iconPath>
+	</ThingCategoryDef>
 
 </Defs>

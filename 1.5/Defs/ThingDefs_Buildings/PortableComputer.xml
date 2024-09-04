@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
   <ThingDef ParentName="BuildingBase">
@@ -26,7 +26,9 @@
       </shadowData>
     </graphicData>
     <defaultPlacingRot>South</defaultPlacingRot>
-    <researchPrerequisites><li>PW_StorageSystem</li></researchPrerequisites>
+    <researchPrerequisites>
+      <li>PW_StorageSystem</li>
+    </researchPrerequisites>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <fillPercent>0.2</fillPercent>
@@ -66,8 +68,8 @@
         <glowRadius>3</glowRadius>
         <glowColor>(73,123,138,0)</glowColor>
       </li>
-      <li Class="CompProperties_Flickable"/>
-      <li Class="CompProperties_Breakdownable"/>    
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Breakdownable" />
     </comps>
     <designationHotKey>Misc5</designationHotKey>
     <placeWorkers>
@@ -78,5 +80,5 @@
       <li>PokeWorld.ITab_ContentsStorageSystem</li>
     </inspectorTabs>
   </ThingDef>
- 
+
 </Defs>

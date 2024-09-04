@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  
-  <ThingDef Name = "PW_PokemonHiveBase" ParentName="BuildingNaturalBase" Abstract = "True">
+
+  <ThingDef Name="PW_PokemonHiveBase" ParentName="BuildingNaturalBase" Abstract="True">
     <label>Pokémon tunnel</label>
     <description>A tunnel dug by a Pokémon familly. If activated, it will spawn additional Pokémon and tunnels over time.</description>
     <thingClass>Hive</thingClass>
@@ -74,8 +74,8 @@
         <spawnSound>Hive_Spawn</spawnSound>
         <initialPawnsPoints>200</initialPawnsPoints>
         <maxSpawnedPawnsPoints>500</maxSpawnedPawnsPoints>
-      </li> 
-    </comps>   
+      </li>
+    </comps>
   </ThingDef>
 
   <ThingDef ParentName="PW_PokemonHiveBase">
@@ -92,8 +92,8 @@
         <spawnSound>Hive_Spawn</spawnSound>
         <initialPawnsPoints>200</initialPawnsPoints>
         <maxSpawnedPawnsPoints>500</maxSpawnedPawnsPoints>
-      </li> 
-    </comps>   
+      </li>
+    </comps>
   </ThingDef>
 
   <ThingDef ParentName="PW_PokemonHiveBase">
@@ -110,8 +110,8 @@
         <spawnSound>Hive_Spawn</spawnSound>
         <initialPawnsPoints>200</initialPawnsPoints>
         <maxSpawnedPawnsPoints>500</maxSpawnedPawnsPoints>
-      </li> 
-    </comps>   
+      </li>
+    </comps>
   </ThingDef>
 
   <ThingDef ParentName="PW_PokemonHiveBase">
@@ -128,8 +128,8 @@
         <spawnSound>Hive_Spawn</spawnSound>
         <initialPawnsPoints>200</initialPawnsPoints>
         <maxSpawnedPawnsPoints>500</maxSpawnedPawnsPoints>
-      </li> 
-    </comps>   
+      </li>
+    </comps>
   </ThingDef>
 
   <ThingDef ParentName="PW_PokemonHiveBase">
@@ -147,8 +147,8 @@
         <spawnSound>Hive_Spawn</spawnSound>
         <initialPawnsPoints>200</initialPawnsPoints>
         <maxSpawnedPawnsPoints>500</maxSpawnedPawnsPoints>
-      </li> 
-    </comps>   
+      </li>
+    </comps>
   </ThingDef>
 
   <ThingDef ParentName="PW_PokemonHiveBase">
@@ -165,8 +165,8 @@
         <spawnSound>Hive_Spawn</spawnSound>
         <initialPawnsPoints>200</initialPawnsPoints>
         <maxSpawnedPawnsPoints>500</maxSpawnedPawnsPoints>
-      </li> 
-    </comps>   
+      </li>
+    </comps>
   </ThingDef>
 
   <ThingDef ParentName="PW_PokemonHiveBase">
@@ -184,8 +184,8 @@
         <spawnSound>Hive_Spawn</spawnSound>
         <initialPawnsPoints>200</initialPawnsPoints>
         <maxSpawnedPawnsPoints>500</maxSpawnedPawnsPoints>
-      </li> 
-    </comps>   
+      </li>
+    </comps>
   </ThingDef>
 
   <!--==================================================-->
@@ -217,8 +217,8 @@
         <spawnSound>Hive_Spawn</spawnSound>
         <initialPawnsPoints>200</initialPawnsPoints>
         <maxSpawnedPawnsPoints>500</maxSpawnedPawnsPoints>
-      </li> 
-    </comps>   
+      </li>
+    </comps>
   </ThingDef>
 
   <ThingDef ParentName="PW_PokemonHiveBase">
@@ -250,8 +250,8 @@
         <spawnSound>Hive_Spawn</spawnSound>
         <initialPawnsPoints>200</initialPawnsPoints>
         <maxSpawnedPawnsPoints>500</maxSpawnedPawnsPoints>
-      </li> 
-    </comps>   
+      </li>
+    </comps>
   </ThingDef>
 
   <!--==================================================-->

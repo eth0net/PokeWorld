@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
   <ThingDef Name="PW_BaseRangedMoveProjectile" Abstract="True">
@@ -14,8 +14,8 @@
     </graphicData>
   </ThingDef>
 
-<!--======== Ranged ============-->
-<!-- Normal Moves -->
+  <!--======== Ranged ============-->
+  <!-- Normal Moves -->
 
   <ThingDef ParentName="PW_BaseRangedMoveProjectile">
     <defName>PW_Projectile_HyperBeam</defName>
@@ -91,11 +91,10 @@
     </verb>
   </PokeWorld.MoveDef>
 
-<!-- Fighting Moves -->
+  <!-- Fighting Moves -->
 
 
-
-<!-- Flying Moves -->
+  <!-- Flying Moves -->
 
   <ThingDef ParentName="PW_BaseRangedMoveProjectile">
     <defName>PW_Projectile_AirSlash</defName>
@@ -171,7 +170,7 @@
     </verb>
   </PokeWorld.MoveDef>
 
-<!-- Poison Moves -->
+  <!-- Poison Moves -->
 
   <ThingDef ParentName="PW_BaseRangedMoveProjectile">
     <defName>PW_Projectile_Smog</defName>
@@ -247,7 +246,7 @@
     </verb>
   </PokeWorld.MoveDef>
 
-<!-- Ground Moves -->
+  <!-- Ground Moves -->
 
   <ThingDef ParentName="PW_BaseRangedMoveProjectile">
     <defName>PW_Projectile_EarthPower</defName>
@@ -360,7 +359,7 @@
     </verb>
   </PokeWorld.MoveDef>
 
-<!-- Rock Moves -->
+  <!-- Rock Moves -->
 
   <ThingDef ParentName="PW_BaseRangedMoveProjectile">
     <defName>PW_Projectile_AncientPower</defName>
@@ -436,7 +435,7 @@
     </verb>
   </PokeWorld.MoveDef>
 
-<!-- Bug Moves -->
+  <!-- Bug Moves -->
 
   <ThingDef ParentName="PW_BaseRangedMoveProjectile">
     <defName>PW_Projectile_BugBuzz</defName>
@@ -512,7 +511,7 @@
     </verb>
   </PokeWorld.MoveDef>
 
-<!-- Ghost Moves -->
+  <!-- Ghost Moves -->
 
   <ThingDef ParentName="PW_BaseRangedMoveProjectile">
     <defName>PW_Projectile_Hex</defName>
@@ -588,7 +587,7 @@
     </verb>
   </PokeWorld.MoveDef>
 
-<!-- Steel Moves -->
+  <!-- Steel Moves -->
 
   <ThingDef ParentName="PW_BaseRangedMoveProjectile">
     <defName>PW_Projectile_FlashCannon</defName>
@@ -627,7 +626,7 @@
     </verb>
   </PokeWorld.MoveDef>
 
-<!-- Fire Moves -->
+  <!-- Fire Moves -->
 
   <ThingDef ParentName="PW_BaseRangedMoveProjectile">
     <defName>PW_Projectile_Ember</defName>
@@ -814,7 +813,7 @@
     </verb>
   </PokeWorld.MoveDef>
 
-<!-- Water Moves -->
+  <!-- Water Moves -->
 
   <ThingDef ParentName="PW_BaseRangedMoveProjectile">
     <defName>PW_Projectile_WaterGun</defName>
@@ -1001,7 +1000,7 @@
     </verb>
   </PokeWorld.MoveDef>
 
-<!-- Grass Moves -->
+  <!-- Grass Moves -->
 
   <ThingDef ParentName="PW_BaseRangedMoveProjectile">
     <defName>PW_Projectile_Absorb</defName>
@@ -1225,7 +1224,7 @@
     </verb>
   </PokeWorld.MoveDef>
 
-<!-- Electric Moves -->
+  <!-- Electric Moves -->
 
   <ThingDef ParentName="PW_BaseRangedMoveProjectile">
     <defName>PW_Projectile_Discharge</defName>
@@ -1449,7 +1448,7 @@
     </verb>
   </PokeWorld.MoveDef>
 
-<!-- Psychic Moves -->
+  <!-- Psychic Moves -->
 
   <ThingDef ParentName="PW_BaseRangedMoveProjectile">
     <defName>PW_Projectile_Confusion</defName>
@@ -1636,7 +1635,7 @@
     </verb>
   </PokeWorld.MoveDef>
 
-<!-- Ice Moves -->
+  <!-- Ice Moves -->
 
   <ThingDef ParentName="PW_BaseRangedMoveProjectile">
     <defName>PW_Projectile_PowderSnow</defName>
@@ -1823,7 +1822,7 @@
     </verb>
   </PokeWorld.MoveDef>
 
-<!-- Dragon Moves -->
+  <!-- Dragon Moves -->
 
   <ThingDef ParentName="PW_BaseRangedMoveProjectile">
     <defName>PW_Projectile_Twister</defName>
@@ -1973,7 +1972,7 @@
     </verb>
   </PokeWorld.MoveDef>
 
-<!-- Dark Moves -->
+  <!-- Dark Moves -->
 
   <ThingDef ParentName="PW_BaseRangedMoveProjectile">
     <defName>PW_Projectile_DarkPulse</defName>
@@ -2012,7 +2011,7 @@
     </verb>
   </PokeWorld.MoveDef>
 
-<!-- Fairy Moves -->
+  <!-- Fairy Moves -->
 
   <ThingDef ParentName="PW_BaseRangedMoveProjectile">
     <defName>PW_Projectile_Moonblast</defName>
