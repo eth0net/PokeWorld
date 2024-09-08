@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="MegascreenTelevision"]/comps</xpath>
+    <value>
+      <li Class="PokeWorld.CompProperties_PokemonSpawner">
+        <pawnKind>PW_Rotom</pawnKind>
+        <delay>2000~2500</delay>
+      </li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="MegascreenTelevision"]</xpath>
+    <value>
+      <tickerType>Normal</tickerType>
+    </value>
+  </Operation>
+</Patch>
