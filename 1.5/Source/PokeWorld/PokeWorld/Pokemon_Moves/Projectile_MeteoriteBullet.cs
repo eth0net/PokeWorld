@@ -1,31 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RimWorld;
+﻿using RimWorld;
 using Verse;
 
-namespace PokeWorld
+namespace PokeWorld;
+
+internal class Projectile_MeteoriteBullet : Bullet
 {
-    class Projectile_MeteoriteBullet : Bullet
+    #region Overrides
+
+    protected override void Impact(Thing hitThing, bool blockedByShield = false)
     {
-        #region Overrides
-        protected override void Impact(Thing hitThing, bool blockedByShield = false)
-        {
-            Map map = base.Map;
-            IntVec3 position = base.Position;
+        var map = Map;
+        var position = Position;
 
-            base.Impact(hitThing);
+        base.Impact(hitThing);
 
-            SkyfallerMaker.SpawnSkyfaller(ThingDefOf.MeteoriteIncoming, position, map);
+        SkyfallerMaker.SpawnSkyfaller(ThingDefOf.MeteoriteIncoming, position, map);
 
-            Messages.Message("Meteorite_hit", MessageTypeDefOf.NeutralEvent);
-
-
-        }
-        #endregion Overrides
-
-
+        Messages.Message("Meteorite_hit", MessageTypeDefOf.NeutralEvent);
     }
+
+    #endregion Overrides
 }

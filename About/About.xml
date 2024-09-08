@@ -2,9 +2,9 @@
 
 <ModMetaData>
 	<name>PokéWorld Updated [ALPHA]</name>
-	<author>Gargamiel, synthe0n</author>
+	<author>Gargamiel, eth0net</author>
 	<packageId>eth0net.PokeWorld</packageId>
-	<url>https://github.com/Gargamiel/PokeWorld.git</url>
+	<url>https://github.com/eth0net/PokeWorld.git</url>
 	<supportedVersions>
 		<li>1.4</li>
 		<li>1.5</li>

@@ -1,25 +1,23 @@
 ﻿using Verse;
 
-namespace PokeWorld
+namespace PokeWorld;
+
+public class CompPokFossilsEvoStoneDropper : ThingComp
 {
-    public class CompPokFossilsEvoStoneDropper : ThingComp
+    public CompProperties_PokFossilsEvoStoneDropper Props => (CompProperties_PokFossilsEvoStoneDropper)props;
+
+    public float StoneDropRate => Props.stoneDropRate;
+
+    public float FossilDropRate => Props.fossilDropRate;
+}
+
+public class CompProperties_PokFossilsEvoStoneDropper : CompProperties
+{
+    public float fossilDropRate;
+    public float stoneDropRate;
+
+    public CompProperties_PokFossilsEvoStoneDropper()
     {
-        public CompProperties_PokFossilsEvoStoneDropper Props => (CompProperties_PokFossilsEvoStoneDropper)this.props;
-
-        public float StoneDropRate => Props.stoneDropRate;
-
-        public float FossilDropRate => Props.fossilDropRate;
-    }
-
-    public class CompProperties_PokFossilsEvoStoneDropper : CompProperties
-    {
-        public float stoneDropRate;
-        
-        public float fossilDropRate;
-        
-        public CompProperties_PokFossilsEvoStoneDropper()
-        {
-            this.compClass = typeof(CompPokFossilsEvoStoneDropper);
-        }
+        compClass = typeof(CompPokFossilsEvoStoneDropper);
     }
 }

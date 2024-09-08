@@ -210,9 +210,6 @@
         <minNoLegCaught>63</minNoLegCaught>
       </li>
     </generationsRequirements>
-    <requiredKindCaught>
-    </requiredKindCaught>
-    <requiredCaughtMinCount></requiredCaughtMinCount>
   </PokeWorld.QuestConditionDef>
 
   <PokeWorld.QuestConditionDef>
@@ -224,10 +221,6 @@
         <minNoLegCaught>63</minNoLegCaught>
       </li>
     </generationsRequirements>
-    <requiredSeenMinCount></requiredSeenMinCount>
-    <requiredKindCaught>
-    </requiredKindCaught>
-    <requiredCaughtMinCount></requiredCaughtMinCount>
   </PokeWorld.QuestConditionDef>
 
   <PokeWorld.QuestConditionDef>
@@ -239,9 +232,6 @@
         <minNoLegCaught>63</minNoLegCaught>
       </li>
     </generationsRequirements>
-    <requiredKindCaught>
-    </requiredKindCaught>
-    <requiredCaughtMinCount></requiredCaughtMinCount>
   </PokeWorld.QuestConditionDef>
 
   <PokeWorld.QuestConditionDef>
@@ -253,8 +243,6 @@
         <minNoLegCaught>75</minNoLegCaught>
       </li>
     </generationsRequirements>
-    <requiredKindSeen>
-    </requiredKindSeen>
   </PokeWorld.QuestConditionDef>
 
   <PokeWorld.QuestConditionDef>
@@ -266,8 +254,6 @@
         <minNoLegCaught>75</minNoLegCaught>
       </li>
     </generationsRequirements>
-    <requiredKindSeen>
-    </requiredKindSeen>
   </PokeWorld.QuestConditionDef>
 
   <PokeWorld.QuestConditionDef>
@@ -355,8 +341,6 @@
         <minNoLegCaught>113</minNoLegCaught>
       </li>
     </generationsRequirements>
-    <requiredKindSeen>
-    </requiredKindSeen>
   </PokeWorld.QuestConditionDef>
 
   <!-- ==================================-->
@@ -370,9 +354,6 @@
         <minNoLegCaught>47</minNoLegCaught>
       </li>
     </generationsRequirements>
-    <requiredKindCaught>
-    </requiredKindCaught>
-    <requiredCaughtMinCount></requiredCaughtMinCount>
   </PokeWorld.QuestConditionDef>
 
   <PokeWorld.QuestConditionDef>
@@ -384,10 +365,6 @@
         <minNoLegCaught>47</minNoLegCaught>
       </li>
     </generationsRequirements>
-    <requiredSeenMinCount></requiredSeenMinCount>
-    <requiredKindCaught>
-    </requiredKindCaught>
-    <requiredCaughtMinCount></requiredCaughtMinCount>
   </PokeWorld.QuestConditionDef>
 
   <PokeWorld.QuestConditionDef>
@@ -399,9 +376,6 @@
         <minNoLegCaught>47</minNoLegCaught>
       </li>
     </generationsRequirements>
-    <requiredKindCaught>
-    </requiredKindCaught>
-    <requiredCaughtMinCount></requiredCaughtMinCount>
   </PokeWorld.QuestConditionDef>
 
   <PokeWorld.QuestConditionDef>
@@ -445,8 +419,6 @@
         <minNoLegCaught>56</minNoLegCaught>
       </li>
     </generationsRequirements>
-    <requiredKindSeen>
-    </requiredKindSeen>
   </PokeWorld.QuestConditionDef>
 
   <PokeWorld.QuestConditionDef>
@@ -492,8 +464,6 @@
         <minNoLegCaught>66</minNoLegCaught>
       </li>
     </generationsRequirements>
-    <requiredKindSeen>
-    </requiredKindSeen>
   </PokeWorld.QuestConditionDef>
 
   <PokeWorld.QuestConditionDef>
@@ -505,8 +475,6 @@
         <minNoLegCaught>84</minNoLegCaught>
       </li>
     </generationsRequirements>
-    <requiredKindSeen>
-    </requiredKindSeen>
   </PokeWorld.QuestConditionDef>
 
   <PokeWorld.QuestConditionDef>
@@ -518,8 +486,6 @@
         <minNoLegCaught>66</minNoLegCaught>
       </li>
     </generationsRequirements>
-    <requiredKindSeen>
-    </requiredKindSeen>
   </PokeWorld.QuestConditionDef>
 
   <PokeWorld.QuestConditionDef>

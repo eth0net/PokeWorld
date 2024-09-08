@@ -1,23 +1,19 @@
-﻿using RimWorld;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using RimWorld;
 using Verse;
 
-namespace PokeWorld
+namespace PokeWorld;
+
+public class Recipe_HealPowder : Recipe_Surgery
 {
-    public class Recipe_HealPowder : Recipe_Surgery
+    //Surgery recipe, not crafting recipe
+    public override void ApplyOnPawn(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)
     {
-        //Surgery recipe, not crafting recipe
-        public override void ApplyOnPawn(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)
+        if (billDoer != null)
         {
-            if (billDoer != null)
-            {
-                HealthUtility.FixWorstHealthCondition(pawn);
-                CompPokemon comp = pawn.TryGetComp<CompPokemon>();
-                if (comp != null && pawn.Faction.IsPlayer)
-                {
-                    comp.friendshipTracker.ChangeFriendship(-6);
-                }
-            }
+            HealthUtility.FixWorstHealthCondition(pawn);
+            var comp = pawn.TryGetComp<CompPokemon>();
+            if (comp != null && pawn.Faction.IsPlayer) comp.friendshipTracker.ChangeFriendship(-6);
         }
     }
 }

@@ -1,16 +1,15 @@
 ﻿using HarmonyLib;
 using Verse;
 
-namespace PokeWorld
+namespace PokeWorld;
+
+[StaticConstructorOnStartup]
+internal class Main
 {
-    [StaticConstructorOnStartup]
-    class Main
+    static Main()
     {
-        static Main()
-        {
-            Harmony.DEBUG = true;
-            var harmony = new Harmony("com.Rimworld.PokeWorld");
-            harmony.PatchAll();
-        }
+        Harmony.DEBUG = true;
+        var harmony = new Harmony("com.Rimworld.PokeWorld");
+        harmony.PatchAll();
     }
 }

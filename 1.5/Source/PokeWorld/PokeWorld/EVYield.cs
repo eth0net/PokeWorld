@@ -1,19 +1,18 @@
-﻿using RimWorld;
-using System.Xml;
+﻿using System.Xml;
+using RimWorld;
 using Verse;
 
-namespace PokeWorld
+namespace PokeWorld;
+
+public class EVYield
 {
-    public class EVYield
+    public StatDef stat;
+
+    public int value;
+
+    public void LoadDataFromXmlCustom(XmlNode xmlRoot)
     {
-        public StatDef stat;
-
-        public int value;
-
-        public void LoadDataFromXmlCustom(XmlNode xmlRoot)
-        {
-            DirectXmlCrossRefLoader.RegisterObjectWantsCrossRef(this, "stat", xmlRoot.Name);
-            value = ParseHelper.FromString<int>(xmlRoot.FirstChild.Value);
-        }
+        DirectXmlCrossRefLoader.RegisterObjectWantsCrossRef(this, "stat", xmlRoot.Name);
+        value = ParseHelper.FromString<int>(xmlRoot.FirstChild.Value);
     }
 }

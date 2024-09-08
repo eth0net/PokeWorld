@@ -1,41 +1,35 @@
 ﻿using Verse;
 
-namespace PokeWorld
+namespace PokeWorld;
+
+public class Evolution
 {
-    public class Evolution
-    {
-        public PawnKindDef pawnKind;
+    public int friendship;
 
-        public EvolutionRequirement requirement;
+    public Gender gender;
 
-        public OtherEvolutionRequirement otherRequirement;
+    public ThingDef item;
 
-        public ThingDef item;
+    public int level;
 
-        public int level;
+    public OtherEvolutionRequirement otherRequirement;
+    public PawnKindDef pawnKind;
 
-        public int friendship;
+    public EvolutionRequirement requirement;
 
-        public TimeOfDay timeOfDay;
+    public TimeOfDay timeOfDay;
+}
 
-        public Gender gender;
+public enum EvolutionRequirement
+{
+    level = 0,
+    item = 1
+}
 
-        public Evolution()
-        {
-        }
-    }
-
-    public enum EvolutionRequirement
-    {
-        level = 0,
-        item = 1
-    }
-
-    public enum OtherEvolutionRequirement
-    {
-        none = 0,
-        attack = 1,
-        defense = 2,
-        balanced = 3
-    }
+public enum OtherEvolutionRequirement
+{
+    none = 0,
+    attack = 1,
+    defense = 2,
+    balanced = 3
 }

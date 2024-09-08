@@ -1,89 +1,85 @@
-﻿using RimWorld;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Xml;
+using RimWorld;
 using Verse;
 
-namespace PokeWorld
+namespace PokeWorld;
+
+public class FishingRateDef : Def
 {
-    public class FishingRateDef : Def
+    private List<FishingRateBiomeRecord> biomes = new();
+
+    private Dictionary<PawnKindDef, float> rateTable;
+
+    public PawnKindDef GetRandomFish(BiomeDef biome, TerrainDef terrain, ThingDef rod)
     {
-        private List<FishingRateBiomeRecord> biomes = new List<FishingRateBiomeRecord>();
+        var rates = biomes.Where(b => b.biome == biome).First().terrains.Where(t => t.terrain == terrain).First().rods
+            .Where(r => r.rod == rod).First().pokemons;
 
-        private Dictionary<PawnKindDef, float> rateTable;
+        rateTable = new Dictionary<PawnKindDef, float>();
 
-        public PawnKindDef GetRandomFish(BiomeDef biome, TerrainDef terrain, ThingDef rod)
-        {
-            List<FishingRatePokemonRecord> rates = biomes.Where((FishingRateBiomeRecord b) => b.biome == biome).First().terrains.Where((FishingRateTerrainRecord t) => t.terrain == terrain).First().rods.Where((FishingRateRodRecord r) => r.rod == rod).First().pokemons;
+        for (var i = 0; i < rates.Count; i++)
+            if (rates[i].pokemon != null)
+                rateTable.Add(rates[i].pokemon, rates[i].rate);
 
-            rateTable = new Dictionary<PawnKindDef, float>();
+        return rateTable.Keys.RandomElementByWeight(def => rateTable[def]);
+    }
 
-            for (int i = 0; i < rates.Count; i++)
-            {
-                if (rates[i].pokemon != null)
-                {
-                    rateTable.Add(rates[i].pokemon, rates[i].rate);
-                }
-            }
+    public void LoadDataFromXmlCustom(XmlNode xmlRoot)
+    {
+        biomes = DirectXmlToObject.ObjectFromXml<List<FishingRateBiomeRecord>>(
+            xmlRoot.SelectSingleNode("biomes"), false
+        );
+    }
 
-            return rateTable.Keys.RandomElementByWeight((PawnKindDef def) => rateTable[def]);
-        }
+    public class FishingRateBiomeRecord
+    {
+        public BiomeDef biome;
+
+        public List<FishingRateTerrainRecord> terrains = new();
 
         public void LoadDataFromXmlCustom(XmlNode xmlRoot)
         {
-            biomes = DirectXmlToObject.ObjectFromXml<List<FishingRateBiomeRecord>>(xmlRoot.SelectSingleNode("biomes"), false);
+            DirectXmlCrossRefLoader.RegisterObjectWantsCrossRef(this, "biome", xmlRoot.Name);
+            terrains = DirectXmlToObject.ObjectFromXml<List<FishingRateTerrainRecord>>(xmlRoot, false);
         }
+    }
 
-        public class FishingRateBiomeRecord
+    public class FishingRateTerrainRecord
+    {
+        public List<FishingRateRodRecord> rods = new();
+        public TerrainDef terrain;
+
+        public void LoadDataFromXmlCustom(XmlNode xmlRoot)
         {
-            public BiomeDef biome;
-
-            public List<FishingRateTerrainRecord> terrains = new List<FishingRateTerrainRecord>();
-
-            public void LoadDataFromXmlCustom(XmlNode xmlRoot)
-            {
-                DirectXmlCrossRefLoader.RegisterObjectWantsCrossRef(this, "biome", xmlRoot.Name);
-                terrains = DirectXmlToObject.ObjectFromXml<List<FishingRateTerrainRecord>>(xmlRoot, false);
-            }
+            DirectXmlCrossRefLoader.RegisterObjectWantsCrossRef(this, "terrain", xmlRoot.Name);
+            rods = DirectXmlToObject.ObjectFromXml<List<FishingRateRodRecord>>(xmlRoot, false);
         }
+    }
 
-        public class FishingRateTerrainRecord
+    public class FishingRateRodRecord
+    {
+        public List<FishingRatePokemonRecord> pokemons = new();
+        public ThingDef rod;
+
+        public void LoadDataFromXmlCustom(XmlNode xmlRoot)
         {
-            public TerrainDef terrain;
-
-            public List<FishingRateRodRecord> rods = new List<FishingRateRodRecord>();
-
-            public void LoadDataFromXmlCustom(XmlNode xmlRoot)
-            {
-                DirectXmlCrossRefLoader.RegisterObjectWantsCrossRef(this, "terrain", xmlRoot.Name);
-                rods = DirectXmlToObject.ObjectFromXml<List<FishingRateRodRecord>>(xmlRoot, false);
-            }
+            DirectXmlCrossRefLoader.RegisterObjectWantsCrossRef(this, "rod", xmlRoot.Name);
+            pokemons = DirectXmlToObject.ObjectFromXml<List<FishingRatePokemonRecord>>(xmlRoot, false);
         }
+    }
 
-        public class FishingRateRodRecord
+    public class FishingRatePokemonRecord
+    {
+        public PawnKindDef pokemon;
+
+        public float rate;
+
+        public void LoadDataFromXmlCustom(XmlNode xmlRoot)
         {
-            public ThingDef rod;
-
-            public List<FishingRatePokemonRecord> pokemons = new List<FishingRatePokemonRecord>();
-
-            public void LoadDataFromXmlCustom(XmlNode xmlRoot)
-            {
-                DirectXmlCrossRefLoader.RegisterObjectWantsCrossRef(this, "rod", xmlRoot.Name);
-                pokemons = DirectXmlToObject.ObjectFromXml<List<FishingRatePokemonRecord>>(xmlRoot, false);
-            }
-        }
-
-        public class FishingRatePokemonRecord
-        {
-            public PawnKindDef pokemon;
-
-            public float rate;
-
-            public void LoadDataFromXmlCustom(XmlNode xmlRoot)
-            {
-                DirectXmlCrossRefLoader.RegisterObjectWantsCrossRef(this, "pokemon", xmlRoot);
-                rate = ParseHelper.FromString<float>(xmlRoot.FirstChild.Value);
-            }
+            DirectXmlCrossRefLoader.RegisterObjectWantsCrossRef(this, "pokemon", xmlRoot);
+            rate = ParseHelper.FromString<float>(xmlRoot.FirstChild.Value);
         }
     }
 }

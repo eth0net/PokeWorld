@@ -1,107 +1,91 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System;
 using RimWorld;
 using UnityEngine;
 using Verse;
 
-namespace PokeWorld
+namespace PokeWorld;
+
+public class PawnKindColumnDef : Def
 {
-	public class PawnKindColumnDef : Def
-	{
-		public Type workerClass = typeof(PawnKindColumnWorker);
+    private const int IconWidth = 26;
 
-		public bool sortable;
+    private static readonly Vector2 IconSize = new(26f, 26f);
 
-		public bool ignoreWhenCalculatingOptimalTableSize;
+    public int gap;
 
-		[NoTranslate]
-		public string headerIcon;
+    public bool headerAlwaysInteractable;
 
-		public Vector2 headerIconSize;
+    [NoTranslate]
+    public string headerIcon;
 
-		[MustTranslate]
-		public string headerTip;
+    public Vector2 headerIconSize;
 
-		public bool headerAlwaysInteractable;
+    [Unsaved]
+    private Texture2D headerIconTex;
 
-		public bool paintable;
+    [MustTranslate]
+    public string headerTip;
 
-		public TrainableDef trainable;
+    public bool ignoreWhenCalculatingOptimalTableSize;
 
-		public int gap;
+    public bool moveWorkTypeLabelDown;
 
-		public WorkTypeDef workType;
+    public bool paintable;
 
-		public bool moveWorkTypeLabelDown;
+    public bool sortable;
 
-		public int widthPriority;
+    public TrainableDef trainable;
 
-		public int width = -1;
+    public int width = -1;
 
-		[Unsaved(false)]
-		private PawnKindColumnWorker workerInt;
+    public int widthPriority;
+    public Type workerClass = typeof(PawnKindColumnWorker);
 
-		[Unsaved(false)]
-		private Texture2D headerIconTex;
+    [Unsaved]
+    private PawnKindColumnWorker workerInt;
 
-		private const int IconWidth = 26;
+    public WorkTypeDef workType;
 
-		private static readonly Vector2 IconSize = new Vector2(26f, 26f);
+    public PawnKindColumnWorker Worker
+    {
+        get
+        {
+            if (workerInt == null)
+            {
+                workerInt = (PawnKindColumnWorker)Activator.CreateInstance(workerClass);
+                workerInt.def = this;
+            }
 
-		public PawnKindColumnWorker Worker
-		{
-			get
-			{
-				if (workerInt == null)
-				{
-					workerInt = (PawnKindColumnWorker)Activator.CreateInstance(workerClass);
-					workerInt.def = this;
-				}
-				return workerInt;
-			}
-		}
+            return workerInt;
+        }
+    }
 
-		public Texture2D HeaderIcon
-		{
-			get
-			{
-				if (headerIconTex == null && !headerIcon.NullOrEmpty())
-				{
-					headerIconTex = ContentFinder<Texture2D>.Get(headerIcon);
-				}
-				return headerIconTex;
-			}
-		}
+    public Texture2D HeaderIcon
+    {
+        get
+        {
+            if (headerIconTex == null && !headerIcon.NullOrEmpty())
+                headerIconTex = ContentFinder<Texture2D>.Get(headerIcon);
+            return headerIconTex;
+        }
+    }
 
-		public Vector2 HeaderIconSize
-		{
-			get
-			{
-				if (headerIconSize != default(Vector2))
-				{
-					return headerIconSize;
-				}
-				if (HeaderIcon != null)
-				{
-					return IconSize;
-				}
-				return Vector2.zero;
-			}
-		}
+    public Vector2 HeaderIconSize
+    {
+        get
+        {
+            if (headerIconSize != default) return headerIconSize;
+            if (HeaderIcon != null) return IconSize;
+            return Vector2.zero;
+        }
+    }
 
-		public bool HeaderInteractable
-		{
-			get
-			{
-				if (!sortable && headerTip.NullOrEmpty())
-				{
-					return headerAlwaysInteractable;
-				}
-				return true;
-			}
-		}
-	}
+    public bool HeaderInteractable
+    {
+        get
+        {
+            if (!sortable && headerTip.NullOrEmpty()) return headerAlwaysInteractable;
+            return true;
+        }
+    }
 }

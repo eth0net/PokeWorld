@@ -1,29 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RimWorld;
+﻿using RimWorld;
 using Verse;
 
-namespace PokeWorld
+namespace PokeWorld;
+
+internal class Projectile_FireBullet : Bullet
 {
-    class Projectile_FireBullet : Bullet
+    #region Overrides
+
+    protected override void Impact(Thing hitThing, bool blockedByShield = false)
     {
-        #region Overrides
-        protected override void Impact(Thing hitThing, bool blockedByShield = false)
-        {
-            Map map = base.Map;
-            IntVec3 position = base.Position;
+        var map = Map;
+        var position = Position;
 
-            base.Impact(hitThing);
+        base.Impact(hitThing);
 
-            GenExplosion.DoExplosion(position, map, 1.9f, DamageDefOf.Flame, null);
+        GenExplosion.DoExplosion(position, map, 1.9f, DamageDefOf.Flame, null);
 
-            Messages.Message("Lightning_hit", MessageTypeDefOf.NeutralEvent);
-
-
-        }
-        #endregion Overrides
+        Messages.Message("Lightning_hit", MessageTypeDefOf.NeutralEvent);
     }
+
+    #endregion Overrides
 }

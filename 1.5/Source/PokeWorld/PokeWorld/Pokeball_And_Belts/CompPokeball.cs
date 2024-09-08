@@ -1,29 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System;
 using Verse;
 
-namespace PokeWorld
+namespace PokeWorld;
+
+internal class CompPokeball : ThingComp
 {
-    class CompPokeball : ThingComp
+    public CompProperties_Pokeball Props => (CompProperties_Pokeball)props;
+    public ThingDef ballDef => Props.ballDef;
+}
+
+public class CompProperties_Pokeball : CompProperties
+{
+    public ThingDef ballDef;
+
+    public CompProperties_Pokeball()
     {
-        public CompProperties_Pokeball Props => (CompProperties_Pokeball)this.props;
-        public ThingDef ballDef => Props.ballDef;
+        compClass = typeof(CompPokeball);
     }
-    public class CompProperties_Pokeball : CompProperties
+
+    public CompProperties_Pokeball(Type compClass) : base(compClass)
     {
-        public ThingDef ballDef;
-
-        public CompProperties_Pokeball()
-        {
-            this.compClass = typeof(CompPokeball);
-        }
-
-        public CompProperties_Pokeball(Type compClass) : base(compClass)
-        {
-            this.compClass = compClass;
-        }
+        this.compClass = compClass;
     }
 }
