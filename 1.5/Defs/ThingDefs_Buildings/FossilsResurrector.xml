@@ -25,7 +25,7 @@
     <castEdgeShadows>false</castEdgeShadows>
     <minifiedDef />
     <thingCategories Inherit="false" />
-    <fillPercent>0.5</fillPercent>
+    <fillPercent>1</fillPercent>
     <canOverlapZones>false</canOverlapZones>
     <statBases>
       <MaxHitPoints>250</MaxHitPoints>
