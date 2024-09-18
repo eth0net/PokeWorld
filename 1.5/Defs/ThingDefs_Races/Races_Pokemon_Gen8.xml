@@ -12712,7 +12712,9 @@
           <PW_Attack>1</PW_Attack>
         </EVYields>
         <catchRate>3</catchRate>
-        <shinyChance>0.00125</shinyChance>
+        <!-- <shinyChance>0.00125</shinyChance> -->
+        <!-- 0% for now without shiny texture -->
+        <shinyChance>0</shinyChance>
       </li>
     </comps>
     <statBases>
@@ -12862,7 +12864,9 @@
           <PW_Attack>3</PW_Attack>
         </EVYields>
         <catchRate>3</catchRate>
-        <shinyChance>0.00125</shinyChance>
+        <!-- <shinyChance>0.00125</shinyChance> -->
+        <!-- 0% for now without shiny texture -->
+        <shinyChance>0</shinyChance>
       </li>
     </comps>
     <statBases>
@@ -13015,7 +13019,9 @@
           <PW_Attack>3</PW_Attack>
         </EVYields>
         <catchRate>3</catchRate>
-        <shinyChance>0.00125</shinyChance>
+        <!-- <shinyChance>0.00125</shinyChance> -->
+        <!-- 0% for now without shiny texture -->
+        <shinyChance>0</shinyChance>
       </li>
     </comps>
     <statBases>
@@ -13798,7 +13804,9 @@
           <PW_HP>3</PW_HP>
         </EVYields>
         <catchRate>3</catchRate>
-        <shinyChance>0.00125</shinyChance>
+        <!-- <shinyChance>0.00125</shinyChance> -->
+        <!-- 0% for now without shiny texture -->
+        <shinyChance>0</shinyChance>
       </li>
     </comps>
     <statBases>
