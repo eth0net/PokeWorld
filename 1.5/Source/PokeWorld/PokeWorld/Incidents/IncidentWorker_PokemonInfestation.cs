@@ -131,13 +131,13 @@ public class TunnelPokemonHiveSpawner : ThingWithComps
     private static readonly MaterialPropertyBlock matPropertyBlock = new();
 
     [TweakValue("Gameplay", 0f, 1f)]
-    private static readonly float DustMoteSpawnMTB = 0.2f;
+    private static float DustMoteSpawnMTB = 0.2f;
 
     [TweakValue("Gameplay", 0f, 1f)]
-    private static readonly float FilthSpawnMTB = 0.3f;
+    private static float FilthSpawnMTB = 0.3f;
 
     [TweakValue("Gameplay", 0f, 10f)]
-    private static readonly float FilthSpawnRadius = 3f;
+    private static float FilthSpawnRadius = 3f;
 
     private static readonly Material TunnelMaterial = MaterialPool.MatFrom(
         "Things/Filth/Grainy/GrainyA", ShaderDatabase.Transparent

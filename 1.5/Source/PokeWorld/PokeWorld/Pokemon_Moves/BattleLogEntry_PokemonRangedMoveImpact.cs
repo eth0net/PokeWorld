@@ -11,7 +11,7 @@ namespace PokeWorld;
 public class BattleLogEntry_PokemonRangedMoveImpact : LogEntry_DamageResult
 {
     [TweakValue("LogFilter", 0f, 1f)]
-    private static readonly float DisplayChanceOnMiss = 0.25f;
+    private static float DisplayChanceOnMiss = 0.25f;
 
     private ThingDef coverDef;
     private Pawn initiatorPawn;

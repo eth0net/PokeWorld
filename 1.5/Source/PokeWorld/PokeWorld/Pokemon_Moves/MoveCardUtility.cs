@@ -13,10 +13,10 @@ public static class MoveCardUtility
     private const float InfoHeaderHeight = 50f;
 
     [TweakValue("Interface", -100f, 300f)]
-    private static readonly float PokemonMoveLeft = 220f;
+    private static float PokemonMoveLeft = 220f;
 
     [TweakValue("Interface", -100f, 300f)]
-    private static readonly float PokemonMoveTop = 0f;
+    private static float PokemonMoveTop = 0f;
 
     private static readonly Texture2D LearnedTrainingTex = ContentFinder<Texture2D>.Get("UI/Icons/FixedCheck");
 
