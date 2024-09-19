@@ -2,6 +2,7 @@
 <Defs>
   <PokeWorld.FishingRateDef>
     <defName>FishingRates</defName>
+    <label>fishing rates</label>
     <biomes>
       <BorealForest>
         <WaterShallow>

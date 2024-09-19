@@ -28,6 +28,8 @@ public class FishingRateDef : Def
 
     public void LoadDataFromXmlCustom(XmlNode xmlRoot)
     {
+        defName = xmlRoot.SelectSingleNode("defName")?.InnerText;
+        label = xmlRoot.SelectSingleNode("label")?.InnerText;
         biomes = DirectXmlToObject.ObjectFromXml<List<FishingRateBiomeRecord>>(
             xmlRoot.SelectSingleNode("biomes"), false
         );
