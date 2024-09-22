@@ -2,9 +2,8 @@
 <Configuration>
   <Excluded>
     <exclude>.git</exclude>
+    <exclude>.idea</exclude>
     <exclude>1.4\Source</exclude>
     <exclude>1.5\Source</exclude>
-    <exclude>.gitattributes</exclude>
-    <exclude>.gitignore</exclude>
   </Excluded>
 </Configuration>
