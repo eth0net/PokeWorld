@@ -5,58 +5,52 @@ using Verse;
 
 namespace PokeWorld;
 
-public sealed class PokedexManager : WorldComponent
+public sealed class PokedexManager(World world) : WorldComponent(world)
 {
     private Dictionary<PawnKindDef, PokemonPokedexState> pokedex = new();
 
-    public PokedexManager(World world) : base(world)
-    {
-        foreach (var allDef in DefDatabase<PawnKindDef>.AllDefs.Where(x => x.race.HasComp(typeof(CompPokemon)))
-                     .OrderBy(x => x.race.GetCompProperties<CompProperties_Pokemon>().pokedexNumber))
-            pokedex.Add(allDef, PokemonPokedexState.None);
-    }
-
     public int TotalSeen()
     {
-        return pokedex.Values.Where(x => x == PokemonPokedexState.Seen || x == PokemonPokedexState.Caught).Count();
+        return pokedex.Values.Count(x => x is PokemonPokedexState.Seen or PokemonPokedexState.Caught);
     }
 
     public int TotalSeen(int generation, bool includeLegendaries = true)
     {
         if (includeLegendaries)
-            return pokedex.Where(
+            return pokedex.Count(
                 x => x.Key.race.HasComp(typeof(CompPokemon)) &&
                      x.Key.race.GetCompProperties<CompProperties_Pokemon>().generation == generation &&
-                     (x.Value == PokemonPokedexState.Seen || x.Value == PokemonPokedexState.Caught)
-            ).Count();
-        return pokedex.Where(
+                     x.Value is PokemonPokedexState.Seen or PokemonPokedexState.Caught
+            );
+
+        return pokedex.Count(
             x => x.Key.race.HasComp(typeof(CompPokemon)) &&
                  x.Key.race.GetCompProperties<CompProperties_Pokemon>().generation == generation &&
                  !x.Key.race.GetCompProperties<CompProperties_Pokemon>().attributes
                      .Contains(PokemonAttribute.Legendary) &&
-                 (x.Value == PokemonPokedexState.Seen || x.Value == PokemonPokedexState.Caught)
-        ).Count();
+                 x.Value is PokemonPokedexState.Seen or PokemonPokedexState.Caught
+        );
     }
 
     public int TotalCaught()
     {
-        return pokedex.Values.Where(x => x == PokemonPokedexState.Caught).Count();
+        return pokedex.Values.Count(x => x == PokemonPokedexState.Caught);
     }
 
     public int TotalCaught(int generation, bool includeLegendaries = true)
     {
         if (includeLegendaries)
-            return pokedex.Where(
+            return pokedex.Count(
                 x => x.Key.race.HasComp(typeof(CompPokemon)) &&
                      x.Key.race.GetCompProperties<CompProperties_Pokemon>().generation == generation &&
                      x.Value == PokemonPokedexState.Caught
-            ).Count();
-        return pokedex.Where(
+            );
+        return pokedex.Count(
             x => x.Key.race.HasComp(typeof(CompPokemon)) &&
                  x.Key.race.GetCompProperties<CompProperties_Pokemon>().generation == generation &&
                  !x.Key.race.GetCompProperties<CompProperties_Pokemon>().attributes
                      .Contains(PokemonAttribute.Legendary) && x.Value == PokemonPokedexState.Caught
-        ).Count();
+        );
     }
 
     public override void ExposeData()
@@ -78,15 +72,16 @@ public sealed class PokedexManager : WorldComponent
 
     public void AddPokemonKindSeen(PawnKindDef pawnKind)
     {
-        if (pawnKind.race.HasComp(typeof(CompPokemon)) && pokedex[pawnKind] == PokemonPokedexState.None)
+        if (!pawnKind.race.HasComp(typeof(CompPokemon))) return;
+
+        if (!pokedex.ContainsKey(pawnKind) || pokedex[pawnKind] == PokemonPokedexState.None)
             pokedex[pawnKind] = PokemonPokedexState.Seen;
     }
 
     public void AddPokemonKindCaught(PawnKindDef pawnKind)
     {
-        if (pawnKind.race.HasComp(typeof(CompPokemon)) && (pokedex[pawnKind] == PokemonPokedexState.None ||
-                                                           pokedex[pawnKind] == PokemonPokedexState.Seen))
-            pokedex[pawnKind] = PokemonPokedexState.Caught;
+        if (!pawnKind.race.HasComp(typeof(CompPokemon))) return;
+        pokedex[pawnKind] = PokemonPokedexState.Caught;
     }
 
     public void DebugFillPokedex()
