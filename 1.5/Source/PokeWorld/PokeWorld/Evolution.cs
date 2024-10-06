@@ -17,7 +17,7 @@ public class Evolution
 
     public EvolutionRequirement requirement;
 
-    public TimeOfDay timeOfDay;
+    public TimeOfDay timeOfDay = TimeOfDay.Any;
 }
 
 public enum EvolutionRequirement
