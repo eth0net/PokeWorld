@@ -27,8 +27,7 @@ internal class JobDriver_CraftPokemon : JobDriver
 
     public override string GetReport()
     {
-        if (job.RecipeDef != null) return ReportStringProcessed(job.RecipeDef.jobString);
-        return base.GetReport();
+        return job.RecipeDef != null ? ReportStringProcessed(job.RecipeDef.jobString) : base.GetReport();
     }
 
     public override void ExposeData()
@@ -55,20 +54,16 @@ internal class JobDriver_CraftPokemon : JobDriver
             delegate
             {
                 var thing = GetActor().jobs.curJob.GetTarget(TargetIndex.A).Thing;
-                return !(thing is Building) || thing.Spawned ? JobCondition.Ongoing : JobCondition.Incompletable;
+                return thing is not Building || thing.Spawned ? JobCondition.Ongoing : JobCondition.Incompletable;
             }
         );
         this.FailOnBurningImmobile(TargetIndex.A);
         this.FailOn(
             delegate
             {
-                if (job.GetTarget(TargetIndex.A).Thing is IBillGiver billGiver)
-                {
-                    if (job.bill.DeletedOrDereferenced) return true;
-                    if (!billGiver.CurrentlyUsableForBills()) return true;
-                }
-
-                return false;
+                if (job.GetTarget(TargetIndex.A).Thing is not IBillGiver billGiver) return false;
+                if (job.bill.DeletedOrDereferenced) return true;
+                return !billGiver.CurrentlyUsableForBills();
             }
         );
         var gotoBillGiver = Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.InteractionCell);
@@ -76,9 +71,9 @@ internal class JobDriver_CraftPokemon : JobDriver
         {
             initAction = delegate
             {
-                if (job.targetQueueB != null && job.targetQueueB.Count == 1)
-                    if (job.targetQueueB[0].Thing is UnfinishedThing unfinishedThing)
-                        unfinishedThing.BoundBill = (Bill_ProductionWithUft)job.bill;
+                if (job.targetQueueB is not { Count: 1 }) return;
+                if (job.targetQueueB[0].Thing is UnfinishedThing unfinishedThing)
+                    unfinishedThing.BoundBill = (Bill_ProductionWithUft)job.bill;
             }
         };
         yield return toil;
@@ -140,33 +135,29 @@ internal class JobDriver_CraftPokemon : JobDriver
             {
                 var curJob = actor.jobs.curJob;
                 var targetQueue = curJob.GetTargetQueue(ind);
-                if (!targetQueue.NullOrEmpty())
-                    for (var i = 0; i < targetQueue.Count; i++)
-                        if (GenAI.CanUseItemForWork(actor, targetQueue[i].Thing) &&
-                            targetQueue[i].Thing.CanStackWith(actor.carryTracker.CarriedThing) &&
-                            !((actor.Position - targetQueue[i].Thing.Position).LengthHorizontalSquared > 64f))
+                if (targetQueue.NullOrEmpty()) return;
+                for (var i = 0; i < targetQueue.Count; i++)
+                    if (GenAI.CanUseItemForWork(actor, targetQueue[i].Thing) &&
+                        targetQueue[i].Thing.CanStackWith(actor.carryTracker.CarriedThing) &&
+                        !((actor.Position - targetQueue[i].Thing.Position).LengthHorizontalSquared > 64f))
+                    {
+                        var num = actor.carryTracker.CarriedThing?.stackCount ?? 0;
+                        var a = curJob.countQueue[i];
+                        a = Mathf.Min(a, targetQueue[i].Thing.def.stackLimit - num);
+                        a = Mathf.Min(a, actor.carryTracker.AvailableStackSpace(targetQueue[i].Thing.def));
+                        if (a <= 0) continue;
+                        curJob.count = a;
+                        curJob.SetTarget(ind, targetQueue[i].Thing);
+                        curJob.countQueue[i] -= a;
+                        if (curJob.countQueue[i] <= 0)
                         {
-                            var num = actor.carryTracker.CarriedThing != null
-                                ? actor.carryTracker.CarriedThing.stackCount
-                                : 0;
-                            var a = curJob.countQueue[i];
-                            a = Mathf.Min(a, targetQueue[i].Thing.def.stackLimit - num);
-                            a = Mathf.Min(a, actor.carryTracker.AvailableStackSpace(targetQueue[i].Thing.def));
-                            if (a > 0)
-                            {
-                                curJob.count = a;
-                                curJob.SetTarget(ind, targetQueue[i].Thing);
-                                curJob.countQueue[i] -= a;
-                                if (curJob.countQueue[i] <= 0)
-                                {
-                                    curJob.countQueue.RemoveAt(i);
-                                    targetQueue.RemoveAt(i);
-                                }
-
-                                actor.jobs.curDriver.JumpToToil(gotoGetTargetToil);
-                                break;
-                            }
+                            curJob.countQueue.RemoveAt(i);
+                            targetQueue.RemoveAt(i);
                         }
+
+                        actor.jobs.curDriver.JumpToToil(gotoGetTargetToil);
+                        break;
+                    }
             }
         };
         return toil;

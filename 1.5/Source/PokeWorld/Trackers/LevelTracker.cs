@@ -168,32 +168,32 @@ public class LevelTracker : IExposable
                 {
                     var attack = (int)pokemonHolder.GetStatValue(DefDatabase<StatDef>.GetNamed("PW_Attack"));
                     var defense = (int)pokemonHolder.GetStatValue(DefDatabase<StatDef>.GetNamed("PW_Defense"));
-                    if (evo.otherRequirement == OtherEvolutionRequirement.attack && !(attack > defense))
+                    if (evo.otherRequirement == OtherEvolutionRequirement.attack && attack <= defense)
                         continue;
-                    if (evo.otherRequirement == OtherEvolutionRequirement.defense && !(defense > attack))
+                    if (evo.otherRequirement == OtherEvolutionRequirement.defense && defense <= attack)
                         continue;
-                    if (evo.otherRequirement == OtherEvolutionRequirement.balanced && !(attack == defense))
+                    if (evo.otherRequirement == OtherEvolutionRequirement.balanced && attack != defense)
                         continue;
                 }
 
                 var currentMapTime = GenLocalDate.HourOfDay(pokemonHolder.Map);
-                if (evo.timeOfDay == TimeOfDay.Any
-                    || (evo.timeOfDay == TimeOfDay.Day && currentMapTime >= 7 && currentMapTime < 19)
-                    || (evo.timeOfDay == TimeOfDay.Night && (currentMapTime >= 19 || currentMapTime < 7)))
+                if (evo.timeOfDay != TimeOfDay.Any
+                    && (evo.timeOfDay != TimeOfDay.Day || currentMapTime is < 7 or >= 19)
+                    && (evo.timeOfDay != TimeOfDay.Night || currentMapTime is < 19 and >= 7)) continue;
+                
+                if (!flagEverstoneOn)
                 {
-                    if (!flagEverstoneOn)
-                    {
-                        evolutionDefList.Add(evo.pawnKind);
-                        BeginEvolutionProcess();
-                    }
-                    else if (flagEverstoneAlertEvolution)
-                    {
-                        Messages.Message(
-                            "PW_MessageEverstonePreventsEvolution".Translate(pokemonHolder.Label), pokemonHolder,
-                            MessageTypeDefOf.NeutralEvent
-                        );
-                        flagEverstoneAlertEvolution = false;
-                    }
+                    evolutionDefList.Add(evo.pawnKind);
+                    BeginEvolutionProcess();
+                }
+                else if (flagEverstoneAlertEvolution)
+                {
+                    Messages.Message(
+                        "PW_MessageEverstonePreventsEvolution".Translate(pokemonHolder.Label), 
+                        pokemonHolder,
+                        MessageTypeDefOf.NeutralEvent
+                    );
+                    flagEverstoneAlertEvolution = false;
                 }
             }
     }

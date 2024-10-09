@@ -32,7 +32,7 @@ internal class WorkGiver_CraftPokemon : WorkGiver_Scanner
     {
         get
         {
-            if (def.fixedBillGiverDefs != null && def.fixedBillGiverDefs.Count == 1)
+            if (def.fixedBillGiverDefs is { Count: 1 })
                 return ThingRequest.ForDef(def.fixedBillGiverDefs[0]);
             return ThingRequest.ForGroup(ThingRequestGroup.PotentialBillGiver);
         }
@@ -51,22 +51,23 @@ internal class WorkGiver_CraftPokemon : WorkGiver_Scanner
     public override bool ShouldSkip(Pawn pawn, bool forced = false)
     {
         var list = pawn.Map.listerThings.ThingsInGroup(ThingRequestGroup.PotentialBillGiver);
-        for (var i = 0; i < list.Count; i++)
-            if (list[i] is IBillGiver billGiver && ThingIsUsableBillGiver(list[i]) &&
+        foreach (var t in list)
+            if (t is IBillGiver billGiver && ThingIsUsableBillGiver(t) &&
                 billGiver.BillStack.AnyShouldDoNow)
                 return false;
+
         return true;
     }
 
     public override Job JobOnThing(Pawn pawn, Thing thing, bool forced = false)
     {
-        if (!(thing is IBillGiver billGiver) || !ThingIsUsableBillGiver(thing) || !billGiver.BillStack.AnyShouldDoNow ||
+        if (thing is not IBillGiver billGiver || !ThingIsUsableBillGiver(thing) || !billGiver.BillStack.AnyShouldDoNow ||
             !billGiver.UsableForBillsAfterFueling() || !pawn.CanReserve(thing, 1, -1, null, forced) ||
             thing.IsBurning() || thing.IsForbidden(pawn) ||
             (thing.def.hasInteractionCell && !pawn.CanReserveSittableOrSpot(thing.InteractionCell, forced)))
             return null;
         var compRefuelable = thing.TryGetComp<CompRefuelable>();
-        if (compRefuelable != null && !compRefuelable.HasFuel)
+        if (compRefuelable is { HasFuel: false })
         {
             if (!RefuelWorkGiverUtility.CanRefuel(pawn, thing, forced)) return null;
             return RefuelWorkGiverUtility.RefuelJob(pawn, thing, forced);
@@ -108,17 +109,16 @@ internal class WorkGiver_CraftPokemon : WorkGiver_Scanner
         if (job != null && job.targetA.Thing != uft) return job;
         var job2 = JobMaker.MakeJob(DefDatabase<JobDef>.GetNamed("PW_CraftPokemon"), (Thing)bill.billStack.billGiver);
         job2.bill = bill;
-        job2.targetQueueB = new List<LocalTargetInfo> { uft };
-        job2.countQueue = new List<int> { 1 };
+        job2.targetQueueB = [uft];
+        job2.countQueue = [1];
         job2.haulMode = HaulMode.ToCellNonStorage;
         return job2;
     }
 
     private Job StartOrResumeBillJob(Pawn pawn, IBillGiver giver)
     {
-        for (var i = 0; i < giver.BillStack.Count; i++)
+        foreach (var bill in giver.BillStack)
         {
-            var bill = giver.BillStack[i];
             if ((bill.recipe.requiredGiverWorkType != null && bill.recipe.requiredGiverWorkType != def.workType) ||
                 (Find.TickManager.TicksGame <= bill.nextTickToSearchForIngredients &&
                  FloatMenuMakerMap.makingFor != pawn) || !bill.ShouldDoNow() ||
@@ -182,10 +182,10 @@ internal class WorkGiver_CraftPokemon : WorkGiver_Scanner
         var job = JobMaker.MakeJob(DefDatabase<JobDef>.GetNamed("PW_CraftPokemon"), (Thing)giver);
         job.targetQueueB = new List<LocalTargetInfo>(chosenIngThings.Count);
         job.countQueue = new List<int>(chosenIngThings.Count);
-        for (var i = 0; i < chosenIngThings.Count; i++)
+        foreach (var t in chosenIngThings)
         {
-            job.targetQueueB.Add(chosenIngThings[i].Thing);
-            job.countQueue.Add(chosenIngThings[i].Count);
+            job.targetQueueB.Add(t.Thing);
+            job.countQueue.Add(t.Count);
         }
 
         job.haulMode = HaulMode.ToCellNonStorage;
@@ -206,12 +206,10 @@ internal class WorkGiver_CraftPokemon : WorkGiver_Scanner
             if (def.billGiversAllAnimals && pawn.RaceProps.Animal) return true;
         }
 
-        if (corpse != null && pawn2 != null)
-        {
-            if (def.billGiversAllHumanlikesCorpses && pawn2.RaceProps.Humanlike) return true;
-            if (def.billGiversAllMechanoidsCorpses && pawn2.RaceProps.IsMechanoid) return true;
-            if (def.billGiversAllAnimalsCorpses && pawn2.RaceProps.Animal) return true;
-        }
+        if (corpse == null || pawn2 == null) return false;
+        if (def.billGiversAllHumanlikesCorpses && pawn2.RaceProps.Humanlike) return true;
+        if (def.billGiversAllMechanoidsCorpses && pawn2.RaceProps.IsMechanoid) return true;
+        if (def.billGiversAllAnimalsCorpses && pawn2.RaceProps.Animal) return true;
 
         return false;
     }
@@ -302,31 +300,25 @@ internal class WorkGiver_CraftPokemon : WorkGiver_Scanner
         bool regionProcessor(Region r)
         {
             var list = r.ListerThings.ThingsMatching(ThingRequest.ForGroup(ThingRequestGroup.HaulableEver));
-            for (var i = 0; i < list.Count; i++)
+            foreach (var thing in list)
             {
-                var thing = list[i];
-                if (!processedThings.Contains(thing) &&
-                    ReachabilityWithinRegion.ThingFromRegionListerReachable(thing, r, PathEndMode.ClosestTouch, pawn) &&
-                    baseValidator(thing) && !(thing.def.IsMedicine && billGiverIsPawn))
-                {
-                    newRelevantThings.Add(thing);
-                    processedThings.Add(thing);
-                }
+                if (processedThings.Contains(thing) ||
+                    !ReachabilityWithinRegion.ThingFromRegionListerReachable(
+                        thing, r, PathEndMode.ClosestTouch, pawn
+                    ) ||
+                    !baseValidator(thing) || thing.def.IsMedicine && billGiverIsPawn) continue;
+                newRelevantThings.Add(thing);
+                processedThings.Add(thing);
             }
 
             regionsProcessed++;
-            if (newRelevantThings.Count > 0 && regionsProcessed > adjacentRegionsAvailable)
-            {
-                relevantThings.AddRange(newRelevantThings);
-                newRelevantThings.Clear();
-                if (foundAllIngredientsAndChoose(relevantThings))
-                {
-                    foundAll = true;
-                    return true;
-                }
-            }
+            if (newRelevantThings.Count <= 0 || regionsProcessed <= adjacentRegionsAvailable) return false;
+            relevantThings.AddRange(newRelevantThings);
+            newRelevantThings.Clear();
+            if (!foundAllIngredientsAndChoose(relevantThings)) return false;
+            foundAll = true;
+            return true;
 
-            return false;
         }
 
         RegionTraverser.BreadthFirstTraverse(rootReg, entryCondition, regionProcessor, 99999);
@@ -338,16 +330,12 @@ internal class WorkGiver_CraftPokemon : WorkGiver_Scanner
 
     private static IntVec3 GetBillGiverRootCell(Thing billGiver, Pawn forPawn)
     {
-        if (billGiver is Building building)
-        {
-            if (building.def.hasInteractionCell) return building.InteractionCell;
-            Log.Error(
-                string.Concat("Tried to find bill ingredients for ", billGiver, " which has no interaction cell.")
-            );
-            return forPawn.Position;
-        }
-
-        return billGiver.Position;
+        if (billGiver is not Building building) return billGiver.Position;
+        if (building.def.hasInteractionCell) return building.InteractionCell;
+        Log.Error(
+            string.Concat("Tried to find bill ingredients for ", billGiver, " which has no interaction cell.")
+        );
+        return forPawn.Position;
     }
 
     private static void AddEveryMedicineToRelevantThings(
@@ -357,9 +345,8 @@ internal class WorkGiver_CraftPokemon : WorkGiver_Scanner
         var medicalCareCategory = GetMedicalCareCategory(billGiver);
         var list = map.listerThings.ThingsInGroup(ThingRequestGroup.Medicine);
         tmpMedicine.Clear();
-        for (var i = 0; i < list.Count; i++)
+        foreach (var thing in list)
         {
-            var thing = list[i];
             if (medicalCareCategory.AllowsMedicine(thing.def) && baseValidator(thing) &&
                 pawn.CanReach(thing, PathEndMode.OnCell, Danger.Deadly)) tmpMedicine.Add(thing);
         }
@@ -373,7 +360,8 @@ internal class WorkGiver_CraftPokemon : WorkGiver_Scanner
 
     private static MedicalCareCategory GetMedicalCareCategory(Thing billGiver)
     {
-        if (billGiver is Pawn pawn && pawn.playerSettings != null) return pawn.playerSettings.medCare;
+        if (billGiver is Pawn { playerSettings: not null } pawn)
+            return pawn.playerSettings.medCare;
         return MedicalCareCategory.Best;
     }
 
@@ -415,9 +403,8 @@ internal class WorkGiver_CraftPokemon : WorkGiver_Scanner
         chosen.Clear();
         availableCounts.Clear();
         availableCounts.GenerateFrom(availableThings);
-        for (var i = 0; i < ingredients.Count; i++)
+        foreach (var ingredientCount in ingredients)
         {
-            var ingredientCount = ingredients[i];
             var flag = false;
             for (var j = 0; j < availableCounts.Count; j++)
             {
@@ -428,30 +415,26 @@ internal class WorkGiver_CraftPokemon : WorkGiver_Scanner
                      num > availableCounts.GetCount(j)) || !ingredientCount.filter.Allows(availableCounts.GetDef(j)) ||
                     (bill != null && !ingredientCount.IsFixedIngredient &&
                      !bill.ingredientFilter.Allows(availableCounts.GetDef(j)))) continue;
-                for (var k = 0; k < availableThings.Count; k++)
+                foreach (var t in availableThings)
                 {
-                    if (availableThings[k].def != availableCounts.GetDef(j)) continue;
-                    var num2 = availableThings[k].stackCount - ThingCountUtility.CountOf(chosen, availableThings[k]);
-                    if (num2 > 0)
+                    if (t.def != availableCounts.GetDef(j)) continue;
+                    var num2 = t.stackCount - ThingCountUtility.CountOf(chosen, t);
+                    if (num2 <= 0) continue;
+                    if (bill != null && bill.recipe.ignoreIngredientCountTakeEntireStacks)
                     {
-                        if (bill != null && bill.recipe.ignoreIngredientCountTakeEntireStacks)
-                        {
-                            ThingCountUtility.AddToList(chosen, availableThings[k], num2);
-                            return true;
-                        }
-
-                        var num3 = Mathf.Min(Mathf.FloorToInt(num), num2);
-                        ThingCountUtility.AddToList(chosen, availableThings[k], num3);
-                        num -= num3;
-                        if (num < 0.001f)
-                        {
-                            flag = true;
-                            var count = availableCounts.GetCount(j);
-                            count -= num;
-                            availableCounts.SetCount(j, count);
-                            break;
-                        }
+                        ThingCountUtility.AddToList(chosen, t, num2);
+                        return true;
                     }
+
+                    var num3 = Mathf.Min(Mathf.FloorToInt(num), num2);
+                    ThingCountUtility.AddToList(chosen, t, num3);
+                    num -= num3;
+                    if (!(num < 0.001f)) continue;
+                    flag = true;
+                    var count = availableCounts.GetCount(j);
+                    count -= num;
+                    availableCounts.SetCount(j, count);
+                    break;
                 }
 
                 if (flag) break;
@@ -472,22 +455,18 @@ internal class WorkGiver_CraftPokemon : WorkGiver_Scanner
             t => bill.recipe.IngredientValueGetter.ValuePerUnitOf(t.def),
             t => (t.Position - rootCell).LengthHorizontalSquared
         );
-        for (var i = 0; i < bill.recipe.ingredients.Count; i++)
+        foreach (var ingredientCount in bill.recipe.ingredients)
         {
-            var ingredientCount = bill.recipe.ingredients[i];
             var num = ingredientCount.GetBaseCount();
-            for (var j = 0; j < availableThings.Count; j++)
+            foreach (var thing in availableThings)
             {
-                var thing = availableThings[j];
-                if (ingredientCount.filter.Allows(thing) &&
-                    (ingredientCount.IsFixedIngredient || bill.ingredientFilter.Allows(thing)))
-                {
-                    var num2 = bill.recipe.IngredientValueGetter.ValuePerUnitOf(thing.def);
-                    var num3 = Mathf.Min(Mathf.CeilToInt(num / num2), thing.stackCount);
-                    ThingCountUtility.AddToList(chosen, thing, num3);
-                    num -= num3 * num2;
-                    if (num <= 0.0001f) break;
-                }
+                if (!ingredientCount.filter.Allows(thing) ||
+                    (!ingredientCount.IsFixedIngredient && !bill.ingredientFilter.Allows(thing))) continue;
+                var num2 = bill.recipe.IngredientValueGetter.ValuePerUnitOf(thing.def);
+                var num3 = Mathf.Min(Mathf.CeilToInt(num / num2), thing.stackCount);
+                ThingCountUtility.AddToList(chosen, thing, num3);
+                num -= num3 * num2;
+                if (num <= 0.0001f) break;
             }
 
             if (num > 0.0001f) return false;
@@ -508,8 +487,7 @@ internal class WorkGiver_CraftPokemon : WorkGiver_Scanner
             get
             {
                 var num = defs.IndexOf(def);
-                if (num < 0) return 0f;
-                return counts[num];
+                return num < 0 ? 0f : counts[num];
             }
             set
             {
@@ -547,11 +525,9 @@ internal class WorkGiver_CraftPokemon : WorkGiver_Scanner
 
         private void CheckRemove(int index)
         {
-            if (counts[index] == 0f)
-            {
-                counts.RemoveAt(index);
-                defs.RemoveAt(index);
-            }
+            if (counts[index] != 0f) return;
+            counts.RemoveAt(index);
+            defs.RemoveAt(index);
         }
 
         public void Clear()
@@ -563,7 +539,8 @@ internal class WorkGiver_CraftPokemon : WorkGiver_Scanner
         public void GenerateFrom(List<Thing> things)
         {
             Clear();
-            for (var i = 0; i < things.Count; i++) this[things[i].def] += things[i].stackCount;
+            foreach (var t in things)
+                this[t.def] += t.stackCount;
         }
     }
 }

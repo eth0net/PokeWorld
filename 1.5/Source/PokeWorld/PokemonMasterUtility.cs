@@ -37,10 +37,8 @@ public static class PokemonMasterUtility
 
     public static bool IsPokemonInMasterRange(Pawn pokemon)
     {
-        if (IsPokemonMasterDrafted(pokemon))
-            if (pokemon.Position.DistanceTo(pokemon.playerSettings.Master.Position) <=
-                GetMasterObedienceRadius(pokemon))
-                return true;
-        return false;
+        if (!IsPokemonMasterDrafted(pokemon)) return false;
+        return pokemon.Position.DistanceTo(pokemon.playerSettings.Master.Position) <=
+               GetMasterObedienceRadius(pokemon);
     }
 }

@@ -16,27 +16,25 @@ public static class Toils_RecipeCraftPokemon
         {
             var actor = toil.actor;
             var curJob = actor.jobs.curJob;
-            if (curJob.RecipeDef.UsesUnfinishedThing && !(curJob.GetTarget(TargetIndex.B).Thing is UnfinishedThing))
+            if (!curJob.RecipeDef.UsesUnfinishedThing ||
+                curJob.GetTarget(TargetIndex.B).Thing is UnfinishedThing) return;
+            var list = CalculateIngredients(curJob, actor);
+            var thing = CalculateDominantIngredient(curJob, list);
+            foreach (var thing2 in list)
             {
-                var list = CalculateIngredients(curJob, actor);
-                var thing = CalculateDominantIngredient(curJob, list);
-                for (var i = 0; i < list.Count; i++)
-                {
-                    var thing2 = list[i];
-                    actor.Map.designationManager.RemoveAllDesignationsOn(thing2);
-                    if (thing2.Spawned) thing2.DeSpawn();
-                }
-
-                var stuff = curJob.RecipeDef.unfinishedThingDef.MadeFromStuff ? thing.def : null;
-                var unfinishedThing = (UnfinishedThing)ThingMaker.MakeThing(curJob.RecipeDef.unfinishedThingDef, stuff);
-                unfinishedThing.Creator = actor;
-                unfinishedThing.BoundBill = (Bill_ProductionWithUft)curJob.bill;
-                unfinishedThing.ingredients = list;
-                unfinishedThing.TryGetComp<CompColorable>()?.SetColor(thing.DrawColor);
-                GenSpawn.Spawn(unfinishedThing, curJob.GetTarget(TargetIndex.A).Cell, actor.Map);
-                curJob.SetTarget(TargetIndex.B, unfinishedThing);
-                actor.Reserve(unfinishedThing, curJob);
+                actor.Map.designationManager.RemoveAllDesignationsOn(thing2);
+                if (thing2.Spawned) thing2.DeSpawn();
             }
+
+            var stuff = curJob.RecipeDef.unfinishedThingDef.MadeFromStuff ? thing.def : null;
+            var unfinishedThing = (UnfinishedThing)ThingMaker.MakeThing(curJob.RecipeDef.unfinishedThingDef, stuff);
+            unfinishedThing.Creator = actor;
+            unfinishedThing.BoundBill = (Bill_ProductionWithUft)curJob.bill;
+            unfinishedThing.ingredients = list;
+            unfinishedThing.TryGetComp<CompColorable>()?.SetColor(thing.DrawColor);
+            GenSpawn.Spawn(unfinishedThing, curJob.GetTarget(TargetIndex.A).Cell, actor.Map);
+            curJob.SetTarget(TargetIndex.B, unfinishedThing);
+            actor.Reserve(unfinishedThing, curJob);
         };
         return toil;
     }
@@ -50,7 +48,7 @@ public static class Toils_RecipeCraftPokemon
             var curJob3 = actor3.jobs.curJob;
             var jobDriver_CraftPokemon2 = (JobDriver_CraftPokemon)actor3.jobs.curDriver;
             var unfinishedThing3 = curJob3.GetTarget(TargetIndex.B).Thing as UnfinishedThing;
-            if (unfinishedThing3 != null && unfinishedThing3.Initialized)
+            if (unfinishedThing3 is { Initialized: true })
             {
                 jobDriver_CraftPokemon2.workLeft = unfinishedThing3.workLeft;
             }
@@ -70,7 +68,7 @@ public static class Toils_RecipeCraftPokemon
             var curJob2 = actor2.jobs.curJob;
             var jobDriver_CraftPokemon = (JobDriver_CraftPokemon)actor2.jobs.curDriver;
             var unfinishedThing2 = curJob2.GetTarget(TargetIndex.B).Thing as UnfinishedThing;
-            if (unfinishedThing2 != null && unfinishedThing2.Destroyed)
+            if (unfinishedThing2 is { Destroyed: true })
             {
                 actor2.jobs.EndCurrentJob(JobCondition.Incompletable);
             }
@@ -119,11 +117,9 @@ public static class Toils_RecipeCraftPokemon
             (Func<bool>)delegate
             {
                 var recipeDef = toil.actor.CurJob.RecipeDef;
-                if (recipeDef != null && recipeDef.interruptIfIngredientIsRotting)
-                {
-                    var target = toil.actor.CurJob.GetTarget(TargetIndex.B);
-                    if (target.HasThing && (int)target.Thing.GetRotStage() > 0) return true;
-                }
+                if (recipeDef is not { interruptIfIngredientIsRotting: true }) return toil.actor.CurJob.bill.suspended;
+                var target = toil.actor.CurJob.GetTarget(TargetIndex.B);
+                if (target.HasThing && (int)target.Thing.GetRotStage() > 0) return true;
 
                 return toil.actor.CurJob.bill.suspended;
             }
@@ -202,23 +198,23 @@ public static class Toils_RecipeCraftPokemon
 
         var list = new List<Thing>();
         if (job.placedThings != null)
-            for (var i = 0; i < job.placedThings.Count; i++)
+            foreach (var t in job.placedThings)
             {
-                if (job.placedThings[i].Count <= 0)
+                if (t.Count <= 0)
                 {
                     Log.Error(
                         string.Concat(
-                            "PlacedThing ", job.placedThings[i], " with count ", job.placedThings[i].Count, " for job ",
+                            "PlacedThing ", t, " with count ", t.Count, " for job ",
                             job
                         )
                     );
                     continue;
                 }
 
-                var thing = job.placedThings[i].Count >= job.placedThings[i].thing.stackCount
-                    ? job.placedThings[i].thing
-                    : job.placedThings[i].thing.SplitOff(job.placedThings[i].Count);
-                job.placedThings[i].Count = 0;
+                var thing = t.Count >= t.thing.stackCount
+                    ? t.thing
+                    : t.thing.SplitOff(t.Count);
+                t.Count = 0;
                 if (list.Contains(thing))
                 {
                     Log.Error("Tried to add ingredient from job placed targets twice: " + thing);
@@ -237,20 +233,18 @@ public static class Toils_RecipeCraftPokemon
     {
         if (job.GetTarget(TargetIndex.B).Thing is UnfinishedThing uft && uft.def.MadeFromStuff)
             return uft.ingredients.First(ing => ing.def == uft.Stuff);
-        if (!ingredients.NullOrEmpty())
-        {
-            if (job.RecipeDef.productHasIngredientStuff) return ingredients[0];
-            if (job.RecipeDef.products.Any(x => x.thingDef.MadeFromStuff))
-                return ingredients.Where(x => x.def.IsStuff).RandomElementByWeight(x => x.stackCount);
-            return ingredients.RandomElementByWeight(x => x.stackCount);
-        }
+        if (ingredients.NullOrEmpty()) return null;
+        if (job.RecipeDef.productHasIngredientStuff) return ingredients[0];
+        if (job.RecipeDef.products.Any(x => x.thingDef.MadeFromStuff))
+            return ingredients.Where(x => x.def.IsStuff).RandomElementByWeight(x => x.stackCount);
+        return ingredients.RandomElementByWeight(x => x.stackCount);
 
-        return null;
     }
 
     private static void ConsumeIngredients(List<Thing> ingredients, RecipeDef recipe, Map map)
     {
-        for (var i = 0; i < ingredients.Count; i++) recipe.Worker.ConsumeIngredient(ingredients[i], recipe, map);
+        foreach (var t in ingredients)
+            recipe.Worker.ConsumeIngredient(t, recipe, map);
     }
 
     public static Toil PlaceHauledThingInCell(
@@ -281,61 +275,60 @@ public static class Toils_RecipeCraftPokemon
                     curJob.def == JobDefOf.RearmTurretAtomic)
                     placedAction = delegate(Thing th, int added)
                     {
-                        if (curJob.placedThings == null) curJob.placedThings = new List<ThingCountClass>();
+                        curJob.placedThings ??= [];
                         var thingCountClass = curJob.placedThings.Find(x => x.thing == th);
                         if (thingCountClass != null)
                             thingCountClass.Count += added;
                         else
                             curJob.placedThings.Add(new ThingCountClass(th, added));
                     };
-                if (!actor.carryTracker.TryDropCarriedThing(cell, ThingPlaceMode.Direct, out var _, placedAction))
+                if (actor.carryTracker.TryDropCarriedThing(cell, ThingPlaceMode.Direct, out var _, placedAction)) 
+                    return;
+                if (storageMode)
                 {
-                    if (storageMode)
+                    if (nextToilOnPlaceFailOrIncomplete != null &&
+                        ((tryStoreInSameStorageIfSpotCantHoldWholeStack &&
+                          StoreUtility.TryFindBestBetterStoreCellForIn(
+                              actor.carryTracker.CarriedThing, actor, actor.Map, StoragePriority.Unstored,
+                              actor.Faction, cell.GetSlotGroup(actor.Map), out var foundCell
+                          )) || StoreUtility.TryFindBestBetterStoreCellFor(
+                            actor.carryTracker.CarriedThing, actor, actor.Map, StoragePriority.Unstored,
+                            actor.Faction, out foundCell
+                        )))
                     {
-                        if (nextToilOnPlaceFailOrIncomplete != null &&
-                            ((tryStoreInSameStorageIfSpotCantHoldWholeStack &&
-                              StoreUtility.TryFindBestBetterStoreCellForIn(
-                                  actor.carryTracker.CarriedThing, actor, actor.Map, StoragePriority.Unstored,
-                                  actor.Faction, cell.GetSlotGroup(actor.Map), out var foundCell
-                              )) || StoreUtility.TryFindBestBetterStoreCellFor(
-                                actor.carryTracker.CarriedThing, actor, actor.Map, StoragePriority.Unstored,
-                                actor.Faction, out foundCell
-                            )))
+                        if (actor.CanReserve(foundCell)) actor.Reserve(foundCell, actor.CurJob);
+                        actor.CurJob.SetTarget(cellInd, foundCell);
+                        actor.jobs.curDriver.JumpToToil(nextToilOnPlaceFailOrIncomplete);
+                    }
+                    else
+                    {
+                        var job = HaulAIUtility.HaulAsideJobFor(actor, actor.carryTracker.CarriedThing);
+                        if (job != null)
                         {
-                            if (actor.CanReserve(foundCell)) actor.Reserve(foundCell, actor.CurJob);
-                            actor.CurJob.SetTarget(cellInd, foundCell);
+                            curJob.targetA = job.targetA;
+                            curJob.targetB = job.targetB;
+                            curJob.targetC = job.targetC;
+                            curJob.count = job.count;
+                            curJob.haulOpportunisticDuplicates = job.haulOpportunisticDuplicates;
+                            curJob.haulMode = job.haulMode;
                             actor.jobs.curDriver.JumpToToil(nextToilOnPlaceFailOrIncomplete);
                         }
                         else
                         {
-                            var job = HaulAIUtility.HaulAsideJobFor(actor, actor.carryTracker.CarriedThing);
-                            if (job != null)
-                            {
-                                curJob.targetA = job.targetA;
-                                curJob.targetB = job.targetB;
-                                curJob.targetC = job.targetC;
-                                curJob.count = job.count;
-                                curJob.haulOpportunisticDuplicates = job.haulOpportunisticDuplicates;
-                                curJob.haulMode = job.haulMode;
-                                actor.jobs.curDriver.JumpToToil(nextToilOnPlaceFailOrIncomplete);
-                            }
-                            else
-                            {
-                                Log.Error(
-                                    string.Concat(
-                                        "Incomplete haul for ", actor, ": Could not find anywhere to put ",
-                                        actor.carryTracker.CarriedThing, " near ", actor.Position,
-                                        ". Destroying. This should never happen!"
-                                    )
-                                );
-                                actor.carryTracker.CarriedThing.Destroy();
-                            }
+                            Log.Error(
+                                string.Concat(
+                                    "Incomplete haul for ", actor, ": Could not find anywhere to put ",
+                                    actor.carryTracker.CarriedThing, " near ", actor.Position,
+                                    ". Destroying. This should never happen!"
+                                )
+                            );
+                            actor.carryTracker.CarriedThing.Destroy();
                         }
                     }
-                    else if (nextToilOnPlaceFailOrIncomplete != null)
-                    {
-                        actor.jobs.curDriver.JumpToToil(nextToilOnPlaceFailOrIncomplete);
-                    }
+                }
+                else if (nextToilOnPlaceFailOrIncomplete != null)
+                {
+                    actor.jobs.curDriver.JumpToToil(nextToilOnPlaceFailOrIncomplete);
                 }
             }
         };
