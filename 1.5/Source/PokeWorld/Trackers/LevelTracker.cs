@@ -11,15 +11,14 @@ public class LevelTracker : IExposable
     public bool canEvolve;
     public CompPokemon comp;
     public int evolutionCountDown = 300;
-    public List<PawnKindDef> evolutionDefList = new();
-
+    public List<PawnKindDef> evolutionDefList = [];
     public List<Evolution> evolutions;
-    public string expCategory;
+    public string expCategory; // todo: add a setter with checks for max level?
     public int experience;
     public bool flagEverstoneAlertEvolution = true;
     public bool flagEverstoneOn;
     public bool flagIsEvolving;
-    public int level = 1;
+    public int level; // todo: add a setter with checks for max level
     public Pawn pokemonHolder;
     public int totalExpForNextLevel;
     public int wildLevelMax;
@@ -54,97 +53,96 @@ public class LevelTracker : IExposable
 
     public IEnumerable<Gizmo> GetGizmos()
     {
-        if (pokemonHolder.Faction == Faction.OfPlayer)
-            if (comp.CanEvolve)
+        if (pokemonHolder.Faction != Faction.OfPlayer) yield break;
+        if (!comp.CanEvolve) yield break;
+
+        if (flagIsEvolving)
+        {
+            yield return new Command_Action
             {
-                if (!flagIsEvolving)
-                {
-                    foreach (var evo in evolutions)
-                        if (evo.requirement == EvolutionRequirement.level &&
-                            (evo.gender == Gender.None || pokemonHolder.gender == evo.gender) &&
-                            PokeWorldSettings.GenerationAllowed(
-                                evo.pawnKind.race.GetCompProperties<CompProperties_Pokemon>().generation
-                            ))
-                        {
-                            var command_Toggle = new Command_Toggle
-                            {
-                                defaultLabel = flagEverstoneOn
-                                    ? "PW_TakeBackEverstone".Translate()
-                                    : "PW_GiveEverstone".Translate(),
-                                defaultDesc = flagEverstoneOn
-                                    ? "PW_TakeBackEverstoneDesc".Translate()
-                                    : "PW_GiveEverstoneDesc".Translate(),
-                                hotKey = KeyBindingDefOf.Misc5,
-                                icon = ContentFinder<Texture2D>.Get("UI/Gizmos/Everstone/Everstone"),
-                                toggleAction = delegate { flagEverstoneOn = !flagEverstoneOn; },
-                                isActive = () => flagEverstoneOn
-                            };
-                            yield return command_Toggle;
-                            break;
-                        }
-                }
-                else
-                {
-                    var command_Action = new Command_Action
-                    {
-                        action = delegate { CancelEvolution(true); },
-                        defaultLabel = "PW_StopEvolution".Translate(),
-                        defaultDesc = "PW_StopEvolutionDesc".Translate(),
-                        hotKey = KeyBindingDefOf.Misc5,
-                        icon = TexCommand.ClearPrioritizedWork
-                    };
-                    yield return command_Action;
-                }
-            }
+                action = delegate { CancelEvolution(true); },
+                defaultLabel = "PW_StopEvolution".Translate(),
+                defaultDesc = "PW_StopEvolutionDesc".Translate(),
+                hotKey = KeyBindingDefOf.Misc5,
+                icon = TexCommand.ClearPrioritizedWork
+            };
+            yield break;
+        }
+
+        foreach (var evo in evolutions)
+        {
+            // todo: review this and maybe implement helpers
+            if (evo.requirement != EvolutionRequirement.level) continue;
+            if (evo.gender != Gender.None && pokemonHolder.gender != evo.gender) continue;
+            var gen = evo.pawnKind.race.GetCompProperties<CompProperties_Pokemon>().generation;
+            if (!PokeWorldSettings.GenerationAllowed(gen)) continue;
+
+            yield return new Command_Toggle
+            {
+                defaultLabel = flagEverstoneOn
+                    ? "PW_TakeBackEverstone".Translate()
+                    : "PW_GiveEverstone".Translate(),
+                defaultDesc = flagEverstoneOn
+                    ? "PW_TakeBackEverstoneDesc".Translate()
+                    : "PW_GiveEverstoneDesc".Translate(),
+                hotKey = KeyBindingDefOf.Misc5,
+                icon = ContentFinder<Texture2D>.Get("UI/Gizmos/Everstone/Everstone"),
+                toggleAction = delegate { flagEverstoneOn = !flagEverstoneOn; },
+                isActive = () => flagEverstoneOn
+            };
+
+            break;
+        }
     }
 
     public void IncreaseExperience(int expAmount)
     {
+        // todo: move this into a setter on level
         if (level >= 100)
         {
             level = 100;
             experience = 0;
+            return;
         }
-        else
-        {
-            experience += expAmount;
-            TryGainLevel();
-        }
+
+        experience += expAmount;
+        TryGainLevel();
     }
 
     public void TryGainLevel()
     {
-        if (experience >= totalExpForNextLevel)
+        if (experience < totalExpForNextLevel) return;
+
+        while (experience >= totalExpForNextLevel)
         {
-            while (experience >= totalExpForNextLevel)
+            level++;
+            if (pokemonHolder.Faction == Faction.OfPlayer)
             {
-                level++;
-                if (pokemonHolder.Faction == Faction.OfPlayer)
-                {
-                    comp.friendshipTracker.IncreaseFriendshipLevelUp();
-                    MoteMaker.ThrowText(pokemonHolder.DrawPos, pokemonHolder.Map, "PW_LevelIncrease".Translate(level));
-                    if (level % 10 == 0)
-                        Messages.Message(
-                            "PW_MessageLevelIncrease".Translate(pokemonHolder.Label, level), pokemonHolder,
-                            MessageTypeDefOf.NeutralEvent
-                        );
-                }
-
-                if (level >= 100)
-                {
-                    level = 100;
-                    experience = 0;
-                    UpdateExpToNextLvl();
-                    break;
-                }
-
-                experience -= totalExpForNextLevel;
-                UpdateExpToNextLvl();
+                comp.friendshipTracker.IncreaseFriendshipLevelUp();
+                MoteMaker.ThrowText(pokemonHolder.DrawPos, pokemonHolder.Map, "PW_LevelIncrease".Translate(level));
+                if (level % 10 == 0)
+                    Messages.Message(
+                        "PW_MessageLevelIncrease".Translate(pokemonHolder.Label, level), pokemonHolder,
+                        MessageTypeDefOf.NeutralEvent
+                    );
             }
 
-            comp.statTracker.UpdateStats();
-            if (canEvolve && pokemonHolder.Faction == Faction.OfPlayer) TryEvolveAfterLevelUp();
+            // todo: maybe move this above the level up message
+            // todo: move this into a setter on level
+            if (level >= 100)
+            {
+                level = 100;
+                experience = 0;
+                UpdateExpToNextLvl();
+                break;
+            }
+
+            experience -= totalExpForNextLevel;
+            UpdateExpToNextLvl();
         }
+
+        comp.statTracker.UpdateStats();
+        if (canEvolve && pokemonHolder.Faction == Faction.OfPlayer) TryEvolveAfterLevelUp();
     }
 
     public void UpdateExpToNextLvl()
@@ -154,93 +152,98 @@ public class LevelTracker : IExposable
 
     public void TryEvolveAfterLevelUp()
     {
-        if (!flagIsEvolving &&
-            pokemonHolder.Map.designationManager.DesignationOn(pokemonHolder, DesignationDefOf.Slaughter) == null)
-            foreach (var evo in evolutions)
-                if (PokeWorldSettings.GenerationAllowed(
-                        evo.pawnKind.race.GetCompProperties<CompProperties_Pokemon>().generation
-                    )
-                    && evo.requirement == EvolutionRequirement.level && level >= evo.level
-                    && comp.friendshipTracker.EvolutionAllowed(evo.friendship)
-                    && (evo.gender == Gender.None || pokemonHolder.gender == evo.gender))
+        // todo: refactor duplicated code with helper
+        if (flagIsEvolving ||
+            pokemonHolder.Map.designationManager.DesignationOn(pokemonHolder, DesignationDefOf.Slaughter) !=
+            null) return;
+        foreach (var evo in evolutions)
+            if (PokeWorldSettings.GenerationAllowed(
+                    evo.pawnKind.race.GetCompProperties<CompProperties_Pokemon>().generation
+                )
+                && evo.requirement == EvolutionRequirement.level && level >= evo.level
+                && comp.friendshipTracker.EvolutionAllowed(evo.friendship)
+                && (evo.gender == Gender.None || pokemonHolder.gender == evo.gender))
+            {
+                if (evo.otherRequirement != OtherEvolutionRequirement.none)
                 {
-                    if (evo.otherRequirement != OtherEvolutionRequirement.none)
-                    {
-                        var attack = (int)pokemonHolder.GetStatValue(DefDatabase<StatDef>.GetNamed("PW_Attack"));
-                        var defense = (int)pokemonHolder.GetStatValue(DefDatabase<StatDef>.GetNamed("PW_Defense"));
-                        if (evo.otherRequirement == OtherEvolutionRequirement.attack && !(attack > defense))
-                            continue;
-                        if (evo.otherRequirement == OtherEvolutionRequirement.defense && !(defense > attack))
-                            continue;
-                        if (evo.otherRequirement == OtherEvolutionRequirement.balanced && !(attack == defense))
-                            continue;
-                    }
+                    var attack = (int)pokemonHolder.GetStatValue(DefDatabase<StatDef>.GetNamed("PW_Attack"));
+                    var defense = (int)pokemonHolder.GetStatValue(DefDatabase<StatDef>.GetNamed("PW_Defense"));
+                    if (evo.otherRequirement == OtherEvolutionRequirement.attack && !(attack > defense))
+                        continue;
+                    if (evo.otherRequirement == OtherEvolutionRequirement.defense && !(defense > attack))
+                        continue;
+                    if (evo.otherRequirement == OtherEvolutionRequirement.balanced && !(attack == defense))
+                        continue;
+                }
 
-                    var currentMapTime = GenLocalDate.HourOfDay(pokemonHolder.Map);
-                    if (evo.timeOfDay == TimeOfDay.Any
-                        || (evo.timeOfDay == TimeOfDay.Day && currentMapTime >= 7 && currentMapTime < 19)
-                        || (evo.timeOfDay == TimeOfDay.Night && (currentMapTime >= 19 || currentMapTime < 7)))
+                var currentMapTime = GenLocalDate.HourOfDay(pokemonHolder.Map);
+                if (evo.timeOfDay == TimeOfDay.Any
+                    || (evo.timeOfDay == TimeOfDay.Day && currentMapTime >= 7 && currentMapTime < 19)
+                    || (evo.timeOfDay == TimeOfDay.Night && (currentMapTime >= 19 || currentMapTime < 7)))
+                {
+                    if (!flagEverstoneOn)
                     {
-                        if (!flagEverstoneOn)
-                        {
-                            evolutionDefList.Add(evo.pawnKind);
-                            BeginEvolutionProcess();
-                        }
-                        else if (flagEverstoneAlertEvolution)
-                        {
-                            Messages.Message(
-                                "PW_MessageEverstonePreventsEvolution".Translate(pokemonHolder.Label), pokemonHolder,
-                                MessageTypeDefOf.NeutralEvent
-                            );
-                            flagEverstoneAlertEvolution = false;
-                        }
+                        evolutionDefList.Add(evo.pawnKind);
+                        BeginEvolutionProcess();
+                    }
+                    else if (flagEverstoneAlertEvolution)
+                    {
+                        Messages.Message(
+                            "PW_MessageEverstonePreventsEvolution".Translate(pokemonHolder.Label), pokemonHolder,
+                            MessageTypeDefOf.NeutralEvent
+                        );
+                        flagEverstoneAlertEvolution = false;
                     }
                 }
+            }
     }
 
     public void TryEvolveWithItem(Thing item)
     {
-        if (!flagIsEvolving &&
-            pokemonHolder.Map.designationManager.DesignationOn(pokemonHolder, DesignationDefOf.Slaughter) == null)
-            foreach (var evo in evolutions)
-                if (evo.item == item.def)
-                {
-                    evolutionDefList.Add(evo.pawnKind);
-                    BeginEvolutionProcess();
-                }
+        // todo: refactor duplicated code with helper
+        if (flagIsEvolving ||
+            pokemonHolder.Map.designationManager.DesignationOn(pokemonHolder, DesignationDefOf.Slaughter) !=
+            null) return;
+
+        foreach (var evo in evolutions.Where(evo => evo.item == item.def))
+        {
+            evolutionDefList.Add(evo.pawnKind);
+            BeginEvolutionProcess();
+        }
     }
 
     public void BeginEvolutionProcess()
     {
-        if (!flagIsEvolving &&
-            pokemonHolder.Map.designationManager.DesignationOn(pokemonHolder, DesignationDefOf.Slaughter) == null)
-        {
-            Messages.Message(
-                "PW_MessageEvolving".Translate(pokemonHolder.Label), pokemonHolder, MessageTypeDefOf.NeutralEvent
-            );
-            flagIsEvolving = true;
-        }
+        // todo: refactor duplicated code with helper
+        if (flagIsEvolving ||
+            pokemonHolder.Map.designationManager.DesignationOn(pokemonHolder, DesignationDefOf.Slaughter) !=
+            null) return;
+        Messages.Message(
+            "PW_MessageEvolving".Translate(pokemonHolder.Label), pokemonHolder, MessageTypeDefOf.NeutralEvent
+        );
+        flagIsEvolving = true;
     }
 
     public void UpdateEvolutionProcess()
     {
+        // todo: refactor duplicated code with helper
         if (pokemonHolder.Map.designationManager.DesignationOn(pokemonHolder, DesignationDefOf.Slaughter) != null)
         {
             CancelEvolution(true);
+            return;
         }
-        else
-        {
-            if (evolutionCountDown % 60 == 0)
-                for (var i = 0; i < 3; i++)
-                    FleckMaker.ThrowDustPuff(pokemonHolder.Position, pokemonHolder.Map, 2f);
-            if (evolutionCountDown <= 0)
-            {
-                flagIsEvolving = false;
-                Evolve(evolutionDefList);
-            }
 
-            evolutionCountDown -= 1;
+        if (evolutionCountDown % 60 == 0)
+            for (var i = 0; i < 3; i++)
+                FleckMaker.ThrowDustPuff(pokemonHolder.Position, pokemonHolder.Map, 2f);
+        
+        if (evolutionCountDown <= 0)
+        {
+            flagIsEvolving = false;
+            Evolve(evolutionDefList);
         }
+
+        evolutionCountDown -= 1;
     }
 
     public void CancelEvolution(bool scared = false)
@@ -271,19 +274,15 @@ public class LevelTracker : IExposable
         }
 
         preEvoPokemon.inventory?.DropAllNearPawn(preEvoPokemon.Position);
-        if (preEvoPokemon.carryTracker != null && preEvoPokemon.carryTracker.CarriedThing != null)
-            preEvoPokemon.carryTracker.TryDropCarriedThing(
-                preEvoPokemon.Position, ThingPlaceMode.Near, out var carriedThing
+        preEvoPokemon.carryTracker?.TryDropCarriedThing(preEvoPokemon.Position, ThingPlaceMode.Near, out _);
+        foreach (var hediff in preEvoPokemon.health.hediffSet?.hediffs ?? [])
+        {
+            if (hediff.def is not { countsAsAddedPartOrImplant: true }) continue;
+            var part = hediff.Part;
+            MedicalRecipesUtility.SpawnThingsFromHediffs(
+                preEvoPokemon, part, preEvoPokemon.Position, preEvoPokemon.Map
             );
-        if (preEvoPokemon.health.hediffSet != null)
-            foreach (var hediff in preEvoPokemon.health.hediffSet.hediffs)
-                if (hediff.def != null && hediff.def.countsAsAddedPartOrImplant)
-                {
-                    var part = hediff.Part;
-                    MedicalRecipesUtility.SpawnThingsFromHediffs(
-                        preEvoPokemon, part, preEvoPokemon.Position, preEvoPokemon.Map
-                    );
-                }
+        }
 
         for (var i = 0; i < 10; i++) FleckMaker.ThrowDustPuff(preEvoPokemon.Position, preEvoPokemon.Map, 2f);
         preEvoPokemon.relations.ClearAllRelations();
@@ -292,6 +291,7 @@ public class LevelTracker : IExposable
 
     private void Copy(Pawn pokemon, Pawn evolution)
     {
+        // todo: refactor this for simplicity
         var postEvoComp = evolution.GetComp<CompPokemon>();
         postEvoComp.levelTracker.level = level;
         postEvoComp.levelTracker.experience = experience;
@@ -338,7 +338,7 @@ public class LevelTracker : IExposable
         evolution.playerSettings.joinTick = pokemon.playerSettings.joinTick;
         evolution.playerSettings.Master = pokemon.playerSettings.Master;
         evolution.playerSettings.medCare = pokemon.playerSettings.medCare;
-        if (pokemon.Name != null && !pokemon.Name.Numerical) evolution.Name = pokemon.Name;
+        if (pokemon.Name is { Numerical: false }) evolution.Name = pokemon.Name;
     }
 
     public void LevelTick()
