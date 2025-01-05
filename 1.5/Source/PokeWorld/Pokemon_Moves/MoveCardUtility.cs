@@ -167,7 +167,7 @@ public static class MoveCardUtility
         var flag = checkOn;
         var texChecked = num ? LearnedTrainingTex : null;
         var texUnchecked = num ? LearnedNotTrainingTex : null;
-        Widgets.Checkbox(rect.position, ref checkOn, rect.width / 2, true);
+        Widgets.Checkbox(rect.position, ref checkOn, rect.width / 2, false, true, texChecked, texUnchecked);
         if (checkOn != flag) pawn.TryGetComp<CompPokemon>().moveTracker.SetWanted(kvp.Key, checkOn);
     }
 
