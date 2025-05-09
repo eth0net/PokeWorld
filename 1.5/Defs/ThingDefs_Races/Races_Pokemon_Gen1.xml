@@ -4594,7 +4594,7 @@
         <rarity>1</rarity>
         <canEvolve>true</canEvolve>
         <evolutionLine>12</evolutionLine>
-		<evolutions>
+        <evolutions>
           <li>
             <pawnKind>PW_Nidorina</pawnKind>
             <requirement>level</requirement>
@@ -5086,7 +5086,7 @@
         <starter>true</starter>
         <rarity>1</rarity>
         <canEvolve>true</canEvolve>
-		<evolutions>
+        <evolutions>
           <li>
             <pawnKind>PW_Nidorino</pawnKind>
             <requirement>level</requirement>
