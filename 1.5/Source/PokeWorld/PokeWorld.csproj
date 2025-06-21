@@ -3,44 +3,130 @@
     <TargetFramework>net48</TargetFramework>
     <OutputType>Library</OutputType>
     <LangVersion>latest</LangVersion>
+    <PackageId>PokeWorld</PackageId>
+    <OutputPath>../../Assemblies\</OutputPath>
+    <ReleasePath>../../../Release</ReleasePath>
+    <ZipFilePath>../../../$(PackageId).zip</ZipFilePath>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <OutputPath>..\..\Assemblies\</OutputPath>
-    <DebugType>none</DebugType>
   </PropertyGroup>
+
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>false</DebugSymbols>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
   </PropertyGroup>
-  <ItemGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+
+  <!-- Define paths for different platforms -->
+  <PropertyGroup>
+    <ManagedDirWin>../../../../../RimWorldWin64_Data/Managed</ManagedDirWin>
+    <ManagedDirMac>../../../../../Contents/Resources/Data/Managed</ManagedDirMac>
+    <ManagedDir Condition="Exists('$(ManagedDirWin)')">$(ManagedDirWin)</ManagedDir>
+    <ManagedDir Condition="Exists('$(ManagedDirMac)')">$(ManagedDirMac)</ManagedDir>
+  </PropertyGroup>
+  <PropertyGroup>
+    <WorkshopDirWin>../../../../../../../../workshop/content/294100</WorkshopDirWin>
+    <WorkshopDirMac>../../../../../../../workshop/content/294100</WorkshopDirMac>
+    <WorkshopDir Condition="Exists('$(WorkshopDirWin)')">$(WorkshopDirWin)</WorkshopDir>
+    <WorkshopDir Condition="Exists('$(WorkshopDirMac)')">$(WorkshopDirMac)</WorkshopDir>
+  </PropertyGroup>
+
+  <!-- Game assemblies for the detected platform -->
+  <ItemGroup Condition="Exists('$(ManagedDir)')">
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>$(ManagedDir)/Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>$(ManagedDir)/UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>$(ManagedDir)/UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.IMGUIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <HintPath>$(ManagedDir)\UnityEngine.IMGUIModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <HintPath>$(ManagedDir)\UnityEngine.TextRenderingModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
+
+  <!-- Include nuget packages -->
   <ItemGroup>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Lib.Harmony" Version="2.*">
+    <PackageReference Include="Lib.Harmony" Version="2.*" ExcludeAssets="runtime" />
+    <!-- <PackageReference Include="Lib.Harmony" Version="2.*">
       <ExcludeAssets>runtime</ExcludeAssets>
       <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
+    </PackageReference> -->
   </ItemGroup>
+
+  <!-- Include Krafs.Rimworld.Ref if Assembly-CSharp HintPath is not set -->
+  <ItemGroup Condition="'@(Reference->WithMetadataValue('Identity', 'Assembly-CSharp')->Metadata('HintPath')->Exists())' == ''">
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.5.*" />
+  </ItemGroup>
+
+  <!-- Optionally include Publicizer -->
+  <!-- <ItemGroup>
+    <PackageReference Include="Krafs.Publicizer" Version="2.2.1" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" PrivateAssets="all" />
+    <Publicize Include="Assembly-CSharp" />
+  </ItemGroup> -->
+
+  <!-- Attach game data files -->
+  <ItemGroup>
+    <Content Condition="Exists('../../../../../Data')" Include="../../../../../Data/**/*">
+      <Link>Attached/Rimworld/%(RecursiveDir)/%(FileName)%(Extension)</Link>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <!-- Delete old PDB files before a release build -->
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent" Condition=" '$(Configuration)' == 'Release' ">
+    <ItemGroup>
+      <PdbFilesToDelete Include="$(OutputPath)/*.pdb" />
+    </ItemGroup>
+    <Delete Files="@(PdbFilesToDelete)" />
+  </Target>
+
+  <!-- Copy release files to the release directory -->
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition=" '$(Configuration)' == 'Release' ">
+    <ItemGroup>
+      <AboutFiles Include="../../../About/**" Exclude="../../../About/*.png~" />
+      <DefsFiles Include="../../../Defs/**" />
+      <LanguagesFiles Include="../../../Languages/**" />
+      <PatchesFiles Include="../../../Patches/**" />
+      <SoundsFiles Include="../../../Sounds/**" />
+      <TexturesFiles Include="../../../Textures/**" />
+      <ExtraFiles Include="../../../README.md" />
+      <ReleaseFiles Include="../../../1.*/**" Exclude="../../../1.*/Source/**" />
+    </ItemGroup>
+    <RemoveDir Condition="Exists('$(ReleasePath)')" Directories="$(ReleasePath)" />
+    <Delete Condition="Exists('$(ZipFilePath)')" Files="$(ZipFilePath)" />
+    <Copy SourceFiles="@(AboutFiles)" DestinationFiles="@(AboutFiles->'$(ReleasePath)/About/%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+    <!-- Use separate copy operations for each directory to ensure proper structure -->
+    <Copy SourceFiles="@(DefsFiles)" DestinationFiles="@(DefsFiles->'$(ReleasePath)/Defs/%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(LanguagesFiles)" DestinationFiles="@(LanguagesFiles->'$(ReleasePath)/Languages/%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(PatchesFiles)" DestinationFiles="@(PatchesFiles->'$(ReleasePath)/Patches/%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(SoundsFiles)" DestinationFiles="@(SoundsFiles->'$(ReleasePath)/Sounds/%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(TexturesFiles)" DestinationFiles="@(TexturesFiles->'$(ReleasePath)/Textures/%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(ReleaseFiles)" DestinationFiles="@(ReleaseFiles->'$(ReleasePath)/%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="false" />
+    <Copy SourceFiles="@(ExtraFiles)" DestinationFolder="$(ReleasePath)/" SkipUnchangedFiles="false" />
+    <ZipDirectory SourceDirectory="$(ReleasePath)" DestinationFile="$(ZipFilePath)" />
+  </Target>
+
+  <!-- Clean release artifacts -->
+  <Target Name="CleanRelease" AfterTargets="Clean">
+    <RemoveDir Condition="Exists('$(ReleasePath)')" Directories="$(ReleasePath)" />
+    <Delete Condition="Exists('$(ZipFilePath)')" Files="$(ZipFilePath)" />
+  </Target>
 </Project>
